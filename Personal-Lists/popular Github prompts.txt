@@ -16,6 +16,7 @@ Uploading both formats of version 1
 update files
 create new files
 Rename unnamed-copy.jpg to Logo280x280.jpg
+Uploading co-pilot exported pdf chats - part 1
 install package dependencies
 Add/Update files
 Create ZIP folder for project
