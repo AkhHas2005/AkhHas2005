@@ -1,0 +1,111 @@
+## You
+In power automate, how can I assign variables to store an input from a text box in my app?
+## Copilot
+Certainly! In Power Automate, you can create and work with variables to store values. Here's how you can assign a variable to store an input from a text box in your app:
+- Initialize a Variable:
+    - Sign in to Power Automate.
+    - Create or open a cloud flow.
+    - Add an action where you want to add a variable.
+    - Search for "Initialize variable" and select it.
+    - Provide the variable name and choose its data type (e.g., string).
+    - Set the initial value for the variable.
+- Get Value from Text Input in Power Apps:
+    - Add a button control to your Power Apps screen.
+    - Set the button's OnSelect property with the following expression:
+
+OnSelect = Patch(ColName, Defaults(ColName), {UserName: UserName_txtInput.Text});
+Reset(UserName_txtInput)
+
+Replace ColName with your collection name and UserName_txtInput with your text input control.
+- Set a Text Box to a Variable Value:
+    - You can use a variable to control the state of a text box.
+    - For example, set the Reset property of the text input control to a variable:
+
+Set(varReset, true);
+Set(varReset, false);
+
+Alternatively, use a button with the OnSelect property:
+
+UpdateContext({Variable1: true});
+UpdateContext({Variable1: false});
+
+Modify the Reset property of the text input control to use Variable1.
+Remember that variables exist globally within the cloud flow and persist across loop iterations. Feel free to adapt these steps to your specific scenario! 😊
+## You
+How can I create a collection in power apps (August 2024)?
+## Copilot
+Certainly! To create a collection in Power Apps, follow these steps:
+- Initialize a Collection:
+    - Open your app in Power Apps.
+    - In the left navigation pane, select the App object.
+    - Set its OnStart property to the following code:
+
+OnStart = Collect(MyCollection, { BookName: "The Testaments", Author: "Margaret Atwood" })
+
+    - Save and publish the app.
+- Verify the Collection:
+    - Now, the collection named MyCollection has been created.
+    - You can access it with all the records you added.
+Remember to replace the book details in the example with your own data! 😊
+## You
+It won't work, the collection is empty when I use that code
+## Copilot
+I apologize for the oversight. Let's troubleshoot this together. Here are some steps to ensure your collection is initialized correctly:
+- Check Collection Name:
+    - Confirm that the collection name you're using (MyCollection) matches the one in your app.
+    - Make sure there are no typos or discrepancies.
+- Verify the OnStart Property:
+    - Go to the App object in the left navigation pane.
+    - Double-check the OnStart property. It should be set to:
+
+OnStart = Collect(MyCollection, { BookName: "The Testaments", Author: "Margaret Atwood" })
+
+    - Save your changes.
+- Test the Collection:
+    - Run your app (you can preview it in the Power Apps Studio).
+    - Check if the collection contains the record with the book details.
+    - If not, try creating a new collection with a different name and test again.
+Remember to replace the book details in the example with your own data. If you encounter any issues, feel free to ask for further assistance! 😊
+## You
+How can I concatenate a string with a variable taken from an inputbox in power apps?
+## Copilot
+Certainly! In Power Apps, you have a few options for concatenating strings with variables or input values:
+- Using $-Strings (String Interpolation):
+    - The new $-String syntax allows you to easily concatenate text strings with expressions (functions, formulas, or variables) inside curly braces.
+    - Example:
+
+$\"Hello {User().FullName}. The current date is {Today()}.\"
+
+This will display a message with the user's name and the current date.
+- Using the & Operator:
+    - You can join text strings using the & operator.
+    - Example:
+
+\"Hello my name is\" & User().FullName & \". The current date is\" & Today() & \".\"
+
+This approach is more readable during code review but requires extra typing.
+- Using the Concatenate Function:
+    - If you prefer a function-based approach, use the Concatenate function.
+    - Example:
+
+Concatenate(\"Hello my name is\", User().FullName, \". The current date is\", Today(), \".\")
+
+Each section of text or expression is supplied as a separate argument.
+Choose the method that best suits your preference and readability! 😊
+## You
+How can I concatenate a string ("Your work hours per day are: ") with a variable taken from an inputbox (TextBox2.Value) in power apps?
+## Copilot
+Certainly! To concatenate a string with a variable from an input box in Power Apps, follow these steps:
+- Create a Label or Text Control:
+    - Add a label or text control to your screen where you want to display the concatenated result.
+- Set the Text Property:
+    - Select the label or text control.
+    - In the Properties pane, find the Text property.
+    - Set the property to the following formula:
+
+"Your work hours per day are: " & TextBox2.Text
+
+Replace TextBox2 with the actual name of your input box control.
+- Test Your App:
+    - Run your app to see the concatenated result in the label or text control.
+This will display the combined string with the value from the input box. 😊

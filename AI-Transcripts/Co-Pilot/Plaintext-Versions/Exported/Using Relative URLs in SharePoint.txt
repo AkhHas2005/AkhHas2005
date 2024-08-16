@@ -1,0 +1,43 @@
+## You
+How I can I use the relative url of a webpage stored in the team documents section of sharepoint in a page stored in the pages section of sharepoint?
+## Copilot
+Certainly! When working with SharePoint, you can use relative URLs to link between different pages or resources. Here's how you can use relative URLs in your scenario:
+- Domain-Relative URL:
+    - A domain-relative URL begins with a forward slash (/) and specifies a complete path from the top-level website to the file name.
+    - For example: /sites/Web_Site/Lists/List_Title/AllItems.aspx.
+- Website-Relative URL:
+    - A website-relative URL is based on the address of a website object (SPWeb). It does not begin with a forward slash.
+    - For example: Lists/List_Title/AllItems.aspx.
+- URL Tokens:
+    - SharePoint supports tokens that you can use in URLs for various situations in development.
+    - These tokens can be used in custom actions, links on custom pages, and more.
+    - Some tokens are usable only in apps, so be aware of context-specific restrictions.
+    - For more details, refer to the URLs and tokens in SharePoint documentation.
+Remember to adjust the URLs based on your specific SharePoint setup. If you need further assistance, feel free to ask! 😊
+## You
+If my page is called EHM-Guides-(AI-Searchable).aspx and is stored in the site Children's System Support and my webpage I want to link is called index.html in the folder AI-Search in Documents, how can I link to it as a awebpage and not as a file?
+## Copilot
+To link to the webpage "index.html" stored in the "AI-Search" folder within the "Documents" section of your SharePoint site, you can create a hyperlink using the domain-relative URL. Here's how:
+- First, determine the domain-relative URL for your target page:
+    - If your SharePoint site is named "Children's System Support," the domain-relative URL would be: /sites/ChildrensSystemSupport/Documents/AI-Search/index.html.
+- Next, create a hyperlink on your "EHM-Guides-(AI-Searchable).aspx" page:
+    - Use an anchor tag (<a>) with the href attribute set to the domain-relative URL.
+    - Example: <a href="/sites/ChildrensSystemSupport/Documents/AI-Search/index.html">Link to AI-Search</a>
+This will create a clickable link to your webpage. Adjust the URL based on your specific SharePoint setup. Let me know if you need further assistance! 😊
+## You
+How can I upload a webpage to the web for free so that I can access it from a link?
+## Copilot
+Certainly! There are a few ways you can host a webpage for free and make it accessible via a link:
+- Static.app:
+    - Static.app offers free HTML website hosting. You can upload your HTML website archive using their drag-and-drop interface, and they'll take care of displaying it online.
+    - Your website will be up and running in moments, and they even include a free SSL certificate.
+- GitHub Pages:
+    - If your website is based on HTML, CSS, and JavaScript, you can use GitHub Pages to host it for free.
+    - Create a GitHub account, create a code repository, and upload your website files. GitHub Pages will automatically publish your site online.
+- FileZilla (FTP):
+    - If you have your own domain and hosting, you can use an FTP program like FileZilla to upload your website files.
+    - Connect to your hosting server using FTP credentials and upload your HTML files to the appropriate directory.
+- Canva's Website Builder:
+    - Canva offers a free website builder where you can publish your site with a my.canva.site domain or purchase a custom domain.
+    - Enjoy worry-free web hosting, SSL certification, and WHOIS privacy protection.
+Choose the option that best suits your needs, and you'll have your webpage accessible via a link in no time! 😊

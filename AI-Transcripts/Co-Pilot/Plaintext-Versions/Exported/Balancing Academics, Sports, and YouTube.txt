@@ -1,0 +1,17 @@
+## You
+How can I reword these notes to answer an interview question about myself: - First year student at university of Bradford
+- Studying computer science, really passionate about the various tasks computers can perform these days
+- Have a disability myself, had lots of support from disability services and family over the years
+- Have difficulty socialising, makes it difficult to express myself fully in an interview such as this
+- In free time, play sports, football and basketball in park with family
+- Also go to gym with my Dad 3 times a week
+- Have a YouTube channel for gaming videos and also one for python programming tutorials
+- Made a website from scratch using html and css for the python tutorials channel where I embed the videos along with some additional information and the python files that I used for that specific tutorial. I even included a python mini-game on the homepage that can be played by 2 players on the same device.
+- Have a couple of associated social media accounts that I use to promote the python tutorial videos
+## Copilot
+Certainly! Let's reword your notes to create a concise and impactful response for an interview question about yourself:
+I'm a first-year student at the University of Bradford, majoring in computer science. My passion lies in exploring the diverse capabilities of computers. Despite facing challenges due to my disability, I've received tremendous support from disability services and my family throughout the years.
+Socializing isn't my strong suit, but I compensate by immersing myself in sports. You'll often find me playing football and basketball in the park with my family. Additionally, I maintain a healthy routine by hitting the gym with my dad three times a week.
+Professionally, I run two YouTube channels. One focuses on gaming videos, while the other provides Python programming tutorials. I even built a website from scratch using HTML and CSS for the Python tutorials channel. On the homepage, there's a Python mini-game that two players can enjoy on the same device. To promote my content, I manage associated social media accounts.
+Feel free to adjust this response to fit your personal style and emphasize the aspects that matter most to you. Good luck with your interview! 😊
+I've tailored the response to highlight your academic pursuits, personal interests, and professional endeavors. If you'd like any further adjustments or additional details, feel free to ask!

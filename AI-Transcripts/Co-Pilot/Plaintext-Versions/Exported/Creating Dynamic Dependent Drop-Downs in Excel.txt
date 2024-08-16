@@ -1,0 +1,41 @@
+## You
+In excel, how can I choose a drop-down based on a dynamically changing list?
+## Copilot
+Certainly! To create a dynamic dependent drop-down list in Excel, you can use the new dynamic array functions available in Excel 365 and Excel 2021. Here's how:
+- Get items for the main drop-down list:
+    - Suppose you have a list of fruit names in column A. Use the UNIQUE function to extract unique fruit names from column A. For example:
+
+=UNIQUE(A3:A15)
+
+    - This formula goes into cell G3, and the results will spill into subsequent cells automatically.
+- Create the main drop-down:
+    - Select a cell where you want the primary drop-down to appear (e.g., D3).
+    - Go to the Data tab, click Data Validation in the Data Tools group.
+    - In the Data Validation dialog box:
+        - Under Allow, select List.
+        - In the Source box, enter the reference to the spill range output by the UNIQUE formula.
+Now, when you select a fruit from the main drop-down, the dependent drop-down will show relevant exporters based on your selection. Remember that this dynamic array approach works only in Excel 365 and Excel 2021. For older versions, you'll need to follow a different method. Let me know if you need further assistance! 😊
+## You
+How can I format text across multiple lines in one cell?
+## Copilot
+Certainly! You can format text across multiple lines in a single cell in Excel using the following methods:
+- Insert Line Breaks:
+    - Select the cell where you want to create multiple lines (e.g., Cell B5).
+    - In the formula bar, type your text and press Alt + Enter to add a line break within the same cell.
+    - Adjust the cell height by double-clicking the bottom bar of the corresponding row number to ensure both lines are visible.
+- Wrap Text:
+    - Select the cell (e.g., Cell B6).
+    - Go to the Home tab and click Wrap Text in the Alignment group.
+    - This will display the content on two lines within the cell.
+- Create a Line Break After a Specific Character:
+    - Insert a comma (", ") after the first part of your text (e.g., "John, Class 5").
+    - Press Ctrl + H to open the Find and Replace window.
+    - In the Find what box, enter a comma (", ").
+    - In the Replace with box, press Ctrl + J to represent a line break.
+    - Click Replace All and adjust the row height as needed.
+- Merge & Center (for two lines only):
+    - Type your text in two adjacent cells (e.g., A1 and B1).
+    - Select both cells, right-click, and choose Format Cells.
+    - In the Alignment tab, select Merge cells and Center across selection.
+    - This will create two lines within a single cell.
+Feel free to choose the method that best suits your needs! 😊

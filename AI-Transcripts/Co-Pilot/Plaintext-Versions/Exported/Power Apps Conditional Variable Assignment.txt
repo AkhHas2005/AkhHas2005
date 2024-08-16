@@ -1,0 +1,29 @@
+## You
+how can I write an if statement for a formula in power apps: I want the formula to set a variable called hours to Textbox2.value if the selected item in ComboBox1 is per day and if it's per week divide this value by 5?
+## Copilot
+Certainly! In Power Apps, you can use the If function to create conditional statements. Let's break down your requirement:
+- If the selected item in ComboBox1 is "per day," set the hours variable to Textbox2.Value.
+- If the selected item in ComboBox1 is "per week," divide Textbox2.Value by 5.
+Here's how you can write this in Power Apps:
+
+Set(hours,
+    If(ComboBox1.Selected.Value = "per day",
+        Textbox2.Value,
+        Textbox2.Value / 5
+    )
+)
+
+Explanation:
+- The If function checks the condition (whether the selected item is "per day").
+- If true, it assigns Textbox2.Value to the hours variable.
+- If false (i.e., "per week"), it divides Textbox2.Value by 5.
+Feel free to adjust the field names and values according to your specific app setup! 😊
+For more examples and details, you can refer to this tutorial.
+## You
+How can I declare/assign a new variable called hours?
+## Copilot
+Certainly! To declare and assign a new variable called hours in Power Apps, you can use the Set function. Here's how you can do it:
+
+Set(hours, 0)  // Initialize the variable with a default value (e.g., 0)
+
+Replace 0 with the appropriate initial value if needed. Now you can use the hours variable in your app! 😊
