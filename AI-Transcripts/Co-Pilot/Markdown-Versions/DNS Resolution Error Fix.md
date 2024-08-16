@@ -1,4 +1,4 @@
-# Marketing and Fundraising Intern Interview Questions
+# DNS Resolution Error Fix
 
 ## Me
 How can I resolve this error: Configuration is not authorised on pythonprogrammertutorials.me.
