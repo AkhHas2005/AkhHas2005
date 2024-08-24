@@ -6,7 +6,7 @@
 
 These are the apps that are currently planned, at the end all of the apps will be integrated together in the collection, more apps can be added or apps can be removed, first draft of list atm (24/8/24)
 
-- [x] AI programming assistant
+- [ ] AI programming assistant
 - [ ] Documents Directory AI summariser (with specific customisations)
 - [ ] General document summarisation AI
 - [ ] AI scheduling & calendar management system
