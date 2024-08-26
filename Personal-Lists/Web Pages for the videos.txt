@@ -1,0 +1,4 @@
+https://pythonprogrammertutorials.me/ShortTutorials/CaesarCipher.html
+https://pythonprogrammertutorials.me/Tutorials/GUICalc.html
+https://pythonprogrammertutorials.me/NumpyShowcase/VideoCode.html
+https://pythonprogrammertutorials.me/ShortTutorials/PatternPrinting.html
