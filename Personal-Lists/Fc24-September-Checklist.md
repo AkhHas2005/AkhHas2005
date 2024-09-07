@@ -21,10 +21,13 @@
 - [ ] 99 Silver Evo (Andy Carroll)
 - [ ] 96 Elliott Evo
 - [ ] 99 Gold Evo (Bajcetic)
-- [ ] Calafiori SBC
+- [x] Calafiori SBC
 - [x] Lahm SBC
 - [x] Raul SBC
 - [ ] 99 Messi SBC
 - [ ] Pacho SBC
 
-Subject to change, any changes listed below:
+Subject to change, any changes listed below:  
+
+[7/9/24 at 22:20]:
+- Calafiori SBC now completed on [RTG Account](#rtg-account)
