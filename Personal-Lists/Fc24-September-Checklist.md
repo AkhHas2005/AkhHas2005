@@ -27,4 +27,4 @@
 - [ ] 99 Messi SBC
 - [ ] Pacho SBC
 
-Feel free to let me know if you need any more adjustments!
+Subject to change, any changes listed below:
