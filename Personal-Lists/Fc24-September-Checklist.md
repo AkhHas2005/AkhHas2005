@@ -11,6 +11,7 @@
 - [ ] 99 Gold Evo (Keita)
 - [ ] 99 Zidane Evo
 - [x] Calafiori SBC
+- [ ] 99 Kimmich Evo
 
 ### RTG Account:
 - [ ] De Ligt SBC
@@ -26,8 +27,13 @@
 - [x] Raul SBC
 - [ ] 99 Messi SBC
 - [ ] Pacho SBC
+- [ ] 98 Maldini Evo
+- [ ] 99 Maguire Evo
 
 Subject to change, any changes listed below:  
 
-[7/9/24 at 22:20]:
+[7/9/24 at 22:20, 22:30]:
 - Calafiori SBC now completed on [RTG Account](#rtg-account)
+- 99 Kimmich Evo added on [Main Account](#main-account)
+- 99 Maguire Evo added on [RTG Account](#rtg-account)
+- 98 Maldini Evo added on [RTG Account](#rtg-account)
