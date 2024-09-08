@@ -29,6 +29,7 @@
 - [ ] Pacho SBC
 - [ ] 98 Maldini Evo
 - [ ] 99 Maguire Evo
+- [ ] 99 Clauss Evo
 
 Subject to change, any changes listed below:  
 
@@ -37,3 +38,6 @@ Subject to change, any changes listed below:
 - 99 Kimmich Evo added on [Main Account](#main-account)
 - 99 Maguire Evo added on [RTG Account](#rtg-account)
 - 98 Maldini Evo added on [RTG Account](#rtg-account)
+
+[8/9/24 at 16:32]:
+- 99 Clauss Evo added on [RTG Account](#rtg-account)
