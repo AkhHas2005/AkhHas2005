@@ -6,7 +6,7 @@
 - [x] De Ligt SBC ✖️ Expired 10/12 squads 😭
 - [x] 97 Skriniar Evo ✖️ Expired
 - [x] 98 Robertson Evo ✖️ Expired
-- [ ] 99 Silver Evo
+- [x] 99 Silver Evo
 - [ ] 94 Vini Evo
 - [ ] 99 Gold Evo (Keita)
 - [ ] 99 Zidane Evo
@@ -17,10 +17,10 @@
 ### RTG Account:
 - [x] De Ligt SBC ✖️ Expired 7/12 squads 😭
 - [x] Gullit SBC ✖️ PACKED HIM
-- [ ] Vieira SBC
+- [x] Vieira SBC
 - [x] 96 Thiago Evo ✖️ Expired
 - [x] 98 Robertson Evo
-- [ ] 99 Silver Evo (Andy Carroll)
+- [x] 99 Silver Evo (Andy Carroll) ✖️ Expired
 - [ ] 96 Elliott Evo
 - [ ] 99 Gold Evo (Bajcetic)
 - [x] Calafiori SBC
@@ -31,6 +31,7 @@
 - [ ] 98 Maldini Evo
 - [ ] 99 Maguire Evo
 - [ ] 99 Clauss Evo
+- [ ] 99 Konate Evo
 
 Subject to change, any changes listed below:  
 
@@ -52,3 +53,9 @@ Subject to change, any changes listed below:
 - 98 Robertson Evo Completed on [RTG Account](#rtg-account)
 - Pacho SBC Completed on [RTG Account](#rtg-account)
 - De Ligt SBC Expired 7/12 squads on [RTG Account](#rtg-account)
+
+[15/9/24 at 20:37, 20:40]:
+- 99 Konate Evo added on [RTG Account](#rtg-account)
+- 99 Silver Evo completed on [Main Account](#main-account)
+- Vieira SBC completed on [RTG Account](#rtg-account)
+- 99 Silver Evo (Andy Carroll) ✖️ Expired on [RTG Account](#rtg-account)
