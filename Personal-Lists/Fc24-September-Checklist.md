@@ -7,12 +7,12 @@
 - [x] 97 Skriniar Evo ✖️ Expired
 - [x] 98 Robertson Evo ✖️ Expired
 - [x] 99 Silver Evo
-- [ ] 94 Vini Evo
+- [x] 94 Vini Evo
 - [ ] 99 Gold Evo (Keita)
 - [ ] 99 Zidane Evo
 - [x] Calafiori SBC
 - [ ] 99 Kimmich Evo
-- [ ] 99 Osario Evo
+- [ ] 99 Osorio Evo
 
 ### RTG Account:
 - [x] De Ligt SBC ✖️ Expired 7/12 squads 😭
@@ -21,7 +21,7 @@
 - [x] 96 Thiago Evo ✖️ Expired
 - [x] 98 Robertson Evo
 - [x] 99 Silver Evo (Andy Carroll) ✖️ Expired
-- [ ] 96 Elliott Evo
+- [x] 96 Elliott Evo ✖️ Expired
 - [ ] 99 Gold Evo (Bajcetic)
 - [x] Calafiori SBC
 - [x] Lahm SBC
@@ -32,6 +32,7 @@
 - [ ] 99 Maguire Evo
 - [ ] 99 Clauss Evo
 - [ ] 99 Konate Evo
+- [ ] 97 Larouci Evo
 
 Subject to change, any changes listed below:  
 
@@ -59,3 +60,8 @@ Subject to change, any changes listed below:
 - 99 Silver Evo completed on [Main Account](#main-account)
 - Vieira SBC completed on [RTG Account](#rtg-account)
 - 99 Silver Evo (Andy Carroll) ✖️ Expired on [RTG Account](#rtg-account)
+
+[25/9/24 at 07:08, 07:10]:
+- 94 Vini Evo completed on [Main Account](#main-account)
+- 97 Larouci Evo added on [RTG Account](#rtg-account)
+- 96 Elliott Evo ✖️ Expired on [RTG Account](#rtg-account)
