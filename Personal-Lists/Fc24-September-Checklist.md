@@ -8,7 +8,7 @@
 - [x] 98 Robertson Evo ✖️ Expired
 - [x] 99 Silver Evo
 - [x] 94 Vini Evo
-- [ ] 99 Gold Evo (Keita)
+- [x] 99 Gold Evo (Keita)
 - [ ] 99 Zidane Evo
 - [x] Calafiori SBC
 - [ ] 99 Kimmich Evo
@@ -22,17 +22,17 @@
 - [x] 98 Robertson Evo
 - [x] 99 Silver Evo (Andy Carroll) ✖️ Expired
 - [x] 96 Elliott Evo ✖️ Expired
-- [ ] 99 Gold Evo (Bajcetic)
+- [x] 99 Gold Evo (Bajcetic)
 - [x] Calafiori SBC
 - [x] Lahm SBC
 - [x] Raul SBC
-- [ ] 99 Messi SBC
+- [x] 99 Messi SBC
 - [x] Pacho SBC
 - [ ] 98 Maldini Evo
 - [ ] 99 Maguire Evo
 - [ ] 99 Clauss Evo
-- [ ] 99 Konate Evo
-- [ ] 97 Larouci Evo
+- [x] 99 Konate Evo
+- [x] 97 Larouci Evo ✖️ Expired
 
 Subject to change, any changes listed below:  
 
@@ -59,9 +59,16 @@ Subject to change, any changes listed below:
 - 99 Konate Evo added on [RTG Account](#rtg-account)
 - 99 Silver Evo completed on [Main Account](#main-account)
 - Vieira SBC completed on [RTG Account](#rtg-account)
+- 99 Messi SBC completed on [RTG Account](#rtg-account)
 - 99 Silver Evo (Andy Carroll) ✖️ Expired on [RTG Account](#rtg-account)
 
 [25/9/24 at 07:08, 07:10]:
 - 94 Vini Evo completed on [Main Account](#main-account)
 - 97 Larouci Evo added on [RTG Account](#rtg-account)
 - 96 Elliott Evo ✖️ Expired on [RTG Account](#rtg-account)
+
+[29/9/24 at 10:53, 10:56]:
+- 99 Gold Evo (Keita) completed on [Main Account](#main-account)
+- 99 Gold Evo (Bajcetic) completed on [RTG Account](#rtg-account)
+- 97 Larouci Evo ✖️ Expired on [RTG Account](#rtg-account)
+- 99 Konate Evo completed on [RTG Account](#rtg-account)
