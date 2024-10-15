@@ -9,20 +9,20 @@ Choose an option from the menu below:
 1. Enqueue
 2. Dequeue
 3. View front
-4. Quit
-1
-You have chosen to enqueue an element
+4. Quit  
+1  
+You have chosen to enqueue an element  
 
-Element to enqueue: 
-S
-Element enqueued successfully
-Choose an option from the menu below:
+Element to enqueue:  
+S  
+Element enqueued successfully  
+Choose an option from the menu below:  
 1. Enqueue
 2. Dequeue
 3. View front
-4. Quit
-3
-You have chosen to view the front element of the queue
+4. Quit  
+3  
+You have chosen to view the front element of the queue  
 
 Element that is at the front is: S
 Choose an option from the menu below:
