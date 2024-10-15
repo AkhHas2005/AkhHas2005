@@ -9,7 +9,8 @@ Choose an option from the menu below:
 1. Enqueue
 2. Dequeue
 3. View front
-4. Quit  
+4. Quit
+
 1  
 You have chosen to enqueue an element  
 
@@ -20,201 +21,222 @@ Choose an option from the menu below:
 1. Enqueue
 2. Dequeue
 3. View front
-4. Quit  
+4. Quit
+
 3  
 You have chosen to view the front element of the queue  
 
-Element that is at the front is: S
+Element that is at the front is: S  
 Choose an option from the menu below:
 1. Enqueue
 2. Dequeue
 3. View front
 4. Quit
-1
-You have chosen to enqueue an element
 
-Element to enqueue: 
-J
-Element enqueued successfully
-Choose an option from the menu below:
-1. Enqueue
-2. Dequeue
-3. View front
-4. Quit
-3
-You have chosen to view the front element of the queue
+1  
+You have chosen to enqueue an element  
 
-Element that is at the front is: S
+Element to enqueue:  
+J  
+Element enqueued successfully  
 Choose an option from the menu below:
 1. Enqueue
 2. Dequeue
 3. View front
 4. Quit
-1
-You have chosen to enqueue an element
 
-Element to enqueue: 
-G
-Element enqueued successfully
-Choose an option from the menu below:
-1. Enqueue
-2. Dequeue
-3. View front
-4. Quit
-2
-You have chosen to dequeue an element
+3  
+You have chosen to view the front element of the queue  
 
-Element that was dequeued: S
+Element that is at the front is: S  
 Choose an option from the menu below:
 1. Enqueue
 2. Dequeue
 3. View front
 4. Quit
-3
-You have chosen to view the front element of the queue
 
-Element that is at the front is: J
-Choose an option from the menu below:
-1. Enqueue
-2. Dequeue
-3. View front
-4. Quit
-2
-You have chosen to dequeue an element
+1  
+You have chosen to enqueue an element  
 
-Element that was dequeued: J
+Element to enqueue:  
+G  
+Element enqueued successfully  
 Choose an option from the menu below:
 1. Enqueue
 2. Dequeue
 3. View front
 4. Quit
-3
-You have chosen to view the front element of the queue
 
-Element that is at the front is: G
-Choose an option from the menu below:
-1. Enqueue
-2. Dequeue
-3. View front
-4. Quit
-1
-You have chosen to enqueue an element
+2  
+You have chosen to dequeue an element  
 
-Element to enqueue: 
-C
-Element enqueued successfully
+Element that was dequeued: S  
 Choose an option from the menu below:
 1. Enqueue
 2. Dequeue
 3. View front
 4. Quit
-2
-You have chosen to dequeue an element
 
-Element that was dequeued: G
-Choose an option from the menu below:
-1. Enqueue
-2. Dequeue
-3. View front
-4. Quit
-3
-You have chosen to view the front element of the queue
+3  
+You have chosen to view the front element of the queue  
 
-Element that is at the front is: C
+Element that is at the front is: J  
 Choose an option from the menu below:
 1. Enqueue
 2. Dequeue
 3. View front
 4. Quit
-1
-You have chosen to enqueue an element
 
-Element to enqueue: 
-B
-Element enqueued successfully
-Choose an option from the menu below:
-1. Enqueue
-2. Dequeue
-3. View front
-4. Quit
-3
-You have chosen to view the front element of the queue
+2  
+You have chosen to dequeue an element  
 
-Element that is at the front is: C
+Element that was dequeued: J  
 Choose an option from the menu below:
 1. Enqueue
 2. Dequeue
 3. View front
 4. Quit
-1
-You have chosen to enqueue an element
 
-Element to enqueue: 
-H
-Element enqueued successfully
-Choose an option from the menu below:
-1. Enqueue
-2. Dequeue
-3. View front
-4. Quit
-1
-You have chosen to enqueue an element
+3  
+You have chosen to view the front element of the queue  
 
-Element to enqueue: 
-E
-Element enqueued successfully
+Element that is at the front is: G  
 Choose an option from the menu below:
 1. Enqueue
 2. Dequeue
 3. View front
 4. Quit
-3
-You have chosen to view the front element of the queue
 
-Element that is at the front is: C
-Choose an option from the menu below:
-1. Enqueue
-2. Dequeue
-3. View front
-4. Quit
-2
-You have chosen to dequeue an element
+1  
+You have chosen to enqueue an element  
 
-Element that was dequeued: C
+Element to enqueue:  
+C  
+Element enqueued successfully  
 Choose an option from the menu below:
 1. Enqueue
 2. Dequeue
 3. View front
 4. Quit
-3
-You have chosen to view the front element of the queue
 
-Element that is at the front is: B
-Choose an option from the menu below:
-1. Enqueue
-2. Dequeue
-3. View front
-4. Quit
-1
-You have chosen to enqueue an element
+2  
+You have chosen to dequeue an element  
 
-Element to enqueue: 
-M
-Element enqueued successfully
+Element that was dequeued: G  
 Choose an option from the menu below:
 1. Enqueue
 2. Dequeue
 3. View front
 4. Quit
-3
-You have chosen to view the front element of the queue
 
-Element that is at the front is: B
+3  
+You have chosen to view the front element of the queue  
+
+Element that is at the front is: C  
 Choose an option from the menu below:
 1. Enqueue
 2. Dequeue
 3. View front
 4. Quit
-4
-Thanks for using this program
+
+1  
+You have chosen to enqueue an element  
+
+Element to enqueue:   
+B  
+Element enqueued successfully  
+Choose an option from the menu below:
+1. Enqueue
+2. Dequeue
+3. View front
+4. Quit
+
+3  
+You have chosen to view the front element of the queue  
+
+Element that is at the front is: C  
+Choose an option from the menu below:
+1. Enqueue
+2. Dequeue
+3. View front
+4. Quit
+
+1  
+You have chosen to enqueue an element  
+
+Element to enqueue:  
+H  
+Element enqueued successfully  
+Choose an option from the menu below:
+1. Enqueue
+2. Dequeue
+3. View front
+4. Quit
+
+1  
+You have chosen to enqueue an element  
+
+Element to enqueue:  
+E  
+Element enqueued successfully  
+Choose an option from the menu below:  
+1. Enqueue
+2. Dequeue
+3. View front
+4. Quit
+
+3  
+You have chosen to view the front element of the queue  
+
+Element that is at the front is: C  
+Choose an option from the menu below:  
+1. Enqueue
+2. Dequeue
+3. View front
+4. Quit
+
+2  
+You have chosen to dequeue an element  
+
+Element that was dequeued: C  
+Choose an option from the menu below:  
+1. Enqueue
+2. Dequeue
+3. View front
+4. Quit
+
+3  
+You have chosen to view the front element of the queue  
+
+Element that is at the front is: B  
+Choose an option from the menu below:  
+1. Enqueue
+2. Dequeue
+3. View front
+4. Quit
+
+1  
+You have chosen to enqueue an element  
+
+Element to enqueue:  
+M  
+Element enqueued successfully  
+Choose an option from the menu below:  
+1. Enqueue
+2. Dequeue
+3. View front
+4. Quit
+
+3  
+You have chosen to view the front element of the queue  
+
+Element that is at the front is: B  
+Choose an option from the menu below:  
+1. Enqueue
+2. Dequeue
+3. View front
+4. Quit
+
+4  
+Thanks for using this program  
 Goodbye...
