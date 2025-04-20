@@ -1,4 +1,4 @@
-# Template Co-Pilot conversation
+# Adding Node.js and npm to PATH
 
 ## Me
 how can i add node.js and npm to path after installing teh pre-built binaries, they folder for the installation is stored at the location: C:\Users\HasanAkh1\Documents\node-v20.16.0-win-x64
