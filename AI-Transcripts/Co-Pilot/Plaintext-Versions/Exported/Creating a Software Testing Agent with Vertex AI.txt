@@ -1,0 +1,100 @@
+## You
+In Google Cloud Agent Builder, I want to create an agent that can help me with software program testing. I want the agent to let me upload a document (pdf or microsoft word), upload a screenshot of the actual outcome, compare the text extracted from the screenshot with the text extracted from the document and provide a summary of how the test went based on the compared information. How would I go about doing this?
+## Copilot
+[1]: https://cloud.google.com/blog/products/ai-machine-learning/build-generative-ai-experiences-with-vertex-ai-agent-builder
+[2]: https://cloud.google.com/docs/get-started/aws-azure-gcp-service-comparison
+[3]: https://cloud.google.com/generative-ai-app-builder/docs/builder-apis
+[4]: https://cloud.google.com/generative-ai-app-builder/docs/introduction
+
+Certainly! To achieve this, you can leverage Vertex AI Agent Builder from Google Cloud. Here's how:
+
+1. Vertex AI Agent Builder Overview:
+   - Vertex AI Agent Builder allows developers to create and deploy enterprise-ready generative AI (gen AI) experiences.
+   - It combines Vertex AI Search and Conversation products, along with enhanced tools for developers[^1^][1].
+   - You can build gen AI agents using different tools based on your expertise level:
+     - No-code console: Use Google's latest Gemini models to build AI agents without writing code.
+     - Open-source frameworks: For more advanced users, frameworks like LangChain on Vertex AI are available.
+   - Security and enterprise controls are built-in, making it suitable for production-ready experiences.
+
+2. Specific Steps for Your Use Case:
+   - To achieve your specific use case of comparing text extracted from a document and a screenshot:
+     - Upload Document: Allow users to upload a document (PDF or Word).
+     - Upload Screenshot: Enable users to upload a screenshot of the actual outcome.
+     - Text Extraction: Extract text from both the document and the screenshot.
+     - Comparison: Compare the extracted text.
+     - Summary: Provide a summary based on the comparison.
+
+3. Grounding System and APIs:
+   - Vertex AI Agent Builder offers grounding systems for gen AI outputs:
+     - Vertex AI Search: Out-of-the-box grounding system.
+     - RAG (Retrieval Augmented Generation) APIs: For document layout processing, ranking, retrieval, and checks on grounding outputs.
+     - Vector Search: Build embeddings-based agents for accurate model responses.
+
+4. Customer Examples:
+   - ADT is building an agent to help customers select and set up home security systems.
+   - Intercontinental Hotels Group will launch a gen AI-powered travel planning capability.
+   - NewsCorp uses Vertex AI to search data across global sources and news articles.
+   - Mayo Clinic researchers search clinical data using Vertex AI Agent Builder.
+   - Vodafone queries documents and understands commercial terms across contracts[^1^][1].
+
+Remember, you can start with the no-code console and explore the capabilities of Vertex AI Agent Builder to create your custom solution for software program testing. 🚀[^1^][1] [^2^][4]
+## You
+So what would I do for the first Agent, the Test Query Processor that has the goal of handling the query of the user, a question for testing a software application?
+## Copilot
+For the Test Query Processor, which handles user queries related to testing software applications, you can follow these steps:
+
+1. Define Intent and Entities:
+   - Start by defining the intent of the user query. What kind of testing-related questions do you expect users to ask?
+   - Identify relevant entities (e.g., software features, test scenarios, test types).
+
+2. Create Training Data:
+   - Collect a diverse set of training examples for your intent.
+   - Annotate the training data with relevant entities.
+
+3. Build an Intent Classifier:
+   - Use machine learning techniques (such as natural language understanding models) to classify user queries into relevant intents.
+   - Train the classifier using your annotated training data.
+
+4. Entity Recognition:
+   - Implement entity recognition to extract relevant information from user queries.
+   - For example, if a user asks about testing a specific feature, extract the feature name as an entity.
+
+5. Response Generation:
+   - Based on the intent and extracted entities, generate appropriate responses.
+   - You can use templates or more advanced techniques like language models.
+
+6. Testing and Iteration:
+   - Test your query processor with various user queries.
+   - Continuously improve the model by iterating on the training data and fine-tuning the classifier.
+
+Remember that the effectiveness of your Test Query Processor depends on the quality of your training data and the accuracy of your intent classification. Regularly monitor and update the system to handle new queries effectively! 🌟 
+## You
+How do I fill out the gioal and instruction sections for this Test Query Processor agent in Vertex AI Agent Builder?
+## Copilot
+[1]: https://www.youtube.com/watch?v=H6nUoszwcrM
+[2]: https://www.youtube.com/watch?v=-3Olw-C4FN4
+[3]: https://www.youtube.com/watch?v=pZKpAai7stE
+[4]: https://cloud.google.com/blog/products/ai-machine-learning/build-generative-ai-experiences-with-vertex-ai-agent-builder
+[5]: https://www.deeplearning.ai/the-batch/all-about-googles-vertex-ai-agent-builder/
+[6]: https://www.cloudskillsboost.google/focuses/93214?parent=catalog
+[7]: https://cloud.google.com/dialogflow/vertex/docs/concept/examples
+[8]: https://github.com/architecturebytes/vertex-ai-agents
+
+Certainly! When setting up your Test Query Processor agent in Vertex AI Agent Builder, you'll define the goal and instructions. Here's how:
+
+1. Goal:
+   - The goal describes the purpose or role of your agent. For example:
+     - "You are a helpful assistant. Return your responses in markdown format."
+     - "Provide software testing guidance and answer user queries."
+   - Keep it concise and aligned with your agent's function.
+
+2. Instructions:
+   - Instructions guide your agent's behavior. They can be simple or detailed.
+   - For example:
+     - "Greet the user, then ask how you can help them today."
+     - "Handle software testing questions related to test scenarios, test types, and features."
+   - Be clear and specific about the expected interactions.
+
+Remember, a well-defined goal and clear instructions will ensure your Test Query Processor performs effectively! 🌟 [^1^][5]
+
+*End of this Conversation*

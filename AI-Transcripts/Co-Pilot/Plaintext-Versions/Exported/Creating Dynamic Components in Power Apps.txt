@@ -1,0 +1,37 @@
+## You
+In power apps, how can I create a component when a button is pressed, is there any way to do this or do I have
+to create all teh components first and then I can unhide them when the button is clicked?
+## Copilot
+[1]: https://www.youtube.com/watch?v=Ldy0NJy2EKE
+[2]: https://www.youtube.com/watch?v=REN93Y-kME8
+[3]: https://www.youtube.com/watch?v=ZiNWh4mTO2c
+[4]: https://www.matthewdevaney.com/power-apps-button-with-icon-and-text/
+[5]: https://www.matthewdevaney.com/the-complete-power-apps-modern-controls-guide/power-apps-button-modern-controls/
+[6]: https://www.m365princess.com/blogs/build-split-button-component-power-apps/
+[7]: https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/controls/modern-controls/modern-control-button
+
+Certainly! In Power Apps, you can create a component that responds to a button press. Here are a few approaches:
+
+1. Button Control with OnSelect Property:
+   - Add a button control to your app.
+   - Set its OnSelect property to execute the desired action when the button is pressed[^1^][5].
+   - For example, you can use the following formula in the OnSelect property:
+     
+     Set(varShowMenu, false);
+     
+   - Click on the button to trigger the action.
+
+2. Custom Component with Behavioral Properties:
+   - Create a custom component (canvas component) that encapsulates your desired behavior.
+   - Add properties to the component (e.g., onCancel, onSubmit).
+   - Set the OnSelect property of buttons within the component to the corresponding property value.
+   - Use the component in your main screen and update the property values to control visibility or behavior[^2^][3].
+
+3. Split Button Component:
+   - Build a split button component (e.g., cmp_SplitButton).
+   - Add a main button (btn_main) with an OnSelect property that calls cmp_SplitButton.OnSelect().
+   - This approach allows you to determine if the button was selected in your app[^3^][6].
+
+Remember to adapt these approaches based on your specific requirements. Feel free to explore other options as well! 😊
+
+*End of this Conversation*

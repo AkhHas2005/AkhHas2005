@@ -1,0 +1,140 @@
+## You
+how can I use componengts from component linbraries in my power app in August 2024
+## Copilot
+[1]: https://www.youtube.com/watch?v=8Sdx7baJEuU
+[2]: https://www.youtube.com/watch?v=tVGhns8-hLc
+[3]: https://www.youtube.com/watch?v=MQGqHwZdUes
+[4]: https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/component-library
+[5]: https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/component-library-alm
+[6]: https://www.matthewdevaney.com/make-a-power-apps-component-library-to-share-and-reuse-components/
+[7]: https://www.bulb.digital/blog/reuse-components-across-powerapps-with-a-component-library
+
+Certainly! To use components from a component library in your Power App, follow these steps:
+
+1. Create a Component Library:
+   - Go to Power Apps and select More from the left navigation.
+   - Choose Component libraries from the App enhancements section.
+   - Create a new component library or edit an existing one.
+
+2. Create Components:
+   - Inside the component library, create the components you want to reuse. These components can be controls, UI elements, or custom functionality.
+
+3. Import Components into Your App:
+   - Create a new app (or open an existing one for editing).
+   - Click the Insert tab in the left menu.
+   - Select Get more components.
+   - Choose the component library you created and import the desired components[^1^][4].
+
+4. Add Components to Your App:
+   - Once imported, you can add the components to any screen in your app.
+   - Any updates to the component definitions in the library will prompt you to review and incorporate the changes when you open the app for editing[^2^][5].
+
+Remember that component libraries are the recommended way to reuse components across apps. Happy building! 😊
+## You
+I am using power apps in teams and there is no "get more components" button, how do I use the components from my compoennt library?
+## Copilot
+[1]: https://www.youtube.com/watch?v=8Sdx7baJEuU
+[2]: https://www.youtube.com/watch?v=tVGhns8-hLc
+[3]: https://www.youtube.com/watch?v=MQGqHwZdUes
+[4]: https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/component-library
+[5]: https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/component-library-alm
+[6]: https://www.matthewdevaney.com/make-a-power-apps-component-library-to-share-and-reuse-components/
+[7]: https://www.bulb.digital/blog/reuse-components-across-powerapps-with-a-component-library
+
+My apologies for any confusion! In Power Apps within Teams, the process for using components from a component library is slightly different. Here's how you can do it:
+
+1. Create a Component Library:
+   - Go to Power Apps within Teams.
+   - Click on the Insert tab in the left menu.
+   - Select Component libraries.
+   - Create a new component library or edit an existing one.
+
+2. Import Components into Your App:
+   - Create a new app (or open an existing one for editing) within Teams.
+   - Click the Insert tab.
+   - Instead of "Get more components," you'll find the component library directly in the list.
+   - Import the desired components from the library.
+
+3. Add Components to Your App:
+   - Once imported, you can add the components to any screen in your app.
+   - Any updates to the component definitions in the library will prompt you to review and incorporate the changes when you open the app for editing[^1^][5].
+
+Remember that component libraries are the recommended way to reuse components across apps. Happy building! 😊
+## You
+how can I export a canvas app so that I can import it in to powedr apps as a zip package file?
+## Copilot
+[1]: https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/export-import-app
+[2]: https://carldesouza.com/how-to-export-and-import-canvas-apps-msapp-and-zip-formats/
+[3]: https://github.com/MicrosoftDocs/powerapps-docs/blob/main/powerapps-docs/maker/canvas-apps/export-import-app.md
+
+Certainly! To export a canvas app as a zip package file and import it into Power Apps, follow these steps:
+
+1. Sign in to Power Apps.
+2. Select Apps from the left pane.
+3. Choose the app that you want to export.
+4. Click Export Package.
+5. Provide a package Name and Description for your exported app package.
+
+The exported package will be in the .zip file format, containing all the necessary resources for your canvas app. You can then import this package into another environment within Power Apps[^1^][1]. Happy app building! 😊
+## You
+How can I import from compoennt libraries if my component library was created in power apps in teams but it won't show when I try to "get a component"?
+## Copilot
+[1]: https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/component-library
+[2]: https://bing.com/search?q=import+component+library+Power+Apps+Teams
+[3]: https://www.matthewdevaney.com/make-a-power-apps-component-library-to-share-and-reuse-components/
+[4]: https://learn.microsoft.com/en-us/power-apps/maker/data-platform/import-update-export-solutions
+[5]: https://kumopartners.com/components-import-guide/
+
+Certainly! If your component library was created in Power Apps within Teams and you're unable to see it when trying to "get a component," follow these steps:
+
+1. Create an App:
+   - Go to Power Apps and create a new app (or edit an existing one).
+
+2. Enable Components:
+   - Make sure the Components feature is turned on for your app.
+   - Under the Insert tab, select Components.
+
+3. Import Components:
+   - Click Import Component.
+   - You'll be presented with a wizard to either import a component from another app or upload a component file.
+   - Choose the option that suits your needs (import from your component library or upload your own component).
+
+4. Verify Components:
+   - Once successfully imported, you'll see the Screens and Components sections in the left-hand tree view.
+   - Your component library components should now be available for use in your app.
+
+Remember that component libraries are the recommended way to reuse components across apps. Happy building! 😊[^1^][2]
+## You
+How can I save my component library files to the cloud and then insert then in power apps?
+## Copilot
+[1]: https://www.youtube.com/watch?v=8Sdx7baJEuU
+[2]: https://www.youtube.com/watch?v=tVGhns8-hLc
+[3]: https://www.youtube.com/watch?v=Mf5LXlHnKr8
+[4]: https://www.matthewdevaney.com/make-a-power-apps-component-library-to-share-and-reuse-components/
+[5]: https://www.matthewdevaney.com/power-apps-easiest-way-to-upload-files-to-a-sharepoint-document-library/
+[6]: https://www.powerapps911.com/post/how-to-use-power-apps-to-upload-a-file
+[7]: https://www.bulb.digital/blog/reuse-components-across-powerapps-with-a-component-library
+
+Certainly! To save your component library files and use them in Power Apps, follow these steps:
+
+1. Create a Component Library:
+   - Go to Power Apps and navigate to the Apps section.
+   - Choose Component Libraries and create a new component library.
+   - Give it a name and click Create.
+
+2. Add Components to the Library:
+   - Inside the component library, create the components you want to reuse.
+   - These components can be controls, UI elements, or custom functionality.
+
+3. Import Components into Your App:
+   - Create a new app (or open an existing one) in Power Apps.
+   - Click the Insert tab and select Get More Components.
+   - Choose your component library and import the desired components.
+
+4. Use Components in Your App:
+   - Once imported, you can add the components to any screen in your app.
+   - Any updates to the component definitions in the library will prompt you to review and incorporate the changes when you open the app for editing[^1^][1].
+
+Remember that component libraries are a powerful way to reuse components across apps. Happy building! 😊
+
+*End of this Conversation*
