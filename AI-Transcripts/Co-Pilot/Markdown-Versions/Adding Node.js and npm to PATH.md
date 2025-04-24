@@ -10,13 +10,13 @@ how can i add node.js and npm to path after installing teh pre-built binaries, t
 [4]: https://www.npmjs.com/package/prebuild-install ""
 [5]: https://stackoverflow.com/questions/77509999/download-pre-built-binaries-post-npm-package-installation ""
 
-Certainly! To add Node.js and npm to your system's PATH after installing the pre-built binaries, you have a couple of options:
+Certainly! To add [Node.js](https://Node.js) and npm to your system's PATH after installing the pre-built binaries, you have a couple of options:
 
 1. **Using GUI (Graphical User Interface):**
    - Locate the "nodejs" directory within the "Program Files" folder (for 64-bit mode) or inside the "Program Files (x86)" folder (for 32-bit mode).
    - Copy the directory path where the "node.exe" file is located.
    - Open the Environment Variables settings by searching for "env" in the Start Menu, selecting "Edit the system environment variables," and then clicking "Environment Variables."
-   - Under "System variables," find and select the "Path" variable, click "Edit," and add the Node.js installation path.
+   - Under "System variables," find and select the "Path" variable, click "Edit," and add the [Node.js](https://Node.js) installation path.
    - Click "OK" on each open window to apply the changes, and then restart the command line.
    - Verify the Node installation using `node -v`.
 
