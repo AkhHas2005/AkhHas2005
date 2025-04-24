@@ -35,20 +35,20 @@ The error message you're encountering indicates an issue with proxy authenticati
 
 Remember to replace placeholders with your actual values. If none of these steps work, consider checking your network configuration or contacting your IT department for further assistance¹². Good luck! 🚀
 
-Source: Conversation with Copilot, 8/16/2024 [actual date unknown]
-(1) git returns http error 407 from proxy after CONNECT. https://stackoverflow.com/questions/24907140/git-returns-http-error-407-from-proxy-after-connect.
-(2) unable to access received http code 407 github desktop #13330. https://github.com/desktop/desktop/issues/13330.
-(3) Unable to connect to git remote repository - Stack Overflow. https://stackoverflow.com/questions/24543372/unable-to-connect-to-git-remote-repository.
-(4) Cannot log in to github desktop while working behind a proxy. https://github.com/desktop/desktop/issues/10635.
-(5) github - Git through a Proxy. What is causing the 407 error when .... https://stackoverflow.com/questions/8561671/git-through-a-proxy-what-is-causing-the-407-error-when-cloning.
-(6) undefined. https://bing.com/search?q=.
-(7) undefined. https://github.com/someUser/someRepo.git.
-(8) undefined. https://username@bitbucket.org/sacgf/x.git/.
-(9) fatal: unable to access 'https://github.com/xxx/xxx.git/': CONNECT .... https://stackoverflow.com/questions/77103474/fatal-unable-to-access-https-github-com-xxx-xxx-git-connect-tunnel-failed.
-(10) undefined. http://github.com/project/project.git.
-(11) undefined. http://github.com/project/project.git/info/refs.
-(12) undefined. http://www.cloudforge.com.
-(13) undefined. https://github.com/xxx/xxx.git/.  
+Source: Conversation with Copilot, 8/16/2024 [actual date Monday, Jul 22]  
+(1) [git returns http error 407 from proxy after CONNECT.](https://stackoverflow.com/questions/24907140/git-returns-http-error-407-from-proxy-after-connect)  
+(2) [unable to access received http code 407 github desktop #13330.](https://github.com/desktop/desktop/issues/13330)  
+(3) [Unable to connect to git remote repository - Stack Overflow](https://stackoverflow.com/questions/24543372/unable-to-connect-to-git-remote-repository)  
+(4) [Cannot log in to github desktop while working behind a proxy.](https://github.com/desktop/desktop/issues/10635)  
+(5) [github - Git through a Proxy. What is causing the 407 error when ....](https://stackoverflow.com/questions/8561671/git-through-a-proxy-what-is-causing-the-407-error-when-cloning)  
+(6) https://bing.com/search?q=.  
+(7) https://github.com/someUser/someRepo.git.  
+(8) https://username@bitbucket.org/sacgf/x.git/.  
+(9) [fatal: unable to access 'https://github.com/xxx/xxx.git/': CONNECT ....](https://stackoverflow.com/questions/77103474/fatal-unable-to-access-https-github-com-xxx-xxx-git-connect-tunnel-failed)  
+(10) http://github.com/project/project.git.  
+(11) http://github.com/project/project.git/info/refs.  
+(12) http://www.cloudforge.com.  
+(13) https://github.com/xxx/xxx.git/.  
 
 ## Me
 What proxy and port numbers would I use for this command: Cloning into 'C:\Users\HasanAkh1\Documents\GitHub\BCFT-AI'...
@@ -84,17 +84,17 @@ To resolve the "HTTP code 407" error when cloning a Git repository through a pro
 
 Remember to replace placeholders with your actual values. If none of these steps work, consider checking your network configuration or contacting your IT department for further assistance¹². Good luck! 🚀
 
-Source: Conversation with Copilot, 8/16/2024 [actual date unknown]
-(1) git returns http error 407 from proxy after CONNECT. https://stackoverflow.com/questions/24907140/git-returns-http-error-407-from-proxy-after-connect.
-(2) unable to access received http code 407 github desktop #13330. https://github.com/desktop/desktop/issues/13330.
-(3) I am failing to clone a git repo when behind a proxy. https://unix.stackexchange.com/questions/9551/i-am-failing-to-clone-a-git-repo-when-behind-a-proxy.
-(4) fatal: unable to access 'https://github.com/xxx/xxx.git/': CONNECT .... https://stackoverflow.com/questions/77103474/fatal-unable-to-access-https-github-com-xxx-xxx-git-connect-tunnel-failed.
-(5) github - Git through a Proxy. What is causing the 407 error when .... https://stackoverflow.com/questions/8561671/git-through-a-proxy-what-is-causing-the-407-error-when-cloning.
-(6) undefined. https://bing.com/search?q=.
-(7) undefined. https://github.com/someUser/someRepo.git.
-(8) undefined. https://username@bitbucket.org/sacgf/x.git/.
-(9) undefined. https://github.com/xxx/xxx.git/.
-(10) undefined. http://github.com/project/project.git/info/refs.  
+Source: Conversation with Copilot, 8/16/2024 [actual date Monday, Jul 22]  
+(1) [git returns http error 407 from proxy after CONNECT](https://stackoverflow.com/questions/24907140/git-returns-http-error-407-from-proxy-after-connect)  
+(2) [unable to access received http code 407 github desktop #13330.](https://github.com/desktop/desktop/issues/13330)  
+(3) [I am failing to clone a git repo when behind a proxy.](https://unix.stackexchange.com/questions/9551/i-am-failing-to-clone-a-git-repo-when-behind-a-proxy)  
+(4) [fatal: unable to access 'https://github.com/xxx/xxx.git/': CONNECT ....](https://stackoverflow.com/questions/77103474/fatal-unable-to-access-https-github-com-xxx-xxx-git-connect-tunnel-failed)  
+(5) [github - Git through a Proxy. What is causing the 407 error when ....](https://stackoverflow.com/questions/8561671/git-through-a-proxy-what-is-causing-the-407-error-when-cloning)  
+(6) https://bing.com/search?q=.
+(7) https://github.com/someUser/someRepo.git.
+(8) https://username@bitbucket.org/sacgf/x.git/.
+(9) https://github.com/xxx/xxx.git/.
+(10) http://github.com/project/project.git/info/refs.  
 
 ## Me
 What proxy and port numbers would I use for this command: git config --global http.proxy http://<username>:<userpsw>@<proxy>:<port>
