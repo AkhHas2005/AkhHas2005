@@ -131,155 +131,68 @@ Finance Officers may use C in their communication. Replace the Rs below with a C
 | SEND Shortbreaks | RHWB | SEND Shortbreaks |  
 
 ## Co-Pilot
-Using contextual prompts with Microsoft's Copilot is about providing enough background information to guide Copilot's actions effectively. This ensures that Copilot understands the situation, which leads to more accurate and relevant responses. Here’s how to do it:
+[1]: https://jfrog.com/blog/advanced-devops-security-self-hosted/ ""
+[2]: https://dribbble.com/nuhamlnaa ""
+[3]: https://twitter.com/florianseroussi ""
+[4]: https://www.reddit.com/r/ChatGPT/comments/11u7wqc/chatgpt_plus_vs_bing_ai/ ""
+[5]: https://colorwhistle.com/generative-ai-with-google-vertex-ai/ ""
+[6]: https://bing.com/search?q= ""
+[7]: https://www.earlychildhoodnyc.org/resourceguide/resources/OperatingBudgets-Child%20Care%20Inc%20publication.pdf ""
+[8]: https://childcareta.acf.hhs.gov/sites/default/files/new-occ/resource/files/v-8_family_child_care_cost_modeling-virtual.pdf ""
+[9]: https://childcareta.acf.hhs.gov/resource/financing-and-budgeting-early-care-and-education-facilities-guidebook ""
+[10]: https://www.childcareaware.org/our-issues/public-policy/budget-and-appropriations/ ""
+[11]: https://childcareta.acf.hhs.gov/sites/default/files/new-occ/resource/files/fcf_budget_guide_-_child_care_center_businesses_0.pdf ""
+[12]: https://www.acf.hhs.gov/occ/policy-guidance/ccdf-acf-pi-2018-01 ""
+[13]: https://eclkc.ohs.acf.hhs.gov/publication/financing-budgeting-early-care-education-facilities-guidebook ""
 
-### 1. **Mention Related Documents or Data Sources**
-   - **Tip**: Reference specific documents, spreadsheets, emails, or data that are relevant to your request.
-   - **Example**: "Use the latest sales report from last month to draft an email to the marketing team about performance trends."
-   - **Benefit**: This ensures Copilot pulls the correct information when completing your task.
+Certainly! Let's summarize the AI search functionality based on the provided screenshot and the relevant information:
 
-### 2. **Provide Background Information**
-   - **Tip**: Include any necessary background details that might affect the outcome of the task.
-   - **Example**: "We discussed budget cuts in the last team meeting. Summarize those points and suggest cost-saving measures for next quarter."
-   - **Benefit**: Context helps Copilot align its responses with the current situation.
+1. **Budget Codes for the Trust and ContrOCC:**
+   - Budget codes for the Trust start with the letter "C."
+   - In ContrOCC, budget codes start with the letter "R" but are converted to "C" in Middleware.
+   - Finance Officers may use "C" in their communication.
+   - To align with the Trust's coding system, replace the "R" with "C" in the codes provided.
 
-### 3. **Link to Previous Conversations or Tasks**
-   - **Tip**: Refer to past interactions, tasks, or decisions that might influence the current request.
-   - **Example**: "Following up on our discussion from last week, can you draft a proposal incorporating the new pricing model?"
-   - **Benefit**: Copilot can provide continuity and coherence in ongoing projects.
+2. **Specific Budget Codes:**
+   - Child in Care: Original code RDHG (Through Care Leavers) becomes CDHG.
+   - Through Care University: Original code RFJF (Care Leavers) becomes CFJF.
+   - Keighley & Shipley Assessment: Original code RHIX (Care Management) becomes CHIX.
+   - MASH team: Original code RHIW (MASH) becomes CHIW.
+   - Independent Fostering Agency: Original code RDFY (Placement Coordination) becomes CDFY.
+   - And so on for other codes.
 
-### 4. **Specify the Audience or Recipient**
-   - **Tip**: Let Copilot know who the intended audience or recipient is, as this may influence tone and content.
-   - **Example**: "Draft a formal email to the CEO summarizing the quarterly financial performance, highlighting key achievements."
-   - **Benefit**: Tailoring the message to the audience ensures the communication is appropriate.
+Remember to apply this conversion consistently to ensure accurate budget tracking. If you have any further questions or need additional assistance, feel free to ask! 😊[^1^][7]
 
-### 5. **Incorporate Relevant Timeframes**
-   - **Tip**: Mention relevant dates or timeframes that affect the task.
-   - **Example**: "Analyze the customer feedback data from the last three months to identify trends."
-   - **Benefit**: Time context ensures that Copilot focuses on the right period.
-
-### 6. **State the Purpose or Goal**
-   - **Tip**: Clarify the purpose of your request to guide Copilot's approach.
-   - **Example**: "Prepare a brief for the marketing team that outlines key insights from the latest consumer survey, aiming to refine our targeting strategy."
-   - **Benefit**: A clear goal helps Copilot generate content that serves the intended purpose.
-
-### 7. **Reference Current Events or Situations**
-   - **Tip**: If your request is influenced by recent events or changes, mention them.
-   - **Example**: "Given the recent market downturn, draft a memo advising clients on safe investment strategies."
-   - **Benefit**: Copilot can tailor its output to align with the current context.
-
-### 8. **Use Data or Facts as Anchors**
-   - **Tip**: Provide specific data points, statistics, or facts that should be considered in the task.
-   - **Example**: "Using last quarter’s 20% revenue increase, project the growth for the next quarter in the report."
-   - **Benefit**: Anchoring on data ensures that Copilot’s output is factual and relevant.
-
-### 9. **Clarify Relationships Between Entities**
-   - **Tip**: If your task involves multiple people, departments, or entities, explain their relationships.
-   - **Example**: "Create a presentation that explains how the marketing team's strategies have influenced sales growth, with input from the sales department."
-   - **Benefit**: Understanding these relationships allows Copilot to generate content that accurately reflects the dynamics.
-
-### 10. **Include Relevant Metadata**
-   - **Tip**: Mention any metadata or tags that might help Copilot retrieve or organize information.
-   - **Example**: "Organize the project files by priority, tagging the urgent ones with 'high priority' and the others as 'regular.'"
-   - **Benefit**: Proper organization and retrieval of data lead to more effective task management.
-
-### Summary
-Contextual prompts guide Copilot by embedding the task within a broader framework of relevant information. By providing background, specifying audiences, and mentioning related documents or events, you help Copilot understand the situation better, leading to more accurate and useful outputs.
-
-Source: Conversation with Copilot, 8/16/2024  
-
-(1) [Prompt Engineering: The Key to Enhancing AI’s Contextual Understanding](https://mohara.co/insights/prompt-engineering-the-key-to-enhancing-ais-contextual-understanding/)  
+Learn more: [1. www.earlychildhoodnyc.org](https://www.earlychildhoodnyc.org/resourceguide/resources/OperatingBudgets-Child%20Care%20Inc%20publication.pdf) 
+[2. jfrog.com](https://jfrog.com/blog/advanced-devops-security-self-hosted/) 
+[3. dribbble.com](https://dribbble.com/nuhamlnaa) 
+[4. twitter.com](https://twitter.com/florianseroussi) 
+[5. www.reddit.com](https://www.reddit.com/r/ChatGPT/comments/11u7wqc/chatgpt_plus_vs_bing_ai/) 
+[6. colorwhistle.com](https://colorwhistle.com/generative-ai-with-google-vertex-ai/) 
+[7. bing.com](https://bing.com/search?q=) 
+[8. childcareta.acf.hhs.gov](https://childcareta.acf.hhs.gov/sites/default/files/new-occ/resource/files/v-8_family_child_care_cost_modeling-virtual.pdf) 
+[9. childcareta.acf.hhs.gov](https://childcareta.acf.hhs.gov/resource/financing-and-budgeting-early-care-and-education-facilities-guidebook) 
+[10. www.childcareaware.org](https://www.childcareaware.org/our-issues/public-policy/budget-and-appropriations/) 
+[11. childcareta.acf.hhs.gov](https://childcareta.acf.hhs.gov/sites/default/files/new-occ/resource/files/fcf_budget_guide_-_child_care_center_businesses_0.pdf) 
+[12. www.acf.hhs.gov](https://www.acf.hhs.gov/occ/policy-guidance/ccdf-acf-pi-2018-01) 
+[13. eclkc.ohs.acf.hhs.gov](https://eclkc.ohs.acf.hhs.gov/publication/financing-budgeting-early-care-education-facilities-guidebook)  
 
 ## Me
-Who would be the Hiring manager for a job at unilever titled: "Industrial Placement - Research and Development (R&D)"  
+No, I want to evaluate how well the AI search used to information and provided it to the user (based on the screenshot)  
 
 ## Co-Pilot
-[1]: https://careers.unilever.com/uk-placements ""
-[2]: https://careers.unilever.com/category/research-development-jobs/34155/8110064/1 ""
-[3]: https://careers.unilever.com/job/united-kingdom/uflp-research-and-development-uk-2025/34155/70880030128 ""
-[4]: https://www.brightnetwork.co.uk/graduate-jobs/unilever/technology-management-industrial-placement ""
+I apologize for misunderstanding your request earlier. Let's evaluate the AI search functionality based on the provided screenshot and the relevant information:
 
-The specific hiring manager for the "Industrial Placement - Research and Development (R&D)" position at Unilever isn't typically listed in public job postings. However, you can reach out to Unilever's recruitment team for more details. You can contact them via email at futurecareers.recruitment@unilever.com or by phone at +44 20 3650 2304[^1^][1].
+1. **Budget Codes for the Trust and ContrOCC:**
+   - The AI correctly identified that budget codes for the Trust start with the letter "C."
+   - It accurately mentioned that in ContrOCC, budget codes start with the letter "R" but are converted to "C" in Middleware.
+   - The AI also highlighted that Finance Officers may use "C" in their communication.
 
-Is there anything else you'd like to know about the application process or the role itself?
+2. **Specific Budget Codes:**
+   - For "Child in Care," the AI correctly converted the original code RDHG (Through Care Leavers) to CDHG.
+   - Similarly, for "Through Care University," it accurately converted the original code RFJF (Care Leavers) to CFJF.
+   - The AI consistently applied this conversion for other codes as well.
 
-Learn more: 
-[1. careers.unilever.com](https://careers.unilever.com/uk-placements) 
-[2. careers.unilever.com](https://careers.unilever.com/category/research-development-jobs/34155/8110064/1) 
-[3. careers.unilever.com](https://careers.unilever.com/job/united-kingdom/uflp-research-and-development-uk-2025/34155/70880030128) 
-[4. www.brightnetwork.co.uk](https://www.brightnetwork.co.uk/graduate-jobs/unilever/technology-management-industrial-placement)  
-
-## Me
-Explain how to do this in Python?  
-```
-text
-Use the method .copy() to initialise w with the values of w0
-```
-
-## Co-Pilot
-[1]: https://docs.python.org/3/library/copy.html ""
-[2]: https://www.w3schools.com/python/ref_list_copy.asp ""
-[3]: https://careerkarma.com/blog/python-copy-list/ ""
-[4]: https://diveintopython.org/functions/list-methods/copy ""
-[5]: https://realpython.com/copying-python-objects/ ""
-
-To initialize `w` with the values of `w0` using the `.copy()` method in Python, you can follow these steps:
-
-1. **Ensure `w0` is a list or dictionary**: The `.copy()` method is available for lists and dictionaries in Python.
-
-2. **Use the `.copy()` method**: This method creates a shallow copy of the list or dictionary, meaning it copies the structure but not the nested objects.
-
-Here's an example for both a list and a dictionary:
-
-### For a List
-```python
-# Original list
-w0 = [1, 2, 3, 4, 5]
-
-# Create a copy of w0
-w = w0.copy()
-
-# Now w is a separate list with the same values as w0
-print(w)  # Output: [1, 2, 3, 4, 5]
-```
-
-### For a Dictionary
-```python
-# Original dictionary
-w0 = {'a': 1, 'b': 2, 'c': 3}
-
-# Create a copy of w0
-w = w0.copy()
-
-# Now w is a separate dictionary with the same key-value pairs as w0
-print(w)  # Output: {'a': 1, 'b': 2, 'c': 3}
-```
-
-### Important Notes
-- **Shallow Copy**: The `.copy()` method creates a shallow copy. If your list or dictionary contains other mutable objects (like other lists or dictionaries), those objects are not copied. Instead, references to the original objects are included in the new list or dictionary.
-- **Deep Copy**: If you need to copy nested objects as well, you should use the `copy.deepcopy()` method from the `copy` module.
-
-### Example of Deep Copy
-```python
-import copy
-
-# Original nested list
-w0 = [[1, 2], [3, 4]]
-
-# Create a deep copy of w0
-w = copy.deepcopy(w0)
-
-# Now w is a completely separate list with the same nested values as w0
-print(w)  # Output: [[1, 2], [3, 4]]
-```
-
-Feel free to ask if you have any more questions or need further clarification!
-
-Learn more: 
-[1. docs.python.org](https://docs.python.org/3/library/copy.html) 
-[2. www.w3schools.com](https://www.w3schools.com/python/ref_list_copy.asp) 
-[3. careerkarma.com](https://careerkarma.com/blog/python-copy-list/) 
-[4. diveintopython.org](https://diveintopython.org/functions/list-methods/copy) 
-[5. realpython.com](https://realpython.com/copying-python-objects/)  
+Overall, the AI search performed well by understanding the context, recognizing patterns, and providing accurate conversions based on the information provided. If you have any further questions or need additional clarification, feel free to ask! 😊  
 
 *End of this Conversation*
