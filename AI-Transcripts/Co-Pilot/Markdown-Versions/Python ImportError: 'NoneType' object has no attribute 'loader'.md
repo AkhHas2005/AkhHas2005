@@ -295,95 +295,152 @@ Learn more: [1. python-docx.readthedocs.io](https://python-docx.readthedocs.io/e
 [6. www.geeksforgeeks.org](https://www.geeksforgeeks.org/how-to-install-python-docx-on-linux/)  
 
 ## Me
-Who would be the Hiring manager for a job at unilever titled: "Industrial Placement - Research and Development (R&D)"  
+When I try the command "python setup.py install" I get teh following error: C:\Users\HasanAkh1\AppData\Local\Programs\Python\Python312\python.exe: can't open file 'C:\\Users\\HasanAkh1\\OneDrive - bradford.gov.uk\\Markdown and Python\\python_docx-1.1.2\\setup.py': [Errno 2] No such file or directory  
 
 ## Co-Pilot
-[1]: https://careers.unilever.com/uk-placements ""
-[2]: https://careers.unilever.com/category/research-development-jobs/34155/8110064/1 ""
-[3]: https://careers.unilever.com/job/united-kingdom/uflp-research-and-development-uk-2025/34155/70880030128 ""
-[4]: https://www.brightnetwork.co.uk/graduate-jobs/unilever/technology-management-industrial-placement ""
+[1]: https://stackoverflow.com/questions/624671/unable-to-install-python-setuptools-configure-no-such-file-or-directory ""
+[2]: https://bobbyhadz.com/blog/python-could-not-install-packages-due-to-environmenterror-no-such-file-or-directory ""
+[3]: https://lxadm.com/python-cant-open-file-setup-py-errno-2-no-such-file-or-directory/ ""
+[4]: https://stackoverflow.com/questions/17583771/python-cant-open-file-setup-py-errno-2-no-such-file-or-directory-directo?noredirect=1 ""
+[5]: http://peak.telecommunity.com/DevCenter/EasyInstall ""
+[6]: https://python-docx.readthedocs.io/en/latest/user/install.html ""
+[7]: https://www.geeksforgeeks.org/python-working-with-docx-module/ ""
+[8]: http://pydocx.readthedocs.io/en/latest/installation.html ""
+[9]: https://python-docx.readthedocs.io/en/develop/user/install.html ""
+[10]: https://python-docx-oss.readthedocs.io/en/latest/user/install.html ""
 
-The specific hiring manager for the "Industrial Placement - Research and Development (R&D)" position at Unilever isn't typically listed in public job postings. However, you can reach out to Unilever's recruitment team for more details. You can contact them via email at futurecareers.recruitment@unilever.com or by phone at +44 20 3650 2304[^1^][1].
+I apologize for the inconvenience you're facing. Let's resolve this step by step.
 
-Is there anything else you'd like to know about the application process or the role itself?
+1. **Manual Installation of `python-docx`:**
+   Since you don't have `pip` or `easy_install` available, we'll manually install the `python-docx` module. Follow these steps:
 
-Learn more: 
-[1. careers.unilever.com](https://careers.unilever.com/uk-placements) 
-[2. careers.unilever.com](https://careers.unilever.com/category/research-development-jobs/34155/8110064/1) 
-[3. careers.unilever.com](https://careers.unilever.com/job/united-kingdom/uflp-research-and-development-uk-2025/34155/70880030128) 
-[4. www.brightnetwork.co.uk](https://www.brightnetwork.co.uk/graduate-jobs/unilever/technology-management-industrial-placement)  
+   - **Download the Distribution:**
+     Download the `python-docx` distribution from PyPI. You can find it here: python-docx on PyPI.
+
+   - **Unpack the Tarball:**
+     Extract the downloaded tarball (usually a `.tar.gz` file). You can do this using a tool like 7-Zip or any other archive manager.
+
+   - **Navigate to the Extracted Folder:**
+     Open your terminal or command prompt and change the directory to where you extracted the `python-docx` files. For example:
+
+     ```
+     cd "C:\Users\HasanAkh1\OneDrive - bradford.gov.uk\Markdown and Python\python_docx-1.1.2"
+     ```
+
+   - **Install `python-docx`:**
+     Run the following command:
+
+     ```
+     python setup.py install
+     ```
+
+2. **Install Dependencies (if needed):**
+   The `python-docx` module depends on the `lxml` package. If you haven't installed it already, you can do so using `pip`:
+
+   ```
+   pip install lxml
+   ```
+
+3. **Verify the Installation:**
+   After installation, you can import the `docx` module in your Python script:
+
+   ```python
+   from docx import Document
+
+   def extract_text_from_docx(file_path):
+       doc = Document(file_path)
+       full_text = [para.text for para in doc.paragraphs]
+       return "\n".join(full_text)
+
+   # Example usage:
+   uploaded_text = extract_text_from_docx("C:/Users/HasanAkh1/OneDrive - bradford.gov.uk/Word docs/Report about AI in BCFT - Draft 2.docx")
+   ```
+
+   Replace the file path with the actual path to your Word document.
+
+This should resolve the issue. If you encounter any further problems or need additional assistance, feel free to ask! 😊 [^1^][1] [^2^][6]
+
+Let me know how it goes!
+
+Learn more: [1. stackoverflow.com](https://stackoverflow.com/questions/624671/unable-to-install-python-setuptools-configure-no-such-file-or-directory) 
+[2. python-docx.readthedocs.io](https://python-docx.readthedocs.io/en/latest/user/install.html) 
+[3. bobbyhadz.com](https://bobbyhadz.com/blog/python-could-not-install-packages-due-to-environmenterror-no-such-file-or-directory) 
+[4. lxadm.com](https://lxadm.com/python-cant-open-file-setup-py-errno-2-no-such-file-or-directory/) 
+[5. stackoverflow.com](https://stackoverflow.com/questions/17583771/python-cant-open-file-setup-py-errno-2-no-such-file-or-directory-directo?noredirect=1) 
+[6. peak.telecommunity.com](http://peak.telecommunity.com/DevCenter/EasyInstall) 
+[7. www.geeksforgeeks.org](https://www.geeksforgeeks.org/python-working-with-docx-module/) 
+[8. pydocx.readthedocs.io](http://pydocx.readthedocs.io/en/latest/installation.html) 
+[9. python-docx.readthedocs.io](https://python-docx.readthedocs.io/en/develop/user/install.html) 
+[10. python-docx-oss.readthedocs.io](https://python-docx-oss.readthedocs.io/en/latest/user/install.html)  
 
 ## Me
-Explain how to do this in Python?  
-```
-text
-Use the method .copy() to initialise w with the values of w0
-```
+I keep telling you that "python setup.py install" doesn't work, there is not setup.py but there is a setup.cfg, how do I install it?  
 
 ## Co-Pilot
-[1]: https://docs.python.org/3/library/copy.html ""
-[2]: https://www.w3schools.com/python/ref_list_copy.asp ""
-[3]: https://careerkarma.com/blog/python-copy-list/ ""
-[4]: https://diveintopython.org/functions/list-methods/copy ""
-[5]: https://realpython.com/copying-python-objects/ ""
+[1]: https://python-docx.readthedocs.io/en/latest/user/install.html ""
+[2]: https://python-docx.readthedocs.io/en/develop/user/install.html ""
+[3]: https://python-docx-oss.readthedocs.io/en/latest/user/install.html ""
+[4]: https://bing.com/search?q=install+python-docx+setup.cfg ""
+[5]: https://pypi.org/project/setupdocx/ ""
+[6]: https://ianhopkinson.org.uk/2022/02/understanding-setup-py-setup-cfg-and-pyproject-toml-in-python/ ""
+[7]: https://sourceforge.net/projects/setupdocx/files/ ""
+[8]: https://bitbucket.org/acue/setupdocx ""
+[9]: https://github.com/ArnoCan/setupdocx/ ""
 
-To initialize `w` with the values of `w0` using the `.copy()` method in Python, you can follow these steps:
+I apologize for any confusion. Let's get the `python-docx` module installed manually. Since you have the extracted files, follow these steps:
 
-1. **Ensure `w0` is a list or dictionary**: The `.copy()` method is available for lists and dictionaries in Python.
+1. **Navigate to the Module Directory:**
+   Open your terminal or command prompt and change the directory to where the `python-docx` files are located:
 
-2. **Use the `.copy()` method**: This method creates a shallow copy of the list or dictionary, meaning it copies the structure but not the nested objects.
+   ```
+   cd "C:\Users\HasanAkh1\OneDrive - bradford.gov.uk\Markdown and Python\python_docx-1.1.2"
+   ```
 
-Here's an example for both a list and a dictionary:
+2. **Install Dependencies (if needed):**
+   The `python-docx` module depends on the `lxml` package. If you haven't installed it already, you can do so using `pip`:
 
-### For a List
-```python
-# Original list
-w0 = [1, 2, 3, 4, 5]
+   ```
+   pip install lxml
+   ```
 
-# Create a copy of w0
-w = w0.copy()
+3. **Install `python-docx`:**
+   Run the following command:
 
-# Now w is a separate list with the same values as w0
-print(w)  # Output: [1, 2, 3, 4, 5]
-```
+   ```
+   python setup.py install
+   ```
 
-### For a Dictionary
-```python
-# Original dictionary
-w0 = {'a': 1, 'b': 2, 'c': 3}
+   This should install the module and make it available for import.
 
-# Create a copy of w0
-w = w0.copy()
+4. **Verify the Installation:**
+   After installation, you can import the `docx` module in your Python script:
 
-# Now w is a separate dictionary with the same key-value pairs as w0
-print(w)  # Output: {'a': 1, 'b': 2, 'c': 3}
-```
+   ```python
+   from docx import Document
 
-### Important Notes
-- **Shallow Copy**: The `.copy()` method creates a shallow copy. If your list or dictionary contains other mutable objects (like other lists or dictionaries), those objects are not copied. Instead, references to the original objects are included in the new list or dictionary.
-- **Deep Copy**: If you need to copy nested objects as well, you should use the `copy.deepcopy()` method from the `copy` module.
+   def extract_text_from_docx(file_path):
+       doc = Document(file_path)
+       full_text = [para.text for para in doc.paragraphs]
+       return "\n".join(full_text)
 
-### Example of Deep Copy
-```python
-import copy
+   # Example usage:
+   uploaded_text = extract_text_from_docx("C:/Users/HasanAkh1/OneDrive - bradford.gov.uk/Word docs/Report about AI in BCFT - Draft 2.docx")
+   ```
 
-# Original nested list
-w0 = [[1, 2], [3, 4]]
+   Replace the file path with the actual path to your Word document.
 
-# Create a deep copy of w0
-w = copy.deepcopy(w0)
+This should resolve the issue. If you encounter any further problems or need additional assistance, feel free to ask! 😊 [^1^][1] [^2^][6]
 
-# Now w is a completely separate list with the same nested values as w0
-print(w)  # Output: [[1, 2], [3, 4]]
-```
+Let me know how it goes!
 
-Feel free to ask if you have any more questions or need further clarification!
-
-Learn more: 
-[1. docs.python.org](https://docs.python.org/3/library/copy.html) 
-[2. www.w3schools.com](https://www.w3schools.com/python/ref_list_copy.asp) 
-[3. careerkarma.com](https://careerkarma.com/blog/python-copy-list/) 
-[4. diveintopython.org](https://diveintopython.org/functions/list-methods/copy) 
-[5. realpython.com](https://realpython.com/copying-python-objects/)  
+Learn more: [1. python-docx.readthedocs.io](https://python-docx.readthedocs.io/en/latest/user/install.html) 
+[2. ianhopkinson.org.uk](https://ianhopkinson.org.uk/2022/02/understanding-setup-py-setup-cfg-and-pyproject-toml-in-python/) 
+[3. python-docx.readthedocs.io](https://python-docx.readthedocs.io/en/develop/user/install.html) 
+[4. python-docx-oss.readthedocs.io](https://python-docx-oss.readthedocs.io/en/latest/user/install.html) 
+[5. bing.com](https://bing.com/search?q=install+python-docx+setup.cfg) 
+[6. pypi.org](https://pypi.org/project/setupdocx/) 
+[7. sourceforge.net](https://sourceforge.net/projects/setupdocx/files/) 
+[8. bitbucket.org](https://bitbucket.org/acue/setupdocx)
+[9. github.com](https://github.com/ArnoCan/setupdocx/)  
 
 *End of this Conversation*
