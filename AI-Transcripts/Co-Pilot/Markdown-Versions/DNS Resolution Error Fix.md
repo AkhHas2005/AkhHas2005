@@ -14,7 +14,7 @@ dns.resolver.default_resolver.nameservers = ['8.8.8.8']
 
 This will set up a custom DNS resolver with Google's public DNS server (8.8.8.8) and should allow your MongoDB connection to proceed without encountering the "Resolver configuration could not be read or specified no nameservers" error¹. Give it a try, and let me know if you need further assistance! 😊
 
-Source: Conversation with Copilot, 8/16/2024 [original date unknown]  
+Source: Conversation with Copilot, 8/16/2024 [original date Thursday, Jul 18]  
 
 (1) [pymongo: Resolver configuration could not be read or specified](https://stackoverflow.com/questions/70228639/pymongo-resolver-configuration-could-not-be-read-or-specified-no-nameservers)  
 (2) [Error creating launch configuration: ValidationError: You are not](https://github.com/hashicorp/terraform/issues/7198)  
