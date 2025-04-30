@@ -1,0 +1,105 @@
+# Hiding Icons on Windows 10  
+
+## Me
+On windows 10, every time I login to my computer after restarting or shutting down and starting up again, the toggle in this section of settings is turned on automatically, however I wnat some icons to be hodden automatically whenever I logon again, how can I achieve this?  
+
+## Co-Pilot
+[1]: https://www.reddit.com/r/discordapp/comments/17veag3/why_does_this_constantly_happen_with_discord/ ""
+[2]: https://techmainauk.blogspot.com/2021/07/how-to-stop-notification-in-windows-10.html ""
+[3]: https://www.tenforums.com/drivers-hardware/66811-safely-remove-hardware-eject-media-icon-missing-windows-10-a.html ""
+[4]: https://www.tenforums.com/general-support/153867-win-10-1909-taskbar-activator-missing.html ""
+[5]: https://www.tenforums.com/software-apps/105839-deleted-program-still-recognised-windows.html ""
+[6]: https://www.youtube.com/watch?v=CXPuDK2v3ps ""
+[7]: https://www.youtube.com/watch?v=E3RIAmBVqE4 ""
+[8]: https://www.youtube.com/watch?v=AAcqhhYjOB4 ""
+[9]: https://www.digitalcitizen.life/how-set-which-icons-are-shown-windows-10s-notification-area/ ""
+[10]: https://support.lenovo.com/us/en/solutions/ht509328-how-to-show-or-hide-icons-on-your-taskbar-windows-10 ""
+[11]: https://bing.com/search?q=how+to+hide+icons+in+Windows+10+taskbar ""
+[12]: https://support.microsoft.com/en-us/windows/customize-the-taskbar-notification-area-e159e8d2-9ac5-b2bd-61c5-bb63c1d437c3 ""
+[13]: https://www.howtogeek.com/225568/how-to-configure-and-customize-the-taskbar-in-windows-10/ ""
+
+To ensure some icons are hidden automatically whenever you log on to your Windows 10 computer, follow these steps:
+
+1. **Open Settings**: Click on the Start menu and select the gear icon to open the Settings app.
+2. **Go to Personalization**: In the Settings window, click on "Personalization."
+3. **Select Taskbar**: From the left-hand menu, choose "Taskbar."
+4. **Adjust Notification Area Settings**:
+   - Scroll down to the "Notification area" section.
+   - Click on "Select which icons appear on the taskbar."
+   - Toggle off the option "Always show all icons in the notification area." This will allow you to individually select which icons to show or hide.
+   - Use the toggles next to each icon to choose which ones you want to appear in the notification area.
+
+By doing this, your preferences should be saved, and the selected icons will remain hidden even after restarting or shutting down your computer.
+
+If you encounter any issues or need further assistance, feel free to ask! 😊
+
+Learn more: [1. www.reddit.com](https://www.reddit.com/r/discordapp/comments/17veag3/why_does_this_constantly_happen_with_discord/) 
+[2. techmainauk.blogspot.com](https://techmainauk.blogspot.com/2021/07/how-to-stop-notification-in-windows-10.html) 
+[3. www.tenforums.com](https://www.tenforums.com/drivers-hardware/66811-safely-remove-hardware-eject-media-icon-missing-windows-10-a.html) 
+[4. www.tenforums.com](https://www.tenforums.com/general-support/153867-win-10-1909-taskbar-activator-missing.html)
+[5. www.tenforums.com](https://www.tenforums.com/software-apps/105839-deleted-program-still-recognised-windows.html)
+[6. www.youtube.com](https://www.youtube.com/watch?v=CXPuDK2v3ps) 
+[7. www.youtube.com](https://www.youtube.com/watch?v=E3RIAmBVqE4) 
+[8. www.youtube.com](https://www.youtube.com/watch?v=AAcqhhYjOB4)
+[9. www.digitalcitizen.life](https://www.digitalcitizen.life/how-set-which-icons-are-shown-windows-10s-notification-area/)
+[10. support.lenovo.com](https://support.lenovo.com/us/en/solutions/ht509328-how-to-show-or-hide-icons-on-your-taskbar-windows-10) 
+[11. bing.com](https://bing.com/search?q=how+to+hide+icons+in+Windows+10+taskbar)
+[12. support.microsoft.com](https://support.microsoft.com/en-us/windows/customize-the-taskbar-notification-area-e159e8d2-9ac5-b2bd-61c5-bb63c1d437c3)
+[13. www.howtogeek.com](https://www.howtogeek.com/225568/how-to-configure-and-customize-the-taskbar-in-windows-10/)  
+
+## Me
+That's what I do, I always turn it off but whenever i logon again after logging off previously, the setting resets, I'm on an administrator controlled device where some settings are hidden ir managed by my organisation  
+
+## Co-Pilot
+It sounds like the settings are being overridden by your organization's policies. This can happen on devices managed by an IT department, where certain configurations are enforced through Group Policy or other management tools.
+
+Here are a few steps you can try:
+
+1. **Check Group Policy**: If you have access, you can check the Group Policy settings to see if there are any policies related to the taskbar or notification area icons. You can do this by:
+   - Pressing `Win + R` to open the Run dialog.
+   - Typing `gpedit.msc` and pressing Enter.
+   - Navigating to `User Configuration` > `Administrative Templates` > `Start Menu and Taskbar`.
+
+2. **Contact IT Support**: Since your device is managed by your organization, it might be best to contact your IT support team. Explain the issue to them, and they might be able to adjust the settings or provide a solution that aligns with your needs.
+
+3. **Use a Local Account**: If possible, you could try using a local account instead of a domain account. This might give you more control over your settings, but it depends on your organization's policies and whether they allow this.
+
+4. **Registry Edit**: As a last resort, you might consider editing the registry, but this should be done with caution and ideally with the help of IT support. The relevant registry key is:
+   - `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer`
+   - Look for settings related to the taskbar and notification area.
+
+If you need more detailed instructions or further assistance, feel free to ask! 😊  
+
+## Me
+I don't have access to Windows Run, how can I check the group policy settings?  
+
+## Co-Pilot
+[1]: https://www.youtube.com/watch?v=Lzqr5SRdsxA ""
+[2]: https://www.howtogeek.com/736545/how-to-open-the-group-policy-editor-on-windows/ ""
+[3]: https://www.minitool.com/news/windows-10-open-local-group-policy-editor.html ""
+[4]: https://www.thewindowsclub.com/find-all-applied-or-enabled-group-policy-settings-in-windows-10 ""
+[5]: https://www.howtogeek.com/116184/how-to-see-which-group-policies-are-applied-to-your-pc-and-user-account/ ""
+[6]: https://winaero.com/see-applied-group-policies-windows-10/ ""
+[7]: https://www.groovypost.com/howto/view-applied-group-policies-on-windows-10/ ""
+[8]: https://www.makeuseof.com/view-applied-group-policie-windows/ ""
+
+Since you don't have access to the Windows Run dialog, you can use the **Resultant Set of Policy (RSoP)** tool to check the Group Policy settings applied to your computer. Here's how you can do it:
+
+1. **Open the Start Menu**: Click on the Start button.
+2. **Search for RSoP**: Type `rsop.msc` in the search bar and press Enter. This will open the Resultant Set of Policy tool.
+3. **View Applied Policies**: The tool will scan your system and display a management console similar to the Group Policy Editor. Here, you can browse through the applied policies.
+
+If the RSoP tool is also restricted, you might need to contact your IT support team for assistance. They can provide you with the necessary information or make the required changes to your settings.
+
+Feel free to ask if you need more help! 😊
+
+Learn more: [1. www.youtube.com](https://www.youtube.com/watch?v=Lzqr5SRdsxA) 
+[2. www.howtogeek.com](https://www.howtogeek.com/736545/how-to-open-the-group-policy-editor-on-windows/) 
+[3. www.minitool.com](https://www.minitool.com/news/windows-10-open-local-group-policy-editor.html)
+[4. www.thewindowsclub.com](https://www.thewindowsclub.com/find-all-applied-or-enabled-group-policy-settings-in-windows-10)
+[5. www.howtogeek.com](https://www.howtogeek.com/116184/how-to-see-which-group-policies-are-applied-to-your-pc-and-user-account/)
+[6. winaero.com](https://winaero.com/see-applied-group-policies-windows-10/) 
+[7. www.groovypost.com](https://www.groovypost.com/howto/view-applied-group-policies-on-windows-10/) 
+[8. www.makeuseof.com](https://www.makeuseof.com/view-applied-group-policie-windows/)  
+
+*End of this Conversation*
