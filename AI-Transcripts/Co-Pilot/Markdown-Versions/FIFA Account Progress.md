@@ -1,0 +1,65 @@
+# FIFA Account Progress  
+
+## Me
+Can you convert this to markdown as a checklist with tick boxes:  
+
+### Main account:  
+Change kits  
+95 Sorloth Evo  
+De Ligt SBC  
+97 Skriniar Evo  
+98 Robertson Evo  
+99 Silver Evo  
+94 Vini Evo  
+99 Gold Evo (Keita)  
+99 Zidane Evo  
+Calafiori SBC  
+
+### RTG account:  
+De Ligt SBC  
+Gullit SBC ✖️ PACKED HIM  
+Vieira SBC 96  
+Thiago Evo 98  
+Robertson Evo 99  
+Silver Evo (Andy Carroll)  
+96 Elliott Evo  
+99 Gold Evo (Bajcetic)  
+Calafiori SBC  
+Lahm SBC  
+Raul SBC  
+99 Messi SBC  
+Pacho SBC  
+
+## Co-Pilot
+Sure, here's your list converted to Markdown with checkboxes:
+
+### Main Account:
+- [ ] Change kits
+- [ ] 95 Sorloth Evo
+- [ ] De Ligt SBC
+- [ ] 97 Skriniar Evo
+- [ ] 98 Robertson Evo
+- [ ] 99 Silver Evo
+- [ ] 94 Vini Evo
+- [ ] 99 Gold Evo (Keita)
+- [ ] 99 Zidane Evo
+- [ ] Calafiori SBC
+
+### RTG Account:
+- [ ] De Ligt SBC
+- [ ] Gullit SBC ✖️ PACKED HIM
+- [ ] Vieira SBC
+- [ ] 96 Thiago Evo
+- [ ] 98 Robertson Evo
+- [ ] 99 Silver Evo (Andy Carroll)
+- [ ] 96 Elliott Evo
+- [ ] 99 Gold Evo (Bajcetic)
+- [ ] Calafiori SBC
+- [ ] Lahm SBC
+- [ ] Raul SBC
+- [ ] 99 Messi SBC
+- [ ] Pacho SBC
+
+Feel free to let me know if you need any more adjustments!  
+
+*End of this Conversation*
