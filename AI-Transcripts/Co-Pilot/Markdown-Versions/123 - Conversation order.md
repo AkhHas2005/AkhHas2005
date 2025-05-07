@@ -93,5 +93,4 @@
 89. Rewording Internship Feedback email to sound more Professional (Tuesday, Sep 24 2024)
 90. Repaying Student Loan while Studying (Tuesday, Sep 24 2024)
 91. Gorillas vs. Monkeys (Saturday, Sep 28 2024)
-92. Python Logo Design (Sunday, Sep 29 2024)
-93. AI Research Intern and Python Enthusiast (Monday, Sep 30 2024)
+92. AI Research Intern and Python Enthusiast (Monday, Sep 30 2024)
