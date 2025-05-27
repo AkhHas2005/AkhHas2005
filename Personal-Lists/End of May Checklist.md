@@ -4,7 +4,7 @@
 
 ## Tuesday 27th
 - [x] Akhtar Hasan Software Solutions freelance business‌
-- [ ] ‌Continue Career Mode Livestreams/Episodes (Realistic Liverpool Ep5)
+- [x] ‌Continue Career Mode Livestreams/Episodes (Realistic Liverpool Ep5)
 - [ ] Development of Flying Football game‌
 - [x] AI Apps challenge: AI Cover Letter Writer V2
 
