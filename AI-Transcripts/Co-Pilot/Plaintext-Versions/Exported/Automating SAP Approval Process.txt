@@ -1,0 +1,126 @@
+## You
+As part of developing our team knowledge of Power Automate/Power solutions, I have a project brief I would like you both to review and consider for development.
+SAP Approval Process
+Project Background:
+
+SAP is a critical system for BCFT, managing key processes across HR, Finance, and Accounts Receivable.
+Access control is managed by SAP Champions, who currently use a manual process with ineffective controls.
+The lack of automation creates delays, inefficiencies, and potential security risks.
+More information on SAP and SAP Champions can be found here - BCFT SAP Information (sharepoint.com)
+Project Goals:
+
+    Develop an automated and efficient access request workflow and controls: Starting with the requestor and/or manager.
+    Validating requests against the scheme of delegation. (optional – if possible)
+    Routing to the SAP Champion for review and approval.
+    Seeking further authorisation from BCFT Finance when required (e.g., for Finance permissions).
+    NB – this development is not required to integrate with SAP. This is a pre-SAP authorisation process.
+    Establish a robust access recording mechanism: Maintaining a comprehensive record of all SAP access authorisations.
+    Enabling periodic review of access rights.
+    Providing clarity on who authorised each access grant.
+
+Project Scope:
+
+    Design and implementation of the automated access request workflow.
+    Development of the access recording and review mechanism.
+    User training and change management support.
+
+Key Stakeholders:
+
+    SAP Champions
+    BCFT Finance team (lead: Denise)
+    Requestors and their managers
+    BCFT IT team
+
+Project Success Metrics:
+
+    Reduced time to grant access.
+    Improved accuracy and compliance in access control.
+    Enhanced visibility into SAP access rights.
+    Positive feedback from stakeholders on system usability and effectiveness.
+
+Next Steps:
+
+    Consider how and which M365 solutions might be applicable.
+    Conduct detailed requirements gathering and process mapping. @Kirsten Trenell may be able to assist.
+    Develop a project plan with timelines, milestones etc.
+## Copilot
+[1]: https://learn.microsoft.com/en-us/power-automate/overview-solution-flows ""
+[2]: https://www.consultdolphin.com/blog/10-examples-of-automation-with-power-automate ""
+[3]: https://pulse.microsoft.com/wp-content/uploads/2023/11/Accelerate-Innovation-with-Microsoft-Power-Automate.pdf ""
+[4]: https://learn.microsoft.com/en-us/dynamics365/project-operations/project-management/scheduling-apis-powerautomate-v2 ""
+[5]: https://learn.microsoft.com/en-us/power-automate/guidance/planning/introduction ""
+
+This project brief for automating the SAP approval process looks well thought out and has clear goals and success metrics. Here are some initial thoughts and suggestions for moving forward with Power Automate and other Microsoft 365 solutions:
+Project Goals and Scope
+
+    Automated Access Request Workflow:
+        Starting with the requestor and/or manager: Power Automate can be used to create a form in Microsoft Forms or SharePoint where requestors/managers can submit access requests.
+        Validating requests against the scheme of delegation: If possible, integrate with a SharePoint list or an Excel file that contains the scheme of delegation for validation.
+        Routing to the SAP Champion for review and approval: Use Power Automate to create an approval flow that routes the request to the SAP Champion.
+        Further authorisation from BCFT Finance: Add a conditional step in the flow to seek additional approval from BCFT Finance when necessary.
+
+    Access Recording Mechanism:
+        Comprehensive record of all SAP access authorisations: Store all access requests and approvals in a SharePoint list or a Dataverse table.
+        Periodic review of access rights: Set up recurring flows to remind SAP Champions and managers to review access rights periodically.
+        Clarity on who authorised each access grant: Ensure the flow captures and logs the details of each approver.
+
+Key Stakeholders
+
+    SAP Champions: They will need to be involved in designing the approval steps and criteria.
+    BCFT Finance team: Particularly Denise, for defining when additional financial approval is required.
+    Requestors and their managers: To ensure the process is user-friendly and meets their needs.
+    BCFT IT team: For technical support and integration with existing systems.
+
+Next Steps
+
+    Consider M365 Solutions:
+        Power Automate: For creating the workflows.
+        SharePoint: For storing forms and records.
+        Microsoft Forms: For collecting access requests.
+        Dataverse: For more complex data storage and management needs.
+
+    Requirements Gathering and Process Mapping:
+        Conduct workshops with stakeholders to gather detailed requirements.
+        Map out the current manual process and identify areas for improvement.
+
+    Develop a Project Plan:
+        Define timelines, milestones, and deliverables.
+        Assign responsibilities to team members.
+
+Additional Resources
+
+    Overview of solution-aware flows in Power Automate^1^
+    Examples of automation with Power Automate^2^
+
+Would you like to dive deeper into any specific part of the project or need help with something else?
+## You
+We're using a channel in a Team in Microsoft teams to communicate about teh project, how can I add a shared folder containing resources for the project to teh tabs section of the channel?
+## Copilot
+[1]: https://support.microsoft.com/en-us/office/collaborate-on-files-in-microsoft-teams-9b200289-dbac-4823-85bd-628a5c7bb0ae ""
+[2]: https://support.microsoft.com/en-us/office/share-files-in-microsoft-teams-0c4d34ee-5dd8-46d5-ab35-0d227b5e6eb5 ""
+[3]: https://www.process.st/how-to/create-a-shared-folder-in-microsoft-teams/ ""
+[4]: https://prod.support.services.microsoft.com/en-gb/office/share-a-file-to-multiple-channels-in-microsoft-teams-7bd003ce-87e2-4b4e-9f30-b27ef5ea471f ""
+[5]: https://support.microsoft.com/en-us/office/share-a-folder-from-cloud-storage-in-microsoft-teams-988f8305-a0e2-44d8-9246-fcca7dd32e93 ""
+
+Adding a shared folder to the tabs section of a Microsoft Teams channel is a great way to keep all your project resources easily accessible. Here’s how you can do it:
+
+    Go to the Channel:
+        Open Microsoft Teams and navigate to the specific channel where you want to add the shared folder.
+
+    Access the Files Tab:
+        Click on the Files tab at the top of the channel.
+
+    Create or Upload the Folder:
+        If you haven't already created the folder, you can do so by selecting New > Folder and giving it a relevant name.
+        Alternatively, you can upload an existing folder by selecting Upload > Folder and choosing the folder from your device.
+
+    Add the Folder as a Tab:
+        Once the folder is in the Files tab, click on the + (plus) icon at the top of the channel to add a new tab.
+        Select Document Library from the list of options.
+        Choose the folder you want to add and follow the prompts to complete the setup.
+
+This will add the shared folder as a tab in your channel, making it easy for everyone to access the project resources.
+
+Would you like any further assistance with setting up your project in Teams?
+
+*End of this Conversation*

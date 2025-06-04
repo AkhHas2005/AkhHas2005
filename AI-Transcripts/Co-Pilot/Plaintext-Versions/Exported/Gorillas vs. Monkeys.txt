@@ -1,0 +1,22 @@
+## You
+Are gorillas monkeys?
+## Copilot
+[1]: https://leozoo.org/are-gorillas-monkeys/ ""
+[2]: https://mrcsl.org/gorilla-monkey/ ""
+[3]: https://medium.com/@Bonkos/is-a-gorilla-a-monkey-clarifying-primate-classification-6337093e0d2a ""
+[4]: https://www.britannica.com/story/whats-the-difference-between-monkeys-and-apes ""
+[5]: https://en.wikipedia.org/wiki/Gorilla ""
+[6]: https://thisvsthat.io/gorilla-vs-monkey ""
+[7]: https://www.bing.com/th?id=OSK.HEROR4SIz5wEPl38fo-Ik-Agb6LXhIjLE0n-RV_Xo47MK-E&pid=cdx&w=320&h=189&c=7 ""
+
+No, gorillas are not monkeys. Gorillas belong to a different group of primates known as apes. This group also includes humans, chimpanzees, bonobos, orangutans, and gibbons^1^^2^.
+
+Here are some key differences:
+
+    Classification: Gorillas are classified as apes in the family Hominidae, while monkeys belong to various other families within the primate order^2^.
+    Physical Traits: Gorillas are generally larger and heavier than monkeys. They also lack tails, which most monkeys have^3^.
+    Behavior: Gorillas are predominantly ground-dwelling, whereas many monkeys are more arboreal (tree-dwelling)^4^.
+
+If you have any more questions about gorillas or other primates, feel free to ask! 🦍
+
+*End of this Conversation*

@@ -1,0 +1,111 @@
+## You
+I want to make a video for my EAFC channel: https://www.youtube.com/@fifautuber836 showcasing the top 10 players in my RTG, the Darwizzy RTG, and upload it as a YouTube shorts. I want to do a little intro at the start where I say "Since Fc24 is ending now and the RTG is finished, I wanted to show the Top 10 GOATS of the RTG, Enjoy!" and then I want to edit the top 10 so it shows the card and then how many games they have played for me and goals, assists, yellow cards and red cards. How best can I format this for my channel and how can I plan it?
+## Copilot
+[1]: https://www.youtube.com/watch?v=4FX1EoEqwvo ""
+[2]: https://www.youtube.com/watch?v=pC-pFBM4fFc ""
+[3]: https://www.youtube.com/watch?v=-uRqW4Mh1z4 ""
+[4]: https://www.youtube.com/watch?v=9BNI9NgJonk ""
+[5]: https://www.youtube.com/shorts/ql1x3iDG7fs ""
+[6]: https://vidiq.com/blog/post/youtube-shorts-vertical-video/ ""
+[7]: https://kontra.agency/youtube-shorts-format-everything-you-need-to-know/ ""
+[8]: https://www.youtube.com/channel/UCo_bLvFRV6dM4AmnpdEcK0Q?sub_confirmation ""
+[9]: https://www.youtube.com/watch?v=PV-W5iG6yXQ ""
+[10]: https://www.youtube.com/watch?v=fvH0BiYIoXc ""
+[11]: https://www.youtube.com/watch?v=l0fuEOEZ8sg ""
+[12]: https://vistasocial.com/insights/youtube-shorts-dimensions/ ""
+[13]: https://embedsocial.com/blog/youtube-shorts/ ""
+[14]: https://www.bing.com/th?id=OSK.HEROhB7-_rsUI5sCQLOnXQS3ct-oIGWg7_wVcCSmd7o-krE&pid=cdx&w=320&h=189&c=7 ""
+
+Creating a YouTube Shorts video for your EAFC channel sounds like a fantastic idea! Here's a step-by-step guide to help you format and plan your video:
+1. Script and Intro
+
+    Script: Write a brief script for your intro. You've already got a great start:
+
+        "Since FC24 is ending now and the RTG is finished, I wanted to show the Top 10 GOATS of the RTG. Enjoy!"
+
+    Recording: Record this intro using your phone or camera in vertical format (9:16 aspect ratio).
+
+2. Gathering Player Data
+
+    Player Cards: Collect images or screenshots of the top 10 players' cards.
+    Statistics: Note down the number of games played, goals, assists, yellow cards, and red cards for each player.
+
+3. Editing the Video
+
+    Software: Use video editing software like Adobe Premiere Pro, Final Cut Pro, or even mobile apps like InShot or CapCut.
+    Format: Ensure your video is in vertical format (1080x1920 pixels, 9:16 aspect ratio) to qualify as a YouTube Short^1^.
+
+4. Creating the Content
+
+    Intro: Start with your recorded intro.
+    Player Showcase: For each player, create a short segment showing:
+        The player's card.
+        A text overlay with their statistics (games played, goals, assists, yellow cards, red cards).
+        You can use transitions or animations to make it visually appealing.
+
+5. Adding Music and Effects
+
+    Music: Choose a background track that fits the theme of your video. YouTube's Audio Library is a good resource for royalty-free music.
+    Effects: Add text animations, transitions, and other effects to keep the video engaging.
+
+6. Final Touches
+
+    Review: Watch the video to ensure everything flows smoothly and there are no errors.
+    Export: Export the video in the correct format and resolution.
+
+7. Uploading to YouTube
+
+    Title and Description: Use a catchy title and description. Include relevant keywords like "EAFC", "RTG", "Top 10 Players", etc.
+    Hashtags: Add hashtags like #Shorts, #EAFC, #FIFA to increase visibility.
+    Thumbnail: Create an eye-catching thumbnail, even though Shorts often autoplay without it.
+
+8. Promotion
+
+    Social Media: Share your video on social media platforms to drive traffic.
+    Engage: Respond to comments and engage with your audience to build a community.
+
+By following these steps, you'll be able to create a compelling and engaging YouTube Shorts video for your EAFC channel. Good luck, and have fun with your video creation! 🎥📈
+
+^1^: YouTube Shorts Dimensions: How to Get the Right Video Size
+## You
+What colours should I use for the section where I show the text overlay with the player statistics?
+## Copilot
+Choosing the right colors can make your video more visually appealing and easier to read. Here are some suggestions:
+1. Background Color
+
+    Dark Background: Use a dark color like navy blue, dark grey, or black. This will make the text stand out more.
+    Gradient Background: Consider using a gradient that transitions from one color to another, such as dark blue to black.
+
+2. Text Color
+
+    White or Light Colors: White, light grey, or light yellow can be very readable against a dark background.
+    Highlight Colors: Use a bright color like yellow, green, or red to highlight important stats (e.g., goals, assists).
+
+3. Accent Colors
+
+    Team Colors: Incorporate the colors of your RTG team or the players' clubs to add a thematic touch.
+    Consistent Theme: Stick to a consistent color scheme throughout the video to maintain a professional look.
+
+4. Examples
+
+    Dark Blue Background with White Text: Clean and professional.
+    Black Background with Yellow and White Text: High contrast and easy to read.
+    Gradient Background (Dark Blue to Black) with Light Grey Text: Modern and stylish.
+
+5. Text Styles
+
+    Bold for Important Stats: Use bold text for key statistics like goals and assists.
+    Different Fonts: Use a different font for the player's name to make it stand out.
+
+Sample Color Scheme:
+
+    Background: Dark Blue (#1a1a2e)
+    Primary Text: White (#ffffff)
+    Highlight Text: Yellow (#ffd700)
+    Accent Text: Light Grey (#d3d3d3)
+
+By using these color combinations, your text overlays will be both attractive and easy to read, enhancing the overall quality of your video. 🎨✨
+
+Would you like any more tips on video editing or content creation?
+
+*End of this Conversation*
