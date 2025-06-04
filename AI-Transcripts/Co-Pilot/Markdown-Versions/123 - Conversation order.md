@@ -94,3 +94,6 @@
 90. Repaying Student Loan while Studying (Tuesday, Sep 24 2024)
 91. Gorillas vs. Monkeys (Saturday, Sep 28 2024)
 92. AI Research Intern and Python Enthusiast (Monday, Sep 30 2024)
+93. Finding Computer Science Placements (Tuesday, Oct 1 2024)
+94. Setting Up Notifications Between Laptop and Phone (Thursday, Oct 3 2024)
+
