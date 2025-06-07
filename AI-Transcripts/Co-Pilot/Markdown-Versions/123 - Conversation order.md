@@ -96,4 +96,7 @@
 92. AI Research Intern and Python Enthusiast (Monday, Sep 30 2024)
 93. Finding Computer Science Placements (Tuesday, Oct 1 2024)
 94. Setting Up Notifications Between Laptop and Phone (Thursday, Oct 3 2024)
+95. Sharing Gemini AI Code (Thursday, Oct 3 2024)
+96. Academic Achievements (Friday, Oct 4 2024)
+
 
