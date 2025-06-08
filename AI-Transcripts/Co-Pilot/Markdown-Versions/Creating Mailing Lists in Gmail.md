@@ -140,156 +140,207 @@ I have the following Google Colab python script but I want a way to use it on my
     print("Please upload a Word Doc") 
     doc_upload = files.upload() 
     print(doc_upload.keys())
+
+    # Extract the filename from the uploaded file 
+    doc_filename = next(iter(doc_upload.keys())) if doc_upload else None
+
+    if doc_filename and doc_filename.lower().endswith('.docx'): 
+       doc = Document(doc_filename) 
+       print(f"Word Doc uploaded successfully: {doc_filename}")
+
+       for paragraph in doc.paragraphs:
+          existing_text.append(paragraph.text) 
+      
+       #print("Existing Text:") 
+       #print(existing_text)
+
+       newDoc = Document(doc_filename) 
+       for num in range(10): 
+          doc.add_paragraph(existing_text) 
+       doc.save(doc_filename) 
+       files.download(doc_filename) 
+    else: 
+       print("Error: Please upload a Word Doc (.docx)")  
+       
 ## Co-Pilot
-Using contextual prompts with Microsoft's Copilot is about providing enough background information to guide Copilot's actions effectively. This ensures that Copilot understands the situation, which leads to more accurate and relevant responses. Here’s how to do it:
+[1]: https://python.land/virtual-environments/virtualenv ""
+[2]: https://docs.python.org/3/library/venv.html ""
+[3]: https://www.pythonguis.com/tutorials/python-virtual-environments/ ""
+[4]: https://www.geeksforgeeks.org/how-to-upload-files-using-python-requests-library/ ""
+[5]: https://pypi.org/project/pypdl/ ""
+[6]: https://pypi.org/ ""
+[7]: https://realpython.com/python-download-file-from-url/ ""
+[8]: https://httpbin.org/post%29 ""
+[9]: https://httpbin.org/post ""
 
-### 1. **Mention Related Documents or Data Sources**
-   - **Tip**: Reference specific documents, spreadsheets, emails, or data that are relevant to your request.
-   - **Example**: "Use the latest sales report from last month to draft an email to the marketing team about performance trends."
-   - **Benefit**: This ensures Copilot pulls the correct information when completing your task.
+Certainly! Let's break this down into two parts: enabling file uploads and enabling file downloads in a native Python environment on your own machine.
 
-### 2. **Provide Background Information**
-   - **Tip**: Include any necessary background details that might affect the outcome of the task.
-   - **Example**: "We discussed budget cuts in the last team meeting. Summarize those points and suggest cost-saving measures for next quarter."
-   - **Benefit**: Context helps Copilot align its responses with the current situation.
+### File Uploads
+To enable easy file uploads in a native Python environment, you can use the `requests` library. This library allows you to make HTTP requests, including uploading files. Here's how you can do it:
 
-### 3. **Link to Previous Conversations or Tasks**
-   - **Tip**: Refer to past interactions, tasks, or decisions that might influence the current request.
-   - **Example**: "Following up on our discussion from last week, can you draft a proposal incorporating the new pricing model?"
-   - **Benefit**: Copilot can provide continuity and coherence in ongoing projects.
+1. **Install the `requests` library** (if you haven't already):
+   You can install it using pip:
+   ```bash
+   pip install requests
+   ```
 
-### 4. **Specify the Audience or Recipient**
-   - **Tip**: Let Copilot know who the intended audience or recipient is, as this may influence tone and content.
-   - **Example**: "Draft a formal email to the CEO summarizing the quarterly financial performance, highlighting key achievements."
-   - **Benefit**: Tailoring the message to the audience ensures the communication is appropriate.
+2. **Uploading Files Using `requests`**:
+   Below are examples of how you can upload files using different methods with the `requests` library:
 
-### 5. **Incorporate Relevant Timeframes**
-   - **Tip**: Mention relevant dates or timeframes that affect the task.
-   - **Example**: "Analyze the customer feedback data from the last three months to identify trends."
-   - **Benefit**: Time context ensures that Copilot focuses on the right period.
+   - **Using the `files` parameter**:
+     This method allows you to upload a file to a specified URL using a POST request. Here's an example:
+     ```python
+     import requests
 
-### 6. **State the Purpose or Goal**
-   - **Tip**: Clarify the purpose of your request to guide Copilot's approach.
-   - **Example**: "Prepare a brief for the marketing team that outlines key insights from the latest consumer survey, aiming to refine our targeting strategy."
-   - **Benefit**: A clear goal helps Copilot generate content that serves the intended purpose.
+     url = 'https://httpbin.org/post'  # Replace with your desired URL
+     files = {'file': open('file.txt', 'rb')}  # Specify the file you want to upload
+     response = requests.post(url, files=files)
+     print(response.text)
+     ```
+     In this example, replace `'file.txt'` with the path to your actual file. The server's response will contain information about the uploaded file.
 
-### 7. **Reference Current Events or Situations**
-   - **Tip**: If your request is influenced by recent events or changes, mention them.
-   - **Example**: "Given the recent market downturn, draft a memo advising clients on safe investment strategies."
-   - **Benefit**: Copilot can tailor its output to align with the current context.
+   - **Using the `data` parameter**:
+     If you need to include additional form data along with the file upload, you can use this method:
+     ```python
+     import requests
 
-### 8. **Use Data or Facts as Anchors**
-   - **Tip**: Provide specific data points, statistics, or facts that should be considered in the task.
-   - **Example**: "Using last quarter’s 20% revenue increase, project the growth for the next quarter in the report."
-   - **Benefit**: Anchoring on data ensures that Copilot’s output is factual and relevant.
+     url = 'https://httpbin.org/post'  # Replace with your desired URL
+     data = {'key': 'value'}  # Additional data if required
+     with open('file.txt', 'rb') as file:
+         response = requests.post(url, data=data, files={'file': file})
+         print(response.text)
+     ```
 
-### 9. **Clarify Relationships Between Entities**
-   - **Tip**: If your task involves multiple people, departments, or entities, explain their relationships.
-   - **Example**: "Create a presentation that explains how the marketing team's strategies have influenced sales growth, with input from the sales department."
-   - **Benefit**: Understanding these relationships allows Copilot to generate content that accurately reflects the dynamics.
+   - **Using `multipart/form-data` directly**:
+     If you want more control over the request, you can construct the `multipart/form-data` payload manually:
+     ```python
+     import requests
 
-### 10. **Include Relevant Metadata**
-   - **Tip**: Mention any metadata or tags that might help Copilot retrieve or organize information.
-   - **Example**: "Organize the project files by priority, tagging the urgent ones with 'high priority' and the others as 'regular.'"
-   - **Benefit**: Proper organization and retrieval of data lead to more effective task management.
+     url = 'https://httpbin.org/post'  # Replace with your desired URL
+     files = {'file': ('example.txt', open('example.txt', 'rb'), 'multipart/form-data')}
+     response = requests.post(url, files=files)
+     print(response.text)
+     ```
 
-### Summary
-Contextual prompts guide Copilot by embedding the task within a broader framework of relevant information. By providing background, specifying audiences, and mentioning related documents or events, you help Copilot understand the situation better, leading to more accurate and useful outputs.
+### File Downloads
+For file downloads, you can use the built-in `urllib` library or the `pypdl` library (which provides additional features). Here's a brief overview:
 
-Source: Conversation with Copilot, 8/16/2024  
+1. **Using `urllib`**:
+   The `urllib` library is part of the Python standard library. You can use it to download files from URLs. Here's a simple example:
+   ```python
+   import urllib.request
 
-(1) [Prompt Engineering: The Key to Enhancing AI’s Contextual Understanding](https://mohara.co/insights/prompt-engineering-the-key-to-enhancing-ais-contextual-understanding/)  
+   url = 'https://example.com/somefile.txt'
+   urllib.request.urlretrieve(url, 'local_filename.txt')
+   ```
+
+2. **Using `pypdl`**:
+   The `pypdl` library provides features like multi-segmented downloads, retrying in case of failure, progress tracking, and more. You can install it via pip:
+   ```bash
+   pip install pypdl
+   ```
+   Then, use it in your Python code:
+   ```python
+   import pypdl
+
+   url = 'https://example.com/somefile.txt'
+   pypdl.download(url, 'local_filename.txt')
+   ```
+
+Remember to replace the example URLs and filenames with your actual ones. Happy uploading and downloading! 🚀📂🔗[^1^][4] [^2^][5] [^3^][6] [^4^][7]
+
+Is there anything else I can assist you with today? 😊
+
+Learn more: [1. www.geeksforgeeks.org](https://www.geeksforgeeks.org/how-to-upload-files-using-python-requests-library/) 
+[2. pypi.org](https://pypi.org/project/pypdl/) 
+[3. pypi.org](https://pypi.org/) 
+[4. realpython.com](https://realpython.com/python-download-file-from-url/)
+[5. python.land](https://python.land/virtual-environments/virtualenv) 
+[6. docs.python.org](https://docs.python.org/3/library/venv.html) 
+[7. www.pythonguis.com](https://www.pythonguis.com/tutorials/python-virtual-environments/) 
+[8. httpbin.org](https://httpbin.org/post%29) 
+[9. httpbin.org](https://httpbin.org/post)  
 
 ## Me
-Who would be the Hiring manager for a job at unilever titled: "Industrial Placement - Research and Development (R&D)"  
+How to solve this error:  
 
+      Please upload a Word Doc
+      Enter path to word doc! C:/Users/fifau/Downloads/Auuuuugh (1).docx
+      Word Doc uploaded successfully: C:/Users/fifau/Downloads/Auuuuugh (1).docx
+      Enter additional name for new file: copy
+      Traceback (most recent call last):
+      File "C:/Users/fifau/Downloads/docExtender.py", line 22, in <module>
+      newDoc = Document(doc_filename)
+      File "C:\Users\fifau\AppData\Local\Programs\Python\Python312\Lib\site-packages\docx\api.py", line 27, in Document
+      document_part = cast("DocumentPart", Package.open(docx).main_document_part)
+      File "C:\Users\fifau\AppData\Local\Programs\Python\Python312\Lib\site-packages\docx\opc\package.py", line 127, in open
+      pkg_reader = PackageReader.from_file(pkg_file)
+      File "C:\Users\fifau\AppData\Local\Programs\Python\Python312\Lib\site-packages\docx\opc\pkgreader.py", line 22, in from_file
+      phys_reader = PhysPkgReader(pkg_file)
+      File "C:\Users\fifau\AppData\Local\Programs\Python\Python312\Lib\site-packages\docx\opc\phys_pkg.py", line 21, in __new__
+      raise PackageNotFoundError("Package not found at '%s'" % pkg_file)
+      docx.opc.exceptions.PackageNotFoundError: Package not found at 'C:/Users/fifau/Downloads/Auuuuugh (1)copy.docx'  
+      
 ## Co-Pilot
-[1]: https://careers.unilever.com/uk-placements ""
-[2]: https://careers.unilever.com/category/research-development-jobs/34155/8110064/1 ""
-[3]: https://careers.unilever.com/job/united-kingdom/uflp-research-and-development-uk-2025/34155/70880030128 ""
-[4]: https://www.brightnetwork.co.uk/graduate-jobs/unilever/technology-management-industrial-placement ""
+[1]: https://stackoverflow.com/questions/78457847/python-cannot-locate-a-docx-file-in-folder-docx-opc-packagenotfounderror ""
+[2]: https://github.com/python-openxml/python-docx/issues/758 ""
+[3]: https://answers.microsoft.com/en-us/msoffice/forum/all/package-not-found-error-message/8d76729f-bcf4-4441-8894-43aad908e503 ""
 
-The specific hiring manager for the "Industrial Placement - Research and Development (R&D)" position at Unilever isn't typically listed in public job postings. However, you can reach out to Unilever's recruitment team for more details. You can contact them via email at futurecareers.recruitment@unilever.com or by phone at +44 20 3650 2304[^1^][1].
+Ah, the infamous "Package not found" error strikes again! Let's unravel this mystery together, shall we? 🕵️‍♂️
 
-Is there anything else you'd like to know about the application process or the role itself?
+The error message you're encountering—`docx.opc.exceptions.PackageNotFoundError: Package not found at 'C:/Users/fifau/Downloads/Auuuuugh (1)copy.docx'`—usually occurs when the Python `python-docx` library can't locate the specified Word document (`.docx` file). Fear not, though; we'll get this sorted out!
 
-Learn more: 
-[1. careers.unilever.com](https://careers.unilever.com/uk-placements) 
-[2. careers.unilever.com](https://careers.unilever.com/category/research-development-jobs/34155/8110064/1) 
-[3. careers.unilever.com](https://careers.unilever.com/job/united-kingdom/uflp-research-and-development-uk-2025/34155/70880030128) 
-[4. www.brightnetwork.co.uk](https://www.brightnetwork.co.uk/graduate-jobs/unilever/technology-management-industrial-placement)  
+Here are a few steps to troubleshoot and resolve this issue:
 
-## Me
-Explain how to do this in Python?  
-```
-text
-Use the method .copy() to initialise w with the values of w0
-```
+1. **Check the File Path**:
+   - Double-check that the file path you provided (`C:/Users/fifau/Downloads/Auuuuugh (1).docx`) is correct.
+   - Make sure there are no typos, extra spaces, or special characters causing confusion.
 
-## Co-Pilot
-[1]: https://docs.python.org/3/library/copy.html ""
-[2]: https://www.w3schools.com/python/ref_list_copy.asp ""
-[3]: https://careerkarma.com/blog/python-copy-list/ ""
-[4]: https://diveintopython.org/functions/list-methods/copy ""
-[5]: https://realpython.com/copying-python-objects/ ""
+2. **Escape Special Characters**:
+   - In your case, the filename contains parentheses (e.g., `(1)`). When specifying file paths in Python, it's essential to escape special characters.
+   - Try using double backslashes (`\\`) instead of single ones in your file path:
+     ```
+     C:\\Users\\fifau\\Downloads\\Auuuuugh (1).docx
+     ```
 
-To initialize `w` with the values of `w0` using the `.copy()` method in Python, you can follow these steps:
+3. **Use Raw String Literal**:
+   - To avoid issues with special characters, you can use a raw string literal by prefixing the path with an `r`:
+     ```
+     r'C:\Users\fifau\Downloads\Auuuuugh (1).docx'
+     ```
 
-1. **Ensure `w0` is a list or dictionary**: The `.copy()` method is available for lists and dictionaries in Python.
+4. **Rename the Output File**:
+   - The error message mentions `'C:/Users/fifau/Downloads/Auuuuugh (1)copy.docx'`. It seems you're trying to create a new file with the name `Auuuuugh (1)copy.docx`.
+   - Ensure that the filename doesn't conflict with existing files. Try a different name (e.g., `Auuuuugh_copy.docx`).
 
-2. **Use the `.copy()` method**: This method creates a shallow copy of the list or dictionary, meaning it copies the structure but not the nested objects.
+5. **Simplify the Script**:
+   - Sometimes, complex interactions between libraries can cause unexpected behavior.
+   - Consider simplifying your script. For instance, you mentioned reading text from markdown files and appending it to an existing `.docx` file. Instead of converting markdown to `.docx`, directly add the text to the existing file.
 
-Here's an example for both a list and a dictionary:
-
-### For a List
+Here's a simplified example based on your original script:
 ```python
-# Original list
-w0 = [1, 2, 3, 4, 5]
+from docx import Document
 
-# Create a copy of w0
-w = w0.copy()
+existing_docx = "C:/Users/fifau/Downloads/Auuuuugh (1).docx"
 
-# Now w is a separate list with the same values as w0
-print(w)  # Output: [1, 2, 3, 4, 5]
+def append_text_to_existing(existing_file, markdown_text):
+    doc = Document(existing_file)
+    doc.add_paragraph(markdown_text)
+    doc.save(existing_file)
+
+# Example usage:
+markdown_text = "This is some additional content."
+append_text_to_existing(existing_docx, markdown_text)
 ```
 
-### For a Dictionary
-```python
-# Original dictionary
-w0 = {'a': 1, 'b': 2, 'c': 3}
+Remember to adjust the `markdown_text` variable according to your needs.
 
-# Create a copy of w0
-w = w0.copy()
+Give these steps a try, and hopefully, you'll conquer that elusive package error! If you need further assistance or have any other questions, feel free to ask. 😊📝🔍[^1^][1] [^2^][2] [^3^][3]
 
-# Now w is a separate dictionary with the same key-value pairs as w0
-print(w)  # Output: {'a': 1, 'b': 2, 'c': 3}
-```
+Is there anything else I can assist you with today? 🤗
 
-### Important Notes
-- **Shallow Copy**: The `.copy()` method creates a shallow copy. If your list or dictionary contains other mutable objects (like other lists or dictionaries), those objects are not copied. Instead, references to the original objects are included in the new list or dictionary.
-- **Deep Copy**: If you need to copy nested objects as well, you should use the `copy.deepcopy()` method from the `copy` module.
-
-### Example of Deep Copy
-```python
-import copy
-
-# Original nested list
-w0 = [[1, 2], [3, 4]]
-
-# Create a deep copy of w0
-w = copy.deepcopy(w0)
-
-# Now w is a completely separate list with the same nested values as w0
-print(w)  # Output: [[1, 2], [3, 4]]
-```
-
-Feel free to ask if you have any more questions or need further clarification!
-
-Learn more: 
-[1. docs.python.org](https://docs.python.org/3/library/copy.html) 
-[2. www.w3schools.com](https://www.w3schools.com/python/ref_list_copy.asp) 
-[3. careerkarma.com](https://careerkarma.com/blog/python-copy-list/) 
-[4. diveintopython.org](https://diveintopython.org/functions/list-methods/copy) 
-[5. realpython.com](https://realpython.com/copying-python-objects/)  
+Learn more: [1. stackoverflow.com](https://stackoverflow.com/questions/78457847/python-cannot-locate-a-docx-file-in-folder-docx-opc-packagenotfounderror) 
+[2. github.com](https://github.com/python-openxml/python-docx/issues/758) 
+[3. answers.microsoft.com](https://answers.microsoft.com/en-us/msoffice/forum/all/package-not-found-error-message/8d76729f-bcf4-4441-8894-43aad908e503)  
 
 *End of this Conversation*
