@@ -99,6 +99,4 @@
 95. Sharing Gemini AI Code (Thursday, Oct 3 2024)
 96. Academic Achievements (Friday, Oct 4 2024)
 97. Creating Mailing Lists in Gmail (Saturday, Oct 5 2024)
-98. 
-
-
+98. Optimistic Gaming Spirit (Wednesday, Oct 9 2024)
