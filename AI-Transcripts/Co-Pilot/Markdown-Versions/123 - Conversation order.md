@@ -98,5 +98,7 @@
 94. Setting Up Notifications Between Laptop and Phone (Thursday, Oct 3 2024)
 95. Sharing Gemini AI Code (Thursday, Oct 3 2024)
 96. Academic Achievements (Friday, Oct 4 2024)
+97. Creating Mailing Lists in Gmail (Saturday, Oct 5 2024)
+98. 
 
 
