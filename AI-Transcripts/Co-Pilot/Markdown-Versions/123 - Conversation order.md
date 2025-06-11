@@ -102,3 +102,5 @@
 98. Optimistic Gaming Spirit (Wednesday, Oct 9 2024)
 99. Football Moments 2013-2024 (Friday, Oct 11 2024)
 100. Converting Positive to Negative in Python (Friday, Oct 11 2024)
+101. Drafting an Email for Reference Request Follow-Up (Wednesday, Oct 16 2024)
+102. Contacting Unilever for Hiring Manager Information (Friday, Oct 18 2024)
