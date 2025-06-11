@@ -100,3 +100,5 @@
 96. Academic Achievements (Friday, Oct 4 2024)
 97. Creating Mailing Lists in Gmail (Saturday, Oct 5 2024)
 98. Optimistic Gaming Spirit (Wednesday, Oct 9 2024)
+99. Football Moments 2013-2024 (Friday, Oct 11 2024)
+100. Converting Positive to Negative in Python (Friday, Oct 11 2024)
