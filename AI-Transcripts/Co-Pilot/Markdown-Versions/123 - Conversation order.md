@@ -108,3 +108,7 @@
 104. Contacting Unilever for Hiring Manager Information (Friday, Oct 18 2024)
 105. Voice Isolation Tools for Recordings (Friday, Oct 18 2024)
 106. CV Summary Assistance (Sunday, Oct 20 2024)
+107. Python dictionary copy method explanation (Tuesday, Oct 22 2024)
+108. Creating a Fancy Image with a Quote (Wednesday, Oct 23 2024)
+109. Counting Items per Day in Weekly Data (Sunday, Oct 27 2024)
+110. Optimizing Performance on Your New Dell Laptop (Sunday, Oct 27 2024)
