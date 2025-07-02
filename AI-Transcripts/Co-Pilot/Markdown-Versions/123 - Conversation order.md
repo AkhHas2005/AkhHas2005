@@ -114,5 +114,6 @@
 110. Resolving Android Resource Cycle Error (Friday, Oct 25 2024)
 111. Counting Items per Day in Weekly Data (Sunday, Oct 27 2024)
 112. Optimizing Performance on Your New Dell Laptop (Sunday, Oct 27 2024)
-113. Preparing for a Business Call (Tuesday, Oct 29 2024)
-114. Summarizing Machine Learning Classifiers (Tuesday, Oct 29 2024)
+113. Troubleshooting MySQL in XAMPP (Sunday, Oct 27 2024)
+114. Preparing for a Business Call (Tuesday, Oct 29 2024)
+115. Summarizing Machine Learning Classifiers (Tuesday, Oct 29 2024)
