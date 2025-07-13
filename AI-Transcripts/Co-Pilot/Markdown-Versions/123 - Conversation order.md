@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/c9b71c7a-f38e-48b8-85c8-40bebe3ea170)# Order of Exported Conversations
+# Order of Exported Conversations
 
 ## Each conversaton title in Chronological order
 
@@ -124,3 +124,7 @@
 120. Solving Color Arrangement with Decision Trees (Monday, Nov 11 2024)
 121. SQL Query for Client and Staff Information (Thursday, Nov 14 2024)
 122. Python Method to Upload Word Files Locally (Monday, Nov 18 2024)
+123. Rewording AI Voice Generation for Coursework (Wednesday, Nov 20 2024)
+124. Answering an Interview Question as a Computer Science Student (Thursday, Nov 21 2024)
+125. Engineering Leaders Scholarship Details (Saturday, Nov 23 2024)
+
