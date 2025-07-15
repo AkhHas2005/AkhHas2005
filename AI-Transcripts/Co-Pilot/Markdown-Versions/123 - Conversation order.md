@@ -127,4 +127,8 @@
 123. Rewording AI Voice Generation for Coursework (Wednesday, Nov 20 2024)
 124. Answering an Interview Question as a Computer Science Student (Thursday, Nov 21 2024)
 125. Engineering Leaders Scholarship Details (Saturday, Nov 23 2024)
-
+126. Creating an AI Call Bot for Coursework (Saturday, Nov 23 2024)
+127. Referencing Sources in an Essay (Friday, Nov 29 2024)
+128. Reply to Colleague on AI Automation Projects (Wednesday, Dec 4 2024)
+129. Troubleshooting Power Automate Error (Monday, Dec 9 2024)
+130. Opening Discord Invite Links in Browser (Sunday, Dec 15 2024)
