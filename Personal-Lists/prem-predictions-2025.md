@@ -23,8 +23,8 @@
 19. Leeds United - 25 Points
 20. Burnley - 21 Points
 
-Golden Boot - Haaland
-Playmaker Award - Salah
-Clean Sheets - Raya
-Impact Signing - Isak
-Underrated Signing - Grealish/Cherki
+**Golden Boot** - Haaland  
+**Playmaker Award** - Salah  
+**Clean Sheets** - Raya  
+**Impact Signing** - Isak  
+**Underrated Signing** - Grealish/Cherki  
