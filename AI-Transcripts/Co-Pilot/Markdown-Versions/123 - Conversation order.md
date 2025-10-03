@@ -140,3 +140,5 @@
 136. Finding the Fake Coin in Three Weighings (Sunday, Dec 22 2024)
 137. **...**
 138. Tips for Engaging YouTube Videos (Thursday, Feb 6 2025)
+139. **...**
+140. How to Install Lora Font in PowerPoint (Friday, Jun 13 2025)  
