@@ -141,4 +141,5 @@
 137. **...**
 138. Tips for Engaging YouTube Videos (Thursday, Feb 6 2025)
 139. **...**
-140. How to Install Lora Font in PowerPoint (Friday, Jun 13 2025)  
+140. How to Install Lora Font in PowerPoint (Friday, Jun 13 2025)
+141. Logo Concept for Custom Gallery App (Monday, Jun 23 2025)  
