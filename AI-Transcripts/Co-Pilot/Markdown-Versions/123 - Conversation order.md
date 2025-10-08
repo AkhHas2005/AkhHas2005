@@ -139,7 +139,9 @@
 135. Biggest European Countries by Population and Capitals (Saturday, Dec 21 2024)
 136. Finding the Fake Coin in Three Weighings (Sunday, Dec 22 2024)
 137. **...**
-138. Tips for Engaging YouTube Videos (Thursday, Feb 6 2025)
+138. Tips for Engaging YouTube Videos [Akhtar Hasan Microsoft Account] (Thursday, Feb 6 2025)
 139. **...**
-140. How to Install Lora Font in PowerPoint (Friday, Jun 13 2025)
-141. Logo Concept for Custom Gallery App (Monday, Jun 23 2025)  
+140. How to Install Lora Font in PowerPoint [Akhtar Hasan Microsoft Account] (Friday, Jun 13 2025)
+141. Fixing Pygame Installation Error in VS Code [Python Programmer Google Account] (Tuesday, Jul 22 2025)
+142. Logo Concept for Custom Gallery App [Akhtar Hasan Microsoft Account] (Monday, Jun 23 2025)
+143.   
