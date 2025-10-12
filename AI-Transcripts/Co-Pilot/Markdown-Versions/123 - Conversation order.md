@@ -144,4 +144,6 @@
 140. How to Install Lora Font in PowerPoint [Akhtar Hasan Microsoft Account] (Friday, Jun 13 2025)
 141. Fixing Pygame Installation Error in VS Code [Python Programmer Google Account] (Tuesday, Jul 22 2025)
 142. Logo Concept for Custom Gallery App [Akhtar Hasan Microsoft Account] (Monday, Jun 23 2025)
-143.   
+143. **...**
+144. [Syntax for jQuery FormData Integration](https://copilot.microsoft.com/shares/cvMANczBKhj3T67D96x8G) [Akhtar Hasan Microsoft Account] (Wednesday, Jul 23 2025)
+145.   
