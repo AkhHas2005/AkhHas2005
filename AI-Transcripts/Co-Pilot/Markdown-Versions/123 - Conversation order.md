@@ -133,11 +133,11 @@
 129. Continuing Python Code for Data Splitting (Saturday, Dec 7 2024)
 130. Troubleshooting Power Automate Error (Monday, Dec 9 2024)
 131. Opening Discord Invite Links in Browser (Sunday, Dec 15 2024)
-132. Python Function to Reverse Linked List (Sunday, Dec 15 2024)
+132. Python Function to Reverse Linked List [Python Programmer Microsoft Account] (Sunday, Dec 15 2024)
 133. Planning a Software Business (Monday, Dec 16 2024)
-134. Requesting a Raise Email Draft (Wednesday, Dec 18 2024)
-135. Biggest European Countries by Population and Capitals (Saturday, Dec 21 2024)
-136. Finding the Fake Coin in Three Weighings (Sunday, Dec 22 2024)
+134. Requesting a Raise Email Draft [Python Programmer Microsoft Account] (Wednesday, Dec 18 2024)
+135. Biggest European Countries by Population and Capitals [Python Programmer Microsoft Account] (Saturday, Dec 21 2024)
+136. Finding the Fake Coin in Three Weighings [Python Programmer Microsoft Account] (Sunday, Dec 22 2024)
 137. **...**
 138. Tips for Engaging YouTube Videos [Akhtar Hasan Microsoft Account] (Thursday, Feb 6 2025)
 139. **...**
