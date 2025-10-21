@@ -99,7 +99,7 @@ Python 3.13 isn't that new, it cam eout in October 2024 and now it's July 2025, 
 [1]: https://peps.python.org/pep-0719/
 [2]: https://pyreadiness.org/3.13/
 [3]: https://pimylifeup.com/python-externally-managed-environment/
-[4:] https://learn.microsoft.com/en-us/answers/questions/2200888/unable-to-install-python-packages-using-pip-gettin
+[4]: https://learn.microsoft.com/en-us/answers/questions/2200888/unable-to-install-python-packages-using-pip-gettin
 
 You're absolutely right, Hasan — Python 3.13 has been around for about 9 months now, and 3.14 is already in prerelease. [1] But here's the catch: **even after a version is officially released, package maintainers often take months (or longer) to update compatibility tags**. As of July 2025, **over 40% of the most downloaded packages on PyPI still don’t explicitly support Python 3.13**. [2] That means pip won’t install them unless you override the default behavior.
 
@@ -142,85 +142,114 @@ Visit [Python 3.13 Readiness](https://pyreadiness.org/3.13/) to see if your desi
 
 If your company uses a proxy or custom package index, I can help configure pip to work with that too. Or if you want to explore building packages from source, I’ve got your back. Want to test a virtual environment setup together? 🧪  
 
+### References
+
+1. [peps.python.org](https://peps.python.org/pep-0719/)
+2. [pyreadiness.ord](https://pyreadiness.org/3.13/)
+3. [pimylifeup.com](https://pimylifeup.com/python-externally-managed-environment/)
+4. [learn.microsoft.com](https://learn.microsoft.com/en-us/answers/questions/2200888/unable-to-install-python-packages-using-pip-gettin)  
+
 ## Me
-I'm getting the following syntax error@:  
+I get this error when setting up the venv:  
 
-AttributeError Traceback (most recent call last) <ipython-input-8-bbfa601b0817> in <cell line: 3>()  
-7 lunchStart = input("Enter start time for lunch in 24 hour format (HH.MM): ")  
-8 lunchEnd = input("Enter end time for lunch in 24 hour format (HH.MM): ")  
-----> 9 convertedST, convertedET, convertedLS, convertedLE = convertTimes(startTime, endTime, lunchStart, lunchEnd)  
-10 hours = calculateHours(convertedST, convertedET, convertedLS, convertedLE)  
-11 totalHours += hours  
-
-\<ipython-input-2-58e211ec7f2a\> in convertTimes(startTime, endTime, lunchStart, lunchEnd)  
-1 def convertTimes(startTime, endTime, lunchStart, lunchEnd):  
-----> 2 newST = datetime.strptime(startTime, "%H.%M")  
-3 newET = datetime.strptime(endTime, "%H.%M")  
-4 newLS = datetime.strptime(lunchStart, "%H.%M")  
-5 newLE = datetime.strptime(lunchEnd, "%H.%M")  
-AttributeError: module 'datetime' has no attribute 'strptime'  
-
+```
+myenv\Scripts\activate :
+File C:\Users\AkhtarHa3\OneDrive - bradford.gov.uk\Markdown and Python\myenv\Scripts\Activate.ps1 cannot be loaded because running scripts is disabled on this system.
+For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ myenv\Scripts\activate
++ ~~~~~~~~~~~~~~~~~~~~~~
+  + CategoryInfo : SecurityError: (:) [], PSSecurityException
+  + FullyQualifiedErrorId : UnauthorizedAccess
+```  
 ## Co-Pilot
-[1]: https://stackoverflow.com/questions/14700073/24-hour-format-for-python-timestamp ""
-[2]: https://scripteverything.com/format-hhmm-am-pm-time-to-24-hours-python/ ""
-[3]: https://diveintopython.org/learn/date/datetime ""
-[4]: https://www.geeksforgeeks.org/python-program-convert-time-12-hour-24-hour-format/ ""
-[5]: https://stackoverflow.com/questions/13855111/how-can-i-convert-24-hour-time-to-12-hour-time ""
-[6]: https://docs.python.org/3/library/time.html ""
-[7]: https://strftime.org/ ""
-[8]: https://statisticsglobe.com/python-attributeerror-datetime-module-has-no-attribute-strptime ""
-[9]: https://sebhastian.com/python-module-datetime-has-no-attribute-strptime/ ""
-[10]: https://bobbyhadz.com/blog/python-attributeerror-module-datetime-has-no-attribute-strptime ""
-[11]: https://hatchjs.com/module-datetime-has-no-attribute-strptime/ ""
-[12]: https://stackoverflow.com/questions/12070193/why-does-trying-to-use-datetime-strptime-result-in-module-object-has-no-at ""
+Ah, classic PowerShell roadblock — this one’s all about **execution policies**. Your system is blocking script activation for security reasons, which is common on work-managed devices. But don’t worry, there’s a safe way around it.
 
-It looks like you're encountering an `AttributeError` related to the `strptime` method in the `datetime` module. Let's address this issue.
+### 🔓 How to Enable Script Activation in PowerShell
 
-The error occurs because you're trying to use `datetime.strptime`, but it's not directly available in the `datetime` module. Instead, you need to call it from the `datetime` class within the module.
-
-Here's how you can fix it:
-
-1. **Import the `datetime` class:**
-   Make sure you import the `datetime` class specifically using `from datetime import datetime`.
-
-2. **Use `datetime.datetime.strptime`:**
-   Replace `datetime.strptime` with `datetime.datetime.strptime` in your code.
-
-Here's an example of how to modify your `convertTimes` function:
-
-```python
-from datetime import datetime
-
-def convertTimes(startTime, endTime, lunchStart, lunchEnd):
-    newST = datetime.strptime(startTime, "%H.%M")
-    newET = datetime.strptime(endTime, "%H.%M")
-    newLS = datetime.strptime(lunchStart, "%H.%M")
-    newLE = datetime.strptime(lunchEnd, "%H.%M")
-    return newST, newET, newLS, newLE
-
-# Example usage:
-startTime = "08.30"
-endTime = "17.45"
-lunchStart = "12.30"
-lunchEnd = "13.30"
-
-convertedST, convertedET, convertedLS, convertedLE = convertTimes(startTime, endTime, lunchStart, lunchEnd)
-print(convertedST, convertedET, convertedLS, convertedLE)
+#### ✅ Option 1: Temporarily Allow Scripts for Your Session
+This is the safest and easiest fix — it only affects your current PowerShell session:
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
+```
+Then try activating your virtual environment again:
+```powershell
+.\myenv\Scripts\Activate.ps1
 ```
 
-Make sure to adjust the input time strings (`startTime`, `endTime`, `lunchStart`, and `lunchEnd`) according to your specific times. If you have any further questions or need additional assistance, feel free to ask! 😊 [^1^][2] [^2^][9]
+#### 🔐 Option 2: Allow Scripts for Your User Account
+If you want a more permanent fix (and your IT policy allows it):
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+```
+This lets you run locally created scripts without needing a digital signature.
 
-Learn more: [1. scripteverything.com](https://scripteverything.com/format-hhmm-am-pm-time-to-24-hours-python/) 
-[2. sebhastian.com](https://sebhastian.com/python-module-datetime-has-no-attribute-strptime/) 
-[3. stackoverflow.com](https://stackoverflow.com/questions/14700073/24-hour-format-for-python-timestamp) 
-[4. diveintopython.org](https://diveintopython.org/learn/date/datetime) 
-[5. www.geeksforgeeks.org](https://www.geeksforgeeks.org/python-program-convert-time-12-hour-24-hour-format/) 
-[6. stackoverflow.com](https://stackoverflow.com/questions/13855111/how-can-i-convert-24-hour-time-to-12-hour-time) 
-[7. docs.python.org](https://docs.python.org/3/library/time.html) 
-[8. strftime.org](https://strftime.org/) 
-[9. statisticsglobe.com](https://statisticsglobe.com/python-attributeerror-datetime-module-has-no-attribute-strptime) 
-[10. bobbyhadz.com](https://bobbyhadz.com/blog/python-attributeerror-module-datetime-has-no-attribute-strptime) 
-[11. hatchjs.com](https://hatchjs.com/module-datetime-has-no-attribute-strptime/)
-[12. stackoverflow.com](https://stackoverflow.com/questions/12070193/why-does-trying-to-use-datetime-strptime-result-in-module-object-has-no-at)  
+#### ⚠️ If You’re Blocked by Admin Restrictions
+If you get an “Access Denied” error, your IT department may have locked down script execution via Group Policy. In that case:
+- You can still use **Command Prompt** to activate the venv:
+  ```cmd
+  myenv\Scripts\activate.bat
+  ```
+- Or use **PowerShell ISE** and run the script manually with `F8`.
+
+---
+
+Let me know if you hit any snags — or if you want help crafting a polite email to IT asking for script permissions 😄  
+
+## Me
+I've activated my venv now, but I get this error when trying to pip install:  
+
+```
+WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by
+'ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))': /simple/flask/
+ERROR: Could not find a version that satisfies the requirement flask (from versions: none)
+ERROR: No matching distribution found for flask
+```
+  
+## Co-Pilot
+That’s a frustrating one, Hasan — but you’re close to cracking it. That `ConnectionResetError (10054)` means your connection to PyPI (Python’s package index) is being **forcibly closed by a remote host**, which is often a firewall, proxy, or security filter. On a **work-managed laptop**, this is almost certainly your corporate network or endpoint protection software stepping in.
+
+### 🔍 What’s Likely Happening
+- Your system is trying to connect to `https://pypi.org/simple/flask/`, but the connection is being **interrupted mid-handshake**.
+- This can happen if:
+  - Your network uses a **proxy** and pip isn’t configured to use it.
+  - Your company’s firewall blocks unknown HTTPS traffic.
+  - Endpoint protection software (like antivirus or EDR) is interfering with pip’s TLS connection.
+
+---
+
+### 🛠️ Fixes You Can Try
+
+#### ✅ 1. **Configure pip to use your proxy**
+If your company uses a proxy, set it like this:
+```bash
+pip install flask --proxy="http://username:password@proxy.company.com:port"
+```
+You can find proxy details in your Windows proxy settings (`Internet Options > Connections > LAN Settings`).
+
+#### ✅ 2. **Use trusted hosts**
+Sometimes pip needs a little reassurance:
+```bash
+pip install flask --trusted-host=pypi.org --trusted-host=files.pythonhosted.org
+```
+
+#### ✅ 3. **Try installing via HTTP mirror (less secure but useful for testing)**
+```bash
+pip install flask -i http://pypi.org/simple --trusted-host pypi.org
+```
+This bypasses HTTPS, so only use it temporarily to confirm the issue.
+
+#### ✅ 4. **Use a different network**
+If you’re on a corporate VPN or Wi-Fi, try switching to a personal hotspot or home network. Some corporate networks block PyPI outright.
+
+#### ✅ 5. **Download the wheel manually**
+Visit [Flask on PyPI](https://pypi.org/project/Flask/) and download the `.whl` file for your Python version. Then install it like this:
+```bash
+pip install path/to/Flask‑X.X.X‑py3-none-any.whl
+```
+
+---
+
+If none of these work, I can help you write a polite email to IT asking for PyPI access or proxy configuration. Or we can explore using [conda](https://docs.conda.io/en/latest/) or Docker as a workaround. Want to give one of these a shot?   
 
 *End of this Conversation*
