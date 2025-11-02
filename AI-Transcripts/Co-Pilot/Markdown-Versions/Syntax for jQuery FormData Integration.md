@@ -81,140 +81,95 @@ Here’s why this works:
 So that one-liner slots right in as a jQuery-flavored replacement without changing any of the form logic. Let me know if you want help tweaking anything else—like styling the response message or making the form submission feel snappier.  
 
 ## Me
-How can I be clear and specific?
+Almost there, I don't want to use FormData at all, I just want $(e) there but I want the js to treat it as a variable and not a string literal or anything like that  
 
 ## Co-Pilot
-Being clear and specific when interacting with Microsoft's Copilot is essential to getting the results you want. Here are some strategies to help you communicate effectively:
+Got it! If you're aiming to use `$(e)` where `e` is a variable—like the event object from your function—you just need to make sure `e` is defined and passed in correctly. For example:
 
-### 1. **Define Your Objective**
-   - **Tip**: Clearly state what you want to achieve. Identify the end goal of your request before communicating with Copilot.
-   - **Example**: Instead of saying, "Help with this document," say, "Summarize the key points in the first three sections of this document."
-
-### 2. **Use Direct Language**
-   - **Tip**: Avoid ambiguous or vague terms. Use direct, straightforward language that leaves little room for interpretation.
-   - **Example**: Rather than asking, "Can you do something with these numbers?" say, "Create a pie chart showing the percentage distribution of sales across regions."
-
-### 3. **Include Specific Details**
-   - **Tip**: Provide specific information, such as names, dates, locations, or file types, to guide Copilot’s actions.
-   - **Example**: "Draft an email response to John Doe regarding the meeting on August 15th, including the updated project timeline as an attachment."
-
-### 4. **Break Down Complex Requests**
-   - **Tip**: If your request is complex, break it down into smaller, manageable parts.
-   - **Example**: Instead of saying, "Handle the project update," say, "First, create a summary of completed tasks. Then, outline the upcoming milestones for the next two weeks."
-
-### 5. **Specify the Format or Style**
-   - **Tip**: If you have a preferred format or style, mention it explicitly.
-   - **Example**: "Generate a bullet-point list of the top five marketing strategies discussed in the last meeting."
-
-### 6. **Reference Known Templates or Examples**
-   - **Tip**: If there's a standard format or template you're following, reference it.
-   - **Example**: "Use the Q2 sales report template to generate a new report for Q3."
-
-### 7. **Set Clear Boundaries or Constraints**
-   - **Tip**: Define any limits or boundaries for your request, such as word count, time frame, or scope.
-   - **Example**: "Write a 150-word executive summary of the latest financial report."
-
-### 8. **Provide Context**
-   - **Tip**: Offer background information or context to help Copilot understand the bigger picture.
-   - **Example**: "Analyze the sales data from Q1 and Q2 to identify trends, with a focus on product performance in the European market."
-
-### 9. **Ask for the Desired Output**
-   - **Tip**: Clearly specify what form you want the output to take, such as a report, email, summary, or chart.
-   - **Example**: "Summarize the meeting notes into a one-page document, highlighting the key decisions made."
-
-### 10. **Use Step-by-Step Instructions**
-   - **Tip**: If a task involves multiple steps, guide Copilot through each one in sequence.
-   - **Example**: "First, extract the data from the sales spreadsheet. Then, create a line graph comparing monthly revenue growth."
-
-### Summary
-Being clear and specific involves stating exactly what you want, providing relevant details, and guiding Copilot through the task in an organized manner. By doing so, you increase the likelihood of getting accurate and useful outputs from your interactions.  
-
-## Me
-Also, how can I use Contextual Prompts?
-
-## Co-Pilot
-Using contextual prompts with Microsoft's Copilot is about providing enough background information to guide Copilot's actions effectively. This ensures that Copilot understands the situation, which leads to more accurate and relevant responses. Here’s how to do it:
-
-### 1. **Mention Related Documents or Data Sources**
-   - **Tip**: Reference specific documents, spreadsheets, emails, or data that are relevant to your request.
-   - **Example**: "Use the latest sales report from last month to draft an email to the marketing team about performance trends."
-   - **Benefit**: This ensures Copilot pulls the correct information when completing your task.
-
-### 2. **Provide Background Information**
-   - **Tip**: Include any necessary background details that might affect the outcome of the task.
-   - **Example**: "We discussed budget cuts in the last team meeting. Summarize those points and suggest cost-saving measures for next quarter."
-   - **Benefit**: Context helps Copilot align its responses with the current situation.
-
-### 3. **Link to Previous Conversations or Tasks**
-   - **Tip**: Refer to past interactions, tasks, or decisions that might influence the current request.
-   - **Example**: "Following up on our discussion from last week, can you draft a proposal incorporating the new pricing model?"
-   - **Benefit**: Copilot can provide continuity and coherence in ongoing projects.
-
-### 4. **Specify the Audience or Recipient**
-   - **Tip**: Let Copilot know who the intended audience or recipient is, as this may influence tone and content.
-   - **Example**: "Draft a formal email to the CEO summarizing the quarterly financial performance, highlighting key achievements."
-   - **Benefit**: Tailoring the message to the audience ensures the communication is appropriate.
-
-### 5. **Incorporate Relevant Timeframes**
-   - **Tip**: Mention relevant dates or timeframes that affect the task.
-   - **Example**: "Analyze the customer feedback data from the last three months to identify trends."
-   - **Benefit**: Time context ensures that Copilot focuses on the right period.
-
-### 6. **State the Purpose or Goal**
-   - **Tip**: Clarify the purpose of your request to guide Copilot's approach.
-   - **Example**: "Prepare a brief for the marketing team that outlines key insights from the latest consumer survey, aiming to refine our targeting strategy."
-   - **Benefit**: A clear goal helps Copilot generate content that serves the intended purpose.
-
-### 7. **Reference Current Events or Situations**
-   - **Tip**: If your request is influenced by recent events or changes, mention them.
-   - **Example**: "Given the recent market downturn, draft a memo advising clients on safe investment strategies."
-   - **Benefit**: Copilot can tailor its output to align with the current context.
-
-### 8. **Use Data or Facts as Anchors**
-   - **Tip**: Provide specific data points, statistics, or facts that should be considered in the task.
-   - **Example**: "Using last quarter’s 20% revenue increase, project the growth for the next quarter in the report."
-   - **Benefit**: Anchoring on data ensures that Copilot’s output is factual and relevant.
-
-### 9. **Clarify Relationships Between Entities**
-   - **Tip**: If your task involves multiple people, departments, or entities, explain their relationships.
-   - **Example**: "Create a presentation that explains how the marketing team's strategies have influenced sales growth, with input from the sales department."
-   - **Benefit**: Understanding these relationships allows Copilot to generate content that accurately reflects the dynamics.
-
-### 10. **Include Relevant Metadata**
-   - **Tip**: Mention any metadata or tags that might help Copilot retrieve or organize information.
-   - **Example**: "Organize the project files by priority, tagging the urgent ones with 'high priority' and the others as 'regular.'"
-   - **Benefit**: Proper organization and retrieval of data lead to more effective task management.
-
-### Summary
-Contextual prompts guide Copilot by embedding the task within a broader framework of relevant information. By providing background, specifying audiences, and mentioning related documents or events, you help Copilot understand the situation better, leading to more accurate and useful outputs.
-
-Source: Conversation with Copilot, 8/16/2024  
-
-(1) [Prompt Engineering: The Key to Enhancing AI’s Contextual Understanding](https://mohara.co/insights/prompt-engineering-the-key-to-enhancing-ais-contextual-understanding/)  
-
-## Me
-Who would be the Hiring manager for a job at unilever titled: "Industrial Placement - Research and Development (R&D)"  
-
-## Co-Pilot
-[1]: https://careers.unilever.com/uk-placements ""
-[2]: https://careers.unilever.com/category/research-development-jobs/34155/8110064/1 ""
-[3]: https://careers.unilever.com/job/united-kingdom/uflp-research-and-development-uk-2025/34155/70880030128 ""
-[4]: https://www.brightnetwork.co.uk/graduate-jobs/unilever/technology-management-industrial-placement ""
-
-The specific hiring manager for the "Industrial Placement - Research and Development (R&D)" position at Unilever isn't typically listed in public job postings. However, you can reach out to Unilever's recruitment team for more details. You can contact them via email at futurecareers.recruitment@unilever.com or by phone at +44 20 3650 2304[^1^][1].
-
-Is there anything else you'd like to know about the application process or the role itself?
-
-Learn more: 
-[1. careers.unilever.com](https://careers.unilever.com/uk-placements) 
-[2. careers.unilever.com](https://careers.unilever.com/category/research-development-jobs/34155/8110064/1) 
-[3. careers.unilever.com](https://careers.unilever.com/job/united-kingdom/uflp-research-and-development-uk-2025/34155/70880030128) 
-[4. www.brightnetwork.co.uk](https://www.brightnetwork.co.uk/graduate-jobs/unilever/technology-management-industrial-placement)  
-
-## Me
-Explain how to do this in Python?  
+```javascript
+document.getElementById('orderForm').addEventListener('submit', function(e) {
+  const $form = $(e.target); // jQuery-wrapped form element
+  // Now you can interact with $form using jQuery
+});
 ```
-text
+
+In this case, `e.target` refers to the form element that triggered the submit event, and wrapping it with `$()` gives you jQuery power 💪. Just don’t forget that you’ll need jQuery loaded in the page for this to work.
+
+So if you're trying to use `$(e)` meaning "treat `e` as a variable, not a literal," you're already on the right path—just make sure you're accessing `e.target` (or the relevant DOM element) and not using quotes. Let me know if you want help chaining jQuery methods from it or extracting field values!  
+
+## Me
+With this the variables with my $ sign appear the same colour as the rest of teh inserted js suggesting that the js will interpret them as string literals:  
+
+```javascript
+html += `
+  <script>
+    document.getElementById('orderForm').addEventListener('submit', async function(event) {
+    event.preventDefault();
+    const $formData = $(e);
+    try {
+      google.script.run
+      .withSuccessHandler(function(result) {
+        document.getElementById('responseMsg').innerText = result;
+        document.getElementById('orderForm').style.display = 'none';
+      })
+      .withFailureHandler(function(error) {
+        document.getElementById('responseMsg').innerText = '❌ Form submission failed.';
+        console.error(error);
+      })
+      .handleFormSubmission($formData);
+    const result = await response.text();
+    document.getElementById('responseMsg').innerText = result;
+    this.style.display = 'none';
+    } catch (error) {
+      console.error('Form submission failed:', error);
+      document.getElementById('responseMsg').innerText = '❌ Failed to submit form.';
+    }
+  });
+  </script> `
+;
+```
+
+## Co-Pilot
+You're super close—great eye spotting the syntax detail! The issue is that you're embedding JavaScript inside a template literal for HTML generation, and within that context, `$(e)` is being treated as plain text instead of referencing an actual variable. To ensure the variable `event` is used properly inside your embedded script, update the line like this:
+
+```javascript
+const $formData = $(event.target);
+```
+
+This avoids using an undeclared `e` and ensures you're using the `event` object already passed into your handler function. `$(event.target)` correctly wraps the submitted form in a jQuery object.
+
+Also, the coloring issue you mentioned (everything looking like a string literal) is probably just due to how your code editor highlights JavaScript inside a string—it doesn’t affect how the browser interprets it as actual executable code.
+
+If you're interested, I could also help modularize this embedded JavaScript for better readability and maintainability. Want me to show you how?  
+
+## Me
+(Now Friday, Jul 25)  
+How can I modify my doPost method to output the text "Thanks for confirming your order. A confirmation email has been sent to your contact email. If there's any issues, feel free to contact us." on the html webpage as a heading 2?  
+
+## Co-Pilot
+You can do this by returning an HTML response from your `doPost` function that includes the desired message wrapped in an `<h2>` tag. Here's a simple example of how to do that:
+
+```javascript
+function doPost(e) {
+  const htmlOutput = HtmlService.createHtmlOutput(
+    '<h2>Thanks for confirming your order. A confirmation email has been sent to your contact email. If there\'s any issues, feel free to contact us.</h2>'
+  );
+  
+  return htmlOutput.setTitle("Order Confirmation")
+                   .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+}
+```
+
+✨ A couple notes:
+- The backslash (`\'`) escapes the single quote inside the string.
+- You can style the `<h2>` with inline CSS or wrap it in a fuller HTML layout if you'd like it to match your page's design.
+
+Want help polishing the layout or embedding it in a branded confirmation page? I’d be happy to help you finesse the experience!  
+
+## Me
+Sorry this is the method, modify this:  
+(On here)
+```javascript
 Use the method .copy() to initialise w with the values of w0
 ```
 
