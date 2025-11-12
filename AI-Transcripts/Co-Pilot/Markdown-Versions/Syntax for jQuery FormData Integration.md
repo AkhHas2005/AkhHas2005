@@ -168,75 +168,300 @@ Want help polishing the layout or embedding it in a branded confirmation page? I
 
 ## Me
 Sorry this is the method, modify this:  
-(On here)
+
 ```javascript
-Use the method .copy() to initialise w with the values of w0
+function doPost(e, emailAddress) {
+  const params = e.parameter;
+  Logger.log("🔍 Raw POST params: " + JSON.stringify(params));
+
+  const customerName = params.name || "Customer";
+  const customerEmail = emailAddress || "pythonprogramsha@gmail.com";
+  const productCount = parseInt(params.productCount, 10);
+  Logger.log(`👤 Customer: ${customerName} (${customerEmail}), Products: ${productCount}`);
+
+  let summary = `🛍️ Order from ${customerName}\n\n`;
+
+  for (let i = 0; i < productCount; i++) {
+    const productName = params[`product_${i}_name`];
+    Logger.log(`📦 Processing: ${productName}`);
+    if (!productName) continue;
+
+    summary += `🔹 ${productName}\n`;
+    let sizeQtyPairs = [];
+    let j = 0;
+
+    while (true) {
+      const sizeKey = `product_${i}_size_${j}`;
+      const qtyKey = `product_${i}_qty_${j}`;
+      if (!(sizeKey in params) || !(qtyKey in params)) break;
+
+      const size = params[sizeKey];
+      const qty = params[qtyKey];
+      Logger.log(` • Pair ${j}: ${size} × ${qty}`);
+
+      if (size && qty) {
+        sizeQtyPairs.push(` • Size: ${size}, Qty: ${qty}`);
+      }
+      j++;
+    }
+
+    if (sizeQtyPairs.length > 0) {
+      summary += sizeQtyPairs.join("\n") + "\n\n";
+    } else {
+      summary += ` ⚠️ No sizes/quantities provided.\n\n`;
+    }
+  }
+
+  Logger.log("📬 Summary:\n" + summary);
+
+  // Owner email
+  MailApp.sendEmail({
+    to: "akhtarhasan2005@gmail.com",
+    subject: `New Kit Order from ${customerName}`,
+    body: summary
+  });
+
+  // Customer confirmation
+  if (customerEmail && customerEmail.includes("@")) {
+    MailApp.sendEmail({
+      to: customerEmail,
+      subject: `We received your order, ${customerName}!`,
+      body: `Hi ${customerName},\n\nThanks for completing your kit order. Here's what we received:\n\n${summary}\nBest,\nAPX Performance`
+    });
+  } else {
+    Logger.log("⚠️ No valid customer email provided.");
+  }
+
+  return ContentService.createTextOutput("✅ Order submitted successfully! Thank you.");
+}
 ```
 
 ## Co-Pilot
-[1]: https://docs.python.org/3/library/copy.html ""
-[2]: https://www.w3schools.com/python/ref_list_copy.asp ""
-[3]: https://careerkarma.com/blog/python-copy-list/ ""
-[4]: https://diveintopython.org/functions/list-methods/copy ""
-[5]: https://realpython.com/copying-python-objects/ ""
+To have the `doPost` method display your confirmation message as an `<h2>` heading on the resulting webpage, you’ll want to replace the current `ContentService.createTextOutput(...)` with an HTML output. Here's your modified method with that change:
 
-To initialize `w` with the values of `w0` using the `.copy()` method in Python, you can follow these steps:
+```javascript
+function doPost(e, emailAddress) {
+  const params = e.parameter;
+  Logger.log("🔍 Raw POST params: " + JSON.stringify(params));
 
-1. **Ensure `w0` is a list or dictionary**: The `.copy()` method is available for lists and dictionaries in Python.
+  const customerName = params.name || "Customer";
+  const customerEmail = emailAddress || "pythonprogramsha@gmail.com";
+  const productCount = parseInt(params.productCount, 10);
+  Logger.log(`👤 Customer: ${customerName} (${customerEmail}), Products: ${productCount}`);
 
-2. **Use the `.copy()` method**: This method creates a shallow copy of the list or dictionary, meaning it copies the structure but not the nested objects.
+  let summary = `🛍️ Order from ${customerName}\n\n`;
 
-Here's an example for both a list and a dictionary:
+  for (let i = 0; i < productCount; i++) {
+    const productName = params[`product_${i}_name`];
+    Logger.log(`📦 Processing: ${productName}`);
+    if (!productName) continue;
 
-### For a List
-```python
-# Original list
-w0 = [1, 2, 3, 4, 5]
+    summary += `🔹 ${productName}\n`;
+    let sizeQtyPairs = [];
+    let j = 0;
 
-# Create a copy of w0
-w = w0.copy()
+    while (true) {
+      const sizeKey = `product_${i}_size_${j}`;
+      const qtyKey = `product_${i}_qty_${j}`;
+      if (!(sizeKey in params) || !(qtyKey in params)) break;
 
-# Now w is a separate list with the same values as w0
-print(w)  # Output: [1, 2, 3, 4, 5]
+      const size = params[sizeKey];
+      const qty = params[qtyKey];
+      Logger.log(`  • Pair ${j}: ${size} × ${qty}`);
+
+      if (size && qty) {
+        sizeQtyPairs.push(`  • Size: ${size}, Qty: ${qty}`);
+      }
+      j++;
+    }
+
+    if (sizeQtyPairs.length > 0) {
+      summary += sizeQtyPairs.join("\n") + "\n\n";
+    } else {
+      summary += `  ⚠️ No sizes/quantities provided.\n\n`;
+    }
+  }
+
+  Logger.log("📬 Summary:\n" + summary);
+
+  // Owner email
+  MailApp.sendEmail({
+    to: "akhtarhasan2005@gmail.com",
+    subject: `New Kit Order from ${customerName}`,
+    body: summary
+  });
+
+  // Customer confirmation
+  if (customerEmail && customerEmail.includes("@")) {
+    MailApp.sendEmail({
+      to: customerEmail,
+      subject: `We received your order, ${customerName}!`,
+      body: `Hi ${customerName},\n\nThanks for completing your kit order. Here's what we received:\n\n${summary}\nBest,\nAPX Performance`
+    });
+  } else {
+    Logger.log("⚠️ No valid customer email provided.");
+  }
+
+  const htmlContent = `
+    <html>
+      <head>
+        <title>Order Confirmation</title>
+        <style>
+          body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+          h2 { color: #2E8B57; }
+        </style>
+      </head>
+      <body>
+        <h2>Thanks for confirming your order. A confirmation email has been sent to your contact email.<br>If there's any issues, feel free to contact us.</h2>
+      </body>
+    </html>
+  `;
+
+  return HtmlService.createHtmlOutput(htmlContent)
+                    .setTitle("Order Confirmation")
+                    .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+}
 ```
 
-### For a Dictionary
-```python
-# Original dictionary
-w0 = {'a': 1, 'b': 2, 'c': 3}
+This update gives your users a warm visual thank-you after placing an order—nice touch for boosting trust and user experience 👌
 
-# Create a copy of w0
-w = w0.copy()
+Would you like to embed the APX branding (like a logo or colors) into this confirmation page? I can help you mock that up too.  
 
-# Now w is a separate dictionary with the same key-value pairs as w0
-print(w)  # Output: {'a': 1, 'b': 2, 'c': 3}
+## Me
+I still get this on the screen only after submitting the form:  
+Complete Your Order, Costello FC  
+
+When this is my full code:  
+[Full code below, cba putting it here]  
+
+## Co-Pilot
+Ah, I see exactly what’s happening—and you’re close. The issue isn’t with your `doPost` method (which is set up correctly to return the confirmation HTML), but with **how it’s being handled inside the `doGet`-returned page**.
+
+Right now, your `doGet` method builds the entire form and sets up client-side JavaScript to submit it via `google.script.run.handleFormSubmission(...)`. That part is great. But in your success handler:
+
+```javascript
+.withSuccessHandler(function(result) {
+  document.getElementById('responseMsg').innerText = result;
+  document.getElementById('orderForm').style.display = 'none';
+})
 ```
 
-### Important Notes
-- **Shallow Copy**: The `.copy()` method creates a shallow copy. If your list or dictionary contains other mutable objects (like other lists or dictionaries), those objects are not copied. Instead, references to the original objects are included in the new list or dictionary.
-- **Deep Copy**: If you need to copy nested objects as well, you should use the `copy.deepcopy()` method from the `copy` module.
+You're treating the result like a **text string**, even though your `doPost` returns **HTML content**.
 
-### Example of Deep Copy
-```python
-import copy
+### ✅ Here's how to fix it:
 
-# Original nested list
-w0 = [[1, 2], [3, 4]]
+Change your success handler so that it updates the page with the HTML content returned from `doPost`:
 
-# Create a deep copy of w0
-w = copy.deepcopy(w0)
-
-# Now w is a completely separate list with the same nested values as w0
-print(w)  # Output: [[1, 2], [3, 4]]
+```javascript
+.withSuccessHandler(function(result) {
+  document.body.innerHTML = result.getContent();
+})
 ```
 
-Feel free to ask if you have any more questions or need further clarification!
+This replaces the current page content with the confirmation message your `doPost` sends. 🎉
 
-Learn more: 
-[1. docs.python.org](https://docs.python.org/3/library/copy.html) 
-[2. www.w3schools.com](https://www.w3schools.com/python/ref_list_copy.asp) 
-[3. careerkarma.com](https://careerkarma.com/blog/python-copy-list/) 
-[4. diveintopython.org](https://diveintopython.org/functions/list-methods/copy) 
-[5. realpython.com](https://realpython.com/copying-python-objects/)  
+---
+
+### ✨ Bonus Suggestion:
+If you’d rather insert the confirmation message in a specific section (instead of replacing the full page), wrap your HTML output inside a div and inject it like:
+
+```javascript
+document.getElementById('responseMsg').innerHTML = result.getContent();
+```
+
+Let me know which experience you’re going for—and if you want the confirmation to feel more branded or dynamic, I can help dress it up!  
+
+## Me
+Ok, now however I get this error:  
+
+Uncaught TypeError: Cannot read properties of null (reading 'getContent')  
+at <anonymous>:47:46  
+at eh (3165903335-mae_html_user_bin_i18n_mae_html_user__en_gb.js:119:417)  
+at 3165903335-mae_html_user_bin_i18n_mae_html_user__en_gb.js:35:132  
+at di.N (3165903335-mae_html_user_bin_i18n_mae_html_user__en_gb.js:143:374)  
+at Td (3165903335-mae_html_user_bin_i18n_mae_html_user__en_gb.js:69:477)  
+at a (3165903335-mae_html_user_bin_i18n_mae_html_user__en_gb.js:67:52)  
+
+Wioth this code:  
+
+```javascript
+document.getElementById('orderForm').addEventListener('submit', async function(event) {
+  event.preventDefault();
+  const formData = new FormData(this);
+
+  try {
+    google.script.run
+      .withSuccessHandler(function(result) {
+        document.body.innerHTML = result.getContent();
+    })
+    .withFailureHandler(function(error) {
+      document.getElementById('responseMsg').innerText = '❌ Form submission failed.';
+      console.error(error);
+    })
+    .handleFormSubmission(Object.fromEntries(formData), ${email});
+  } catch (error) {
+    console.error('Form submission failed:', error);
+    document.getElementById('responseMsg').innerText = '❌ Failed to submit form.';
+  }
+});
+```
+
+## Co-Pilot
+The error you're seeing is happening because the `result` object returned by `handleFormSubmission` is not an instance of `HtmlOutput`, so trying to call `result.getContent()` throws that TypeError.
+
+👉 In Google Apps Script, objects passed from server-side to client-side via `google.script.run` don’t retain their class methods (like `.getContent()`). They’re serialized as plain JavaScript objects or strings.
+
+Since you're already returning a full HTML string in your `doPost`, you can skip `.getContent()` and use `result` directly:
+
+```javascript
+.withSuccessHandler(function(result) {
+  document.body.innerHTML = result; // Just use result, not result.getContent()
+})
+```
+
+That should wipe out the error and cleanly replace the page content with your confirmation message. If you ever want more control—like inserting that message into a section of the page rather than swapping everything—I can help you refactor accordingly.
+
+Want to add a little APX logo flair or some fade-in animation to make that confirmation more visually satisfying? I’ve got ideas.  
+
+## Me
+Ok so now there's no errors, however teh screen just goes blank after successfully submitting the form, the html text doesn't display  
+
+## Co-Pilot
+Ah, I see the trouble—the form submits successfully, but then the page goes blank instead of showing your confirmation message. You're returning full HTML from `doPost`, but on the client side, you're injecting `result` into `document.body.innerHTML`, assuming it's just plain markup. The catch? When Apps Script sends back an `HtmlOutput`, the client-side `google.script.run` receives it as a **special object**, not a raw HTML string.
+
+Here’s how to fix it cleanly:
+
+### ✅ Update `doPost` to return a string instead of `HtmlOutput`
+
+Change the last lines of `doPost` to:
+
+```javascript
+return `
+  <h2 style="color:#2E8B57; text-align:center; margin-top:50px;">
+    Thanks for confirming your order. A confirmation email has been sent to your contact email.<br>
+    If there's any issues, feel free to contact us.
+  </h2>
+`;
+```
+
+No need to return a full HTML page from `doPost`, because you're injecting this snippet directly into the page via JavaScript.
+
+---
+
+### ✅ Confirm your client-side handler is ready for this string
+
+```javascript
+.withSuccessHandler(function(result) {
+  document.body.innerHTML = result; // 'result' is now a plain HTML string
+})
+```
+
+---
+
+### ✅ Why this works
+
+You're already within a full HTML shell rendered by `doGet`. Injecting another entire HTML document via `HtmlOutput` inside it isn’t the right fit. Instead, keeping it to just the HTML markup (string) lets you swap out the page content smoothly.
+
+Want to make that confirmation message animate in, fade out the form gracefully, or include a team logo for ✨style points? I’ve got ideas.  
 
 *End of this Conversation*
