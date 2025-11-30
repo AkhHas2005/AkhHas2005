@@ -1369,20 +1369,99 @@ docExt = documentExtractor(form_type='breaking_the_cycle')
 This setup will ensure that your document extractor correctly handles the form structure shown in the image, extracting and mapping the information as needed. If you have any further questions or need more adjustments, feel free to ask!  
 
 ## Me
-I got this error when trying to run mySQL server in xampp:2024-10-15 10:28:59 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 334962024-10-15 10:28:59 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 10:28:59 0 [Note] InnoDB: Uses event mutexes2024-10-15 10:28:59 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 10:28:59 0 [Note] InnoDB: Number of pools: 12024-10-15 10:28:59 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 10:28:59 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 10:28:59 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 10:28:59 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=3002882024-10-15 10:28:59 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 10:28:59 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 10:28:59 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 10:28:59 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 10:28:59 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 10:28:59 0 [Note] InnoDB: Waiting for purge to start2024-10-15 10:28:59 0 [Note] InnoDB: 10.4.32 started; log sequence number 300297; transaction id 1702024-10-15 10:28:59 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 10:28:59 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 10:28:59 0 [Note] InnoDB: Buffer pool(s) load completed at 241015 10:28:592024-10-15 10:28:59 0 [Note] Server socket created on IP: '::'.2024-10-15 11:40:26 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 16224Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:26 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:26 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:26 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:26 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:26 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:26 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:26 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:26 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:26 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:26 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=5755382024-10-15 11:40:26 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:26 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 11:40:26 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:26 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:26 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:26 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:27 0 [Note] InnoDB: 10.4.32 started; log sequence number 575547; transaction id 4052024-10-15 11:40:27 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:27 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:27 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:27 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:27 0 [ERROR] Aborting2024-10-15 11:40:31 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 27624Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:31 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:31 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:31 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:31 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:31 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:31 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:31 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:31 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:31 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:31 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:31 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:31 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:31 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:31 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:31 0 [Note] InnoDB: 10.4.32 started; log sequence number 575556; transaction id 4052024-10-15 11:40:31 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:31 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:31 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:31 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:31 0 [ERROR] Aborting  
+Can you make a pattern mapping in teh form_configs for inputs in this format:  
+
+Name (Young Person): Jane Shilton  
+Date of Birth (Young Person): 01.01.2010  
+Gender F  
+Address (Young Person): 8 codes walk Bradford BD1 1DR  
+Postcode  
+Phone Number (Young Person): 07777777709  
+Phone Number (Parent / Carer): Cindy Shilton 01274 123456  
+Name of person making referral: Gladys West  
+Address of person / organisation making referral: I GPS Street SM1 2FT  
+Email of person making referral:  
+Telephone number of person making referral: 08888098688  
+Date of referral:  
+04.09.24
+School attended: Babushka High   
 
 ## Copilot
-It looks like you're encountering an error with MySQL in XAMPP, specifically related to Aria recovery failing. This can happen due to corrupted files or incomplete recovery processes. Here are a few steps you can try to resolve this issue:
+Sure, I'll adjust the pattern mappings in the `form_configs` for inputs in the format you've provided. Here’s the updated configuration:
 
-1. **Run XAMPP as Administrator**: Sometimes, running XAMPP with administrative privileges can resolve permission-related issues.
-2. **Restore Database Backup**: If you have a backup of your database, try restoring it.
-3. **Change MySQL Port**: Changing the MySQL port in the XAMPP configuration might help if there's a port conflict.
-4. **Check Aria Tables**: Run `aria_chk -r` on all Aria tables and delete all `aria_log` files as suggested by the error message.
+```python
+# form_configs.py
 
-If these steps don't resolve the issue, you might want to check out detailed tutorials or forums for more specific guidance. Does this help, or do you need more detailed instructions on any of these steps?  
+form_configs = {
+    'breaking_the_cycle': {
+        'mapping': {
+            "Name (Young Person):": "YOUNG PERSON'S INFORMATION",
+            "Date of Birth (Young Person):": "YOUNG PERSON'S INFORMATION",
+            "Gender:": "YOUNG PERSON'S INFORMATION",
+            "Address (Young Person):": "YOUNG PERSON'S INFORMATION",
+            "Postcode:": "YOUNG PERSON'S INFORMATION",
+            "Phone Number (Young Person):": "YOUNG PERSON'S INFORMATION",
+            "Phone Number (Parent / Carer):": "YOUNG PERSON'S INFORMATION",
+            "Name of person making referral:": "REFERRAL INFORMATION",
+            "Address of person / organisation making referral:": "REFERRAL INFORMATION",
+            "Email of person making referral:": "REFERRAL INFORMATION",
+            "Telephone number of person making referral:": "REFERRAL INFORMATION",
+            "Date of referral:": "REFERRAL INFORMATION",
+            "School attended:": "REFERRAL INFORMATION",
+        },
+        'patterns': {
+            'Name (Young Person):': r"Name \(Young Person\):\s*(.*)",
+            'Date of Birth (Young Person):': r"Date of Birth \(Young Person\):\s*(\d{2}\.\d{2}\.\d{4})\s*Gender\s*(\w)",
+            'Gender:': r"Date of Birth \(Young Person\):\s*\d{2}\.\d{2}\.\d{4}\s*Gender\s*(\w)",
+            'Address (Young Person):': r"Address \(Young Person\):\s*(.*)",
+            'Postcode:': r"Address \(Young Person\):.*\nPostcode\s*(.*)",
+            'Phone Number (Young Person):': r"Phone Number \(Young Person\):\s*(\d+)",
+            'Phone Number (Parent / Carer):': r"Phone Number \(Parent / Carer\):\s*(.*)",
+            'Name of person making referral:': r"Name of person making referral:\s*(.*)",
+            'Address of person / organisation making referral:': r"Address of person / organisation making referral:\s*(.*)",
+            'Email of person making referral:': r"Email of person making referral:\s*(.*)",
+            'Telephone number of person making referral:': r"Telephone number of person making referral:\s*(\d+)",
+            'Date of referral:': r"Date of referral:\s*(.*)",
+            'School attended:': r"School attended:\s*(.*)",
+            'Date of referral (2):': r"Date of referral:\s*(\d{2}\.\d{2}\.\d{2})",
+        }
+    }
+}
+```
+
+### Explanation:
+- **Mapping**: Maps the fields from the document to the section in your output.
+- **Patterns**: Uses regular expressions to capture the fields in the format you've described.
+
+### Key Points in Patterns:
+1. **Name (Young Person):** Captures the name after the label.
+2. **Date of Birth (Young Person):** Captures the date of birth and gender in one pattern.
+3. **Gender:** Extracted along with the date of birth.
+4. **Address (Young Person):** Captures the address.
+5. **Postcode:** Captures the postcode after the address.
+6. **Phone Number (Young Person):** Captures the phone number.
+7. **Phone Number (Parent / Carer):** Captures both the parent/carer name and phone number.
+8. **Name of person making referral:** Captures the name of the person making the referral.
+9. **Address of person / organisation making referral:** Captures the address of the person/organisation making the referral.
+10. **Email of person making referral:** Captures the email (if any).
+11. **Telephone number of person making referral:** Captures the telephone number.
+12. **Date of referral:** Captures the date of referral.
+13. **School attended:** Captures the school attended.
+
+### Usage in Main Code:
+In your main code, use this form type as follows:
+
+```python
+docExt = documentExtractor(form_type='breaking_the_cycle')
+```
+
+This should enable the document extractor to handle the provided form format effectively. If you need further adjustments or have any other questions, feel free to ask!  
 
 ## Me
-How about this form variation? Include only the config for this form type [Uploaded Image Expired]  
+Can you adjust it slightly, currently these are teh outputs for "Email of person making referral" & "Date of referral", teh actual date is present on teh next line and I only want to extract that part:  
+Current outputs:  
+'Email of person making referral:': 'Telephone number of person making referral: 08888098688'  
+'Date Case Allocated': 'School attended: Babushka High'  
 
 ## Copilot
 Based on the details of the "District Youth Service Referral Form" for the "Breaking The Cycle Intervention Project", here's the configuration for this form type:
@@ -1454,20 +1533,75 @@ docExt = documentExtractor(form_type='breaking_the_cycle')
 This setup ensures that your document extractor correctly handles the form structure and extracts the necessary information accordingly. If you need any further adjustments or have more questions, feel free to ask!  
 
 ## Me
-I got this error when trying to run mySQL server in xampp:2024-10-15 10:28:59 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 334962024-10-15 10:28:59 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 10:28:59 0 [Note] InnoDB: Uses event mutexes2024-10-15 10:28:59 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 10:28:59 0 [Note] InnoDB: Number of pools: 12024-10-15 10:28:59 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 10:28:59 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 10:28:59 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 10:28:59 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=3002882024-10-15 10:28:59 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 10:28:59 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 10:28:59 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 10:28:59 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 10:28:59 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 10:28:59 0 [Note] InnoDB: Waiting for purge to start2024-10-15 10:28:59 0 [Note] InnoDB: 10.4.32 started; log sequence number 300297; transaction id 1702024-10-15 10:28:59 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 10:28:59 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 10:28:59 0 [Note] InnoDB: Buffer pool(s) load completed at 241015 10:28:592024-10-15 10:28:59 0 [Note] Server socket created on IP: '::'.2024-10-15 11:40:26 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 16224Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:26 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:26 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:26 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:26 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:26 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:26 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:26 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:26 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:26 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:26 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=5755382024-10-15 11:40:26 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:26 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 11:40:26 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:26 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:26 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:26 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:27 0 [Note] InnoDB: 10.4.32 started; log sequence number 575547; transaction id 4052024-10-15 11:40:27 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:27 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:27 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:27 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:27 0 [ERROR] Aborting2024-10-15 11:40:31 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 27624Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:31 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:31 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:31 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:31 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:31 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:31 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:31 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:31 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:31 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:31 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:31 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:31 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:31 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:31 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:31 0 [Note] InnoDB: 10.4.32 started; log sequence number 575556; transaction id 4052024-10-15 11:40:31 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:31 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:31 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:31 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:31 0 [ERROR] Aborting  
+How can I make sure that the 'Email of person making referral' doesn't return this if it's empty:  
+'Email of person making referral:': 'Telephone number of person making referral: 08888098688'  
 
 ## Copilot
-It looks like you're encountering an error with MySQL in XAMPP, specifically related to Aria recovery failing. This can happen due to corrupted files or incomplete recovery processes. Here are a few steps you can try to resolve this issue:
+To ensure that the 'Email of person making referral' field doesn't capture unintended text when it's empty, you can modify the regex pattern and add a condition to check if the field is actually empty. Here's an updated configuration to handle this scenario:
 
-1. **Run XAMPP as Administrator**: Sometimes, running XAMPP with administrative privileges can resolve permission-related issues.
-2. **Restore Database Backup**: If you have a backup of your database, try restoring it.
-3. **Change MySQL Port**: Changing the MySQL port in the XAMPP configuration might help if there's a port conflict.
-4. **Check Aria Tables**: Run `aria_chk -r` on all Aria tables and delete all `aria_log` files as suggested by the error message.
+### Updated Configuration:
+```python
+# form_configs.py
 
-If these steps don't resolve the issue, you might want to check out detailed tutorials or forums for more specific guidance. Does this help, or do you need more detailed instructions on any of these steps?  
+form_configs = {
+    'breaking_the_cycle': {
+        'mapping': {
+            "Name (Young Person):": "YOUNG PERSON'S INFORMATION",
+            "Date of Birth (Young Person):": "YOUNG PERSON'S INFORMATION",
+            "Gender:": "YOUNG PERSON'S INFORMATION",
+            "Address (Young Person):": "YOUNG PERSON'S INFORMATION",
+            "Postcode:": "YOUNG PERSON'S INFORMATION",
+            "Phone Number (Young Person):": "YOUNG PERSON'S INFORMATION",
+            "Phone Number (Parent / Carer):": "YOUNG PERSON'S INFORMATION",
+            "Name of person making referral:": "REFERRAL INFORMATION",
+            "Address of person / organisation making referral:": "REFERRAL INFORMATION",
+            "Email of person making referral:": "REFERRAL INFORMATION",
+            "Telephone number of person making referral:": "REFERRAL INFORMATION",
+            "Date of referral:": "REFERRAL INFORMATION",
+            "School attended:": "REFERRAL INFORMATION",
+        },
+        'patterns': {
+            'Name (Young Person):': r"Name \(Young Person\):\s*(.*)",
+            'Date of Birth (Young Person):': r"Date of Birth \(Young Person\):\s*(\d{2}\.\d{2}\.\d{4})\s*Gender\s*(\w)",
+            'Gender:': r"Date of Birth \(Young Person\):\s*\d{2}\.\d{2}\.\d{4}\s*Gender\s*(\w)",
+            'Address (Young Person):': r"Address \(Young Person\):\s*(.*)",
+            'Postcode:': r"Address \(Young Person\):.*\nPostcode\s*(.*)",
+            'Phone Number (Young Person):': r"Phone Number \(Young Person\):\s*(\d+)",
+            'Phone Number (Parent / Carer):': r"Phone Number \(Parent / Carer\):\s*(.*)",
+            'Name of person making referral:': r"Name of person making referral:\s*(.*)",
+            'Address of person / organisation making referral:': r"Address of person / organisation making referral:\s*(.*)",
+            'Email of person making referral:': r"Email of person making referral:(?:\s*(.*))?\n",
+            'Telephone number of person making referral:': r"Telephone number of person making referral:\s*(\d+)",
+            'Date of referral:': r"Date of referral:\s*(.*)\n",
+            'School attended:': r"School attended:\s*(.*)",
+            'Date of referral (2):': r"\n(\d{2}\.\d{2}\.\d{2})",
+        }
+    }
+}
+```
 
-### References
-[kinsta.com](https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/)  
+### Explanation:
+1. **Regex Pattern Update**: 
+   - For the 'Email of person making referral', I used a non-capturing group `(?:\s*(.*))?` to handle optional empty email fields without capturing unintended text.
+2. **Conditional Extraction**: 
+   - Modify the `custom_field_extraction` method to check for empty fields before adding them to the extracted data.
+
+### Updated Method in Main Code:
+Update the `custom_field_extraction` method in your main code to handle empty fields:
+
+```python
+def custom_field_extraction(self, text):
+    extracted_data = {}
+    for field, pattern in self.form_config['patterns'].items():
+        match = re.search(pattern, text)
+        if match:
+            value = match.group(1).strip()
+            if value:  # Only add if the value is not empty
+                extracted_data[field] = value
+    return extracted_data
+```
+
+This approach ensures that the 'Email of person making referral' field will not return unintended text when it's empty. If there's anything else you need help with, feel free to ask!  
 
 ## Me
 I got this error when trying to run mySQL server in xampp:2024-10-15 10:28:59 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 334962024-10-15 10:28:59 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 10:28:59 0 [Note] InnoDB: Uses event mutexes2024-10-15 10:28:59 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 10:28:59 0 [Note] InnoDB: Number of pools: 12024-10-15 10:28:59 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 10:28:59 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 10:28:59 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 10:28:59 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=3002882024-10-15 10:28:59 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 10:28:59 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 10:28:59 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 10:28:59 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 10:28:59 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 10:28:59 0 [Note] InnoDB: Waiting for purge to start2024-10-15 10:28:59 0 [Note] InnoDB: 10.4.32 started; log sequence number 300297; transaction id 1702024-10-15 10:28:59 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 10:28:59 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 10:28:59 0 [Note] InnoDB: Buffer pool(s) load completed at 241015 10:28:592024-10-15 10:28:59 0 [Note] Server socket created on IP: '::'.2024-10-15 11:40:26 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 16224Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:26 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:26 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:26 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:26 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:26 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:26 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:26 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:26 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:26 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:26 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=5755382024-10-15 11:40:26 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:26 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 11:40:26 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:26 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:26 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:26 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:27 0 [Note] InnoDB: 10.4.32 started; log sequence number 575547; transaction id 4052024-10-15 11:40:27 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:27 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:27 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:27 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:27 0 [ERROR] Aborting2024-10-15 11:40:31 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 27624Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:31 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:31 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:31 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:31 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:31 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:31 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:31 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:31 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:31 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:31 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:31 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:31 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:31 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:31 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:31 0 [Note] InnoDB: 10.4.32 started; log sequence number 575556; transaction id 4052024-10-15 11:40:31 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:31 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:31 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:31 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:31 0 [ERROR] Aborting  
