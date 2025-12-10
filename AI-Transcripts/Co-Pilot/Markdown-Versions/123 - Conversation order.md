@@ -129,37 +129,39 @@
 125. Engineering Leaders Scholarship Details (Saturday, Nov 23 2024)
 126. Creating an AI Call Bot for Coursework (Saturday, Nov 23 2024)
 127. [Adding Extra File Upload in HTML](https://copilot.microsoft.com/shares/LtyXA3n7kR6yqfFNTg3nS) (Monday, Nov 25 2024)
-128. Referencing Sources in an Essay (Friday, Nov 29 2024)
-129. Reply to Colleague on AI Automation Projects (Wednesday, Dec 4 2024)
-130. Continuing Python Code for Data Splitting (Saturday, Dec 7 2024)
-131. Troubleshooting Power Automate Error (Monday, Dec 9 2024)
-132. Opening Discord Invite Links in Browser (Sunday, Dec 15 2024)
-133. Python Function to Reverse Linked List [Python Programmer Microsoft Account] (Sunday, Dec 15 2024)
-134. Planning a Software Business (Monday, Dec 16 2024)
-135. Requesting a Raise Email Draft [Python Programmer Microsoft Account] (Wednesday, Dec 18 2024)
-136. Biggest European Countries by Population and Capitals [Python Programmer Microsoft Account] (Saturday, Dec 21 2024)
-137. Finding the Fake Coin in Three Weighings [Python Programmer Microsoft Account] (Sunday, Dec 22 2024)
-138. [Improving Imbalanced Dataset in Python Model](https://copilot.microsoft.com/shares/QbRGmUofaPt8Vip8TKxmo) [Fifa Utuber Microsoft Account] (Thursday, Jan 2 2025)
-139. [Choosing a Linear Classification Model](https://copilot.microsoft.com/shares/ELQW4wd2841DWK5fZVD5c) [Fifa Utuber Microsoft Account] (Thursday, Jan 2 2025)
-140. [Error in Logistic Regression Model](https://copilot.microsoft.com/shares/7EDG3a45ijDpzZjFVjVjX) [Fifa Utuber Microsoft Account] (Friday, Jan 3 2025)
-141. [Creating an AI Call Bot with King Kong Personality](https://copilot.microsoft.com/shares/U7tQnCwsDazdKKarftZRp) [Fifa Utuber Microsoft Account] (Friday, Jan 3 2025)
-142. [Polite Follow-up on Scholarship Application](https://copilot.microsoft.com/shares/jYQiRqCwCMwWxXtDsXFyR) [Fifa Utuber Microsoft Account] (Sunday, Jan 5 2025)
-143. **...**
-144. Tips for Engaging YouTube Videos [Akhtar Hasan Microsoft Account] (Thursday, Feb 6 2025)
-145. **...**
-146. How to Install Lora Font in PowerPoint [Akhtar Hasan Microsoft Account] (Friday, Jun 13 2025)
-147. **...**
-148. Logo Concept for Custom Gallery App [Akhtar Hasan Microsoft Account] (Monday, Jun 23 2025)
-149. **...**
-150. [Fixing Pygame Installation Error in VS Code](https://copilot.microsoft.com/shares/Uoqbtf5XYhp6pG9w3d6gE) [Python Programmer Google Account] (Tuesday, Jul 22 2025)
-151. [Syntax for jQuery FormData Integration](https://copilot.microsoft.com/shares/cvMANczBKhj3T67D96x8G) [Akhtar Hasan Microsoft Account] (Wednesday, Jul 23 2025)
-152. [Creating HTML Page with Interactive Images and Color Theme](https://copilot.microsoft.com/shares/z6nB7h7bU5hWYB8KYc7MX) [Python Programmer Google Account] (Thursday, Jul 24 2025)
-153. [Creating a Non-Technical Project Summary for README File](https://copilot.microsoft.com/shares/MUe8Cknq2hicGHYyWf7JM) [Python Programmer Google Account] (Thursday, Jul 24 2025)
-154. **...**
-155. [Email Request for ESS and Flex Portal Access](https://copilot.microsoft.com/shares/TqqWEzfobWqFfNXHKqvZm) [Python Programmer Google Account] (Thursday, Aug 14 2025)
-156. **...**
-157. [Creating a YouTube Description and Hashtags for LinguaCode Video](https://copilot.microsoft.com/shares/A6XT4LSCJby8SRe5jwBuy) [Python Programmer Google Account] (Monday, Aug 25 2025)
-158. **...**
-159. [Spend Efficiency Panel Overview and Resources](https://copilot.microsoft.com/shares/QSdEkmEJjRQoy5nqiNEfG) [Python Programmer Google Account] (Tuesday, Sep 9 2025)
-160. **...**
-161. [Professional Email Response Draft](https://copilot.microsoft.com/shares/Jm5H6yzrpn1CTAqKZDXuo) [Python Programmer Google Account] (Thursday, Sep 25 2025)  
+129. Referencing Sources in an Essay (Friday, Nov 29 2024)
+130. Reply to Colleague on AI Automation Projects (Wednesday, Dec 4 2024)
+131. Continuing Python Code for Data Splitting (Saturday, Dec 7 2024)
+132. Troubleshooting Power Automate Error (Monday, Dec 9 2024)
+133. Opening Discord Invite Links in Browser (Sunday, Dec 15 2024)
+134. Python Function to Reverse Linked List [Python Programmer Microsoft Account] (Sunday, Dec 15 2024)
+135. Planning a Software Business (Monday, Dec 16 2024)
+136. Requesting a Raise Email Draft [Python Programmer Microsoft Account] (Wednesday, Dec 18 2024)
+137. Biggest European Countries by Population and Capitals [Python Programmer Microsoft Account] (Saturday, Dec 21 2024)
+138. Finding the Fake Coin in Three Weighings [Python Programmer Microsoft Account] (Sunday, Dec 22 2024)
+139. [Improving Imbalanced Dataset in Python Model](https://copilot.microsoft.com/shares/QbRGmUofaPt8Vip8TKxmo) [Fifa Utuber Microsoft Account] (Thursday, Jan 2 2025)
+140. [Choosing a Linear Classification Model](https://copilot.microsoft.com/shares/ELQW4wd2841DWK5fZVD5c) [Fifa Utuber Microsoft Account] (Thursday, Jan 2 2025)
+141. [Error in Logistic Regression Model](https://copilot.microsoft.com/shares/7EDG3a45ijDpzZjFVjVjX) [Fifa Utuber Microsoft Account] (Friday, Jan 3 2025)
+142. [Creating an AI Call Bot with King Kong Personality](https://copilot.microsoft.com/shares/U7tQnCwsDazdKKarftZRp) [Fifa Utuber Microsoft Account] (Friday, Jan 3 2025)
+143. [Polite Follow-up on Scholarship Application](https://copilot.microsoft.com/shares/jYQiRqCwCMwWxXtDsXFyR) [Fifa Utuber Microsoft Account] (Sunday, Jan 5 2025)
+144. [Restarting Loop on None Value in Python](https://copilot.microsoft.com/shares/k21NShwZdjvys2C8Aot9W) [Fifa Utuber Microsoft Account] (Friday, Jan 10 2025)
+145. [Creating a Random Image Generator in JavaScript](https://copilot.microsoft.com/shares/FXMGtkZheorHsmazL5KMJ) [Fifa Utuber Microsoft Account] (Wednesday, Jan 15 2025)
+146. **...**
+147. Tips for Engaging YouTube Videos [Akhtar Hasan Microsoft Account] (Thursday, Feb 6 2025)
+148. **...**
+149. How to Install Lora Font in PowerPoint [Akhtar Hasan Microsoft Account] (Friday, Jun 13 2025)
+150. **...**
+151. Logo Concept for Custom Gallery App [Akhtar Hasan Microsoft Account] (Monday, Jun 23 2025)
+152. **...**
+153. [Fixing Pygame Installation Error in VS Code](https://copilot.microsoft.com/shares/Uoqbtf5XYhp6pG9w3d6gE) [Python Programmer Google Account] (Tuesday, Jul 22 2025)
+154. [Syntax for jQuery FormData Integration](https://copilot.microsoft.com/shares/cvMANczBKhj3T67D96x8G) [Akhtar Hasan Microsoft Account] (Wednesday, Jul 23 2025)
+155. [Creating HTML Page with Interactive Images and Color Theme](https://copilot.microsoft.com/shares/z6nB7h7bU5hWYB8KYc7MX) [Python Programmer Google Account] (Thursday, Jul 24 2025)
+156. [Creating a Non-Technical Project Summary for README File](https://copilot.microsoft.com/shares/MUe8Cknq2hicGHYyWf7JM) [Python Programmer Google Account] (Thursday, Jul 24 2025)
+157. **...**
+158. [Email Request for ESS and Flex Portal Access](https://copilot.microsoft.com/shares/TqqWEzfobWqFfNXHKqvZm) [Python Programmer Google Account] (Thursday, Aug 14 2025)
+159. **...**
+160. [Creating a YouTube Description and Hashtags for LinguaCode Video](https://copilot.microsoft.com/shares/A6XT4LSCJby8SRe5jwBuy) [Python Programmer Google Account] (Monday, Aug 25 2025)
+161. **...**
+162. [Spend Efficiency Panel Overview and Resources](https://copilot.microsoft.com/shares/QSdEkmEJjRQoy5nqiNEfG) [Python Programmer Google Account] (Tuesday, Sep 9 2025)
+163. **...**
+164. [Professional Email Response Draft](https://copilot.microsoft.com/shares/Jm5H6yzrpn1CTAqKZDXuo) [Python Programmer Google Account] (Thursday, Sep 25 2025)  
