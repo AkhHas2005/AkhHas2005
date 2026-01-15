@@ -168,4 +168,11 @@
 165. **...**
 166. [Spend Efficiency Panel Overview and Resources](https://copilot.microsoft.com/shares/QSdEkmEJjRQoy5nqiNEfG) [Python Programmer Google Account] (Tuesday, Sep 9 2025)
 167. **...**
-168. [Professional Email Response Draft](https://copilot.microsoft.com/shares/Jm5H6yzrpn1CTAqKZDXuo) [Python Programmer Google Account] (Thursday, Sep 25 2025)  
+168. [Suggestions for Young Professionals' Development](https://copilot.microsoft.com/shares/auxDBuQ3TUKT5mq3XEMYX) [Python Programmer Google Account] (Thursday, Sep 18 2025)
+169. [Professional Email Response Draft](https://copilot.microsoft.com/shares/Jm5H6yzrpn1CTAqKZDXuo) [Python Programmer Google Account] (Thursday, Sep 25 2025)
+170. **...**
+171. [Setting Default Photo Viewer in Windows 11](https://copilot.microsoft.com/shares/3dybo1N7BzwuB3jbqhVoL) [Python Programmer Google Account] (Wednesday, Oct 1 2025)
+172. **...**
+173. [Understanding a Metaphorical Comment on Generative AI]() [Python Programmer Google Account] (Wednesday, Oct 8 2025)
+174. **...**
+175. [Calculating Bi-Weekly Meeting Dates in Power Automate](https://copilot.microsoft.com/shares/GfSRw3rVMuqn24bQpMaph) [Python Programmer Google Account] (Thursday, Nov 27 2025)
