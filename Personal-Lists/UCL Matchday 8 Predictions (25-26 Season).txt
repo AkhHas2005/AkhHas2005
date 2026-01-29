@@ -1,0 +1,132 @@
+All Games Predicted and Actual Results with Points
+
+Fully correct prediction = 3 points
+Only result correct (not scoreline) = 1 point
+Incorrect prediction = 0 points
+TOTAL AVAILABLE POINTS = 54 (18 matches)
+
+Game 1: Liverpool 3-0 Qarabag
+ACTUAL RESULT: Liverpool 6-0 Qarabag
+Points: 1(+1)
+
+Game 2: Paris SG 1-1 Newcastle
+ACTUAL RESULT: Paris SG 1-1 Newcastle
+Points: 4(+3)
+
+Game 3: Man City 2-0 Galatasary
+ACTUAL RESULT: Man City 2-0 Galatasary
+Points: 7(+3)
+
+Game 4: B Dortmund 0-0 Inter
+ACTUAL RESULT: B Dortmund 0-2 Inter
+Points: 7(+0)
+
+Game 5: Barcelona 3-0 Copenhagen
+ACTUAL RESULT: Barcelona 4-1 Copenhagen
+Points: 8(+1)
+
+Game 6: Arsenal 2-0 Kairat Almaty
+ACTUAL RESULT: Arsenal 3-2 Kairat Almaty
+Points: 9(+1)
+
+Game 7: Leverkusen 2-2 Villareal
+ACTUAL RESULT: Leverkusen 3-0 Villareal
+Points: 9(+0)
+
+Game 8: Atletico M 3-2 Bodo/Glimt
+ACTUAL RESULT: Atletico M 1-2 Bodo/Glimt
+Points: 9(+0)
+
+Game 9: Benfica 2-2 Real Madrid
+ACTUAL RESULT: Benfica 4-2 Real Madrid
+Points: 9(+0)
+
+Game 10: PSV 1-3 Bayern Munchen
+ACTUAL RESULT: PSV 1-2 Bayern Munchen
+Points: 10(+1)
+
+Game 11: Monaco 1-2 Juventus
+ACTUAL RESULT: Monaco 0-0 Juventus
+Points: 10(+0)
+
+Game 12: Athletic Club 1-4 Sporting CP
+ACTUAL RESULT: Athletic Club 2-3 Sporting CP
+Points: 11(+1)
+
+Game 13: Frankfurt 1-2 Tottenham
+ACTUAL RESULT: Frankfurt 0-2 Tottenham
+Points: 12(+1)
+
+Game 14: Club Brugge 1-3 Marseille
+ACTUAL RESULT: Club Brugge 3-0 Marseille
+Points: 12(+0)
+
+Game 15: Ajax 1-1 OLympiacos
+ACTUAL RESULT: Ajax 1-2 OLympiacos
+Points: 12(+0)
+
+Game 16: Napoli 1-2 Chelsea
+ACTUAL RESULT: Napoli 2-3 Chelsea
+Points: 13(+1)
+
+Game 17: Union SG 1-2 Atalanta
+ACTUAL RESULT: Union SG 1-0 Atalanta
+Points: 13(+0)
+
+Game 18: Pafos 1-3 Slavia Praha
+ACTUAL RESULT: Pafos 4-1 Slavia Praha
+Points: 13(+0)
+
+Final Points: 13/54 (3: 2, 1: 7, 0: 9); PREDICTED: 5 Home Wins, 5 Draws, 8 Away Wins; ACTUALLY: 9 Home Wins, 2 Draws, 7 Away Wins  
+
+Predicted Table:
+1) Arsenal - 24 (8-0-0)
+2) Bayern Munchen - 21 (7-0-1)
+3) Liverpool - 18 (6-0-2)
+4) Tottenham - 17 (5-2-1)
+5) Real Madrid - 16 (5-1-2)
+6) Barcelona - 16 (5-1-2)
+7) Sporting CP - 16 (5-1-2)
+8) Chelsea - 16 (5-1-2)
+9) Man City - 16 (5-1-2)
+10) Atletico M - 16 (5-1-2)
+11) Atalanta - 16 (5-1-2)
+12) Juventus - 15 (4-3-1)
+13) Paris SG - 14 (4-2-2)
+14) Newcastle - 14 (4-2-2)
+15) Inter - 13 (4-1-3)
+16) B Dortmund - 12 (3-3-2)
+17) Marseille - 12 (4-0-4)
+18) Galatasaray - 10 (3-1-4)
+19) Leverkusen - 10 (2-4-2)
+20) Qarabag - 10 (3-1-4)
+21) Olympiacos - 9 (2-3-3)
+22) Monaco - 9 (2-3-3)
+23) PSV - 8 (2-2-4)
+24) Napoli - 8 (2-2-4)
+
+Actual Table:
+1) Arsenal - 24 (8-0-0)
+2) Bayern Munchen - 21 (7-0-1)
+3) Liverpool - 18 (6-0-2)
+4) Tottenham - 17 (5-2-1)
+5) Barcelona - 16 (5-1-2)
+6) Chelsea - 16 (5-1-2)
+7) Sporting CP - 16 (5-1-2)
+8) Man City - 16 (5-1-2)
+9) Real Madrid - 15 (5-0-3)
+10) Inter - 15 (5-0-3)
+11) Paris SG - 14 (4-2-2)
+12) Newcastle - 14 (4-2-2)
+13) Juventus - 13 (3-4-1)
+14) Atletico M - 13 (4-1-3)
+15) Atalanta - 13 (4-1-3)
+16) Leverkusen - 12 (3-3-2)
+17) B Dortmund - 11 (3-2-3)
+18) Olympiacos - 11 (3-2-3)
+19) Club Brugge - 10 (3-1-4)
+20) Galatasaray - 10 (3-1-4)
+21) Monaco - 10 (2-4-2)
+22) Qarabag - 10 (3-1-4)
+23) Bodo/Glimt - 9 (2-3-3)
+24) Benfica - 9 (3-0-5)
