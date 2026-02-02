@@ -184,3 +184,5 @@
 181. [Understanding a Metaphorical Comment on Generative AI]() [Python Programmer Google Account] (Wednesday, Oct 8 2025)
 182. **...**
 183. [Calculating Bi-Weekly Meeting Dates in Power Automate](https://copilot.microsoft.com/shares/GfSRw3rVMuqn24bQpMaph) [Python Programmer Google Account] (Thursday, Nov 27 2025)
+184. **...**
+185. [Studying Concurrency in Java](https://m365.cloud.microsoft/chat/entity1-d870f6cd-4aa5-4d42-9626-ab690c041429/eyJpZCI6IlZYTmxjbFl4ZkdoMGRIQnpPaTh2YzNWaWMzUnlZWFJsTFdsdWRDNXZabVpwWTJVdVkyOXRMM3hQU1VRNk5EUXdZbVUyT0RndFlqTTROUzAwWXpjMkxXRmhZall0WW1aa00ySmhZV1ZrWTJSbGZEWTVZVE5pTlRoaExUUXpNRGt0TkRnNU5DMDRaRE0yTFdVM1l6STFNbUU1T1dRME5Id3lNREkyTFRBeUxUQXlWREV6T2pFM09qUTFMakl4TXpVeVdnJTNkJTNkIiwic2NlbmFyaW8iOiJzaGFyZUxpbmtWaWFSaWNoQ29weSIsInByb3BlcnRpZXMiOnsicHJvbXB0U291cmNlIjoidXNlciIsImNsaWNrVGltZXN0YW1wIjoiMjAyNi0wMi0wMlQxMzoxNzo0Mi45NTVaIn0sImNoYXRUeXBlIjoid2ViIiwidmVyc2lvbiI6MS4xfQ) [Uni Microsoft Account] (Monday, Feb 2 2026)
