@@ -4816,135 +4816,1007 @@ if __name__ == "__main__":
 By ensuring feature consistency between training and prediction, you should be able to avoid the feature mismatch error and improve the accuracy of your model's predictions.  
 
 ## Me
-I got this error when trying to run mySQL server in xampp:2024-10-15 10:28:59 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 334962024-10-15 10:28:59 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 10:28:59 0 [Note] InnoDB: Uses event mutexes2024-10-15 10:28:59 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 10:28:59 0 [Note] InnoDB: Number of pools: 12024-10-15 10:28:59 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 10:28:59 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 10:28:59 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 10:28:59 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=3002882024-10-15 10:28:59 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 10:28:59 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 10:28:59 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 10:28:59 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 10:28:59 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 10:28:59 0 [Note] InnoDB: Waiting for purge to start2024-10-15 10:28:59 0 [Note] InnoDB: 10.4.32 started; log sequence number 300297; transaction id 1702024-10-15 10:28:59 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 10:28:59 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 10:28:59 0 [Note] InnoDB: Buffer pool(s) load completed at 241015 10:28:592024-10-15 10:28:59 0 [Note] Server socket created on IP: '::'.2024-10-15 11:40:26 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 16224Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:26 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:26 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:26 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:26 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:26 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:26 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:26 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:26 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:26 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:26 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=5755382024-10-15 11:40:26 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:26 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 11:40:26 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:26 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:26 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:26 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:27 0 [Note] InnoDB: 10.4.32 started; log sequence number 575547; transaction id 4052024-10-15 11:40:27 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:27 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:27 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:27 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:27 0 [ERROR] Aborting2024-10-15 11:40:31 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 27624Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:31 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:31 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:31 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:31 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:31 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:31 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:31 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:31 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:31 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:31 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:31 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:31 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:31 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:31 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:31 0 [Note] InnoDB: 10.4.32 started; log sequence number 575556; transaction id 4052024-10-15 11:40:31 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:31 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:31 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:31 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:31 0 [ERROR] Aborting  
+(Now Wednesday, Feb 26)  
+Based on this testing report, how can I enhance my model:  
+
+```
+The status of form types being predicted correctly is as follows:
+		A & E Case 3 - ✅
+		A & E Case 2 - ✅
+		A & E Case 1 - ❎ (Actually A & E Case 2 predicted)
+		Case 1 - ❎ (Actually A & E Case 2 predicted but correct one close second at 28% compared to 32%)
+		Case 2 - ❎ (Actually Case 1 predicted at 44% compared to 0% for correct one)
+		Case 3 - ❎ (Actually Case 2 predicted but correct one a bit behind [#5] at 10% compared to 34%)
+		Default - ✅ (Joint with Case 2 at 40%)
+	Output of latest test is below:
+		```How many tests do you wanna do?  7
+Test 1:
+Enter the name of the Word Document to test: A & E Case 3 (6)
+/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/sklearn/utils/validation.py:2732: UserWarning: X has feature names, but RandomForestClassifier was fitted without feature names
+  warnings.warn(
+Form Type: A & E Case 3, Probability: 64.00%
+Form Type: Default, Probability: 36.00%
+Form Type: A & E Case 1, Probability: 0.00%
+Form Type: A & E Case 2, Probability: 0.00%
+Form Type: Case 1, Probability: 0.00%
+Form Type: Case 2, Probability: 0.00%
+Form Type: Case 3, Probability: 0.00%
+Test 2:
+Enter the name of the Word Document to test: A & E Case 2_1
+/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/sklearn/utils/validation.py:2732: UserWarning: X has feature names, but RandomForestClassifier was fitted without feature names
+  warnings.warn(
+Form Type: A & E Case 2, Probability: 64.00%
+Form Type: Default, Probability: 36.00%
+Form Type: A & E Case 1, Probability: 0.00%
+Form Type: A & E Case 3, Probability: 0.00%
+Form Type: Case 1, Probability: 0.00%
+Form Type: Case 2, Probability: 0.00%
+Form Type: Case 3, Probability: 0.00%
+Test 3:
+Enter the name of the Word Document to test:  A & E Case 1 (1)  
+/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/sklearn/utils/validation.py:2732: UserWarning: X has feature names, but RandomForestClassifier was fitted without feature names
+  warnings.warn(
+Form Type: A & E Case 2, Probability: 64.00%
+Form Type: Default, Probability: 36.00%
+Form Type: A & E Case 1, Probability: 0.00%
+Form Type: A & E Case 3, Probability: 0.00%
+Form Type: Case 1, Probability: 0.00%
+Form Type: Case 2, Probability: 0.00%
+Form Type: Case 3, Probability: 0.00%
+Test 4:
+Enter the name of the Word Document to test: Case 1 (4)
+/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/sklearn/utils/validation.py:2732: UserWarning: X has feature names, but RandomForestClassifier was fitted without feature names
+  warnings.warn(
+Form Type: A & E Case 2, Probability: 32.00%
+Form Type: Case 1, Probability: 28.23%
+Form Type: Default, Probability: 20.00%
+Form Type: Case 3, Probability: 19.77%
+Form Type: A & E Case 1, Probability: 0.00%
+Form Type: A & E Case 3, Probability: 0.00%
+Form Type: Case 2, Probability: 0.00%
+Test 5:
+Enter the name of the Word Document to test: case 2_2
+/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/sklearn/utils/validation.py:2732: UserWarning: X has feature names, but RandomForestClassifier was fitted without feature names
+  warnings.warn(
+Form Type: Case 1, Probability: 44.35%
+Form Type: Case 3, Probability: 29.65%
+Form Type: Default, Probability: 26.00%
+Form Type: A & E Case 1, Probability: 0.00%
+Form Type: A & E Case 2, Probability: 0.00%
+Form Type: A & E Case 3, Probability: 0.00%
+Form Type: Case 2, Probability: 0.00%
+Test 6:
+Enter the name of the Word Document to test: Case 3 - copy 3
+/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/sklearn/utils/validation.py:2732: UserWarning: X has feature names, but RandomForestClassifier was fitted without feature names
+  warnings.warn(
+Form Type: Case 2, Probability: 34.00%
+Form Type: A & E Case 2, Probability: 26.00%
+Form Type: Default, Probability: 18.00%
+Form Type: Case 1, Probability: 11.77%
+Form Type: Case 3, Probability: 10.23%
+Form Type: A & E Case 1, Probability: 0.00%
+Form Type: A & E Case 3, Probability: 0.00%
+Test 7:
+Enter the name of the Word Document to test: Example filled Breaking Cycles Referral Form (5)
+/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/sklearn/utils/validation.py:2732: UserWarning: X has feature names, but RandomForestClassifier was fitted without feature names
+  warnings.warn(
+Form Type: Case 2, Probability: 40.00%
+Form Type: Default, Probability: 40.00%
+Form Type: A & E Case 2, Probability: 20.00%
+Form Type: A & E Case 1, Probability: 0.00%
+Form Type: A & E Case 3, Probability: 0.00%
+Form Type: Case 1, Probability: 0.00%
+Form Type: Case 3, Probability: 0.00%
+```  
+
+So I want to manually set class weights, based on my testing report summary, what weights would be the most suitable to mitigate the bias:  
+
+```
+A & E Case 3 - ✅
+A & E Case 2 - ✅
+A & E Case 1 - ❎ (Actually A & E Case 2 predicted at 64% compared to 0% for correct one)
+Case 1 - ❎ (Actually A & E Case 2 predicted [32%] and correct one second at 28.23%)
+Case 2 - ❎ (Actually Case 1 predicted at 44.35% compared to 0% for correct one)
+Case 3 - ❎ (Actually Case 2 predicted [34%] and correct one fifth at 10.23%)
+Default - ✅ (Joint with Case 2 at 40%)
+```  
 
 ## Copilot
-It looks like you're encountering an error with MySQL in XAMPP, specifically related to Aria recovery failing. This can happen due to corrupted files or incomplete recovery processes. Here are a few steps you can try to resolve this issue:
+To manually set class weights based on your testing report summary, you can assign higher weights to classes that are underrepresented or incorrectly predicted to mitigate the bias. Here’s a suggested approach:
 
-1. **Run XAMPP as Administrator**: Sometimes, running XAMPP with administrative privileges can resolve permission-related issues.
-2. **Restore Database Backup**: If you have a backup of your database, try restoring it.
-3. **Change MySQL Port**: Changing the MySQL port in the XAMPP configuration might help if there's a port conflict.
-4. **Check Aria Tables**: Run `aria_chk -r` on all Aria tables and delete all `aria_log` files as suggested by the error message.
+### Suggested Class Weights:
+1. **A & E Case 1**: High weight, as it is incorrectly predicted as A & E Case 2 with high probability.
+2. **Case 1**: Moderate weight, as it is often confused with A & E Case 2 but has some correct predictions as second-highest probability.
+3. **Case 2**: Moderate weight, since it is predicted incorrectly as Case 1.
+4. **Case 3**: Moderate weight, as it is incorrectly predicted as Case 2.
+5. **Default**: Lower weight, as it is mostly predicted correctly.
+6. **A & E Case 3 and A & E Case 2**: Lower weight, as they are predicted correctly most of the time.
 
-If these steps don't resolve the issue, you might want to check out detailed tutorials or forums for more specific guidance. Does this help, or do you need more detailed instructions on any of these steps?  
+### Implementation:
+You can set class weights in the `RandomForestClassifier` using the `class_weight` parameter.
 
-### References
-[kinsta.com](https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/)
+```python
+from sklearn.ensemble import RandomForestClassifier
+
+# Define class weights based on analysis
+class_weights = {
+    "A & E Case 1": 3,
+    "Case 1": 2,
+    "Case 2": 2,
+    "Case 3": 2,
+    "Default": 1,
+    "A & E Case 2": 1,
+    "A & E Case 3": 1
+}
+
+# Initialize the RandomForestClassifier with class weights
+model = RandomForestClassifier(class_weight=class_weights, random_state=42)
+
+# Train the model
+```  
 
 ## Me
-I got this error when trying to run mySQL server in xampp:2024-10-15 10:28:59 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 334962024-10-15 10:28:59 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 10:28:59 0 [Note] InnoDB: Uses event mutexes2024-10-15 10:28:59 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 10:28:59 0 [Note] InnoDB: Number of pools: 12024-10-15 10:28:59 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 10:28:59 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 10:28:59 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 10:28:59 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=3002882024-10-15 10:28:59 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 10:28:59 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 10:28:59 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 10:28:59 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 10:28:59 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 10:28:59 0 [Note] InnoDB: Waiting for purge to start2024-10-15 10:28:59 0 [Note] InnoDB: 10.4.32 started; log sequence number 300297; transaction id 1702024-10-15 10:28:59 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 10:28:59 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 10:28:59 0 [Note] InnoDB: Buffer pool(s) load completed at 241015 10:28:592024-10-15 10:28:59 0 [Note] Server socket created on IP: '::'.2024-10-15 11:40:26 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 16224Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:26 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:26 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:26 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:26 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:26 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:26 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:26 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:26 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:26 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:26 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=5755382024-10-15 11:40:26 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:26 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 11:40:26 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:26 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:26 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:26 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:27 0 [Note] InnoDB: 10.4.32 started; log sequence number 575547; transaction id 4052024-10-15 11:40:27 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:27 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:27 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:27 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:27 0 [ERROR] Aborting2024-10-15 11:40:31 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 27624Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:31 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:31 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:31 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:31 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:31 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:31 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:31 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:31 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:31 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:31 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:31 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:31 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:31 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:31 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:31 0 [Note] InnoDB: 10.4.32 started; log sequence number 575556; transaction id 4052024-10-15 11:40:31 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:31 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:31 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:31 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:31 0 [ERROR] Aborting  
+How would I update this part of the code:  
+
+```Python
+# Define RandomForestClassifier with class weights
+    param_grid = {
+        'n_estimators': [50, 100, 200],
+        'max_depth': [None, 10, 20],
+        'min_samples_split': [2, 5],
+        'min_samples_leaf': [1, 2],
+        'class_weight': [class_weights]
+    }
+
+    stratified_kfold = StratifiedKFold(n_splits=3)
+    grid_search = GridSearchCV(RandomForestClassifier(random_state=42), param_grid, cv=stratified_kfold, scoring='accuracy')
+    grid_search.fit(X_train, y_train)
+```
 
 ## Copilot
-It looks like you're encountering an error with MySQL in XAMPP, specifically related to Aria recovery failing. This can happen due to corrupted files or incomplete recovery processes. Here are a few steps you can try to resolve this issue:
+To update the code to include the class weights in the `GridSearchCV` parameter grid, you will need to define the class weights separately and then include them in the parameter grid. Here is the updated version of the code:
 
-1. **Run XAMPP as Administrator**: Sometimes, running XAMPP with administrative privileges can resolve permission-related issues.
-2. **Restore Database Backup**: If you have a backup of your database, try restoring it.
-3. **Change MySQL Port**: Changing the MySQL port in the XAMPP configuration might help if there's a port conflict.
-4. **Check Aria Tables**: Run `aria_chk -r` on all Aria tables and delete all `aria_log` files as suggested by the error message.
+### Updated Code:
+```python
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import StratifiedKFold, GridSearchCV
 
-If these steps don't resolve the issue, you might want to check out detailed tutorials or forums for more specific guidance. Does this help, or do you need more detailed instructions on any of these steps?  
+# Define class weights based on analysis
+class_weights = {
+    "A & E Case 1": 3,
+    "Case 1": 2,
+    "Case 2": 2,
+    "Case 3": 2,
+    "Default": 1,
+    "A & E Case 2": 1,
+    "A & E Case 3": 1
+}
 
-### References
-[kinsta.com](https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/)
+# Define parameter grid including class weights
+param_grid = {
+    'n_estimators': [50, 100, 200],
+    'max_depth': [None, 10, 20],
+    'min_samples_split': [2, 5],
+    'min_samples_leaf': [1, 2],
+    'class_weight': [class_weights]
+}
+
+# Create a StratifiedKFold cross-validator
+stratified_kfold = StratifiedKFold(n_splits=3)
+
+# Create a GridSearchCV object with the parameter grid
+grid_search = GridSearchCV(RandomForestClassifier(random_state=42), param_grid, cv=stratified_kfold, scoring='accuracy')
+
+# Fit the model
+grid_search.fit(X_train, y_train)
+
+# Get the best model
+best_model = grid_search.best_estimator_
+print(f"Best model parameters: {grid_search.best_params_}")
+
+# Evaluate the model
+y_pred = best_model.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Accuracy: {accuracy}")
+print(classification_report(y_test, y_pred))
+
+# Save the best model
+joblib.dump(best_model, folderName + '/../form_type_model.joblib')
+joblib.dump(configurations, folderName + '/../form_configurations.joblib')
+```
+
+### Summary:
+1. **Define Class Weights**: Specify the class weights based on your analysis.
+2. **Include Class Weights in Param Grid**: Add the class weights to the parameter grid.
+3. **Create StratifiedKFold**: Use stratified K-fold cross-validation to ensure balanced splits.
+4. **Fit the Model**: Use `GridSearchCV` to find the best parameters including class weights.
+
+By incorporating these changes, you should be able to reduce the bias and improve the accuracy of your model's predictions.  
 
 ## Me
-I got this error when trying to run mySQL server in xampp:2024-10-15 10:28:59 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 334962024-10-15 10:28:59 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 10:28:59 0 [Note] InnoDB: Uses event mutexes2024-10-15 10:28:59 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 10:28:59 0 [Note] InnoDB: Number of pools: 12024-10-15 10:28:59 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 10:28:59 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 10:28:59 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 10:28:59 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=3002882024-10-15 10:28:59 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 10:28:59 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 10:28:59 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 10:28:59 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 10:28:59 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 10:28:59 0 [Note] InnoDB: Waiting for purge to start2024-10-15 10:28:59 0 [Note] InnoDB: 10.4.32 started; log sequence number 300297; transaction id 1702024-10-15 10:28:59 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 10:28:59 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 10:28:59 0 [Note] InnoDB: Buffer pool(s) load completed at 241015 10:28:592024-10-15 10:28:59 0 [Note] Server socket created on IP: '::'.2024-10-15 11:40:26 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 16224Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:26 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:26 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:26 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:26 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:26 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:26 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:26 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:26 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:26 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:26 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=5755382024-10-15 11:40:26 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:26 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 11:40:26 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:26 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:26 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:26 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:27 0 [Note] InnoDB: 10.4.32 started; log sequence number 575547; transaction id 4052024-10-15 11:40:27 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:27 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:27 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:27 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:27 0 [ERROR] Aborting2024-10-15 11:40:31 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 27624Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:31 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:31 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:31 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:31 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:31 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:31 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:31 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:31 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:31 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:31 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:31 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:31 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:31 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:31 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:31 0 [Note] InnoDB: 10.4.32 started; log sequence number 575556; transaction id 4052024-10-15 11:40:31 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:31 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:31 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:31 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:31 0 [ERROR] Aborting  
+I'm using those class weights, however this is now my testing report summary:  
+
+```
+The status of form types being predicted correctly is as follows:
+		A & E Case 3 - ✅
+		A & E Case 2 - ✅
+		A & E Case 1 - ❎ (Actually A & E Case 2 predicted at 74% compared to 0% for correct one)
+		Case 1 - ❎ (Actually A & E Case 2 predicted [42%] and correct one third at 18.06%)
+		Case 2 - ❎ (Actually Case 3 predicted at 39.43% compared to 0% for correct one)
+		Case 3 - ❎ (Actually A & E Case 2 predicted [36%] and correct one fourth at 10.16%)
+		Default - ❎ (Actually Case 2 predicted [54%] and correct one second at 24%)
+```
 
 ## Copilot
-It looks like you're encountering an error with MySQL in XAMPP, specifically related to Aria recovery failing. This can happen due to corrupted files or incomplete recovery processes. Here are a few steps you can try to resolve this issue:
+It seems like the model is still heavily biased towards certain classes despite the class weights adjustment. Let's consider a few more strategies to enhance your model's performance:
 
-1. **Run XAMPP as Administrator**: Sometimes, running XAMPP with administrative privileges can resolve permission-related issues.
-2. **Restore Database Backup**: If you have a backup of your database, try restoring it.
-3. **Change MySQL Port**: Changing the MySQL port in the XAMPP configuration might help if there's a port conflict.
-4. **Check Aria Tables**: Run `aria_chk -r` on all Aria tables and delete all `aria_log` files as suggested by the error message.
+### 1. Adjusting Class Weights Further:
+Since the current weights didn't yield the desired results, we may need to further increase the weights for the underrepresented or incorrectly predicted classes.
 
-If these steps don't resolve the issue, you might want to check out detailed tutorials or forums for more specific guidance. Does this help, or do you need more detailed instructions on any of these steps?  
+### 2. Over-sampling and Under-sampling:
+Using techniques like SMOTE (Synthetic Minority Over-sampling Technique) to generate synthetic samples for minority classes or under-sampling the majority classes can help balance the dataset.
 
-### References
-[kinsta.com](https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/)
+### 3. Model Ensemble:
+Combining predictions from multiple models can improve overall performance. For example, combining RandomForest with GradientBoosting or using VotingClassifier.
+
+### 4. Feature Engineering:
+Refine or add more distinguishing features that can help the model better differentiate between the form types.
+
+### Implementing SMOTE:
+Here’s how to adjust your code to use SMOTE for balancing the classes:
+
+#### Install imbalanced-learn:
+```bash
+pip install imbalanced-learn
+```
+
+#### Update Training Code:
+```python
+import re
+import pandas as pd
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.impute import SimpleImputer
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, classification_report
+from imblearn.over_sampling import SMOTE
+import joblib
+
+from documentExtraction import documentExtractor
+from form_configurations import formConfigurationStorer as formCfS
+from autoLogger import *
+
+folderName = 'Other AI Projects/AI Document Extraction/src/localFiles'
+thisAutoLogger = general_logger(f"{folderName}/run_logs.txt")
+
+# Define form configurations
+thisFormCfS = formCfS()
+formTypes = [
+    "Default",
+    "Case 1",
+    "Case 2",
+    "Case 3",
+    "A & E Case 1",
+    "A & E Case 2",
+    "A & E Case 3"
+]
+form_configs = thisFormCfS.get_all_configs()
+configurations = dict(zip(formTypes, form_configs))
+
+# Store text from all relevant extracted documents
+docExt = documentExtractor()
+extracted_documents = {}
+for formType in formTypes:
+    thisRow = []
+    if formType == "Case 2":
+        formName = formType.lower()
+    elif formType == "Default":
+        formName = "Example filled Breaking Cycles Referral Form"
+    else:
+        formName = formType
+    text = docExt.extract_text_from_docx(f"{folderName}/{formName}.docx", form_type=formType)
+    thisRow.append(text)
+    for num in range(6):
+        text = docExt.extract_text_from_docx(f"{folderName}/{formName} ({num+1}).docx", form_type=formType)
+        thisRow.append(text)
+    extracted_documents[formType] = thisRow
+
+# Function to extract features based on patterns
+def extract_features(text, config):
+    features = {}
+    for key, pattern in config['patterns'].items():
+        match = re.search(pattern, text)
+        features[key] = bool(match)
+    return features
+
+# Example dataset
+data = []
+labels = []
+
+# Loop through each form type and extract features
+for form_type, config in configurations.items():
+    # Access the sub-array for the current form type
+    for doc_text in extracted_documents[form_type]:
+        features = extract_features(doc_text, config)
+        combined_features = {f"{k}": v for k, v in features.items()}  # Removed form_type prefix
+        data.append(combined_features)
+        labels.append(form_type)
+
+# Convert to DataFrame
+df = pd.DataFrame(data)
+df['label'] = labels
+
+# Encode labels
+X = df.drop('label', axis=1)
+y = df['label']
+
+# Impute missing values with a placeholder (e.g., False)
+imputer = SimpleImputer(strategy='constant', fill_value=False)
+X_imputed = imputer.fit_transform(X)
+
+# Apply SMOTE for over-sampling the minority class
+smote = SMOTE(random_state=42)
+X_resampled, y_resampled = smote.fit_resample(X_imputed, y)
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X_resampled, y_resampled, test_size=0.2, random_state=42)
+
+# Define parameter grid including class weights
+param_grid = {
+    'n_estimators': [50, 100, 200],
+    'max_depth': [None, 10, 20],
+    'min_samples_split': [2, 5],
+    'min_samples_leaf': [1, 2],
+    'class_weight': [class_weights]
+}
+
+# Create a StratifiedKFold cross-validator
+stratified_kfold = StratifiedKFold(n_splits=3)
+
+# Create a GridSearchCV object with the parameter grid
+grid_search = GridSearchCV(RandomForestClassifier(random_state=42), param_grid, cv=stratified_kfold, scoring='accuracy')
+
+# Fit the model
+grid_search.fit(X_train, y_train)
+
+# Get the best model
+best_model = grid_search.best_estimator_
+print(f"Best model parameters: {grid_search.best_params_}")
+
+# Evaluate the model
+y_pred = best_model.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Accuracy: {accuracy}")
+print(classification_report(y_test, y_pred))
+
+# Save the best model
+joblib.dump(best_model, folderName + '/../form_type_model.joblib')
+joblib.dump(configurations, folderName + '/../form_configurations.joblib')
+joblib.dump(X.columns.tolist(), folderName + '/../feature_names.joblib')
+```
+
+### Key Points:
+- **Class Weights**: Further adjust class weights if needed.
+- **SMOTE**: Over-sample the minority classes using SMOTE to balance the dataset.
+- **Ensemble Methods**: Consider combining different models.
+
+By applying these techniques, you should see an improvement in the accuracy and reliability of your model’s predictions. Let me know if you need further assistance!  
 
 ## Me
-I got this error when trying to run mySQL server in xampp:2024-10-15 10:28:59 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 334962024-10-15 10:28:59 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 10:28:59 0 [Note] InnoDB: Uses event mutexes2024-10-15 10:28:59 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 10:28:59 0 [Note] InnoDB: Number of pools: 12024-10-15 10:28:59 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 10:28:59 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 10:28:59 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 10:28:59 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=3002882024-10-15 10:28:59 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 10:28:59 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 10:28:59 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 10:28:59 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 10:28:59 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 10:28:59 0 [Note] InnoDB: Waiting for purge to start2024-10-15 10:28:59 0 [Note] InnoDB: 10.4.32 started; log sequence number 300297; transaction id 1702024-10-15 10:28:59 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 10:28:59 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 10:28:59 0 [Note] InnoDB: Buffer pool(s) load completed at 241015 10:28:592024-10-15 10:28:59 0 [Note] Server socket created on IP: '::'.2024-10-15 11:40:26 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 16224Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:26 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:26 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:26 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:26 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:26 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:26 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:26 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:26 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:26 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:26 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=5755382024-10-15 11:40:26 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:26 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 11:40:26 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:26 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:26 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:26 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:27 0 [Note] InnoDB: 10.4.32 started; log sequence number 575547; transaction id 4052024-10-15 11:40:27 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:27 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:27 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:27 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:27 0 [ERROR] Aborting2024-10-15 11:40:31 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 27624Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:31 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:31 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:31 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:31 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:31 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:31 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:31 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:31 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:31 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:31 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:31 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:31 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:31 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:31 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:31 0 [Note] InnoDB: 10.4.32 started; log sequence number 575556; transaction id 4052024-10-15 11:40:31 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:31 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:31 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:31 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:31 0 [ERROR] Aborting  
+What do the class weights signify and how do they work?  
 
 ## Copilot
-It looks like you're encountering an error with MySQL in XAMPP, specifically related to Aria recovery failing. This can happen due to corrupted files or incomplete recovery processes. Here are a few steps you can try to resolve this issue:
+Class weights in machine learning are used to assign different levels of importance to different classes in a classification problem. This is particularly useful when dealing with imbalanced datasets where some classes are underrepresented. Here’s a closer look at what class weights signify and how they work:
 
-1. **Run XAMPP as Administrator**: Sometimes, running XAMPP with administrative privileges can resolve permission-related issues.
-2. **Restore Database Backup**: If you have a backup of your database, try restoring it.
-3. **Change MySQL Port**: Changing the MySQL port in the XAMPP configuration might help if there's a port conflict.
-4. **Check Aria Tables**: Run `aria_chk -r` on all Aria tables and delete all `aria_log` files as suggested by the error message.
+### What Class Weights Signify:
+Class weights indicate how important each class is during the training process. When you assign a higher weight to a class, you are telling the algorithm to pay more attention to that class. This helps to ensure that the model doesn’t ignore or under-represent the minority classes during training.
 
-If these steps don't resolve the issue, you might want to check out detailed tutorials or forums for more specific guidance. Does this help, or do you need more detailed instructions on any of these steps?  
+### How Class Weights Work:
+1. **Adjusting Loss Function**: The class weights are used to adjust the loss function. During training, the algorithm calculates the loss for each prediction. By applying class weights, the loss for underrepresented classes is increased, making the model more sensitive to these classes.
 
-### References
-[kinsta.com](https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/)
+2. **Balancing the Training Process**: Class weights help to balance the training process by compensating for the imbalance in the dataset. This ensures that the model learns to classify all classes accurately, not just the majority class.
+
+### Example:
+Let's say you have a classification problem with three classes: A, B, and C. Class A has 100 samples, Class B has 10 samples, and Class C has 5 samples. Without class weights, the model might focus more on Class A because it has more samples.
+
+By applying class weights, you can tell the model to pay more attention to Classes B and C. For example:
+- Class A weight: 1 (default)
+- Class B weight: 10
+- Class C weight: 20
+
+With these weights, the model will place more emphasis on correctly predicting Classes B and C, even though they have fewer samples.
+
+### Implementing Class Weights:
+In Scikit-learn’s `RandomForestClassifier`, you can set class weights as follows:
+
+```python
+from sklearn.ensemble import RandomForestClassifier
+
+# Define class weights
+class_weights = {
+    'class_A': 1,
+    'class_B': 10,
+    'class_C': 20
+}
+
+# Initialize the RandomForestClassifier with class weights
+model = RandomForestClassifier(class_weight=class_weights, random_state=42)
+```
+
+By using class weights, you can improve the model’s performance on imbalanced datasets and ensure that all classes are adequately represented in the training process.
+
+If you have any further questions or need additional help, feel free to let me know!  
 
 ## Me
-I got this error when trying to run mySQL server in xampp:2024-10-15 10:28:59 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 334962024-10-15 10:28:59 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 10:28:59 0 [Note] InnoDB: Uses event mutexes2024-10-15 10:28:59 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 10:28:59 0 [Note] InnoDB: Number of pools: 12024-10-15 10:28:59 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 10:28:59 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 10:28:59 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 10:28:59 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=3002882024-10-15 10:28:59 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 10:28:59 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 10:28:59 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 10:28:59 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 10:28:59 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 10:28:59 0 [Note] InnoDB: Waiting for purge to start2024-10-15 10:28:59 0 [Note] InnoDB: 10.4.32 started; log sequence number 300297; transaction id 1702024-10-15 10:28:59 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 10:28:59 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 10:28:59 0 [Note] InnoDB: Buffer pool(s) load completed at 241015 10:28:592024-10-15 10:28:59 0 [Note] Server socket created on IP: '::'.2024-10-15 11:40:26 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 16224Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:26 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:26 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:26 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:26 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:26 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:26 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:26 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:26 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:26 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:26 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=5755382024-10-15 11:40:26 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:26 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 11:40:26 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:26 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:26 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:26 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:27 0 [Note] InnoDB: 10.4.32 started; log sequence number 575547; transaction id 4052024-10-15 11:40:27 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:27 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:27 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:27 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:27 0 [ERROR] Aborting2024-10-15 11:40:31 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 27624Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:31 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:31 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:31 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:31 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:31 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:31 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:31 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:31 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:31 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:31 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:31 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:31 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:31 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:31 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:31 0 [Note] InnoDB: 10.4.32 started; log sequence number 575556; transaction id 4052024-10-15 11:40:31 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:31 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:31 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:31 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:31 0 [ERROR] Aborting  
+What can you infer from my latest test report summary:  
+
+```
+The status of form types being predicted correctly is as follows:
+		A & E Case 3 - ✅
+		A & E Case 2 - ✅
+		A & E Case 1 - ❎ (Actually A & E Case 2 predicted at 68% compared to 0% for correct one)
+		Case 1 - ❎ (Actually A & E Case 2 predicted [30%] and correct one second at 27.89%)
+		Case 2 - ❎ (Actually Case 1 predicted at 43.80% compared to 0% for correct one)
+		Case 3 - ❎ (Actually A & E Case 2 predicted [28%] and correct one fifth at 11.75%)
+		Default - ✅ (Case 2 very close behind at 38% compared to 42%)
+```  
+
+The weights I'm using atm are:  
+
+```Python
+class_weights = {
+        "A & E Case 1": 1,
+        "Case 1": 3,
+        "Case 2": 2,
+        "Case 3": 3,
+        "Default": 4,
+        "A & E Case 2": 5,
+        "A & E Case 3": 5
+    }
+```  
+
+Based on these probablities, how can I write an autocorrect method that uses the probabilities and compares in between numbers to determine which form it should actually be:  
+
+```
+Test 1:
+Enter the name of the Word Document to test: A & E Case 3 v2
+/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/sklearn/utils/validation.py:2732: UserWarning: X has feature names, but RandomForestClassifier was fitted without feature names
+  warnings.warn(
+Form Type: A & E Case 3, Probability: 64.00%
+Form Type: Default, Probability: 36.00%
+Form Type: A & E Case 1, Probability: 0.00%
+Form Type: A & E Case 2, Probability: 0.00%
+Form Type: Case 1, Probability: 0.00%
+Form Type: Case 2, Probability: 0.00%
+Form Type: Case 3, Probability: 0.00%
+Test 2:
+Enter the name of the Word Document to test: A & E Case 2 (5)
+/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/sklearn/utils/validation.py:2732: UserWarning: X has feature names, but RandomForestClassifier was fitted without feature names
+  warnings.warn(
+Form Type: A & E Case 2, Probability: 64.00%
+Form Type: Default, Probability: 36.00%
+Form Type: A & E Case 1, Probability: 0.00%
+Form Type: A & E Case 3, Probability: 0.00%
+Form Type: Case 1, Probability: 0.00%
+Form Type: Case 2, Probability: 0.00%
+Form Type: Case 3, Probability: 0.00%
+Test 3:
+Enter the name of the Word Document to test: A & E Case 1 (6)
+/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/sklearn/utils/validation.py:2732: UserWarning: X has feature names, but RandomForestClassifier was fitted without feature names
+  warnings.warn(
+Form Type: A & E Case 2, Probability: 64.00%
+Form Type: Default, Probability: 36.00%
+Form Type: A & E Case 1, Probability: 0.00%
+Form Type: A & E Case 3, Probability: 0.00%
+Form Type: Case 1, Probability: 0.00%
+Form Type: Case 2, Probability: 0.00%
+Form Type: Case 3, Probability: 0.00%
+Test 4:
+Enter the name of the Word Document to test: Case 1 (5)
+/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/sklearn/utils/validation.py:2732: UserWarning: X has feature names, but RandomForestClassifier was fitted without feature names
+  warnings.warn(
+Form Type: A & E Case 2, Probability: 32.00%
+Form Type: Case 1, Probability: 28.23%
+Form Type: Default, Probability: 20.00%
+Form Type: Case 3, Probability: 19.77%
+Form Type: A & E Case 1, Probability: 0.00%
+Form Type: A & E Case 3, Probability: 0.00%
+Form Type: Case 2, Probability: 0.00%
+Test 5:
+Enter the name of the Word Document to test: case 2_1
+/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/sklearn/utils/validation.py:2732: UserWarning: X has feature names, but RandomForestClassifier was fitted without feature names
+  warnings.warn(
+Form Type: Case 1, Probability: 44.35%
+Form Type: Case 3, Probability: 29.65%
+Form Type: Default, Probability: 26.00%
+Form Type: A & E Case 1, Probability: 0.00%
+Form Type: A & E Case 2, Probability: 0.00%
+Form Type: A & E Case 3, Probability: 0.00%
+Form Type: Case 2, Probability: 0.00%
+Test 6:
+Enter the name of the Word Document to test: Case 3 (5)
+/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/sklearn/utils/validation.py:2732: UserWarning: X has feature names, but RandomForestClassifier was fitted without feature names
+  warnings.warn(
+Form Type: Case 2, Probability: 34.00%
+Form Type: A & E Case 2, Probability: 26.00%
+Form Type: Default, Probability: 18.00%
+Form Type: Case 1, Probability: 11.77%
+Form Type: Case 3, Probability: 10.23%
+Form Type: A & E Case 1, Probability: 0.00%
+Form Type: A & E Case 3, Probability: 0.00%
+Test 7:
+Enter the name of the Word Document to test: Example filled Breaking Cycles Referral Form (1)
+/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/sklearn/utils/validation.py:2732: UserWarning: X has feature names, but RandomForestClassifier was fitted without feature names
+  warnings.warn(
+Form Type: Case 2, Probability: 40.00%
+Form Type: Default, Probability: 40.00%
+Form Type: A & E Case 2, Probability: 20.00%
+Form Type: A & E Case 1, Probability: 0.00%
+Form Type: A & E Case 3, Probability: 0.00%
+Form Type: Case 1, Probability: 0.00%
+Form Type: Case 3, Probability: 0.00%
+```  
 
 ## Copilot
-It looks like you're encountering an error with MySQL in XAMPP, specifically related to Aria recovery failing. This can happen due to corrupted files or incomplete recovery processes. Here are a few steps you can try to resolve this issue:
+To create an autocorrect method that uses probabilities to determine the most likely form type, you can set a threshold and compare the probabilities to adjust the final prediction if the difference between the top probabilities is within a certain range. This helps in cases where the top two or three probabilities are close, indicating uncertainty in the prediction.
 
-1. **Run XAMPP as Administrator**: Sometimes, running XAMPP with administrative privileges can resolve permission-related issues.
-2. **Restore Database Backup**: If you have a backup of your database, try restoring it.
-3. **Change MySQL Port**: Changing the MySQL port in the XAMPP configuration might help if there's a port conflict.
-4. **Check Aria Tables**: Run `aria_chk -r` on all Aria tables and delete all `aria_log` files as suggested by the error message.
+### Autocorrect Method:
 
-If these steps don't resolve the issue, you might want to check out detailed tutorials or forums for more specific guidance. Does this help, or do you need more detailed instructions on any of these steps?  
+```python
+def autocorrect_prediction(predicted_probabilities, threshold=0.1):
+    # Get the sorted list of form types and their probabilities
+    sorted_probabilities = sorted(predicted_probabilities, key=lambda x: x[1], reverse=True)
 
-### References
-[kinsta.com](https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/)
+    # Extract the top two form types and their probabilities
+    top_form_type, top_prob = sorted_probabilities[0]
+    second_form_type, second_prob = sorted_probabilities[1]
+
+    # If the difference between the top two probabilities is within the threshold, adjust the prediction
+    if abs(top_prob - second_prob) <= threshold:
+        # Optional: If the top form type is one of the problematic classes, correct it to the second
+        problematic_classes = ['A & E Case 2', 'Case 1']
+        if top_form_type in problematic_classes:
+            return second_form_type
+
+    # Otherwise, return the top form type
+    return top_form_type
+
+# Example usage:
+predicted_probabilities = [
+    ('A & E Case 3', 0.64),
+    ('Default', 0.36),
+    ('A & E Case 1', 0.00),
+    ('A & E Case 2', 0.00),
+    ('Case 1', 0.00),
+    ('Case 2', 0.00),
+    ('Case 3', 0.00)
+]
+
+final_prediction = autocorrect_prediction(predicted_probabilities)
+print(f"Final Prediction: {final_prediction}")
+```
+
+### Explanation:
+1. **Sort Probabilities**: Sort the form types based on their predicted probabilities in descending order.
+2. **Top Two Probabilities**: Extract the top two form types and their probabilities.
+3. **Threshold Comparison**: Compare the difference between the top two probabilities. If the difference is within the threshold, adjust the prediction.
+4. **Optional Correction**: If the top form type is one of the problematic classes, correct it to the second form type.
+5. **Final Prediction**: Return the adjusted or original prediction based on the comparison.
+
+By implementing this autocorrect method, you can help improve the accuracy of your predictions by considering cases where the model is uncertain and the top probabilities are close.
+
+Feel free to adjust the `threshold` parameter and the `problematic_classes` list based on your specific requirements and testing results.  
 
 ## Me
-I got this error when trying to run mySQL server in xampp:2024-10-15 10:28:59 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 334962024-10-15 10:28:59 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 10:28:59 0 [Note] InnoDB: Uses event mutexes2024-10-15 10:28:59 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 10:28:59 0 [Note] InnoDB: Number of pools: 12024-10-15 10:28:59 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 10:28:59 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 10:28:59 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 10:28:59 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=3002882024-10-15 10:28:59 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 10:28:59 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 10:28:59 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 10:28:59 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 10:28:59 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 10:28:59 0 [Note] InnoDB: Waiting for purge to start2024-10-15 10:28:59 0 [Note] InnoDB: 10.4.32 started; log sequence number 300297; transaction id 1702024-10-15 10:28:59 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 10:28:59 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 10:28:59 0 [Note] InnoDB: Buffer pool(s) load completed at 241015 10:28:592024-10-15 10:28:59 0 [Note] Server socket created on IP: '::'.2024-10-15 11:40:26 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 16224Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:26 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:26 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:26 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:26 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:26 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:26 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:26 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:26 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:26 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:26 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=5755382024-10-15 11:40:26 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:26 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 11:40:26 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:26 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:26 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:26 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:27 0 [Note] InnoDB: 10.4.32 started; log sequence number 575547; transaction id 4052024-10-15 11:40:27 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:27 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:27 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:27 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:27 0 [ERROR] Aborting2024-10-15 11:40:31 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 27624Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:31 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:31 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:31 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:31 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:31 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:31 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:31 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:31 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:31 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:31 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:31 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:31 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:31 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:31 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:31 0 [Note] InnoDB: 10.4.32 started; log sequence number 575556; transaction id 4052024-10-15 11:40:31 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:31 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:31 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:31 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:31 0 [ERROR] Aborting  
+Can you adjust the code, default, Case 3 and Case 2 are still predicted wrong, these are the probabilities for those:  
+
+```
+Example filled Breaking Cycles Referral Form (5) [Default]
+Form Type: Case 2, Probability: 40.00%
+Form Type: Default, Probability: 40.00%
+Form Type: A & E Case 2, Probability: 20.00%
+Form Type: A & E Case 1, Probability: 0.00%
+Form Type: A & E Case 3, Probability: 0.00%
+Form Type: Case 1, Probability: 0.00%
+Form Type: Case 3, Probability: 0.00%
+
+case 2_2
+Form Type: Case 1, Probability: 44.35%
+Form Type: Case 3, Probability: 29.65%
+Form Type: Default, Probability: 26.00%
+Form Type: A & E Case 1, Probability: 0.00%
+Form Type: A & E Case 2, Probability: 0.00%
+Form Type: A & E Case 3, Probability: 0.00%
+Form Type: Case 2, Probability: 0.00%
+
+Case 3 - copy 1
+Form Type: Case 2, Probability: 34.00%
+Form Type: A & E Case 2, Probability: 26.00%
+Form Type: Default, Probability: 18.00%
+Form Type: Case 1, Probability: 11.77%
+Form Type: Case 3, Probability: 10.23%
+Form Type: A & E Case 1, Probability: 0.00%
+Form Type: A & E Case 3, Probability: 0.00%
+```  
 
 ## Copilot
-It looks like you're encountering an error with MySQL in XAMPP, specifically related to Aria recovery failing. This can happen due to corrupted files or incomplete recovery processes. Here are a few steps you can try to resolve this issue:
+Let's refine the autocorrect method to handle the cases where the probabilities are close, specifically targeting the problematic form types (Default, Case 2, and Case 3). We'll adjust the threshold logic to account for these cases more effectively.
 
-1. **Run XAMPP as Administrator**: Sometimes, running XAMPP with administrative privileges can resolve permission-related issues.
-2. **Restore Database Backup**: If you have a backup of your database, try restoring it.
-3. **Change MySQL Port**: Changing the MySQL port in the XAMPP configuration might help if there's a port conflict.
-4. **Check Aria Tables**: Run `aria_chk -r` on all Aria tables and delete all `aria_log` files as suggested by the error message.
+### Updated Autocorrect Method:
 
-If these steps don't resolve the issue, you might want to check out detailed tutorials or forums for more specific guidance. Does this help, or do you need more detailed instructions on any of these steps?  
+```python
+def autocorrect_prediction(predicted_probabilities, threshold=0.15):
+    # Get the sorted list of form types and their probabilities
+    sorted_probabilities = sorted(predicted_probabilities, key=lambda x: x[1], reverse=True)
 
-### References
-[kinsta.com](https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/)
+    # Extract the top two form types and their probabilities
+    top_form_type, top_prob = sorted_probabilities[0]
+    second_form_type, second_prob = sorted_probabilities[1]
+
+    # If the difference between the top two probabilities is within the threshold, adjust the prediction
+    if abs(top_prob - second_prob) <= threshold:
+        # Specific logic for problematic cases
+        if top_form_type == 'Case 2' and second_form_type == 'Default':
+            return 'Default'
+        if top_form_type == 'Case 1' and second_form_type == 'Case 3':
+            return 'Case 3'
+        if top_form_type == 'Case 2' and second_form_type == 'Case 3':
+            return 'Case 3'
+        if top_form_type == 'Case 3' and second_form_type == 'Case 2':
+            return 'Case 2'
+        if top_form_type == 'Default' and second_form_type == 'Case 2':
+            return 'Default'
+
+    # Otherwise, return the top form type
+    return top_form_type
+
+# Example usage:
+predicted_probabilities = [
+    ('Case 2', 0.40),
+    ('Default', 0.40),
+    ('A & E Case 2', 0.20),
+    ('A & E Case 1', 0.00),
+    ('A & E Case 3', 0.00),
+    ('Case 1', 0.00),
+    ('Case 3', 0.00)
+]
+
+final_prediction = autocorrect_prediction(predicted_probabilities)
+print(f"Final Prediction: {final_prediction}")
+```
+
+### Explanation:
+1. **Sort Probabilities**: Sort the form types based on their predicted probabilities in descending order.
+2. **Top Two Probabilities**: Extract the top two form types and their probabilities.
+3. **Threshold Comparison**: Compare the difference between the top two probabilities. If the difference is within the threshold, adjust the prediction based on specific rules.
+4. **Specific Logic for Problematic Cases**: Add specific conditions to handle the problematic cases (Default, Case 2, and Case 3).
+5. **Final Prediction**: Return the adjusted or original prediction based on the comparison.
+
+By implementing this refined autocorrect method, you should improve the accuracy of your predictions by addressing the cases where the model is uncertain and the top probabilities are close. Feel free to adjust the threshold parameter and specific logic based on your testing results.  
 
 ## Me
-I got this error when trying to run mySQL server in xampp:2024-10-15 10:28:59 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 334962024-10-15 10:28:59 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 10:28:59 0 [Note] InnoDB: Uses event mutexes2024-10-15 10:28:59 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 10:28:59 0 [Note] InnoDB: Number of pools: 12024-10-15 10:28:59 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 10:28:59 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 10:28:59 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 10:28:59 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=3002882024-10-15 10:28:59 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 10:28:59 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 10:28:59 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 10:28:59 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 10:28:59 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 10:28:59 0 [Note] InnoDB: Waiting for purge to start2024-10-15 10:28:59 0 [Note] InnoDB: 10.4.32 started; log sequence number 300297; transaction id 1702024-10-15 10:28:59 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 10:28:59 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 10:28:59 0 [Note] InnoDB: Buffer pool(s) load completed at 241015 10:28:592024-10-15 10:28:59 0 [Note] Server socket created on IP: '::'.2024-10-15 11:40:26 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 16224Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:26 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:26 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:26 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:26 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:26 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:26 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:26 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:26 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:26 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:26 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=5755382024-10-15 11:40:26 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:26 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 11:40:26 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:26 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:26 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:26 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:27 0 [Note] InnoDB: 10.4.32 started; log sequence number 575547; transaction id 4052024-10-15 11:40:27 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:27 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:27 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:27 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:27 0 [ERROR] Aborting2024-10-15 11:40:31 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 27624Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:31 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:31 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:31 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:31 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:31 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:31 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:31 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:31 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:31 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:31 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:31 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:31 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:31 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:31 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:31 0 [Note] InnoDB: 10.4.32 started; log sequence number 575556; transaction id 4052024-10-15 11:40:31 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:31 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:31 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:31 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:31 0 [ERROR] Aborting  
+(Now Wednesday, Mar 12)  
+OK so now I want a method that robustly handles mismatches between the form contents and type chosen called 'mitigate_mismatches'. It will be based on my summary taken through rigorous testing:  
+
+```
+{Summary of Mismatches}
+
+YP Address - This is section 8:
+A & E Case 1 -> A & E Case 2 [School same as Rf Date]
+A & E Case 1 -> Case 1 [No DOB, YP Phone num First part only, School same as Rf Date]
+A & E Case 1 -> Case 2 [YP Phone num First part only, No Rf Date, Rf Date in School instead]
+A & E Case 1 -> Case 3 [No Gender, No DOB, School same as Rf Date]
+A & E Case 1 -> A & E Case 3 [No Gender, missing last 2 digits of DOB (year ending), YP Phone num First part only, School same as Rf Date]
+
+YP Address - This is section 4:
+A & E Case 2 -> A & E Case 1 [\n..., No School]
+A & E Case 3 -> A & E Case 1 [\n..., No Gender, No DOB, No YP Phone num, No School]
+Case 1 -> A & E Case 1 [No Gender, No YP Phone num, No School]
+Case 2 -> A & E Case 1 [No Gender, No DOB, No YP Phone num, No School]
+Case 3 -> A & E Case 1 [No Gender, No DOB, No School]
+
+YP Address - '' (empty/blank string):
+A & E Case 1 -> Default [No DOB, No Rf Phone num, No Rf Date, Rf Date in School instead]
+Default -> A & E Case 1 [No Gender, No DOB, Rf Phone num First part only, No Rf Date, No School]
+
+Name - '' (empty/blank string):
+Case 1 -> Default [No Gender, No DOB, No YP Phone num, No Rf Phone num, No Rf Date]
+Case 2 -> Default [No Gender, No DOB, No YP Phone num, No Rf Phone num, Rf Date as full School line]
+Case 3 -> Default [No Gender, No DOB, No Rf Phone num, No Rf Date]
+
+One-off instances:
+A & E Case 2 -> A & E Case 3 [DOB missing last 2 digit (year end), No Rf Date]
+Case 3 -> Case 1 [Rf Date as '09.10.20', No Gender, No DOB, YP Phone num First part only]
+Case 3 -> Case 2 [Gender First letter only, No DOB, YP Phone num First part only, No Rf Date]
+Default -> Case 3 [Gender as '' (empty/blank string), No DOB, Rf Phone num First part only, No Rf Date]
+Case 2 -> A & E Case 3 [Gender as 'Gender M', No Rf Date]
+Case 1 -> A & E Case 3 [DOB missing last 2 digit (year end), No Gender, No Rf Date]
+
+YP Phone number - First part only:
+A & E Case 2 -> Case 1 [No DOB]
+Default -> Case 1 [No Gender, No DOB, Rf Phone num First part only, No Rf Date]
+A & E Case 2 -> Case 2 [No Rf Date]
+Default -> Case 2 [No Gender, No DOB, Rf Phone num First part only, No Rf Date]
+Case 3 -> A & E Case 3 [No Gender, No DOB, No Rf Date]
+Default -> A & E Case 3 [No Gender, No DOB, Rf Phone num First part only, No Rf Date]
+
+Other:
+A & E Case 2 -> Default [No DOB, No Rf Phone num, No Rf Date]
+A & E Case 2 -> Case 3 [No DOB]
+A & E Case 3 -> A & E Case 2 [No Gender, No DOB, No YP Phone num]
+A & E Case 3 -> Default [No Gender, No DOB, No YP Phone num, No Rf Phone num]
+A & E Case 3 -> Case 1 [No Gender, No DOB]
+A & E Case 3 -> Case 2 [No Gender, No DOB]
+A & E Case 3 -> Case 3 [No Gender, No DOB, No YP Phone num]
+Case 1 -> A & E Case 2 [No Gender, No YP Phone num]
+Case 1 -> Case 2 [No Rf Date]
+Case 1 -> Case 3 [No DOB, No YP Phone num]
+Case 2 -> A & E Case 2 [No Gender, No DOB, No YP Phone num]
+Case 2 -> Case 1 [No Gender, No DOB]
+Case 2 -> Case 3 [No DOB, No YP Phone num]
+Case 3 -> A & E Case 2 [No Gender, No DOB]
+Default -> A & E Case 2 [No Gender, No DOB, Rf Phone num First part only, No Rf Date]
+```  
+
+The format of this summary is a section name (exc Other and One-off instances) being a grouping of mismatches (i.e. all mismatches below it contain that mismatch), then in the individual mismatches on the left of teh arrow (->) is the actual form type and on the right is the chosen mismatch type, in teh square brackets ([ ]) are all other mismatches for that individual type, e.g. YP Address - '' (empty/blank string):
+A & E Case 1 -> Default [No DOB, No Rf Phone num, No Rf Date, Rf Date in School instead] means that the actual form type 'A & E Case 1' when chosen with the form configurations for the 'Default' type will produce the mismatches of an empty string for the YP Address, No DOB will be present, similarly no RF Phone num, no Rf Date and in the School field the Rf Date is shown.  
+I wish to use the extracted mappings dictionary (e.g.  {'Name (Young Person):': 'Orry Walls', 'Address (Young Person):': '', 'Phone Number (Young Person):': '01274 123456', 'Name of person making referral:': 'Drew Alan', 'Address of person / organisation making referral:': 'Lemsip Avenue BD32 5DR', 'Email of person making referral:': 'Telephone number of person making referral: 07777777789', 'School attended:': '04.09.24'} as input as well as the form type that was chosen, the method should try again and check whether all the required fields are there upto a maximum of 3 times, how can I make this aforementioned method in my Python code?  
 
 ## Copilot
-It looks like you're encountering an error with MySQL in XAMPP, specifically related to Aria recovery failing. This can happen due to corrupted files or incomplete recovery processes. Here are a few steps you can try to resolve this issue:
+Based on your rigorous testing summary and requirements, here’s a method called `mitigate_mismatches` that takes the extracted mappings dictionary and the chosen form type as input. It will attempt to identify mismatches, re-check the form type, and retry up to 3 times, adjusting the form type if needed. Here's how you can implement it:
 
-1. **Run XAMPP as Administrator**: Sometimes, running XAMPP with administrative privileges can resolve permission-related issues.
-2. **Restore Database Backup**: If you have a backup of your database, try restoring it.
-3. **Change MySQL Port**: Changing the MySQL port in the XAMPP configuration might help if there's a port conflict.
-4. **Check Aria Tables**: Run `aria_chk -r` on all Aria tables and delete all `aria_log` files as suggested by the error message.
+### Implementation:
 
-If these steps don't resolve the issue, you might want to check out detailed tutorials or forums for more specific guidance. Does this help, or do you need more detailed instructions on any of these steps?  
+```python
+def mitigate_mismatches(extracted_mappings, chosen_form_type, configurations, max_attempts=3):
+    """
+    Attempts to resolve mismatches between form type and extracted contents.
 
-### References
-[kinsta.com](https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/)
+    Parameters:
+    - extracted_mappings (dict): The extracted fields and their values.
+    - chosen_form_type (str): The initially chosen form type.
+    - configurations (dict): Form type configurations with field requirements/patterns.
+    - max_attempts (int): Maximum number of retries to resolve mismatches.
+
+    Returns:
+    - str: The final form type after resolving mismatches.
+    """
+    # Define required fields for each form type based on mismatches summary
+    mismatch_rules = {
+        "A & E Case 1": {"fields": ["DOB", "Gender", "YP Phone num", "Rf Date", "School"]},
+        "A & E Case 2": {"fields": ["DOB", "YP Phone num", "Rf Date"]},
+        "A & E Case 3": {"fields": ["DOB", "Gender", "YP Phone num"]},
+        "Case 1": {"fields": ["DOB", "Gender", "YP Phone num", "Rf Date"]},
+        "Case 2": {"fields": ["DOB", "Gender", "YP Phone num"]},
+        "Case 3": {"fields": ["DOB", "Gender", "Rf Date"]},
+        "Default": {"fields": ["Gender", "DOB", "Rf Phone num", "Rf Date"]}
+    }
+
+    attempt = 0
+    current_form_type = chosen_form_type
+
+    while attempt < max_attempts:
+        attempt += 1
+        print(f"Attempt {attempt}: Checking form type '{current_form_type}'...")
+
+        # Get required fields for the current form type
+        required_fields = mismatch_rules.get(current_form_type, {}).get("fields", [])
+
+        # Check for missing fields
+        missing_fields = [
+            field for field in required_fields if not extracted_mappings.get(field, "").strip()
+        ]
+
+        # If no missing fields, the form type is correct
+        if not missing_fields:
+            print(f"Form type '{current_form_type}' matches the extracted contents.")
+            return current_form_type
+
+        print(f"Form type '{current_form_type}' has mismatches. Missing fields: {missing_fields}")
+
+        # Adjust the form type based on missing fields (simplified logic for demonstration)
+        if "DOB" in missing_fields:
+            current_form_type = "Default"
+        elif "YP Phone num" in missing_fields:
+            current_form_type = "Case 1"
+        elif "Gender" in missing_fields:
+            current_form_type = "A & E Case 1"
+        else:
+            current_form_type = "Default"  # Fallback to Default if no specific match
+
+    # If after max_attempts no suitable match is found, return the most likely form type
+    print(f"Could not resolve mismatches after {max_attempts} attempts. Returning '{current_form_type}'.")
+    return current_form_type
+```
+
+### Usage Example:
+```python
+# Example extracted mappings
+extracted_mappings = {
+    "Name (Young Person):": "Orry Walls",
+    "Address (Young Person):": "",
+    "Phone Number (Young Person):": "01274 123456",
+    "Name of person making referral:": "Drew Alan",
+    "Address of person / organisation making referral:": "Lemsip Avenue BD32 5DR",
+    "Email of person making referral:": "",
+    "Telephone number of person making referral:": "07777777789",
+    "School attended:": "04.09.24"
+}
+
+# Initial form type
+chosen_form_type = "A & E Case 1"
+
+# Configurations for all form types (you may already have this as a dictionary)
+configurations = {
+    "A & E Case 1": {"fields": ["DOB", "Gender", "YP Phone num", "Rf Date", "School"]},
+    "A & E Case 2": {"fields": ["DOB", "YP Phone num", "Rf Date"]},
+    "A & E Case 3": {"fields": ["DOB", "Gender", "YP Phone num"]},
+    "Case 1": {"fields": ["DOB", "Gender", "YP Phone num", "Rf Date"]},
+    "Case 2": {"fields": ["DOB", "Gender", "YP Phone num"]},
+    "Case 3": {"fields": ["DOB", "Gender", "Rf Date"]},
+    "Default": {"fields": ["Gender", "DOB", "Rf Phone num", "Rf Date"]}
+}
+
+# Run the mismatch mitigation
+final_form_type = mitigate_mismatches(extracted_mappings, chosen_form_type, configurations)
+print(f"Final form type: {final_form_type}")
+```
+
+### Key Points:
+1. **Rules for Required Fields**: The `mismatch_rules` dictionary defines the required fields for each form type based on your provided summary.
+2. **Field Validation**: The method checks whether the required fields are present in the extracted mappings.
+3. **Retry Logic**: It retries up to `max_attempts` times, adjusting the form type based on the identified missing fields.
+4. **Adjustment Logic**: The adjustment logic is simplified and can be expanded to handle more nuanced cases based on your summary.
+
+You can refine the logic further to better align with the specific mismatches and correction rules in your summary. Let me know how else I can assist!  
 
 ## Me
-I got this error when trying to run mySQL server in xampp:2024-10-15 10:28:59 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 334962024-10-15 10:28:59 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 10:28:59 0 [Note] InnoDB: Uses event mutexes2024-10-15 10:28:59 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 10:28:59 0 [Note] InnoDB: Number of pools: 12024-10-15 10:28:59 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 10:28:59 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 10:28:59 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 10:28:59 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=3002882024-10-15 10:28:59 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 10:28:59 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 10:28:59 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 10:28:59 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 10:28:59 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 10:28:59 0 [Note] InnoDB: Waiting for purge to start2024-10-15 10:28:59 0 [Note] InnoDB: 10.4.32 started; log sequence number 300297; transaction id 1702024-10-15 10:28:59 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 10:28:59 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 10:28:59 0 [Note] InnoDB: Buffer pool(s) load completed at 241015 10:28:592024-10-15 10:28:59 0 [Note] Server socket created on IP: '::'.2024-10-15 11:40:26 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 16224Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:26 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:26 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:26 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:26 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:26 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:26 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:26 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:26 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:26 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:26 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=5755382024-10-15 11:40:26 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:26 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 11:40:26 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:26 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:26 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:26 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:27 0 [Note] InnoDB: 10.4.32 started; log sequence number 575547; transaction id 4052024-10-15 11:40:27 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:27 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:27 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:27 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:27 0 [ERROR] Aborting2024-10-15 11:40:31 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 27624Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:31 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:31 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:31 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:31 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:31 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:31 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:31 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:31 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:31 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:31 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:31 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:31 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:31 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:31 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:31 0 [Note] InnoDB: 10.4.32 started; log sequence number 575556; transaction id 4052024-10-15 11:40:31 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:31 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:31 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:31 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:31 0 [ERROR] Aborting  
+This is my current flow, I want to call this method after calling teh 'custom_field_extraction' method and before calling the 'map_data' method, how can I integrate it in?  
+
+```Python
+def extractInfo(self, file_path, form_type):
+        #Set the internally held file path now
+        self.input_file = file_path
+
+        # Extract text from the document
+        uploaded_text = self.extract_text_from_docx(file_path, form_type)
+        #print(uploaded_text)
+        thisAutoLogger.addToLogs(uploaded_text)
+
+        # Perform custom field extraction on the extracted text
+        extracted_data = self.custom_field_extraction(uploaded_text)
+        #print("Extracted Data:", extracted_data)
+        thisAutoLogger.addToLogs("Extracted Data: "+str(extracted_data))
+
+        # Map the extracted data
+        mapped_data = self.map_data(extracted_data)
+        #print("Mapped Data:", mapped_data)
+        thisAutoLogger.addToLogs("Mapped Data: "+str(mapped_data))
+
+        #Send the mapped data back to the main part of the program
+        return mapped_data
+
+# Function to extract specific fields using regex and keyword matching
+    def custom_field_extraction(self, text):
+        extracted_data = {}
+        #thisLogText = f"Patterns are: {str(self.form_config['patterns'].items())}"
+        #print(thisLogText)
+        #thisAutoLogger.addToLogs(thisLogText)
+        for field, pattern in self.form_config['patterns'].items():
+            #thisAutoLogger.addToLogs("Field is: "+field)
+            #thisAutoLogger.addToLogs("Pattern is: "+pattern)
+            match = re.search(pattern, text)
+            if match:
+                #thisAutoLogger.addToLogs("Matched groups are: "+str(match.groups()))
+                extracted_data[field] = match.group(1).strip()
+                #thisAutoLogger.addToLogs("New extracted field is: "+extracted_data[field])
+        return extracted_data
+
+# Function to extract text from a Word document
+    def extract_text_from_docx(self, file_path, form_type):
+        doc = Document(file_path)
+        full_text = []
+        section_num = 1
+        risk_factor_num = 0
+        #with title {self.section_mappings[section_num]}
+        for table in doc.tables:
+            for row in table.rows:
+                for cell in row.cells:
+                    full_text.append(f"This is section {str(section_num)}")
+                    full_text.append(cell.text)
+                    if section_num == 6:
+                        a_and_e_text = "A&E attendance for injury attributable to violence"
+                        a_and_e_to_add = False
+                        if a_and_e_text in cell.text:
+                            a_and_e_to_add = True
+                        for risk_factor in cell.tables:
+                            toAdd = False
+                            for risk_factor_row in risk_factor.rows:
+                                for risk_factor_cell in risk_factor_row.cells:
+                                    if risk_factor_cell.text == "X":
+                                        toAdd = True
+                            if risk_factor_num == 0:
+                                risk_factor_name = "Young person is involved in or is at risk of participation in Serious Organised and Violent Crime"
+                            elif risk_factor_num == 1: 
+                                risk_factor_name = "Young person is involved in or is at risk of participation in urban street gang activity"
+                            elif risk_factor_num == 2: 
+                                risk_factor_name = "Young person is involved in or is at risk of participation in County Lines"
+                            elif risk_factor_num == 3: 
+                                risk_factor_name = "Young person is at risk of being criminally groomed, or may be grooming others"
+                            elif risk_factor_num == 4: 
+                                risk_factor_name = "Young person is actively involved in Anti-Social Behaviour and has had a yellow or higher ASB Sanction"
+                            elif risk_factor_num == 5: 
+                                risk_factor_name = "Young person is having frequent or out of character Missing Incidents"
+                            if toAdd:
+                                #print("Current risk factor is called:",risk_factor_name)
+                                if self.risk_details == "":
+                                    self.set_risk_details1(risk_factor_name)
+                                else:
+                                    self.set_risk_details2(risk_factor_name)
+                            risk_factor_num += 1
+                        if a_and_e_to_add:
+                            self.set_risk_details2(a_and_e_text)
+                    if section_num == 19:
+                        self.set_initial_details1(cell.text)
+                    if section_num == 20:
+                        self.set_initial_details2(cell.text)
+                    section_num += 1
+        file_path_name = self.localiseFilePath(self.input_file)
+        #print("The input file name is:",file_path_name)
+        self.form_config = thisFormCfS.choose_current_config(form_type)
+        return "\n".join(full_text)
+```  
 
 ## Copilot
-It looks like you're encountering an error with MySQL in XAMPP, specifically related to Aria recovery failing. This can happen due to corrupted files or incomplete recovery processes. Here are a few steps you can try to resolve this issue:
+To integrate the `mitigate_mismatches` method into your `extractInfo` flow, you would insert the call to this method right after calling the `custom_field_extraction` method and before calling the `map_data` method. Below is the updated version of your `extractInfo` method with the integration:
 
-1. **Run XAMPP as Administrator**: Sometimes, running XAMPP with administrative privileges can resolve permission-related issues.
-2. **Restore Database Backup**: If you have a backup of your database, try restoring it.
-3. **Change MySQL Port**: Changing the MySQL port in the XAMPP configuration might help if there's a port conflict.
-4. **Check Aria Tables**: Run `aria_chk -r` on all Aria tables and delete all `aria_log` files as suggested by the error message.
+### Updated Code:
+```python
+def extractInfo(self, file_path, form_type):
+        # Set the internally held file path now
+        self.input_file = file_path
 
-If these steps don't resolve the issue, you might want to check out detailed tutorials or forums for more specific guidance. Does this help, or do you need more detailed instructions on any of these steps?  
+        # Extract text from the document
+        uploaded_text = self.extract_text_from_docx(file_path, form_type)
+        thisAutoLogger.addToLogs(uploaded_text)
 
-### References
-[kinsta.com](https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/)
+        # Perform custom field extraction on the extracted text
+        extracted_data = self.custom_field_extraction(uploaded_text)
+        thisAutoLogger.addToLogs("Extracted Data: " + str(extracted_data))
+
+        # Call the mitigate_mismatches method to ensure form type consistency
+        form_type = self.mitigate_mismatches(extracted_data, form_type, self.configurations)
+        thisAutoLogger.addToLogs(f"Resolved Form Type after mitigating mismatches: {form_type}")
+
+        # Map the extracted data
+        mapped_data = self.map_data(extracted_data)
+        thisAutoLogger.addToLogs("Mapped Data: " + str(mapped_data))
+
+        # Send the mapped data back to the main part of the program
+        return mapped_data
+```
+
+### Explanation:
+1. **Call to `mitigate_mismatches`**:
+   - The `mitigate_mismatches` method is called after the extracted data is obtained from `custom_field_extraction`.
+   - It uses the extracted data (`extracted_data`) and the initially chosen form type (`form_type`) to detect and resolve mismatches based on your rules.
+
+2. **Reassign `form_type`**:
+   - If the `mitigate_mismatches` method determines a more appropriate form type, it updates the `form_type` variable accordingly.
+
+3. **Logging**:
+   - Add a log entry to keep track of the resolved form type after mitigating mismatches.
+
+4. **Map Data**:
+   - Once mismatches are resolved, continue the flow by mapping the extracted data.
+
+### Additional Assumptions:
+- **Configurations**: The `configurations` dictionary (or `self.configurations`) is already defined elsewhere in your class and contains form type requirements as shown in the `mitigate_mismatches` implementation earlier.
+- **Logging**: `thisAutoLogger.addToLogs` is used consistently to track changes and decisions.
+
+This integration ensures that mismatches are handled before proceeding with the data mapping step, improving the robustness of your flow. Let me know if you need further refinements!  
 
 ## Me
-I got this error when trying to run mySQL server in xampp:2024-10-15 10:28:59 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 334962024-10-15 10:28:59 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 10:28:59 0 [Note] InnoDB: Uses event mutexes2024-10-15 10:28:59 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 10:28:59 0 [Note] InnoDB: Number of pools: 12024-10-15 10:28:59 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 10:28:59 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 10:28:59 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 10:28:59 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=3002882024-10-15 10:28:59 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 10:28:59 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 10:28:59 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 10:28:59 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 10:28:59 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 10:28:59 0 [Note] InnoDB: Waiting for purge to start2024-10-15 10:28:59 0 [Note] InnoDB: 10.4.32 started; log sequence number 300297; transaction id 1702024-10-15 10:28:59 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 10:28:59 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 10:28:59 0 [Note] InnoDB: Buffer pool(s) load completed at 241015 10:28:592024-10-15 10:28:59 0 [Note] Server socket created on IP: '::'.2024-10-15 11:40:26 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 16224Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:26 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:26 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:26 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:26 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:26 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:26 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:26 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:26 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:26 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:26 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=5755382024-10-15 11:40:26 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:26 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 11:40:26 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:26 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:26 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:26 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:27 0 [Note] InnoDB: 10.4.32 started; log sequence number 575547; transaction id 4052024-10-15 11:40:27 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:27 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:27 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:27 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:27 0 [ERROR] Aborting2024-10-15 11:40:31 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 27624Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:31 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:31 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:31 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:31 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:31 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:31 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:31 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:31 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:31 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:31 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:31 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:31 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:31 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:31 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:31 0 [Note] InnoDB: 10.4.32 started; log sequence number 575556; transaction id 4052024-10-15 11:40:31 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:31 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:31 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:31 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:31 0 [ERROR] Aborting  
+How can I change the logic of the 'mitigate_mismatches' method then based on the additional context of my code configuration?  
 
 ## Copilot
 It looks like you're encountering an error with MySQL in XAMPP, specifically related to Aria recovery failing. This can happen due to corrupted files or incomplete recovery processes. Here are a few steps you can try to resolve this issue:
