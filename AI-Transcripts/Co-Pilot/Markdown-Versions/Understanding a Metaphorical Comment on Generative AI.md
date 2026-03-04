@@ -4289,183 +4289,3617 @@ Then let the Compose handle the conversion.
 If you tell me the **exact error message you get now** (after adding the Condition and Compose like this), we can zero in on the remaining edge case.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+Ok so now I want to test the reminder and email. What datyes would be suitable for the contract end if I want these stpes to activate today (30th December 2025)?  
 
 ## Co-Pilot
-Certainly, Hasan
+Perfect timing, Hasan — since today is **30 December 2025**, we can reverse-engineer the contract end dates that would trigger each step of your flow.
+
+---
+
+## ✅ To trigger the **reminder step** (1 month before contract end)
+
+Your flow checks:
+
+```plaintext
+utcNow() == ContractEnd minus 30 days
+```
+
+So to trigger this today:
+
+### **Set ContractEnd to:**  
+**29 January 2026**
+
+Because:
+
+- 29 Jan 2026 minus 30 days = **30 Dec 2025**
+
+---
+
+## ✅ To trigger the **email step** (1 week after the reminder)
+
+Your flow checks:
+
+```plaintext
+utcNow() == ContractEnd minus 23 days
+```
+
+So to trigger this today:
+
+### **Set ContractEnd to:**  
+**22 January 2026**
+
+Because:
+
+- 22 Jan 2026 minus 23 days = **30 Dec 2025**
+
+---
+
+## 🧪 Summary of test values
+
+| Step              | ContractEnd to use | Reason |
+|------------------|--------------------|--------|
+| Reminder email   | **29 Jan 2026**    | 30 days before = today |
+| Follow-up email  | **22 Jan 2026**    | 23 days before = today |
+
+---
+
+## 🛠 How to test
+
+1. Open your Excel sheet  
+2. Set one row’s `ContractEnd` to **29/01/2026**  
+3. Set another row’s `ContractEnd` to **22/01/2026**  
+4. Run the flow manually  
+5. Confirm that:
+   - The reminder logic triggers for the 29 Jan row  
+   - The follow-up email logic triggers for the 22 Jan row
+
+Let me know if you want to simulate both paths in one run — I can help you structure the test rows to cover all branches.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+(Now Tuesday, Jan 6)  
+Now I get thus error:  
+
+```
+Unable to process template language expressions in action 'Compose' inputs at line '0' and column '0':
+'The template language function 'replace' expects its third parameter 'new string' to be a string.
+The provided value is of type 'Null'.
+Please see https://aka.ms/logicexpressions#replace for usage details.'.
+```  
+
+When the configuration is:  
+
+```
+replace(
+  replace(
+    replace(
+      body('Get_file_content'),
+      '[Contract Type]',
+      items('Apply_to_each')?['Contract Type']
+    ),
+    '[Employee Name]',
+    items('Apply_to_each')?['Personnel Name']
+  ),
+  '[Insert Date]',
+  items('Apply_to_each')?['ContractEnd']
+)
+```  
+
+And the email template used in teh replace is as follows (html file):  
+
+```Html
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="Generator" content="Microsoft Word 15 (filtered medium)">
+<!--[if !mso]><style>v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Aptos;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	font-size:12.0pt;
+	font-family:"Aptos",sans-serif;
+	mso-ligatures:standardcontextual;
+	mso-fareast-language:EN-US;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:"Times New Roman",serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-fareast-language:EN-US;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+/* List Definitions */
+@list l0
+	{mso-list-id:1333995712;
+	mso-list-template-ids:-111117658;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+--></style>
+</head>
+<body lang="EN-GB" link="#467886" vlink="#96607D" style="word-wrap:break-word">
+<div class="WordSection1">
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB">Good morning,<o:p></o:p></span></p>
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB"><br><o:p></o:p></span></p>
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB">I hope that you&#8217;re well.<o:p></o:p></span></p>
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB"><br><o:p></o:p></span></p>
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB">I am writing to inform you that the [Contract Type] for [Employee Name] comes to an end on [Insert Date].<o:p></o:p></span></p>
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB"><br><o:p></o:p></span></p>
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB">Please inform us if this should come to an end, has ended already for another reason or please submit the relevant paperwork to arrange the extension of the end date.<o:p></o:p></span></p>
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB"><br><o:p></o:p></span></p>
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB">If you are intending to extend the end date, please ensure that you submit the Employee Change form (Attached) in time to allow for processing.<o:p></o:p></span></p>
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB"><br><o:p></o:p></span></p>
+<p class="MsoNormal" style="vertical-align:baseline"><b><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB">Kind Regards,<o:p></o:p></span></b></p>
+<p class="MsoNormal" style="vertical-align:baseline"><b><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB">Sohail Farid<o:p></o:p></span></b></p>
+<p class="MsoNormal" style="vertical-align:baseline"><b><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB">Human Resources Officer<o:p></o:p></span></b></p>
+<p class="MsoNormal" style="vertical-align:baseline"><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="vertical-align:baseline"><span style="color:#467886;mso-ligatures:none;mso-fareast-language:EN-GB"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="vertical-align:baseline"><span style="color:#467886;mso-fareast-language:EN-GB"><img border="0" width="198" height="70" style="width:2.0625in;height:.7291in" id="Picture_x0020_1" src="https://bradfordgovuk.sharepoint.com/:i:/r/sites/DT-592/Shared%20Documents/Hasan/BCFT-logo.png?csf=1&web=1&e=CbSEvM" alt="BCFT Logo"></span><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-language:EN-GB">&nbsp;</span><span style="font-size:9.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-language:EN-GB"><br>
+<br>
+</span><span lang="EN-US" style="font-size:9.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#07365D;mso-fareast-language:EN-GB"><o:p></o:p></span></p>
+<p class="MsoNormal" style="vertical-align:baseline"><b><span style="color:#F038BB;mso-fareast-language:EN-GB">Have you seen our</span></b><b><span style="mso-fareast-language:EN-GB">
+</span></b><span style="mso-fareast-language:EN-GB"><a href="https://bradfordgovuk.sharepoint.com/:u:/r/sites/BradfordChildrenandFamiliesIntranet/SitePages/People-and-Talent---HR-Team.aspx?csf=1&amp;web=1&amp;e=TPh38g"><span style="color:#467886">People Team Page</span></a>
+<b><span style="color:#F038BB">yet, where you can find:</span></b><span style="color:#F038BB">
+<o:p></o:p></span></span></p>
+<p class="MsoNormal" style="vertical-align:baseline"><span style="mso-fareast-language:EN-GB"><img border="0" width="623" height="253" style="width:6.493in;height:2.6319in" id="Picture_x0020_2" alt="Screenshot of the SharePoint page showing HR links and tiles" src="https://bradfordgovuk.sharepoint.com/:i:/r/sites/DT-592/Shared%20Documents/Hasan/HR-Page.jpg?csf=1&web=1&e=VWfWfa"><b><span style="color:#07365D;mso-ligatures:none"><o:p></o:p></span></b></span></p>
+<p class="MsoNormal" style="vertical-align:baseline"><span lang="EN-US" style="font-size:9.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#07365D;mso-fareast-language:EN-GB"><br>
+<br>
+</span><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-language:EN-GB"><o:p></o:p></span></p>
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+</div>
+</body>
+</html>
+```  
 
 ## Co-Pilot
-Certainly, Hasan
+Hasan, I know exactly what’s happening here — and this time the error message gives us the *real* cause:
+
+> **“replace() expects its third parameter to be a string. The provided value is Null.”**
+
+This means **one of your Excel fields is blank**:
+
+- `[Contract Type]`  
+- `[Employee Name]`  
+- `[Insert Date]`  
+
+…and because `replace()` cannot accept **null** as the replacement value, the whole Compose fails.
+
+This has nothing to do with your HTML template.  
+It’s simply that one of the values you’re inserting is empty.
+
+Let’s fix it cleanly and permanently.
+
+---
+
+# ✅ Why this happens
+Power Automate’s `replace()` function requires:
+
+```
+replace( textToSearch, textToFind, replacementString )
+```
+
+But if the replacementString is **null**, you get:
+
+> “The provided value is of type Null.”
+
+So if your Excel row has:
+
+- missing Contract Type  
+- missing Personnel Name  
+- missing ContractEnd  
+- or ContractEnd is still `"45747"` and not a formatted date  
+
+…the replace chain breaks.
+
+---
+
+# ⭐ The fix: wrap every dynamic value in `string()`  
+This forces null → empty string, which is safe.
+
+Replace your entire Compose with this version:
+
+```plaintext
+replace(
+  replace(
+    replace(
+      body('Get_file_content'),
+      '[Contract Type]',
+      string(items('Apply_to_each')?['Contract Type'])
+    ),
+    '[Employee Name]',
+    string(items('Apply_to_each')?['Personnel Name'])
+  ),
+  '[Insert Date]',
+  string(items('Apply_to_each')?['ContractEnd'])
+)
+```
+
+### Why this works
+- `string(null)` → `""` (safe)
+- `string(45747)` → `"45747"` (safe)
+- `string(2025-03-01T00:00:00Z)` → `"2025-03-01T00:00:00Z"` (safe)
+
+No more null errors.
+
+---
+
+# 🧠 But there’s one more thing you should do  
+Your `[Insert Date]` placeholder is currently being replaced with:
+
+```
+"45747"
+```
+
+…which is not a date.
+
+You should replace it with your **already-converted reminder date** or **contract end date**.
+
+Example:
+
+If you have a Compose called `Compose – ContractEndDateFormatted`, then use:
+
+```plaintext
+string(outputs('Compose_-_ContractEndDateFormatted'))
+```
+
+Or if you want the reminder date:
+
+```plaintext
+string(variables('reminder_date'))
+```
+
+---
+
+# 🎯 Final recommended version (clean, safe, readable)
+
+```plaintext
+replace(
+  replace(
+    replace(
+      body('Get_file_content'),
+      '[Contract Type]',
+      string(items('Apply_to_each')?['Contract Type'])
+    ),
+    '[Employee Name]',
+    string(items('Apply_to_each')?['Personnel Name'])
+  ),
+  '[Insert Date]',
+  string(variables('ContractEndFormatted'))
+)
+```
+
+Where `ContractEndFormatted` is a variable or Compose that already contains a proper ISO or UK‑formatted date.
+
+---
+
+# If you want, I can help you build the cleanest version:
+- A Compose that formats the date  
+- A Compose that builds the email body  
+- A Set variable that stores it  
+- And a Send email action that uses it  
+
+Just tell me the name of your date Compose/variable and I’ll plug it in.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
-
+How can I add a compose like this:  
+ Compose called Compose – ContractEndDateFormatted  
+ 
 ## Co-Pilot
-Certainly, Hasan
+Here’s the clean, frustration‑free way to add **Compose – ContractEndDateFormatted** in Power Automate *and* make sure it never crashes again.
+
+I’ll give you:
+
+- the **exact steps** in the designer  
+- the **exact expression** to paste  
+- the **safe version** that works even if Excel sends `"45747"`, `"45747.0"`, `" 45747 "`, or anything else  
+
+Let’s get this flowing smoothly.
+
+---
+
+# 🟦 Step 1 — Add the Compose action
+
+Inside your **Apply to each**, in the **Yes** branch of your ContractEnd check:
+
+1. Click **+ Add an action**
+2. Search for **Compose**
+3. Rename it to:
+
+**Compose – ContractEndDateFormatted**
+
+(Click the three dots → Rename)
+
+---
+
+# 🟦 Step 2 — Paste this SAFE expression
+
+This version handles:
+
+- Excel serial numbers  
+- Excel serials with decimals  
+- Excel serials with spaces  
+- Excel serials with hidden characters  
+- Excel serials wrapped in quotes  
+- And it never throws `int()` or `float()` errors  
+
+### ⭐ Paste this into the **Expression** tab:
+
+```plaintext
+formatDateTime(
+  addDays(
+    '1899-12-30',
+    int(
+      last(
+        split(
+          trim(
+            string(item()?['ContractEnd'])
+          ),
+          '.'
+        )
+      )
+    )
+  ),
+  'dd/MM/yyyy'
+)
+```
+
+---
+
+# 🟦 Why this version finally works
+
+- `string()` → forces any value into text  
+- `trim()` → removes invisible spaces, tabs, CRLF  
+- `split(..., '.')` → handles `"45747.0"` or `"45747.00"`  
+- `last(...)` → extracts the integer part  
+- `int(...)` → safely converts to a number  
+- `addDays('1899‑12‑30', …)` → converts Excel serial → real date  
+- `formatDateTime(..., 'dd/MM/yyyy')` → gives you a clean UK date  
+
+This is the most stable pattern for Excel → Power Automate date conversion.
+
+---
+
+# 🟦 Step 3 — Use this Compose in your email template
+
+Now that you have a clean date, update your email body replace() block to use:
+
+```plaintext
+string(outputs('Compose_-_ContractEndDateFormatted'))
+```
+
+So your final replace chain becomes:
+
+```plaintext
+replace(
+  replace(
+    replace(
+      body('Get_file_content'),
+      '[Contract Type]',
+      string(items('Apply_to_each')?['Contract Type'])
+    ),
+    '[Employee Name]',
+    string(items('Apply_to_each')?['Personnel Name'])
+  ),
+  '[Insert Date]',
+  string(outputs('Compose_-_ContractEndDateFormatted'))
+)
+```
+
+This guarantees:
+
+- No null errors  
+- No serial numbers in emails  
+- No broken replace() calls  
+
+---
+
+# 🟦 If you want, I can help you add a second Compose for the reminder date or follow‑up date  
+Just tell me whether you want:
+
+- **Reminder date (30 days before)**  
+- **Follow‑up date (23 days before)**  
+- **Both**  
+
+I’ll give you the exact expressions so everything stays clean and readable.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+This is good, however I want to display the date in a different format e.g. 31 March 2025:  
+
+```
+formatDateTime(
+  addDays(
+    '1899-12-30',
+    int(
+      last(
+        split(
+          trim(
+            string(item()?['ContractEnd'])
+          ),
+          '.'
+        )
+      )
+    )
+  ),
+  'dd/MM/yyyy'
+)
+```  
 
 ## Co-Pilot
-Certainly, Hasan
+You’ve already done the hard part — converting the Excel serial into a real date.  
+Now you just want to **change the display format** from:
+
+```
+31/03/2025
+```
+
+to:
+
+```
+31 March 2025
+```
+
+That’s completely doable with `formatDateTime()`.
+
+---
+
+# ✅ Use this format string instead
+
+Replace:
+
+```
+'dd/MM/yyyy'
+```
+
+with:
+
+```
+'dd MMMM yyyy'
+```
+
+So your full expression becomes:
+
+```plaintext
+formatDateTime(
+  addDays(
+    '1899-12-30',
+    int(
+      last(
+        split(
+          trim(
+            string(item()?['ContractEnd'])
+          ),
+          '.'
+        )
+      )
+    )
+  ),
+  'dd MMMM yyyy'
+)
+```
+
+---
+
+# ⭐ What this produces
+
+| Format string | Output |
+|---------------|---------|
+| `dd/MM/yyyy` | 31/03/2025 |
+| `dd MMM yyyy` | 31 Mar 2025 |
+| `dd MMMM yyyy` | **31 March 2025** |
+| `dddd, dd MMMM yyyy` | Monday, 31 March 2025 |
+
+You can choose whichever style fits your HR email tone.
+
+---
+
+# 🧠 Why this works
+
+`MMMM` = full month name  
+`MMM` = short month name  
+`dd` = day with leading zero  
+`yyyy` = four‑digit year  
+
+Power Automate formats the date after converting the Excel serial, so you get a clean, human‑readable output.
+
+---
+
+If you want, I can help you format the reminder date and follow‑up date in the same style so your emails look consistent and polished.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+Ok teh date is now 6th January 2026. What date should I put in the spreadsheet to test the reminder actions and email actions today?  
 
 ## Co-Pilot
-Certainly, Hasan
+Great — now that we’re working with **today = 6 January 2026**, we can calculate the exact ContractEnd dates that will trigger each branch of your flow.
+
+Your automation uses two key rules:
+
+- **Reminder** triggers when:  
+  **Today = ContractEnd − 30 days**
+
+- **Follow‑up email** triggers when:  
+  **Today = ContractEnd − 23 days**
+
+Let’s work backwards from today.
+
+---
+
+# 🟦 **1. To trigger the REMINDER today (30 days before)**
+
+We solve:
+
+```
+ContractEnd − 30 days = 6 Jan 2026
+```
+
+So:
+
+```
+ContractEnd = 6 Jan 2026 + 30 days
+```
+
+### ⭐ **ContractEnd = 5 February 2026**
+
+(30 days after 6 Jan)
+
+Put **05/02/2026** in the spreadsheet to trigger the reminder logic today.
+
+---
+
+# 🟦 **2. To trigger the FOLLOW‑UP EMAIL today (23 days before)**
+
+We solve:
+
+```
+ContractEnd − 23 days = 6 Jan 2026
+```
+
+So:
+
+```
+ContractEnd = 6 Jan 2026 + 23 days
+```
+
+### ⭐ **ContractEnd = 29 January 2026**
+
+(23 days after 6 Jan)
+
+Put **29/01/2026** in the spreadsheet to trigger the follow‑up email logic today.
+
+---
+
+# 🟦 Summary (copy/paste friendly)
+
+| Action you want to test | Put this ContractEnd date |
+|-------------------------|---------------------------|
+| **Reminder (30 days before)** | **05/02/2026** |
+| **Follow‑up email (23 days before)** | **29/01/2026** |
+
+---
+
+If you want, I can help you add a third test date to confirm the “do nothing” branch as well — it’s a nice way to validate the whole flow end‑to‑end.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+Ok so now my email doesn't show the images properly (see attached image), when the html is:  
+
+```Html
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="Generator" content="Microsoft Word 15 (filtered medium)">
+<!--[if !mso]><style>v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Aptos;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	font-size:12.0pt;
+	font-family:"Aptos",sans-serif;
+	mso-ligatures:standardcontextual;
+	mso-fareast-language:EN-US;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:"Times New Roman",serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-fareast-language:EN-US;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+/* List Definitions */
+@list l0
+	{mso-list-id:1333995712;
+	mso-list-template-ids:-111117658;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+--></style>
+</head>
+<body lang="EN-GB" link="#467886" vlink="#96607D" style="word-wrap:break-word">
+<div class="WordSection1">
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB">Good morning,<o:p></o:p></span></p>
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB"><br><o:p></o:p></span></p>
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB">I hope that you&#8217;re well.<o:p></o:p></span></p>
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB"><br><o:p></o:p></span></p>
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB">I am writing to inform you that the [Contract Type] for [Employee Name] comes to an end on [Insert Date].<o:p></o:p></span></p>
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB"><br><o:p></o:p></span></p>
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB">Please inform us if this should come to an end, has ended already for another reason or please submit the relevant paperwork to arrange the extension of the end date.<o:p></o:p></span></p>
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB"><br><o:p></o:p></span></p>
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB">If you are intending to extend the end date, please ensure that you submit the Employee Change form (Attached) in time to allow for processing.<o:p></o:p></span></p>
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB"><br><o:p></o:p></span></p>
+<p class="MsoNormal" style="vertical-align:baseline"><b><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB">Kind Regards,<o:p></o:p></span></b></p>
+<p class="MsoNormal" style="vertical-align:baseline"><b><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB">Sohail Farid<o:p></o:p></span></b></p>
+<p class="MsoNormal" style="vertical-align:baseline"><b><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB">Human Resources Officer<o:p></o:p></span></b></p>
+<p class="MsoNormal" style="vertical-align:baseline"><span style="font-family:&quot;Times New Roman&quot;,serif;mso-ligatures:none;mso-fareast-language:EN-GB"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="vertical-align:baseline"><span style="color:#467886;mso-ligatures:none;mso-fareast-language:EN-GB"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal" style="vertical-align:baseline"><span style="color:#467886;mso-fareast-language:EN-GB"><img border="0" width="198" height="70" style="width:2.0625in;height:.7291in" id="Picture_x0020_1" src="https://bradfordgovuk.sharepoint.com/:i:/r/sites/DT-592/Shared%20Documents/Hasan/BCFT-logo.png?csf=1&web=1&e=CbSEvM" alt="BCFT Logo"></span><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-language:EN-GB">&nbsp;</span><span style="font-size:9.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-language:EN-GB"><br>
+<br>
+</span><span lang="EN-US" style="font-size:9.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#07365D;mso-fareast-language:EN-GB"><o:p></o:p></span></p>
+<p class="MsoNormal" style="vertical-align:baseline"><b><span style="color:#F038BB;mso-fareast-language:EN-GB">Have you seen our</span></b><b><span style="mso-fareast-language:EN-GB">
+</span></b><span style="mso-fareast-language:EN-GB"><a href="https://bradfordgovuk.sharepoint.com/:u:/r/sites/BradfordChildrenandFamiliesIntranet/SitePages/People-and-Talent---HR-Team.aspx?csf=1&amp;web=1&amp;e=TPh38g"><span style="color:#467886">People Team Page</span></a>
+<b><span style="color:#F038BB">yet, where you can find:</span></b><span style="color:#F038BB">
+<o:p></o:p></span></span></p>
+<p class="MsoNormal" style="vertical-align:baseline"><span style="mso-fareast-language:EN-GB"><img border="0" width="623" height="253" style="width:6.493in;height:2.6319in" id="Picture_x0020_2" alt="Screenshot of the SharePoint page showing HR links and tiles" src="https://bradfordgovuk.sharepoint.com/:i:/r/sites/DT-592/Shared%20Documents/Hasan/HR-Page.jpg?csf=1&web=1&e=VWfWfa"><b><span style="color:#07365D;mso-ligatures:none"><o:p></o:p></span></b></span></p>
+<p class="MsoNormal" style="vertical-align:baseline"><span lang="EN-US" style="font-size:9.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#07365D;mso-fareast-language:EN-GB"><br>
+<br>
+</span><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-language:EN-GB"><o:p></o:p></span></p>
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+</div>
+</body>
+</html>
+```  
+
+The images show up in html preview (when viewing the html as a webpage in teh browser) but they didn't work on the template. What should I do?  
 
 ## Co-Pilot
-Certainly, Hasan
+You're running into a classic HTML email limitation, Hasan — **images hosted on SharePoint often fail to render in emails**, especially when sent via Power Automate. Here's why and how to fix it.
+
+---
+
+## 🧨 Why your images aren't showing in the email
+
+Even though they show in browser preview, email clients (especially Outlook, Gmail, etc.) often block or fail to load images when:
+
+- The image is hosted on **SharePoint with access restrictions**
+- The URL contains **authentication tokens or session-based parameters** (like `?csf=1&web=1&e=CbSEvM`)
+- The image is not **publicly accessible** without sign-in
+- The image is embedded using `<img src="...">` but the source is not reachable by the recipient's email client
+
+So even if *you* can see the image, recipients can't — because their email client can't authenticate to SharePoint.
+
+---
+
+## ✅ How to fix it
+
+### 🔹 Option 1: Host the image on a **publicly accessible location**
+
+Upload the image to a location that:
+
+- Does **not require sign-in**
+- Has a **direct image URL** (ending in `.png`, `.jpg`, etc.)
+- Is **permanently accessible** to recipients
+
+Examples:
+
+- **OneDrive public folder** (if shared with “Anyone with the link”)
+- **GitHub raw image URL**
+- **Public image hosting services** (e.g., Imgur, Cloudinary)
+- **Your organization’s public-facing website or CDN**
+
+Then update your HTML to use:
+
+```html
+<img src="https://yourdomain.com/images/bcft-logo.png" alt="BCFT Logo">
+```
+
+---
+
+### 🔹 Option 2: Embed the image as a **base64 string** (not recommended for large images)
+
+You can convert the image to base64 and embed it directly:
+
+```html
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="BCFT Logo">
+```
+
+⚠️ But this only works for small images and can break in some email clients. Also, Power Automate doesn't support base64 embedding easily unless you manually encode and inject it.
+
+---
+
+### 🔹 Option 3: Attach the image to the email and reference it via `cid:` (Content-ID)
+
+This is the **most reliable method** for internal emails:
+
+1. In your **Send an email (V2)** action:
+   - Add the image as an **attachment**
+   - Set the **Content-ID** to something like `bcftlogo`
+
+2. In your HTML body, use:
+
+```html
+<img src="cid:bcftlogo" alt="BCFT Logo">
+```
+
+This embeds the image directly in the email and works across Outlook, Gmail, etc.
+
+---
+
+## 🧪 How to test
+
+- Send the email to yourself and open it in Outlook or Gmail
+- If the image shows up, you're good
+- If not, check the image URL — try opening it in a private browser window (incognito). If it asks for login, it won't work in email
+
+---
+
+Would you like help converting your current SharePoint image into a CID-based embedded image or finding a public hosting alternative? I can walk you through either.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+Ok I've uploaded teh image to my GitHub repo at the following relative paths:  
+`Other AI Projects/BCFT-logo.png`  
+`Other AI Projects/HR-Page.jpg`  
+Where the full paths to the images in the browser are "https://github.com/HasanBradfordUni/BCFT-AI/blob/main/Other%20AI%20Projects/HR-Page.jpg" and "https://github.com/HasanBradfordUni/BCFT-AI/blob/main/Other%20AI%20Projects/BCFT-logo.png" respectively.  
+
+The GitHub repo is private, however teh images are publicaly available on the linked GitHub pages site at the following urls respectively:  
+`https://bcft-ai.pythonprogrammertutorials.me/Other%20AI%20Projects/HR-Page.jpg`  
+`https://bcft-ai.pythonprogrammertutorials.me/Other%20AI%20Projects/BCFT-logo.png`  
+
+How would I mebed them?  
 
 ## Co-Pilot
-Certainly, Hasan
+Perfect setup, Hasan — since your images are publicly accessible via your GitHub Pages site, you can embed them directly in your HTML email using standard `<img>` tags.
+
+Here’s exactly how to do it.
+
+---
+
+## ✅ Embed your images using direct URLs
+
+Replace your current `<img>` tags with these:
+
+### 🔹 BCFT Logo
+```html
+<img src="https://bcft-ai.pythonprogrammertutorials.me/Other%20AI%20Projects/BCFT-logo.png" alt="BCFT Logo" width="198" height="70" style="width:2.0625in;height:.7291in;">
+```
+
+### 🔹 HR Page Screenshot
+```html
+<img src="https://bcft-ai.pythonprogrammertutorials.me/Other%20AI%20Projects/HR-Page.jpg" alt="HR Page Screenshot" width="623" height="253" style="width:6.493in;height:2.6319in;">
+```
+
+---
+
+## 🧠 Best practices for email compatibility
+
+- ✅ Use **absolute URLs** (which you’ve done)
+- ✅ Use **standard image formats** like `.png` or `.jpg`
+- ✅ Avoid query strings (`?csf=1&web=1`) — your GitHub Pages URLs are clean
+- ✅ Include `alt` text for accessibility
+- ✅ Set `width` and `height` explicitly to avoid layout issues
+- ✅ Avoid VML or Word-specific markup — keep it clean HTML
+
+---
+
+## 🧪 How to test
+
+1. Paste the updated HTML into your Compose step
+2. Send the email to yourself
+3. Open it in Outlook and Gmail
+4. Confirm both images render correctly
+
+If they do, you’re good to go. If not, I can help you inline the images or troubleshoot email client quirks.
+
+---
+
+Would you like me to help you clean up the rest of the HTML to remove Word-generated clutter and make the email more lightweight and readable across devices? It’ll make your HR comms feel more polished.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+One other thing, the email was formatted as this (for January 6th 2026): `01/06/2026`  
+When it should be this: `06/01/2025`  
+Using this formula: `formatDateTime(string(variables('emailDate')), 'dd/MM/yyyy')`  
+
+How do I update it to teh intended date formatting?  
 
 ## Co-Pilot
-Certainly, Hasan
+Ah, I see exactly what’s happening, Hasan — and it’s not your `formatDateTime()` pattern at all.  
+Your format string **'dd/MM/yyyy' is correct**.  
+The *real* issue is this:
+
+### 👉 Your `emailDate` variable is being interpreted as **MM/dd/yyyy**, not **dd/MM/yyyy**.
+
+So when you pass:
+
+```
+"06/01/2026"
+```
+
+Power Automate reads it as:
+
+- **Month = 06**
+- **Day = 01**
+- **Year = 2026**
+
+…which becomes **01/06/2026** when reformatted.
+
+That’s why you’re getting the wrong output.
+
+---
+
+# ✅ The fix: convert the date properly before formatting
+
+You need to **parse** the date using the correct input format before formatting it.
+
+Use this instead:
+
+```plaintext
+formatDateTime(
+    parseDateTime(variables('emailDate'), 'dd/MM/yyyy'),
+    'dd/MM/yyyy'
+)
+```
+
+This tells Power Automate:
+
+- “Interpret the incoming value as **day/month/year**”
+- Then output it as **day/month/year** again
+
+Now:
+
+- `06/01/2026` → correctly parsed as 6 January 2026  
+- Reformatted → `06/01/2026`
+
+---
+
+# ⭐ If your variable contains an ISO date (e.g., 2026‑01‑06)
+
+Then use:
+
+```plaintext
+formatDateTime(variables('emailDate'), 'dd/MM/yyyy')
+```
+
+ISO dates don’t need parsing.
+
+---
+
+# 🧠 If your variable contains an Excel serial (e.g., 45747)
+
+Then you must convert it first:
+
+```plaintext
+formatDateTime(
+    addDays('1899-12-30', int(variables('emailDate'))),
+    'dd/MM/yyyy'
+)
+```
+
+---
+
+# 🎯 Summary
+
+| Your variable contains | Use this |
+|------------------------|----------|
+| `06/01/2026` (UK text date) | `formatDateTime(parseDateTime(...), 'dd/MM/yyyy')` |
+| `2026-01-06T00:00:00Z` (ISO) | `formatDateTime(..., 'dd/MM/yyyy')` |
+| `45747` (Excel serial) | `formatDateTime(addDays(...), 'dd/MM/yyyy')` |
+
+---
+
+If you tell me **exactly what the raw value of `emailDate` is** (from a Compose), I’ll give you the exact expression tailored to your flow so it never misinterprets dates again.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+The date is formatted as this before:  
+`2026-01-06T00:00:00.0000000`  
+
+And then after the formula becomes the American date instead of the UK date for 6th January 2026:  
+`formatDateTime(string(variables('emailDate')), 'dd/MM/yyyy')`  
+
+It should be this:  
+`06/01/2026`  
+But instead becomes this:  
+`01/06/2026`  
+
+Which would read as 1st of June instead of 6th Jnauary so that's why it's a problem  
 
 ## Co-Pilot
-Certainly, Hasan
+You’ve done everything right, Hasan — and the good news is this one is **very easy to fix** once you know what Power Automate is doing behind the scenes.
+
+Let me break it down cleanly.
+
+---
+
+# ✅ What’s actually happening
+
+Your variable contains this:
+
+```
+2026-01-06T00:00:00.0000000
+```
+
+This is an **ISO 8601 date**, and ISO dates are always interpreted as:
+
+```
+yyyy-MM-dd
+```
+
+So:
+
+- `2026-01-06` = **6 January 2026** (correct)
+
+But when you wrap it in:
+
+```plaintext
+string(variables('emailDate'))
+```
+
+Power Automate converts it to a **string**, and then `formatDateTime()` tries to *re‑parse* that string.
+
+When `formatDateTime()` re-parses a string, it assumes **MM/dd/yyyy** unless told otherwise.
+
+So it reads:
+
+```
+2026-01-06T00:00:00.0000000
+```
+
+as:
+
+- Month = **01**
+- Day = **06**
+- Year = **2026**
+
+…and then outputs:
+
+```
+01/06/2026
+```
+
+Which is the wrong interpretation for UK users.
+
+---
+
+# 🎯 The fix: **remove the string() wrapper**
+
+You don’t need to convert the ISO date to a string.  
+Power Automate already knows how to parse ISO dates correctly.
+
+Use this:
+
+```plaintext
+formatDateTime(variables('emailDate'), 'dd/MM/yyyy')
+```
+
+That’s it.  
+No `string()`.  
+No parsing.  
+No US format confusion.
+
+---
+
+# ⭐ Why this works
+
+- ISO dates (`2026-01-06T00:00:00Z`) are always parsed correctly  
+- `formatDateTime()` only misbehaves when you give it a **string**  
+- Passing the variable directly keeps it in **date-time** type  
+- So the output becomes:
+
+```
+06/01/2026
+```
+
+Exactly what you want.
+
+---
+
+# 🧪 Quick test
+
+Add a temporary Compose:
+
+```
+formatDateTime(variables('emailDate'), 'dd/MM/yyyy')
+```
+
+You’ll see:
+
+```
+06/01/2026
+```
+
+Perfect UK format.
+
+---
+
+If you want, I can help you apply this same fix to your reminder date, follow‑up date, or anywhere else you’re formatting dates in the flow.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+The date still apperas as `01/06/26`. This is my flow steps (only relevant connectors) until that point:  
+
+Compose 1: `addDays('1899-12-30', sub(int(item()?['ContractEnd']), 30))`  
+Set variable 1 - reminder date: `@{outputs('Compose_1')}`  
+Compose 2: `addDays(variables('reminderDate'),7)`  
+Set variable 2 - email date: `@{outputs('Compose_2')}`  
+Update a row 1:  
+In EmailReminderSent: `@{formatDateTime(variables('emailDate'), 'dd/MM/yyyy')}`  
 
 ## Co-Pilot
-Certainly, Hasan
+Hasan, this is one of those Power Automate quirks that *looks* like a formatting issue… but it’s actually a **type‑conversion issue** happening earlier in the flow.
+
+Let me walk you through it clearly, because the behaviour you’re seeing:
+
+```
+06 January 2026  →  01/06/2026
+```
+
+only happens when **Power Automate thinks the date is a STRING**, not a DATETIME.
+
+And in your flow, that’s exactly what’s happening.
+
+---
+
+# 🔍 **Where the problem actually starts**
+This step is the culprit:
+
+### **Set variable – reminderDate**
+```
+@{outputs('Compose_1')}
+```
+
+And then:
+
+### **Set variable – emailDate**
+```
+@{outputs('Compose_2')}
+```
+
+When you store a date inside a **variable**, Power Automate converts it to a **string**, even if the Compose output was a proper datetime.
+
+So by the time you reach:
+
+```
+formatDateTime(variables('emailDate'), 'dd/MM/yyyy')
+```
+
+Power Automate is no longer formatting a datetime — it’s trying to **parse a string**, and when parsing strings, it assumes **US format (MM/dd/yyyy)**.
+
+That’s why:
+
+```
+2026-01-06T00:00:00.0000000
+```
+
+gets interpreted as:
+
+- Month = 01  
+- Day = 06  
+- Year = 2026  
+
+…and then output becomes:
+
+```
+01/06/2026
+```
+
+---
+
+# ✅ **The fix: convert the string back into a datetime before formatting**
+
+Use **parseDateTime()** to force Power Automate to treat the variable as a real date again.
+
+Replace your current expression with:
+
+```plaintext
+formatDateTime(
+    parseDateTime(variables('emailDate')),
+    'dd/MM/yyyy'
+)
+```
+
+### Why this works
+- `parseDateTime()` correctly interprets ISO strings like `2026-01-06T00:00:00Z`
+- It converts them back into a proper datetime object
+- `formatDateTime()` then formats it correctly as UK date
+
+This will output:
+
+```
+06/01/2026
+```
+
+Exactly what you want.
+
+---
+
+# ⭐ **Even better fix (recommended)**  
+Avoid storing dates in variables at all.
+
+Instead of:
+
+```
+Set variable → emailDate
+```
+
+Use a **Compose**:
+
+```
+Compose – EmailDate
+addDays(outputs('Compose_1'), 7)
+```
+
+Then format it directly:
+
+```
+formatDateTime(outputs('Compose_-_EmailDate'), 'dd/MM/yyyy')
+```
+
+Composes preserve the datetime type.  
+Variables convert everything to strings.
+
+---
+
+# 🧪 Want me to rewrite your flow steps cleanly so the dates never break again?
+
+I can map out:
+
+- Compose 1 (Reminder date)
+- Compose 2 (Email date)
+- Compose 3 (Formatted date)
+- Update row
+
+…so the whole chain stays type‑safe and UK‑formatted.
+
+Just say the word and I’ll lay it out neatly.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+This is my parameters for teh Update a row 1 connector:  
+
+```Json
+{"source":"sites/bradfordgovuk.sharepoint.com,b1833659-7a8a-4640-8737-86d3a9d319c3,9538aa2e-9e9f-4b60-8cd9-835501a878ac",
+  "drive":"b!WTaDsYp6QEaHN4bTqdMZwy6qOJWfnmBLjNmDVQGoeKzIf5lXnZOYSr3GmlJOoche",
+  "file":"01O4YHJ6ODJLHVKBSIDBBYW2IT5W2HU3FQ",
+  "table":"{1FF71D37-A30D-448C-92C2-7A705182817D}",
+  "idColumn":"PersNo",
+  "id":"71291835",
+  "item/EmailReminderSent":"06/01/2026",
+  "item/Comments":"Automatic email was sent on 06 January 2026"
+}
+```  
+
+The date is actually crrectly formatted there, however it still apperasd in the US format in teh spreadsheet. This is the body output from teh aforemationed connector:  
+
+```Json
+{"@odata.context":"https://excelonline-uks.azconn-uks-002.p.azurewebsites.net/$metadata#drives('b%21WTaDsYp6QEaHN4bTqdMZwy6qOJWfnmBLjNmDVQGoeKzIf5lXnZOYSr3GmlJOoche')/Files('01O4YHJ6ODJLHVKBSIDBBYW2IT5W2HU3FQ')/Tables('%7B1FF71D37-A30D-448C-92C2-7A705182817D%7D')/items/$entity",
+  "@odata.etag":"",
+  "ItemInternalId":"71291835",
+  "PersNo":"71291835",
+  "Personnel Name":"Test Name",
+  "ContractEnd":"46051",
+  "Position":"50236710",
+  "Position Title":"Test Position",
+  "LineManager":"Hasan Akhtar",
+  "Employee Group":"Temporary",
+  "ContractType":"Temporary contract ",
+  "EmailReminderSent":"46174",
+  "HRSD":"",
+  "Comments":"Automatic email was sent on 06 January 2026"
+}
+```  
 
 ## Co-Pilot
-Certainly, Hasan
+Hasan — this is one of those Excel‑via‑Power‑Automate behaviours that *looks* like a formatting bug, but it’s actually Excel doing something completely different under the hood.
+
+Let me break it down cleanly and show you exactly why your spreadsheet is showing **01/06/2026** even though you sent **06/01/2026**.
+
+---
+
+# ✅ **The key insight: Excel does NOT store dates as text**
+Even if you send:
+
+```
+"06/01/2026"
+```
+
+Excel **does not store that string**.
+
+Excel converts it into a **serial number**, and that serial number is what you see in the connector output:
+
+```
+"EmailReminderSent": "46174"
+```
+
+Serial **46174** = **6 January 2026**  
+…but Excel will *display* that serial using **the cell’s local date format**, not the string you sent.
+
+So if the cell is formatted as:
+
+- **MM/DD/YYYY** → Excel shows **01/06/2026**
+- **DD/MM/YYYY** → Excel shows **06/01/2026**
+
+Power Automate has *no control* over how Excel displays the date.  
+It only writes the serial number.
+
+And your output confirms this:
+
+```
+"EmailReminderSent": "46174"
+```
+
+That is correct.  
+Excel is simply formatting it using **US locale**.
+
+---
+
+# 🎯 **So the real issue is: the Excel column is formatted as US date**
+Even if your Windows/Office is UK, Excel Online often defaults to US formatting unless you explicitly change the column format.
+
+---
+
+# ✅ **How to fix it properly**
+
+### 1. Open the Excel file in **Excel Desktop** (not Excel Online)
+Excel Online sometimes refuses to save locale formatting.
+
+### 2. Select the entire **EmailReminderSent** column
+
+### 3. Right‑click → **Format Cells**
+
+### 4. Choose **Date**
+
+### 5. Set **Locale = English (United Kingdom)**  
+This is the critical step.
+
+### 6. Choose the format you want:  
+`14/03/2012` (dd/mm/yyyy)
+
+### 7. Save the file
+
+### 8. Re‑upload or overwrite the file in SharePoint
+
+### 9. Refresh the Power Automate connection (close and reopen the flow)
+
+---
+
+# 🧪 Why this works
+Excel stores:
+
+```
+46174
+```
+
+And then *displays* it using the cell’s locale.
+
+If the locale is US → **01/06/2026**  
+If the locale is UK → **06/01/2026**
+
+Power Automate is doing everything correctly — Excel is just formatting the serial using the wrong locale.
+
+---
+
+# ⭐ Bonus: How to confirm the fix
+After updating the column formatting:
+
+1. Manually type `46174` into a cell  
+2. Press Enter  
+3. If it shows **06/01/2026**, the formatting is correct  
+4. If it shows **01/06/2026**, the column is still US‑formatted
+
+---
+
+# If you want, I can help you:
+- Reformat the entire table safely  
+- Rebuild the Excel file so it never flips back to US locale  
+- Move the date logic into a separate hidden sheet  
+- Or switch to SharePoint lists (which handle dates properly)
+
+Just tell me what direction you want to take.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+These are my column settings in excel [Uploaded Image Expired]  
 
 ## Co-Pilot
-Certainly, Hasan
+Thanks for the screenshot, Hasan — this confirms that your **Excel column is correctly formatted as a UK date** (`dd/mm/yy`) with **Locale: English (United Kingdom)**. So the issue isn’t Excel’s formatting — it’s how Power Automate is writing the value into the cell.
+
+Let’s break it down:
+
+---
+
+## ✅ What’s happening
+
+Your flow sends this value to Excel:
+
+```
+"06/01/2026"
+```
+
+But Excel receives it as a **string**, not a date, and then **reinterprets it using US logic** unless you force it to treat the input as a proper date.
+
+Even though the column is formatted as UK date, Excel will still misinterpret `"06/01/2026"` as:
+
+- **January 6th** if treated as a date  
+- **June 1st** if treated as a string
+
+And Power Automate’s `Update a row` connector **does not guarantee type fidelity** — it often sends strings unless you explicitly convert the value to a datetime.
+
+---
+
+## 🎯 The fix: send a proper datetime object, not a string
+
+Instead of:
+
+```plaintext
+formatDateTime(variables('emailDate'), 'dd/MM/yyyy')
+```
+
+Use this:
+
+```plaintext
+variables('emailDate')
+```
+
+This sends the **raw datetime value**, which Excel will store as a serial number and display using the column’s UK format.
+
+---
+
+## 🧪 How to confirm it works
+
+1. In your `Update a row` connector, set `EmailReminderSent` to:
+
+```plaintext
+variables('emailDate')
+```
+
+2. Run the flow  
+3. Open Excel  
+4. If the column is formatted as UK date, you’ll see:
+
+```
+06/01/2026
+```
+
+If you still see `01/06/2026`, it means Excel is treating the input as a string — in that case, we can force the conversion using `addDays()` or `formatDateTime()` but only after parsing the string properly.
+
+---
+
+## 🛠 Alternative: use `addDays()` to force Excel to treat it as a date
+
+If you must use a formula, this works:
+
+```plaintext
+addDays('1899-12-30', int('46174'))
+```
+
+Or if your variable is a serial number:
+
+```plaintext
+addDays('1899-12-30', int(variables('emailDate')))
+```
+
+This guarantees Excel receives a proper datetime.
+
+---
+
+Let me know if you want to restructure the flow so all date values are stored as datetime objects from start to finish — I can help you clean up the Compose and Variable steps so this never breaks again.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+Now it apperas like this in the column: `2026-01-06T00:00:00.0000000`  
 
 ## Co-Pilot
-Certainly, Hasan
+That’s actually a good sign, Hasan — it means Power Automate is now writing a **true datetime value** into Excel, not a string or serial number. The format you're seeing:
+
+```
+2026-01-06T00:00:00.0000000
+```
+
+is the **ISO 8601 format**, which Excel stores internally when receiving a datetime object from Power Automate. But here’s the catch:
+
+> Excel will **display** that ISO string unless the column is explicitly formatted as a date.
+
+Even though your column is already set to UK date format (as per your earlier screenshot), Excel sometimes fails to apply that formatting to **newly written cells**, especially if the cell was previously blank or formatted as General/Text.
+
+---
+
+## ✅ How to fix the display issue
+
+### Step 1 — Open the Excel file in **Excel Desktop**
+Excel Online often doesn’t apply formatting reliably.
+
+### Step 2 — Select the entire **EmailReminderSent** column
+
+### Step 3 — Right-click → **Format Cells**
+
+### Step 4 — Choose **Date**  
+Make sure the format is something like:
+
+```
+14/03/2012
+```
+
+### Step 5 — Confirm the **Locale is English (United Kingdom)**
+
+### Step 6 — Save the file and re-upload to SharePoint
+
+---
+
+## 🧪 What happens after this
+
+Once the column is formatted as UK date:
+
+- Excel will display `2026-01-06T00:00:00.0000000` as **06/01/2026**
+- You won’t need to reformat or parse anything in Power Automate
+- The cell will behave like a proper date (sortable, filterable, etc.)
+
+---
+
+## 🛠 Optional: force Excel to reformat the cell
+
+If you want to guarantee the format is applied even when Power Automate writes to a blank cell, you can:
+
+- Pre-fill the column with dummy dates (e.g., `01/01/2000`)  
+- Format the entire column as Date  
+- Let Power Automate overwrite the values
+
+This ensures Excel retains the formatting.
+
+---
+
+Let me know if you want help building a test sheet with preformatted columns and dummy data — I can guide you through a setup that never breaks formatting again.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+It's already formatted as a date column. However when `2026-01-06T00:00:00.0000000` is in the column it doesn't format it, but when I change it to `2026-01-06` in Excel, tehn it formats it properly as `06/01/26`  
 
 ## Co-Pilot
-Certainly, Hasan
+Ahh, now we’re right on the heart of the issue, Hasan — and this behaviour tells us something very specific about how **Excel Online + Power Automate** treat ISO timestamps.
+
+Here’s the key insight:
+
+---
+
+# 🎯 Excel **cannot convert** this format into a date:
+```
+2026-01-06T00:00:00.0000000
+```
+
+But Excel **can** convert this:
+```
+2026-01-06
+```
+
+Why?
+
+Because Excel only auto‑recognises **ISO dates without time**.  
+As soon as the timestamp includes:
+
+- `T`
+- milliseconds
+- timezone
+- or anything beyond `yyyy-mm-dd`
+
+Excel treats it as **text**, even if the column is formatted as a date.
+
+That’s why your column formatting is being ignored.
+
+---
+
+# ✅ The fix: send Excel a clean ISO date **without the time component**
+
+Instead of sending:
+
+```
+variables('emailDate')
+```
+
+Send:
+
+```plaintext
+formatDateTime(variables('emailDate'), 'yyyy-MM-dd')
+```
+
+This produces:
+
+```
+2026-01-06
+```
+
+Excel will then:
+
+- recognise it as a date  
+- convert it to a serial  
+- display it using your UK format (`dd/mm/yy`)  
+- show it as **06/01/26**
+
+Exactly what you want.
+
+---
+
+# 🧪 Why this works
+
+Excel’s date parser accepts:
+
+- `2026-01-06` → ✔ valid date  
+- `2026-01-06T00:00:00.0000000` → ❌ treated as text  
+
+Even if the column is formatted as a date, Excel **cannot convert text to date unless the text is in a recognised format**.
+
+---
+
+# 🛠 What to put in your “Update a row” connector
+
+For `EmailReminderSent`, use:
+
+```plaintext
+@{formatDateTime(variables('emailDate'), 'yyyy-MM-dd')}
+```
+
+For `Comments`, you can still use your UK‑formatted version:
+
+```plaintext
+Automatic email was sent on @{formatDateTime(variables('emailDate'), 'dd MMMM yyyy')}
+```
+
+---
+
+# ⭐ Summary
+
+| Value you send | How Excel treats it | Result |
+|----------------|---------------------|--------|
+| `2026-01-06T00:00:00.0000000` | Text | Shows raw string |
+| `2026-01-06` | Date | Displays as `06/01/26` (UK format) |
+
+---
+
+If you want, I can help you clean up the entire date pipeline so every date in your flow is:
+
+- stored as datetime  
+- formatted correctly  
+- written to Excel in a way Excel always understands  
+
+Just say the word.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+Okmit finally worked, thanks for your help  
 
 ## Co-Pilot
-Certainly, Hasan
+That’s brilliant to hear, Hasan — you’ve wrestled with one of the trickiest Excel + Power Automate date quirks, and you came out on top. These flows get so much smoother once the date pipeline is behaving, and you’ve now got it working exactly the way a UK‑formatted HR workflow *should*.
+
+If you ever want to tighten up the flow further — maybe streamline the date logic, clean up the HTML template, or build a little diagnostics Compose to help future debugging — I’m always up for it.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+Ok so how can I write documentation for this flow that is suitable for non-technical colleagues and also contains some technical aspects (for anyone who understands power automate and/or the technical aspects of IT Autimation).   
+Below is text that documents all teh current flow configurations (from Power Automate) in readble format where "" indicates an empty field (if it isn't a string).  
+
+```
+HR Automation - Contract Ending - Test Version 
+Full Flow Configurations
+
+Start --> Recurrence:
+Interval = 1
+Frequency = Day
+Time zone = (UTC+00:00) Dublin, Edinburgh, Lisbon, London
+Start time = 2025-12-23T10:00:00.000Z
+At these hours = 9
+At these minutes = 0
+
+Recurrence --> Initialize variable 1 - reminder date:
+Name = reminderDate
+Type = String
+Value = ""
+
+Initialize variable 1 - reminder date --> Initialize variable 2 - email date:
+Name = emailDate
+Type = String
+Value = ""
+
+Initialize variable 2 - email date --> Get file content (SharePoint):
+Site Address = Application & System Support Team - https://bradfordgovuk.sharepoint.com/sites/DT-592
+File Identifier = /Shared Documents/Hasan/Contract Ending Email Template.html
+
+Get file content --> List rows present in a table (Excel):
+Location = SharePoint Site - Application & System Support Team
+Document Library = Documents
+File = /Hasan/HRSD Master tracker - Test Version.xlsx
+Table = Table1
+Extract Sensitivity Label (A boolean whether to extract sensitivity label Id for associated artefact.) = ""
+Sensitivity Label Metadata (A boolean whether to fetch sensitivity label Metadata for associated Labelld.) = ""
+Advanced parameters (Showing 1 of 6)
+Filter Query = EmailReminderSent eq"
+
+List rows present in a table --> Apply to each (loop):
+Select an output from previous steps = @{outputs('List_rows_present_in_a_table')?['body/value']}
+
+Following connectors are all inside the Apply to each loop
+
+[Apply to each] --> Condition 1 (conditional):
+@{items('Apply_to_each')?['ContractEnd']} is not equal to ""
+
+Following connectors are all inside Condition 1 (True branch)
+
+[Condition 1 (True)] --> Compose 1
+Inputs = @{addDays('1899-12-30', sub(int(item()?['ContractEnd']), 30))}
+
+Compose 1 --> Set variable 1 - reminder date
+Name = reminderDate
+Value = @{outputs('Compose_1')}
+
+Set variable 1 - reminder date --> Compose 2
+Inputs = @{addDays(variables('reminderDate'),7)}
+
+Compose 2 --> Set variable 2 - email date
+Name = emailDate
+Value = @{outputs('Compose_2')}
+
+Set variable 2 - email date --> Condition - Reminder Date (conditional):
+@{formatDateTime(utcNow(), 'yyyy-MM-dd')} is equal to @{formatDateTime(variables('reminderDate'), 'yyyy-MM-dd')}
+
+Following connectors are all inside Condition - Reminder Date (True branch) and still inside Condition 1 (True branch)
+
+[Condition - Reminder Date (True)] --> Update a row (Excel):
+Location = SharePoint Site - Application & System Support Team
+Document Library = Documents
+File = /Hasan/HRSD Master tracker - Test Version.xlsx
+Table = Table1
+Key Column = PersNo
+Key Value = @{items('Apply_to_each')?['PersNo']}
+Advanced parameters (Showing 1 of 12)
+Comments = Automatic email to be sent on @{formatDateTime(string(variables('emailDate')),'dd MMMM yyyy')}
+
+END of Condition - Reminder Date
+
+Condition - Reminder Date --> Condition - Email Date
+@{formatDateTime(utcNow(), 'yyyy-MM-dd')} is equal to @{formatDateTime(variables('emailDate'), 'yyyy-MM-dd')}
+
+Following connectors are all inside Condition - Email Date (True branch) and still inside Condition 1 (True branch)
+
+[Condition - Email Date] --> Compose - Contract End Date:
+Inputs = @{formatDateTime(addDays('1899-12-30',int(last(split(trim(string(items('Apply_to_each')?['ContractEnd'])),'.')))),'dd MMMM yyyy')}
+
+Compose - Contract End Date --> Compose:
+Inputs = @{replace(replace(replace(body('Get_file_content'),'[Contract Type]',string(items('Apply_to_each')?['ContractType'])),'[Employee Name]',string(items('Apply_to_each')?['Personnel Name'])),'[Insert Date]',string(outputs('Compose_-_Contract_End_Date')))}
+
+Compose --> Compose 1 - Manager Name:
+Inputs = @{trim(replace(replace(replace(replace(items('Apply_to_each')?['LineManager'],'Mr ', ''),'Mrs ', ''),'Ms ', ''),'Miss ', ''))}
+
+Compose 1 - Manager Name --> Compose 2 - Manager Email:
+Inputs = @{concat(toLower(replace(outputs('Compose_1_-_Manager_Name'), ' ', '.')),'@bradfordcft.org.uk')}
+
+Compose 2 - Manager Email --> Get user profile (V2):
+User (UPN) = @{outputs('Compose_2_-_Manager_Email')}
+
+Get user profile --> Condition (conditional):
+@{outputs('Compose_2_-_Manager_Email')} is equal to @{if(equals(outputs('Get_user_profile_(V2)')?['body/mail'], null), null, toLower(outputs('Get_user_profile_(V2)')?['body/mail']))}
+
+Following connectors are all inside Condition (True branch) and still inside Condition - Email Date (True branch)
+
+[Condition (True)] --> Send an email (V2):
+To = @{outputs('Compose_2_-_Manager_Email')}
+Subject = Contract Ending soon - @{items('Apply_to_each')?['Personnel Name']}
+Body = @{outputs('Compose')} Please note that this is a TEST VERSION of the Automated HR System. No actual action is to be taken from this unless for testing purposes. If you believe to have received this email in error, please contact the App Support Team via Appsupportchildrens@bradfordcft.org.uk or alternatively Hasan.Akhtar@bradfordcft.org.uk who has created this test version.
+
+Send an email (V2) --> Update a row 1 (Excel): 
+Location = SharePoint Site - Application & System Support Team
+Document Library = Documents
+File = /Hasan/HRSD Master tracker - Test Version.xlsx
+Table = Table1
+Key Column = PersNo
+Key Value = @{items('Apply_to_each')?['PersNo']}
+Advanced parameters (Showing 2 of 12)
+EmailReminderSent = @{formatDateTime(variables('emailDate'), 'yyyy-MM-dd')}
+Comments = Automatic email was sent on @{formatDateTime(string(variables('emailDate')),'dd MMMM yyyy')}
+
+Following connectors are all inside Condition (False branch) and still inside Condition - Email Date (True branch)
+
+[Condition (False)] --> Send an email (V2) 1:
+To = Sohail.Farid@bradfordcft.org.uk
+Subject = Manual Action Required - Contract Ending - @{items('Apply_to_each')?['Personnel Name']}
+Body = Good morning, The automated system could not determine the email address for the Line Manager listed below. Please send the contract ending notification manually. Employee: @{items('Apply_to_each')?['Personnel Name']} Contract Type: @{items('Apply_to_each')?['ContractType']} Contract End Date: @{formatDateTime(addDays('1899-12-30',int(last(split(trim(string(items('Apply_to_each')?['ContractEnd'])),'.')))),'dd MMMM yyyy')} Line Manager: @{items('Apply_to_each')?['LineManager']} Position: @{items('Apply_to_each')?['Position Title']} Kind regards, Automated HR System Please note that this is a TEST VERSION of the Automated HR System. No actual action is to be taken from this unless for testing purposes. If you believe to have received this email in error, please contact the App Support Team via Appsupportchildrens@bradfordcft.org.uk or alternatively Hasan.Akhtar@bradfordcft.org.uk who has created this test version.
+From (Send as) = Appsupportchildrens@bradfordcft.org.uk
+
+Send an email 1 --> Update a row 2 (Excel): 
+Location = SharePoint Site - Application & System Support Team
+Document Library = Documents
+File = /Hasan/HRSD Master tracker - Test Version.xlsx
+Table = Table1
+Key Column = PersNo
+Key Value = @{items('Apply_to_each')?['PersNo']}
+Advanced parameters (Showing 1 of 12)
+Comments = Automatic email could not be sent - to be checked by relevant HRSD  
+```  
 
 ## Co-Pilot
-Certainly, Hasan
+Absolutely, Hasan — you can turn this into documentation that *non‑technical colleagues can understand* **and** that still gives enough depth for technical readers. The trick is to structure it like a professional internal guide:
+
+- A **plain‑English overview** of what the flow does  
+- A **step‑by‑step process explanation** (non‑technical)  
+- A **technical appendix** (for Power Automate users)  
+- Clear **inputs, outputs, and responsibilities**  
+- Screenshots or diagrams (optional later)
+
+Below is a polished, ready‑to‑use structure you can adapt. I’ll write it in a tone suitable for HR, App Support, and technical colleagues.
+
+---
+
+# 📘 HR Automation – Contract Ending  
+## Flow Documentation (Test Version)
+
+---
+
+# 1. Purpose of the Automation  
+This flow automatically monitors contract end dates recorded in the HRSD Master Tracker and sends timely reminders to line managers. It reduces manual tracking, ensures consistency, and helps HRSD receive extension paperwork on time.
+
+The automation performs two key actions:
+
+- **Reminder Email** – sent **30 days before** a contract ends  
+- **Follow‑up Email** – sent **7 days after the reminder** (23 days before contract end)
+
+If the system cannot determine the manager’s email address, it alerts HRSD to take manual action.
+
+---
+
+# 2. Who This Documentation Is For  
+- **HR colleagues** who need to understand what the automation does  
+- **App Support / IT Automation** who maintain or troubleshoot the flow  
+- **Managers** who want to understand why they receive automated emails  
+- **Technical staff** who need the full configuration details
+
+---
+
+# 3. High‑Level Process (Non‑Technical Summary)
+
+Here’s the flow in plain English:
+
+1. **Every morning at 9am**, the system checks the HRSD Master Tracker.
+2. It looks for employees whose contract end date is recorded.
+3. For each employee:
+   - It calculates:
+     - **Reminder Date** = Contract End − 30 days  
+     - **Email Date** = Reminder Date + 7 days  
+4. If today matches the **Reminder Date**, the system updates the tracker to show a reminder is scheduled.
+5. If today matches the **Email Date**:
+   - It prepares an email using the HTML template stored in SharePoint.
+   - It identifies the line manager’s email address.
+   - If found → sends the contract‑ending email to the manager.  
+   - If not found → alerts HRSD to send the email manually.
+6. The tracker is updated to show whether the email was sent or manual action is required.
+
+This ensures HRSD has visibility and managers receive timely reminders.
+
+---
+
+# 4. Data Sources Used
+
+| Source | Purpose |
+|-------|---------|
+| **HRSD Master Tracker (Excel)** | Stores contract end dates and tracks reminder status |
+| **HTML Email Template (SharePoint)** | Provides the formatted email body |
+| **Azure AD (Get User Profile)** | Used to validate manager email addresses |
+
+---
+
+# 5. Key Fields in the HRSD Tracker
+
+| Column | Description |
+|--------|-------------|
+| **ContractEnd** | Excel serial number representing the contract end date |
+| **EmailReminderSent** | Stores the date the reminder email was sent |
+| **Comments** | Notes added by the automation (e.g., “Automatic email sent…”) |
+| **LineManager** | Manager’s name used to derive their email address |
+
+---
+
+# 6. Flow Logic Diagram (Text Version)
+
+```
+Recurrence → Load Template → Load Tracker → For Each Row
+    → If ContractEnd exists
+        → Calculate ReminderDate & EmailDate
+        → If Today = ReminderDate → Update Tracker
+        → If Today = EmailDate
+            → Build Email Body
+            → Determine Manager Email
+            → If Valid → Send Email → Update Tracker
+            → Else → Notify HRSD → Update Tracker
+```
+
+---
+
+# 7. Technical Appendix (Full Flow Configuration)
+
+Below is the full technical configuration for Power Automate users.  
+This section is intended for App Support, IT Automation, and anyone maintaining the flow.
+
+---
+
+## 🔧 Trigger: Recurrence  
+- Interval: **1 day**  
+- Time: **09:00 UK time**  
+- Time zone: **UTC+00:00 Dublin, Edinburgh, Lisbon, London**
+
+---
+
+## 🔧 Variables  
+### reminderDate  
+- Type: String  
+- Initial value: `""`
+
+### emailDate  
+- Type: String  
+- Initial value: `""`
+
+---
+
+## 🔧 Get File Content (HTML Template)  
+- Site: Application & System Support Team  
+- File: `/Shared Documents/Hasan/Contract Ending Email Template.html`
+
+---
+
+## 🔧 List Rows (Excel)  
+- File: `HRSD Master tracker – Test Version.xlsx`  
+- Table: `Table1`  
+- Filter: `EmailReminderSent eq ""`  
+  (Only process rows where no reminder has been sent)
+
+---
+
+## 🔧 Apply to Each Row  
+### Condition 1  
+Check if ContractEnd is populated.
+
+---
+
+## 🔧 Date Calculations  
+### Compose 1 – Reminder Date  
+```
+addDays('1899-12-30', sub(int(item()?['ContractEnd']), 30))
+```
+
+### Compose 2 – Email Date  
+```
+addDays(variables('reminderDate'), 7)
+```
+
+---
+
+## 🔧 Reminder Date Check  
+```
+formatDateTime(utcNow(), 'yyyy-MM-dd')
+=
+formatDateTime(variables('reminderDate'), 'yyyy-MM-dd')
+```
+
+If true → update Comments.
+
+---
+
+## 🔧 Email Date Check  
+```
+formatDateTime(utcNow(), 'yyyy-MM-dd')
+=
+formatDateTime(variables('emailDate'), 'yyyy-MM-dd')
+```
+
+If true → proceed to email generation.
+
+---
+
+## 🔧 Build Email Body  
+### Convert ContractEnd to readable date  
+```
+formatDateTime(
+  addDays('1899-12-30', int(last(split(trim(string(items('Apply_to_each')?['ContractEnd'])), '.')))),
+  'dd MMMM yyyy'
+)
+```
+
+### Replace placeholders in HTML  
+```
+replace(
+  replace(
+    replace(
+      body('Get_file_content'),
+      '[Contract Type]', string(items('Apply_to_each')?['ContractType'])
+    ),
+    '[Employee Name]', string(items('Apply_to_each')?['Personnel Name'])
+  ),
+  '[Insert Date]', string(outputs('Compose_-_Contract_End_Date'))
+)
+```
+
+---
+
+## 🔧 Manager Email Resolution  
+- Remove titles (Mr, Mrs, Ms, Miss)  
+- Convert name to email format: `firstname.lastname@bradfordcft.org.uk`  
+- Validate via **Get User Profile (V2)**
+
+---
+
+## 🔧 Email Actions  
+### If manager email is valid → Send email  
+### If invalid → Notify HRSD
+
+---
+
+## 🔧 Update Tracker  
+### EmailReminderSent  
+```
+formatDateTime(variables('emailDate'), 'yyyy-MM-dd')
+```
+
+### Comments  
+Human‑readable date:
+```
+formatDateTime(variables('emailDate'), 'dd MMMM yyyy')
+```
+
+---
+
+# 8. Error Handling & Manual Intervention
+
+| Scenario | System Action | HRSD Action |
+|----------|----------------|--------------|
+| Manager email cannot be determined | Sends alert email to HRSD | Send contract ending email manually |
+| ContractEnd missing | Row skipped | HRSD should update tracker |
+| Excel date formatting issue | Writes ISO date | Excel formats automatically |
+
+---
+
+# 9. Maintenance Notes (Technical)
+
+- Excel date columns must be formatted as **UK date**  
+- HTML template images must be hosted on **public GitHub Pages URLs**  
+- Flow must run with an account that has access to:  
+  - SharePoint site  
+  - Excel file  
+  - Azure AD user profiles  
+- If the tracker structure changes, update:  
+  - Column names  
+  - Table name  
+  - Filter query  
+
+---
+
+# 10. Versioning  
+This documentation refers to:
+
+**HR Automation – Contract Ending – Test Version**  
+Last updated: **6 January 2026**
+
+---
+
+If you want, I can turn this into:
+
+- A **PDF‑ready formatted document**  
+- A **SharePoint page layout**  
+- A **flow diagram (text or visual)**  
+- A **training guide for HR colleagues**  
+
+Just tell me which direction you want to take.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+(Now Thursday, Jan 8)  
+Ok so I've finished the flow now, what's a Teams message I can send to Sohail Farid (the HR worker who's teh primary stakeholder for this project) notifying him of my progress. I've now completed teh test system and would like to demo it to him next week. I'm also gonna attach teh documentation that I made for it to teh email  
 
 ## Co-Pilot
-Certainly, Hasan
+Here’s a polished, professional Teams message you can send to Sohail — clear, confident, and respectful of his time, while also showing the progress you’ve made and setting up the demo.
+
+---
+
+## **Suggested Teams Message to Sohail**
+
+Hi Sohail, hope you're doing well. I wanted to let you know that the Contract Ending Automation (test version) is now fully completed. The flow has been built, tested, and documented, and it's ready for review.
+
+I’ve put together clear documentation explaining how the system works from both an HR and technical perspective, which I’ll attach in the follow‑up email.
+
+If you’re available next week, I’d love to walk you through a short demo so you can see how the automation behaves end‑to‑end and confirm it meets your requirements. Just let me know a day/time that works best for you.
+
+Looking forward to showing you the progress.
+
+---
+
+If you want, I can also help you draft the email that includes the documentation attachment — something polished and stakeholder‑friendly.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+How about a message to James (my manager who wanted me to build projects for HR) giving him an update  
 
 ## Co-Pilot
-Certainly, Hasan
+Here’s a message that strikes the right balance between professional, proactive, and confident — and it shows James that you’ve delivered real value while keeping momentum for next steps.
+
+---
+
+## **Suggested Teams Message to James**
+
+Hi James, just a quick update on the HR automation project. I’ve now completed the full test version of the Contract Ending flow — including the logic, email generation, date handling, and the Excel integration. It’s all working end‑to‑end, and I’ve also produced clear documentation covering both the HR process and the technical setup.
+
+I’m planning to demo it to Sohail next week so he can review the workflow and confirm it meets their requirements. Once he’s happy, I can move on to preparing the production version.
+
+Let me know if you’d like a walkthrough as well or if there’s anything you want me to refine before the demo.
+
+---
+
+If you want, I can also help you draft a follow‑up email to attach the documentation, or a short summary you can drop into your weekly update.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+(Now Monday, Jan 19)  
+Ok back to the actual flow. Via feedback from the HR officer, the email should be sent 60 days before the contract end date and the reminder date should be 7 days before this. I've already updated the flow, however I'm unsure about teh dates to test it again in teh spreadsheet. Today is the 19th January 2026, what dates should |I put in the spreadsheet?  
 
 ## Co-Pilot
-Certainly, Hasan
+You’ve got the new logic perfectly clear:
+
+- **Email Date** = ContractEnd − 60 days  
+- **Reminder Date** = Email Date − 7 days  
+- Today = **19 January 2026**
+
+So let’s work backwards.
+
+---
+
+# 📅 1. To trigger the **Email Action** today  
+Solve:
+
+\[
+\text{ContractEnd} - 60 = 19\text{ Jan 2026}
+\]
+
+Add 60 days to today:
+
+- 19 Jan → +12 days → 31 Jan  
+- Remaining: 48 days  
+- February 2026 has 28 days  
+- 31 Jan + 28 days = 28 Feb  
+- Remaining: 20 days  
+- 28 Feb + 20 days = **20 March 2026**
+
+### ✔ ContractEnd for Email Action = **20/03/2026**  
+**Put this in the spreadsheet to trigger the email today.**
+
+---
+
+# 📅 2. To trigger the **Reminder Action** today  
+Reminder triggers when:
+
+\[
+\text{ReminderDate} = \text{EmailDate} - 7
+\]
+
+So:
+
+\[
+\text{ContractEnd} - 60 - 7 = 19\text{ Jan 2026}
+\]
+
+\[
+\text{ContractEnd} - 67 = 19\text{ Jan 2026}
+\]
+
+Add 67 days to today:
+
+- 19 Jan → +12 days → 31 Jan  
+- Remaining: 55 days  
+- February (28 days) → 28 Feb  
+- Remaining: 27 days  
+- 28 Feb + 27 days = **27 March 2026**
+
+### ✔ ContractEnd for Reminder Action = **27/03/2026**  
+**Put this in the spreadsheet to trigger the reminder today.**
+
+---
+
+# 🧪 Summary (copy/paste friendly)
+
+| Action | ContractEnd date to enter |  
+|-------|----------------------------|  
+| **Reminder (67 days before)** | **27/03/2026** |  
+| **Email (60 days before)** | **20/03/2026** |
+
+---
+
+If you want, I can also calculate the “do nothing” test date or help you update the documentation to reflect the new 60‑day logic.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+(Now Thursday, Jan 22)  
+Ok now I have to make another similar flow for HR based on these meeting notes:  
+
+```
+Probation period spreadsheet tracker
+Start date filled out in col B
+Dates can be automatically filed in for column I and O
+Emails should be sent automatically
+```  
+
+I already have teh email template, how can I make the flow? Attached is how the tracker spreadsheet looks like (excel rows pasted) and below is teh text from teh template:  
+
+```
+Good morning,
+
+This is a friendly reminder that in line with our probation policy, the probationary reviews for the above individual who recently joined your team, need to be completed within the 6 month probationary period.
+
+It’s important to ensure that the necessary reviews are scheduled within the specified timelines to support successful integration and performance during the probationary period.
+
+Please take a moment to review the Probation Policy , Manager Guide and review form here Probation Policy Informal probation review meetings are to be held with new colleagues throughout the probationary period, and we ask you to complete at least two review meetings, normally after 3 months working and 5 months working.
+
+Please make sure that you use the Probation Review Form and discuss the key areas of:
+
+Performance against role expectations
+Attendance
+Conduct and Behaviour, in line with professional standards and our Inspire values
+Areas of development
+Any training or support required moving forward
+Once a review has been completed, please send a copy of the review form to BCFTHRhelpdesk@bradfordCFT.org.uk .
+
+If you need assistance or guidance in preparing for the review, feel free to email us.
+```  
 
 ## Co-Pilot
-Certainly, Hasan
+Great — this is a natural extension of your HR automation work, Hasan. You can build this flow using a similar structure to your Contract Ending system, but tailored to **probation review milestones**. Let’s break it down step-by-step.
+
+---
+
+## 🧠 What the flow needs to do
+
+### Inputs:
+- **Start Date** (Column B)
+- **Personnel Name** (likely Column A or nearby)
+- **Line Manager** (name or email, depending on structure)
+
+### Outputs:
+- Automatically populate:
+  - **Column I** = 3-month review date
+  - **Column O** = 5-month review date
+- Send email reminders to line managers:
+  - **7 days before** each review date
+
+---
+
+## ✅ Flow Structure Overview
+
+### **Trigger**
+- Recurrence: Daily at 9am
+
+### **Step 1: List rows from the Probation Tracker**
+- Filter: Only rows where Start Date is filled and review dates (I and O) are blank
+
+### **Step 2: Apply to each row**
+- If Start Date exists:
+  - Calculate:
+    - **3-month review date** = Start Date + 90 days
+    - **5-month review date** = Start Date + 150 days
+  - Populate Columns I and O with those dates (using `Update a row`)
+  - Calculate:
+    - **Reminder 1** = 3-month review − 7 days
+    - **Reminder 2** = 5-month review − 7 days
+  - If today = Reminder 1 or Reminder 2:
+    - Build email body using your template
+    - Resolve manager email (same logic as before)
+    - Send email
+    - Update Comments column with “Reminder sent for 3-month review” or similar
+
+---
+
+## 🧮 Date Logic Expressions
+
+### 3-month review:
+```plaintext
+addDays(items('Apply_to_each')?['StartDate'], 90)
+```
+
+### 5-month review:
+```plaintext
+addDays(items('Apply_to_each')?['StartDate'], 150)
+```
+
+### Reminder dates:
+```plaintext
+addDays(3MonthReviewDate, -7)
+addDays(5MonthReviewDate, -7)
+```
+
+---
+
+## 📧 Email Logic
+
+Use your existing HTML template and replace:
+
+- `[Employee Name]` → from spreadsheet
+- `[Review Type]` → “3-month” or “5-month”
+- `[Review Date]` → formatted date
+
+---
+
+## 🛠 Excel Setup Tips
+
+Make sure:
+
+- Column B is formatted as a **date**
+- Columns I and O are also formatted as **UK date**
+- There’s a **Comments** column for logging automation actions
+- Manager name is consistent (e.g., “Jane Smith” → `jane.smith@bradfordcft.org.uk`)
+
+---
+
+## 🧪 Testing Dates
+
+Today is **22 January 2026**  
+To test:
+
+| Review Type | Review Date | Start Date to use |
+|-------------|-------------|-------------------|
+| 3-month | 29 Jan 2026 | **31 Oct 2025** |
+| 5-month | 29 Jan 2026 | **31 Aug 2025** |
+
+---
+
+Would you like me to draft the full flow configuration in Power Automate format like you did for the Contract Ending flow? I can lay it out step-by-step with all expressions and connectors.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+Ok a slight change to the contract ending flow. At the moment my filter query (OData formula) for teh List rows connector is set as EmailReminderSent eq ''. However, I want to expand this so it checks if anything is present in the ContractEnd column at the same time, how can I modify teh formula?  
 
 ## Co-Pilot
-Certainly, Hasan
+To expand your OData filter so it checks both conditions — that `EmailReminderSent` is blank **and** `ContractEnd` is present — you can use this:
+
+```plaintext
+EmailReminderSent eq '' and ContractEnd ne ''
+```
+
+### ✅ Explanation:
+- `EmailReminderSent eq ''` → only rows where no reminder has been sent
+- `ContractEnd ne ''` → only rows where a contract end date is recorded
+
+This ensures your flow only processes rows that:
+- Haven’t been actioned yet  
+- Have a valid contract end date
+
+---
+
+### 🧠 Bonus tip:
+If `ContractEnd` is a number (Excel serial), and some rows contain `null` instead of `''`, you can use:
+
+```plaintext
+EmailReminderSent eq '' and ContractEnd ne null
+```
+
+Or even:
+
+```plaintext
+EmailReminderSent eq '' and ContractEnd ne null and ContractEnd ne ''
+```
+
+…but in most Excel tables, `ne ''` is sufficient.
+
+Let me know if you want to add a third condition (e.g., only Temporary contracts), or if you want to make this filter dynamic based on today’s date.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+I get this error now:  
+
+```
+Action 'List_rows_present_in_a_table' failed:
+Invalid filter clause: unsupported operation. Only single 'eq', 'ne', 'contains', 'startswith' or 'endswith' is currently supported.
+clientRequestId: 422734ab-14bc-4bc7-8a08-19ebaaddc009
+serviceRequestId: 37e5d703-4c4e-4d91-b1e9-b2eb673e6f10;b6dcbb15-a0ac-4ab7-be98-efd12773c562;1f907924-aa06-4243-b8f5-b3a103b50879;4fe5bc61-ab9b-48d5-baca-49b181dffa68
+```  
 
 ## Co-Pilot
-Certainly, Hasan
+Excel’s connector is being its usual awkward self here — and the error message is actually very literal:
+
+> **“Only single ‘eq’, ‘ne’, ‘contains’, ‘startswith’ or ‘endswith’ is currently supported.”**
+
+This means:
+
+### ❌ You cannot use:
+- `and`
+- `or`
+- multiple conditions
+- grouped conditions
+
+Even though OData *supports* them,  
+**the Excel connector does NOT.**
+
+So this filter:
+
+```
+EmailReminderSent eq '' and ContractEnd ne ''
+```
+
+will *always* fail.
+
+---
+
+# ✅ The workaround (the only reliable one)
+
+### **Use a single-condition filter in Excel**  
+…and then apply the second condition **inside the flow** using a Condition block.
+
+This is the standard pattern used by Microsoft and most Power Automate developers.
+
+---
+
+# ✔ Recommended filter query (safe and supported)
+
+Use only:
+
+```
+EmailReminderSent eq ''
+```
+
+This keeps the dataset small.
+
+---
+
+# ✔ Then inside the Apply to each, add a Condition:
+
+```
+@not(equals(items('Apply_to_each')?['ContractEnd'], ''))
+```
+
+Or if ContractEnd is numeric:
+
+```
+@not(equals(items('Apply_to_each')?['ContractEnd'], null))
+```
+
+---
+
+# 🧠 Why this is the correct approach
+
+The Excel connector is extremely limited:
+
+- It only allows **one** comparison operator  
+- It does **not** support logical operators (`and`, `or`)  
+- It does **not** support parentheses  
+- It does **not** support multiple expressions
+
+So the only stable pattern is:
+
+### 1. Filter by the simplest condition  
+### 2. Do the rest inside the flow
+
+This is exactly what you already do in your Contract Ending flow for other checks.
+
+---
+
+# ⭐ If you *really* want to reduce rows further…
+
+You can filter on ContractEnd only:
+
+```
+ContractEnd ne ''
+```
+
+…but then you’d need to check EmailReminderSent inside the flow instead.
+
+Pick whichever condition reduces the dataset more.
+
+---
+
+If you want, I can help you restructure the top of the flow so it’s cleaner and avoids unnecessary loops — you’ve got a solid system already, and a small tweak will make it even more efficient.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+Ok so teh main problem with this is that the amount of empty rows far exceeds the rows where a contract date is present at the moment (over 200 empty rows). Should I switch it so that the condition is the other way around?  
 
 ## Co-Pilot
-Certainly, Hasan
+Switching the condition is exactly the right move, Hasan — and it will make your flow **much faster and cleaner**.
+
+Because the Excel connector only supports **one** filter condition, the best strategy is always:
+
+### 🎯 Filter on the condition that reduces the dataset the most  
+…and then handle the second condition inside the flow.
+
+Right now:
+
+- **EmailReminderSent eq ''** → returns *hundreds* of rows  
+- **ContractEnd ne ''** → returns *only the rows you actually care about*
+
+So yes — you should absolutely flip it.
+
+---
+
+# ✅ Recommended Filter Query (best performance)
+
+Use this:
+
+```
+ContractEnd ne ''
+```
+
+This will return only rows where a contract end date exists — which is exactly the subset you want to process.
+
+---
+
+# 🧠 Then inside the flow, add a Condition:
+
+```
+@equals(items('Apply_to_each')?['EmailReminderSent'], '')
+```
+
+This ensures you still skip rows where the reminder has already been sent.
+
+---
+
+# 📌 Why this is the optimal setup
+
+### ✔ Faster  
+You’re looping through far fewer rows.
+
+### ✔ More reliable  
+Excel’s connector struggles with large datasets and empty rows.
+
+### ✔ Cleaner logic  
+You’re filtering on the column that actually defines whether a row is relevant.
+
+### ✔ Matches your business logic  
+A row with no ContractEnd date should never be processed anyway.
+
+---
+
+# 🧪 Quick sanity check  
+If your tracker currently has:
+
+- 200+ empty rows  
+- 20–30 rows with ContractEnd dates  
+
+Then switching to:
+
+```
+ContractEnd ne ''
+```
+
+reduces your loop size by **90%**.
+
+That’s a huge improvement.
+
+---
+
+If you want, I can help you restructure the top of the flow so the Apply to each loop only runs when absolutely necessary — you’ve already built a solid system, and this tweak will make it even more efficient.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+One thing I want to double check. So the email should be sent 60 days before the contract end and the reminder should be 7 days before the email is sent.  
+If the formula I'm using is this, would this work or do I have to amend it?  
+
+```
+Reminder Date: addDays('1899-12-30', sub(int(item()?['ContractEnd']), 53))
+Email Date: addDays(variables('reminderDate'),7)
+```  
 
 ## Co-Pilot
-Certainly, Hasan
+You’ve done the right thing by stopping to sanity‑check this, Hasan — because the logic you’ve written **does work**, but it’s worth confirming the maths so you’re 100% confident.
+
+Let’s walk through it cleanly.
+
+---
+
+# ✅ What the business logic requires
+
+- **Email Date** = ContractEnd − 60 days  
+- **Reminder Date** = Email Date − 7 days  
+  → which is the same as: ContractEnd − 67 days
+
+So the two dates should be:
+
+- Reminder = ContractEnd − 67  
+- Email = ContractEnd − 60  
+
+---
+
+# 🧮 What your formulas currently do
+
+### **Reminder Date**
+```
+addDays('1899-12-30', sub(int(item()?['ContractEnd']), 53))
+```
+
+Breakdown:
+
+- `ContractEnd` (Excel serial)
+- `sub(serial, 53)` → ContractEnd − 53
+- `addDays('1899‑12‑30', …)` → converts serial back to a date
+
+So your reminder date = **ContractEnd − 53**
+
+### **Email Date**
+```
+addDays(variables('reminderDate'), 7)
+```
+
+So email date = (ContractEnd − 53) + 7  
+= **ContractEnd − 46**
+
+---
+
+# ❌ Conclusion: The current formulas are incorrect
+
+Your flow is currently doing:
+
+- Reminder = ContractEnd − 53  
+- Email = ContractEnd − 46  
+
+But the requirement is:
+
+- Reminder = ContractEnd − 67  
+- Email = ContractEnd − 60  
+
+So yes — you need to amend the formulas.
+
+---
+
+# ✅ Correct formulas
+
+### **Correct Reminder Date (ContractEnd − 67)**
+
+```
+addDays('1899-12-30', sub(int(item()?['ContractEnd']), 67))
+```
+
+### **Correct Email Date (Reminder + 7)**
+
+```
+addDays(variables('reminderDate'), 7)
+```
+
+This now gives:
+
+- Reminder = ContractEnd − 67  
+- Email = ContractEnd − 60  
+
+Exactly matching the HR requirement.
+
+---
+
+# ⭐ Optional improvement (cleaner logic)
+
+Instead of calculating email date from reminder date, you can calculate both directly:
+
+### Email Date (ContractEnd − 60)
+```
+addDays('1899-12-30', sub(int(item()?['ContractEnd']), 60))
+```
+
+### Reminder Date (Email − 7)
+```
+addDays(variables('emailDate'), -7)
+```
+
+This makes the flow easier to read and maintain.
+
+---
+
+If you want, I can help you update the documentation and the flow diagram so the new 60‑day logic is reflected cleanly.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+Another automation flow for HR would be based on these notes:  
+
+```
+Breakdown of emails received and how task been completed - automatically monitoring mailboxes through SharePoint or Outlook
+Flags/Tags would indicate different completions statuses/person who completed the task
+Completed tasks should be moved to an archive or seperate folder
+Also need to create report for that for internal HR tracking
+```
+
+How could I create this flow?  
 
 ## Co-Pilot
-Certainly, Hasan
+You can absolutely build this, Hasan — and the good news is that what HR is asking for is essentially a **mailbox‑monitoring workflow** with **status tagging**, **auto‑archiving**, and **reporting**. Power Automate is perfect for this, and you can design it in a way that’s clean, scalable, and easy for HR to understand.
+
+Let’s break it down into a practical, buildable solution.
+
+---
+
+# **1. What HR actually wants (translated into automation logic)**
+
+### **A. Monitor an inbox automatically**
+- Watch for new emails arriving in a specific mailbox (shared mailbox or personal mailbox)
+- Extract key information (sender, subject, date, attachments, keywords)
+
+### **B. Categorise each email**
+Using:
+- Flags  
+- Tags  
+- Status labels  
+- Or SharePoint metadata  
+
+### **C. Track who completed the task**
+- When HR staff process an email, they should be able to mark it as:
+  - Completed  
+  - In progress  
+  - Escalated  
+  - Waiting for info  
+- And record **who** completed it.
+
+### **D. Move completed emails to an archive folder**
+- Automatically move emails once marked as completed.
+
+### **E. Generate a report**
+- A SharePoint list or Excel table that logs:
+  - Email received  
+  - Status  
+  - Who completed it  
+  - Completion date  
+  - Notes  
+  - Attachments (optional)  
+
+This becomes HR’s internal dashboard.
+
+---
+
+# **2. Recommended Architecture (cleanest and most scalable)**
+
+## **📌 Core Components**
+| Component | Purpose |
+|----------|---------|
+| **Shared Mailbox** | Where HR receives tasks |
+| **Power Automate Flow** | Monitors and processes emails |
+| **SharePoint List** | Stores tracking data + status |
+| **Archive Folder** | Stores completed emails |
+| **Power BI (optional)** | Reporting dashboard |
+
+---
+
+# **3. The Flow Structure (step-by-step)**
+
+Below is the exact structure you can build in Power Automate.
+
+---
+
+## **Step 1 — Trigger**
+**When a new email arrives (V3)**  
+- Choose the HR shared mailbox  
+- Filter by folder (e.g., Inbox)
+
+---
+
+## **Step 2 — Extract metadata**
+Use dynamic content to capture:
+
+- From  
+- Subject  
+- Body  
+- Received time  
+- Attachments  
+- Message ID  
+- Conversation ID  
+
+---
+
+## **Step 3 — Create a SharePoint list item**
+Create a row in a list called **HR Email Tracker** with columns like:
+
+| Column | Purpose |
+|--------|---------|
+| EmailSubject | For searching |
+| Sender | Who sent it |
+| ReceivedDate | Timestamp |
+| Status | New / In Progress / Completed |
+| AssignedTo | HR staff member |
+| CompletedDate | When done |
+| Notes | Optional |
+| MessageID | Used to move the email later |
+
+This becomes your **single source of truth**.
+
+---
+
+## **Step 4 — Auto‑categorise (optional)**
+Use conditions to tag emails based on:
+
+- Keywords  
+- Sender domain  
+- Attachment type  
+- Subject patterns  
+
+Example:
+
+```
+If subject contains "contract" → Category = Contract Tasks
+If attachment is PDF → Category = Document Review
+```
+
+Store this in SharePoint.
+
+---
+
+## **Step 5 — HR manually updates the SharePoint list**
+HR staff can update:
+
+- Status  
+- AssignedTo  
+- Notes  
+
+This is the human part of the workflow.
+
+---
+
+## **Step 6 — When Status = Completed**
+Create a **second flow**:
+
+**Trigger:**  
+_When an item is modified_ (SharePoint)
+
+**Condition:**  
+`Status equals Completed`
+
+**Actions:**
+1. **Move email** to Archive folder  
+   - Use the Message ID stored earlier  
+2. **Update CompletedDate**  
+3. **Send confirmation email** (optional)
+
+---
+
+# **4. Reporting**
+
+Once the SharePoint list is populated, you can generate:
+
+### **A. Excel report**
+- Export the list to Excel  
+- HR can filter by:
+  - Completed tasks  
+  - Who completed them  
+  - Time taken  
+  - Volume per week/month  
+
+### **B. Power BI dashboard (recommended)**
+- Visual charts  
+- Trends  
+- SLA tracking  
+- Workload distribution  
+
+This becomes HR’s internal performance dashboard.
+
+---
+
+# **5. Summary of the Full System**
+
+### **Flow 1 — Email Intake**
+- Trigger: New email arrives  
+- Action: Create SharePoint list item  
+- Action: Auto‑categorise  
+
+### **Flow 2 — Completion Handler**
+- Trigger: SharePoint item modified  
+- Condition: Status = Completed  
+- Action: Move email to Archive  
+- Action: Update CompletedDate  
+
+### **Flow 3 — Reporting (optional)**
+- Scheduled flow to export weekly/monthly reports  
+- Or Power BI refresh
+
+---
+
+# **6. If you want, I can build the full flow blueprint**
+I can generate:
+
+- The SharePoint list schema  
+- The exact Power Automate expressions  
+- A full documentation page (like your Contract Ending one)  
+- A flow diagram  
+- A testing plan  
+- A Teams message to HR explaining the new system  
+
+Just tell me which part you want next.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+Ok so for the test version I'll just use my personal mailbox (Hasan.Akhtar@bradfordcft.org.uk) and then it can be updated to the shared HR mailbox in the live system. Can you give me a step-by-step for the flow?  
 
 ## Co-Pilot
-Certainly, Hasan
+*I need to create a step-by-step guide for mailbox monitoring, starting with testing on my personal mailbox. I’ll keep the verbosity low, aiming for clarity and conciseness. I’ll include headings and bullets for structure, focusing on technical details. The outline will cover prerequisites, creating a SharePoint list, Flow 1 for intake, and Flow 2 for completion. I’ll also mention how to adapt the process for a shared mailbox. I’ll aim to keep it under 800-1000 words.*  
+
+### Overview
+
+You’ll build **two flows**:
+
+1. **Email intake flow** – logs incoming emails into a SharePoint list  
+2. **Completion flow** – moves completed emails to an archive folder and stamps completion info  
+
+You’ll test using your own mailbox now, then later switch to the HR shared mailbox.
+
+---
+
+## 1. Set up the SharePoint list
+
+Create a list, e.g. **“HR Email Tracker – Test”** with these columns:
+
+- **Title:** Single line of text  
+  - **Use for:** Email subject  
+- **Sender:** Single line of text  
+- **ReceivedDate:** Date and time  
+- **Status:** Choice  
+  - Values: `New`, `In Progress`, `Completed`  
+  - Default: `New`  
+- **AssignedTo:** Person or Group (optional for now)  
+- **CompletedDate:** Date and time  
+- **Notes:** Multiple lines of text  
+- **MessageId:** Single line of text (store Outlook message ID)  
+- **Category:** Choice (optional – e.g. Contract, Probation, General)
+
+---
+
+## 2. Flow 1 – Email intake (log new emails)
+
+### Step 1 – Create the flow
+
+- **Trigger:**  
+  - `When a new email arrives (V3)`  
+  - **Mailbox:** `Hasan.Akhtar@bradfordcft.org.uk`  
+  - **Folder:** Inbox (or a specific subfolder if you want)
+
+### Step 2 – Add “Create item” (SharePoint)
+
+- **Site Address:** Your App Support / test site  
+- **List Name:** `HR Email Tracker – Test`
+
+Map fields:
+
+- **Title:** `Subject`  
+- **Sender:** `From (Address)`  
+- **ReceivedDate:** `Received time`  
+- **Status:** `New` (typed in)  
+- **AssignedTo:** (leave blank for now or set to yourself)  
+- **CompletedDate:** (leave blank)  
+- **Notes:** (blank)  
+- **MessageId:** `Message Id`  
+- **Category:** (optional – you can later drive this from conditions/keywords)
+
+Save and test by sending yourself a test email.
+
+---
+
+## 3. Flow 2 – Completion handler (move completed emails)
+
+This flow reacts when HR (or you, for now) mark an item as **Completed** in the SharePoint list.
+
+### Step 1 – Trigger
+
+- **Trigger:** `When an item is modified`  
+- **Site Address:** Same as above  
+- **List Name:** `HR Email Tracker – Test`
+
+### Step 2 – Add a Condition
+
+- **Condition:**  
+  - Left: `Status`  
+  - Operator: `is equal to`  
+  - Right: `Completed`
+
+Only run the rest of the actions in the **Yes** branch.
+
+### Step 3 – Get the email (by MessageId)
+
+Inside the **Yes** branch:
+
+- **Action:** `Get email (V3)`  
+  - **Message Id:** `MessageId` (from the SharePoint item)  
+  - **Original Mailbox Address:** `Hasan.Akhtar@bradfordcft.org.uk`
+
+### Step 4 – Move the email to an Archive folder
+
+- **Action:** `Move email (V3)`  
+  - **Message Id:** `Message Id` (from `Get email`)  
+  - **Destination folder:** e.g. `Archive/HR Test` (create this in Outlook first)
+
+### Step 5 – Update the SharePoint item (stamp completion date)
+
+- **Action:** `Update item`  
+  - Same Site + List  
+  - **Id:** from trigger  
+  - Re-map all required fields (Title, Sender, etc.)  
+  - **CompletedDate:** `utcNow()`  
+  - **Status:** keep as `Completed`
+
+Save and test:
+
+1. Send yourself an email  
+2. Confirm it appears in the SharePoint list as `New`  
+3. Edit the item → change **Status** to `Completed`  
+4. Flow 2 should run, move the email to Archive, and set **CompletedDate**
+
+---
+
+## 4. Adapting to the HR shared mailbox later
+
+When going live:
+
+- In **Flow 1** and **Flow 2**, change:
+  - `When a new email arrives (V3)` mailbox → HR shared mailbox  
+  - `Get email` / `Move email` → set **Original Mailbox Address** to the shared mailbox  
+- Keep the same SharePoint list structure; you can create a **new list** for production.
+
+---
+
+If you want, next step we can layer in **Categories** (based on subject/keywords) and a simple **Power BI report** over the SharePoint list.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+Going back to teh contract end flows, I added a compose with debug statements and this is what I get:
+
+Contract End Date: `29 March 2026`, Reminder Date: `21 January 2026`, Email Date: `28 January 2026`  
+Contract End Date: `22 March 2026`, Reminder Date: `14 January 2026`, Email Date: `21 January 2026`  
+
+With the following expressions:  
+Email Date --> `addDays('1899-12-30', sub(int(item()?['ContractEnd']), 60))`  
+Reminder Date --> `addDays(variables('emailDate'), -7)`  
+
+Is this correct and what dates do I need to put in the spreadsheet for testing it today (22nd January 2026)  
 
 ## Co-Pilot
-Certainly, Hasan
+Your debug output is **exactly what you should be seeing**, Hasan — the maths checks out perfectly. Let’s walk through it cleanly so you can be 100% confident, and then I’ll give you the exact dates to enter for testing today.
+
+---
+
+# ✅ Are your formulas correct?
+
+### **Email Date**
+```
+addDays('1899-12-30', sub(int(item()?['ContractEnd']), 60))
+```
+This gives:
+\[
+\text{Email Date} = \text{ContractEnd} - 60
+\]
+
+### **Reminder Date**
+```
+addDays(variables('emailDate'), -7)
+```
+This gives:
+\[
+\text{Reminder Date} = \text{Email Date} - 7 = \text{ContractEnd} - 67
+\]
+
+### ✔ This matches the HR requirement exactly  
+- Email = 60 days before  
+- Reminder = 7 days before the email (so 67 days before)
+
+Your debug values confirm the maths:
+
+| Contract End | Email Date | Reminder Date |
+|--------------|------------|----------------|
+| 29 Mar 2026 | 28 Jan 2026 | 21 Jan 2026 |
+| 22 Mar 2026 | 21 Jan 2026 | 14 Jan 2026 |
+
+Everything is behaving exactly as intended.
+
+---
+
+# 📅 What dates should you put in the spreadsheet to test **today** (22 January 2026)?
+
+You want the flow to trigger **today**, so you need:
+
+- **Reminder Date = today**  
+  OR  
+- **Email Date = today**
+
+Let’s calculate both.
+
+---
+
+# 🧪 1. To trigger the **Email** today  
+Solve:
+\[
+\text{ContractEnd} - 60 = 22\text{ Jan 2026}
+\]
+
+Add 60 days to today:
+
+- 22 Jan → +9 days → 31 Jan  
+- Remaining: 51 days  
+- February 2026 has 28 days  
+- 31 Jan + 28 days = 28 Feb  
+- Remaining: 23 days  
+- 28 Feb + 23 days = **23 March 2026**
+
+### ✔ Put this in the spreadsheet to trigger the **email** today:
+**23/03/2026**
+
+---
+
+# 🧪 2. To trigger the **Reminder** today  
+Solve:
+\[
+\text{ContractEnd} - 67 = 22\text{ Jan 2026}
+\]
+
+Add 67 days to today:
+
+- 22 Jan → +9 days → 31 Jan  
+- Remaining: 58 days  
+- February (28 days) → 28 Feb  
+- Remaining: 30 days  
+- 28 Feb + 30 days = **30 March 2026**
+
+### ✔ Put this in the spreadsheet to trigger the **reminder** today:
+**30/03/2026**
+
+---
+
+# ⭐ Final testing values (copy/paste)
+
+| Test Type | Contract End Date to Enter |
+|-----------|----------------------------|
+| **Trigger Email Today** | **23/03/2026** |
+| **Trigger Reminder Today** | **30/03/2026** |
+
+---
+
+If you want, I can also help you add a **“Debug Mode” toggle** to the flow so you can test any date without changing the spreadsheet.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+For the HR shared mailbox flows I would need some permissions setting up in Azure.  
+Which specific permissions would these be for the tasks my auitomation needs to complete:  
+
+```
+Breakdown of emails received and how many tasks have been completed - automatically monitoring mailboxes through SharePoint or Outlook
+Flags/Tags would indicate different completions statuses/person who completed the task
+Completed tasks should be moved to an archive or seperate folder
+```  
 
 ## Co-Pilot
-Certainly, Hasan
+You’re thinking about this exactly the right way, Hasan — when you move from testing in your own mailbox to running the automation against the **HR shared mailbox**, you’ll need the right permissions in place. And because this is a shared mailbox, the permissions must be granted **in Microsoft 365 / Exchange Online**, not directly in Azure AD.
+
+Here’s the clean breakdown of what you need, why you need it, and who needs to configure it.
+
+---
+
+# **1. Permissions your automation account needs**
+To perform the tasks you listed, the automation account (usually a service account or your own account if you’re the owner) needs **three core permissions**:
+
+## **A. Full Access to the shared mailbox**  
+This allows the flow to:
+- Read incoming emails  
+- Access message metadata  
+- Retrieve message IDs  
+- Track who sent what and when  
+
+This is essential for the “breakdown of emails received” part.
+
+**Permission name:**  
+- **Mailbox Full Access** (Exchange Online)
+
+**Assigned via:**  
+- Microsoft 365 Admin Center → Exchange Admin Center → Shared Mailboxes → Permissions
+
+---
+
+## **B. Send As (optional but recommended)**  
+If the flow ever needs to send:
+- Confirmation emails  
+- Notifications  
+- Escalations  
+
+…from the HR mailbox instead of your personal account.
+
+**Permission name:**  
+- **Send As**
+
+---
+
+## **C. Folder-level permissions (Move/Delete)**  
+To move completed tasks to an archive folder, the automation account needs permission to:
+
+- Move messages  
+- Delete messages  
+- Create folders (optional)
+
+**Permission name:**  
+- **Mailbox Full Access** already covers this  
+- No extra permission needed if Full Access is granted
+
+---
+
+# **2. Permissions you *do not* need**
+These often confuse people, so it’s good to be clear:
+
+- You **do not** need Azure AD app registrations  
+- You **do not** need Graph API permissions  
+- You **do not** need Application-level delegated permissions  
+- You **do not** need admin roles like Exchange Admin or Global Admin  
+
+Your flow uses **Power Automate connectors**, not Graph API calls.
+
+---
+
+# **3. Who needs to set this up**
+Any of the following roles can grant the permissions:
+
+- **Exchange Administrator**  
+- **Global Administrator**  
+- **Privileged Role Administrator**  
+
+They will do this in:
+
+**Microsoft 365 Admin Center → Exchange Admin Center → Shared Mailboxes → HR Mailbox → Permissions**
+
+---
+
+# **4. Summary table (copy/paste for IT)**
+
+| Task | Required Permission | Why |
+|------|---------------------|-----|
+| Monitor incoming emails | **Full Access** | Allows the flow to read emails |
+| Categorise / flag emails | **Full Access** | Needed to modify message metadata |
+| Move completed emails to Archive | **Full Access** | Required to move/delete messages |
+| Send notifications from HR mailbox | **Send As** | Allows flow to send as HR mailbox |
+| Write to SharePoint list | No special Azure permissions | Covered by SharePoint permissions |
+
+---
+
+# **5. What to request from IT (ready to send)**
+
+**Subject:** Permissions required for HR Automation Shared Mailbox
+
+Hi team,  
+For the upcoming HR automation flows, I need the following permissions applied to the HR shared mailbox:
+
+**Mailbox:** HR Shared Mailbox  
+**User/Service Account:** <your account or service account>
+
+**Required permissions:**
+- **Full Access** (read, move, and manage emails)  
+- **Send As** (optional but recommended for sending notifications)
+
+These permissions are needed for Power Automate to:
+- Monitor incoming emails  
+- Categorise and track tasks  
+- Move completed items to an archive folder  
+- Generate reporting data  
+
+Thanks!
+
+---
+
+If you want, I can also help you design the **service account model**, or help you write the **documentation for IT** explaining why these permissions are required.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+Does the Mailbox Full Access (Exchange Online) permission also include Send as?  
 
 ## Co-Pilot
-Certainly, Hasan
+Short answer: **No — Full Access does *not* include Send As.**  
+They are two completely separate permissions in Exchange Online.
+
+Here’s the clean breakdown so you can explain it clearly to IT or HR.
+
+---
+
+# **Mailbox Full Access vs Send As — What’s the difference?**
+
+## **1. Full Access**
+Gives your automation account the ability to:
+
+- Open the shared mailbox  
+- Read emails  
+- Move emails  
+- Delete emails  
+- Create folders  
+- Process message metadata  
+
+**But it does NOT allow sending emails as that mailbox.**
+
+---
+
+## **2. Send As**
+This permission specifically allows:
+
+- Sending an email *as* the shared mailbox  
+- The recipient sees the shared mailbox as the sender  
+- No trace of your personal account in the “From” field  
+
+This is required if your flow will send:
+
+- Notifications  
+- Confirmations  
+- Escalations  
+- Auto‑replies  
+- Anything that should appear to come from HR, not you
+
+---
+
+# **3. Why Microsoft separates them**
+It’s intentional:
+
+- **Full Access** = mailbox management  
+- **Send As** = identity / impersonation  
+
+They’re kept separate for security reasons.
+
+---
+
+# **4. What you need for your HR automation**
+
+To run your flows properly, the automation account needs:
+
+### ✔ **Full Access**  
+To read, move, and archive emails.
+
+### ✔ **Send As**  
+If the flow will send emails from the HR mailbox.
+
+### (Optional) **Send on Behalf**  
+Not usually needed — recipients will see “Hasan on behalf of HR Mailbox”, which HR normally doesn’t want.
+
+---
+
+# **5. Ready‑to‑send request for IT**
+
+**Subject:** Permissions required for HR Automation Shared Mailbox
+
+Hi team,  
+For the HR automation flows I’m developing, I need the following permissions applied to the HR shared mailbox:
+
+**Mailbox:** <HR Shared Mailbox Name>  
+**User/Service Account:** <Your account or service account>
+
+**Required permissions:**
+- **Full Access** (read, move, and manage emails)  
+- **Send As** (send emails directly from the HR mailbox)
+
+These are required for Power Automate to monitor incoming emails, categorise tasks, archive completed items, and send notifications from the HR mailbox.
+
+Thanks!
+
+---
+
+If you want, I can also help you design the service account model or prepare documentation for HR explaining how the automation will work.  
 
 ## Me
-How can I create a non-technical summary document for this project based on teh review [Uploaded Document Expired] (the project is now wrapped up) with a links section for relevant material that was part of teh project (mostly SharePoint links)  
+(Now Monday, Jan 26)  
+Ok so according to this overview, how can I send an email to Sohail (my contact in HR) asking him to clarify a few things such as how a task will be marked as complated and what different types of HR tasks are there within emails:  
+
+```
+Overview
+You’ll build two flows:
+
+Email intake flow – logs incoming emails into a SharePoint list
+
+Completion flow – moves completed emails to an archive folder and stamps completion info
+
+You’ll test using your own mailbox now, then later switch to the HR shared mailbox.
+
+1. Set up the SharePoint list
+Create a list, e.g. “HR Email Tracker – Test” with these columns:
+
+Title: Single line of text
+
+Use for: Email subject
+
+Sender: Single line of text
+
+ReceivedDate: Date and time
+
+Status: Choice
+
+Values: New, In Progress, Completed
+
+Default: New
+
+AssignedTo: Person or Group (optional for now)
+
+CompletedDate: Date and time
+
+Notes: Multiple lines of text
+
+MessageId: Single line of text (store Outlook message ID)
+
+Category: Choice (optional – e.g. Contract, Probation, General)
+
+2. Flow 1 – Email intake (log new emails)
+Step 1 – Create the flow
+Trigger:
+
+When a new email arrives (V3)
+
+Mailbox: Hasan.Akhtar@bradfordcft.org.uk
+
+Folder: Inbox (or a specific subfolder if you want)
+
+Step 2 – Add “Create item” (SharePoint)
+Site Address: Your App Support / test site
+
+List Name: HR Email Tracker – Test
+
+Map fields:
+
+Title: Subject
+
+Sender: From (Address)
+
+ReceivedDate: Received time
+
+Status: New (typed in)
+
+AssignedTo: (leave blank for now or set to yourself)
+
+CompletedDate: (leave blank)
+
+Notes: (blank)
+
+MessageId: Message Id
+
+Category: (optional – you can later drive this from conditions/keywords)
+
+Save and test by sending yourself a test email.
+
+3. Flow 2 – Completion handler (move completed emails)
+This flow reacts when HR (or you, for now) mark an item as Completed in the SharePoint list.
+
+Step 1 – Trigger
+Trigger: When an item is modified
+
+Site Address: Same as above
+
+List Name: HR Email Tracker – Test
+
+Step 2 – Add a Condition
+Condition:
+
+Left: Status
+
+Operator: is equal to
+
+Right: Completed
+
+Only run the rest of the actions in the Yes branch.
+
+Step 3 – Get the email (by MessageId)
+Inside the Yes branch:
+
+Action: Get email (V3)
+
+Message Id: MessageId (from the SharePoint item)
+
+Original Mailbox Address: Hasan.Akhtar@bradfordcft.org.uk
+
+Step 4 – Move the email to an Archive folder
+Action: Move email (V3)
+
+Message Id: Message Id (from Get email)
+
+Destination folder: e.g. Archive/HR Test (create this in Outlook first)
+
+Step 5 – Update the SharePoint item (stamp completion date)
+Action: Update item
+
+Same Site + List
+
+Id: from trigger
+
+Re-map all required fields (Title, Sender, etc.)
+
+CompletedDate: utcNow()
+
+Status: keep as Completed
+
+Save and test:
+
+Send yourself an email
+
+Confirm it appears in the SharePoint list as New
+
+Edit the item → change Status to Completed
+
+Flow 2 should run, move the email to Archive, and set CompletedDate
+
+4. Adapting to the HR shared mailbox later
+When going live:
+
+In Flow 1 and Flow 2, change:
+
+When a new email arrives (V3) mailbox → HR shared mailbox
+
+Get email / Move email → set Original Mailbox Address to the shared mailbox
+
+Keep the same SharePoint list structure; you can create a new list for production.
+```  
 
 ## Co-Pilot
-Certainly, Hasan
+Here’s a message that strikes the right balance between clarity, professionalism, and keeping the project moving. It frames your questions in a way that shows progress while making it easy for Sohail to give you the information you need.
+
+---
+
+## **Suggested Email to Sohail**
+
+Hi Sohail,
+
+Hope you’re doing well. I’ve started putting together the test version of the HR mailbox automation we discussed, and I now have the core structure in place. Before I continue building out the logic, I wanted to check a couple of points with you so the system matches the way HR currently works.
+
+To make sure the automation correctly tracks and categorises incoming HR emails, could you clarify the following:
+
+### **1. How should a task be marked as completed?**
+For example:
+- Should HR staff manually update a status field in a SharePoint list?
+- Or should completion be triggered by moving the email to a specific folder?
+- Or is there another process you’d prefer?
+
+### **2. What types of HR tasks typically come through the mailbox?**
+This will help me build the right categories and reporting. Examples might include:
+- Contract extensions  
+- Probation reviews  
+- Leaver notifications  
+- General HR queries  
+- Anything else that regularly appears
+
+### **3. Should different task types have different workflows or all follow the same process?**
+For instance, some tasks may need escalation, while others may simply be logged and archived.
+
+Once I have your input, I can finalise the SharePoint structure and complete the automation flows. I’m aiming to keep everything simple and easy for the team to use, while giving you clear reporting on volumes and completion rates.
+
+Let me know your thoughts when you get a moment.
+
+Thanks,  
+Hasan
+
+---
+
+If you want, I can also draft a shorter Teams message version, or help you prepare a quick visual diagram to show him how the automation will work.  
 
 *End of this Conversation*
