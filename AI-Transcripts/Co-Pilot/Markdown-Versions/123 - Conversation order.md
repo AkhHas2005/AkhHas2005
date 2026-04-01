@@ -124,11 +124,12 @@
 120. Solving Color Arrangement with Decision Trees (Monday, Nov 11 2024)
 121. SQL Query for Client and Staff Information (Thursday, Nov 14 2024)
 122. Python Method to Upload Word Files Locally (Monday, Nov 18 2024)
-123. Rewording AI Voice Generation for Coursework (Wednesday, Nov 20 2024)
-124. Answering an Interview Question as a Computer Science Student (Thursday, Nov 21 2024)
-125. Engineering Leaders Scholarship Details (Saturday, Nov 23 2024)
-126. Creating an AI Call Bot for Coursework (Saturday, Nov 23 2024)
-127. [Adding Extra File Upload in HTML](https://copilot.microsoft.com/shares/LtyXA3n7kR6yqfFNTg3nS) (Monday, Nov 25 2024)
+123. [Generative Models: Methods and Applications Summary](https://copilot.microsoft.com/shares/ENsKb5Mxq8CAKyXmWjqP5) [Fifa Utuber Microsoft Account] (Tuesday, Nov 19 2024) 
+124. Rewording AI Voice Generation for Coursework (Wednesday, Nov 20 2024)
+125. Answering an Interview Question as a Computer Science Student (Thursday, Nov 21 2024)
+126. Engineering Leaders Scholarship Details (Saturday, Nov 23 2024)
+127. Creating an AI Call Bot for Coursework (Saturday, Nov 23 2024)
+128. [Adding Extra File Upload in HTML](https://copilot.microsoft.com/shares/LtyXA3n7kR6yqfFNTg3nS) (Monday, Nov 25 2024)
 129. Referencing Sources in an Essay (Friday, Nov 29 2024)
 130. Reply to Colleague on AI Automation Projects (Wednesday, Dec 4 2024)
 131. Continuing Python Code for Data Splitting (Saturday, Dec 7 2024)
@@ -162,8 +163,9 @@
 159. [Uploading OneDrive Files to SharePoint for Audit](https://copilot.microsoft.com/shares/rPNZVc1EnJv9Yw2iDLg4c) [Fifa Utuber Microsoft Account] (Tuesday, Mar 4 2025)
 160. [Summarizing Skills for Python Tutorials Website](https://copilot.microsoft.com/shares/wHn4qH3V2wMtUueJUvRD3) [Fifa Utuber Microsoft Account] (Wednesday, Apr 2 2025)
 161. [LinkedIn Post for Internship Reflection and Career Transition](https://copilot.microsoft.com/shares/H4TcvcmEPV3aq3XX1AAUd) [Fifa Utuber Microsoft Account] (Thursday, Apr 3 2025)
-162. **...**
-163. How to Install Lora Font in PowerPoint [Akhtar Hasan Microsoft Account] (Friday, Jun 13 2025)
+162. 
+163. **...**
+164. How to Install Lora Font in PowerPoint [Akhtar Hasan Microsoft Account] (Friday, Jun 13 2025)
 166. **...**
 167. Logo Concept for Custom Gallery App [Akhtar Hasan Microsoft Account] (Monday, Jun 23 2025)
 168. **...**
