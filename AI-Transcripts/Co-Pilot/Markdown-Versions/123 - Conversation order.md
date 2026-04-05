@@ -163,9 +163,10 @@
 159. [Uploading OneDrive Files to SharePoint for Audit](https://copilot.microsoft.com/shares/rPNZVc1EnJv9Yw2iDLg4c) [Fifa Utuber Microsoft Account] (Tuesday, Mar 4 2025)
 160. [Summarizing Skills for Python Tutorials Website](https://copilot.microsoft.com/shares/wHn4qH3V2wMtUueJUvRD3) [Fifa Utuber Microsoft Account] (Wednesday, Apr 2 2025)
 161. [LinkedIn Post for Internship Reflection and Career Transition](https://copilot.microsoft.com/shares/H4TcvcmEPV3aq3XX1AAUd) [Fifa Utuber Microsoft Account] (Thursday, Apr 3 2025)
-162. 
-163. **...**
-164. How to Install Lora Font in PowerPoint [Akhtar Hasan Microsoft Account] (Friday, Jun 13 2025)
+162. Fixing Gmail Authentication Error in Python Script(https://copilot.microsoft.com/shares/3dvR8pxQcMU6yA7WQBsKc) [Fifa Utuber Microsoft Account] (Wednesday, May 7 2025)
+163. 
+164. **...**
+165. How to Install Lora Font in PowerPoint [Akhtar Hasan Microsoft Account] (Friday, Jun 13 2025)
 166. **...**
 167. Logo Concept for Custom Gallery App [Akhtar Hasan Microsoft Account] (Monday, Jun 23 2025)
 168. **...**
