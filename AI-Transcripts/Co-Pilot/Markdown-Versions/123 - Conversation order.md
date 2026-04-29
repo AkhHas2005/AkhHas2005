@@ -189,16 +189,17 @@
 185. [Celebrating Consistency and Achievements in LinkedIn Games](https://copilot.microsoft.com/shares/BTBuvgfagoiwjpAVpe1iw) [Fifa Utuber Microsoft Account] (Wednesday, Aug 20 2025)
 186. **...**
 187. [Creating a YouTube Description and Hashtags for LinguaCode Video](https://copilot.microsoft.com/shares/A6XT4LSCJby8SRe5jwBuy) [Python Programmer Google Account] (Monday, Aug 25 2025)
-188. **...**
+188. [Preparing for Labs Demonstrator Interview Call](https://copilot.microsoft.com/shares/JmzLBSJieGqR1S15cNXZP) [Fifa Utuber Microsoft Account] (Monday, Sep 8 2025)
 189. [Spend Efficiency Panel Overview and Resources](https://copilot.microsoft.com/shares/QSdEkmEJjRQoy5nqiNEfG) [Python Programmer Google Account] (Tuesday, Sep 9 2025)
-190. **...**
-191. [Suggestions for Young Professionals' Development](https://copilot.microsoft.com/shares/auxDBuQ3TUKT5mq3XEMYX) [Python Programmer Google Account] (Thursday, Sep 18 2025)
-192. [Professional Email Response Draft](https://copilot.microsoft.com/shares/Jm5H6yzrpn1CTAqKZDXuo) [Python Programmer Google Account] (Thursday, Sep 25 2025)
-193. **...**
-194. [Setting Default Photo Viewer in Windows 11](https://copilot.microsoft.com/shares/3dybo1N7BzwuB3jbqhVoL) [Python Programmer Google Account] (Wednesday, Oct 1 2025)
-195. **...**
-196. [Understanding a Metaphorical Comment on Generative AI](https://copilot.microsoft.com/shares/u8QX8Tn7LmrGgbs6EBds6) [Python Programmer Google Account] (Wednesday, Oct 8 2025)
-197. **...**
-198. [Calculating Bi-Weekly Meeting Dates in Power Automate](https://copilot.microsoft.com/shares/GfSRw3rVMuqn24bQpMaph) [Python Programmer Google Account] (Thursday, Nov 27 2025)
-199. **...**
-200. [Studying Concurrency in Java](https://m365.cloud.microsoft/chat/entity1-d870f6cd-4aa5-4d42-9626-ab690c041429/eyJpZCI6IlZYTmxjbFl4ZkdoMGRIQnpPaTh2YzNWaWMzUnlZWFJsTFdsdWRDNXZabVpwWTJVdVkyOXRMM3hQU1VRNk5EUXdZbVUyT0RndFlqTTROUzAwWXpjMkxXRmhZall0WW1aa00ySmhZV1ZrWTJSbGZEWTVZVE5pTlRoaExUUXpNRGt0TkRnNU5DMDRaRE0yTFdVM1l6STFNbUU1T1dRME5Id3lNREkyTFRBeUxUQXlWREV6T2pFM09qUTFMakl4TXpVeVdnJTNkJTNkIiwic2NlbmFyaW8iOiJzaGFyZUxpbmtWaWFSaWNoQ29weSIsInByb3BlcnRpZXMiOnsicHJvbXB0U291cmNlIjoidXNlciIsImNsaWNrVGltZXN0YW1wIjoiMjAyNi0wMi0wMlQxMzoxNzo0Mi45NTVaIn0sImNoYXRUeXBlIjoid2ViIiwidmVyc2lvbiI6MS4xfQ) [Uni Microsoft Account] (Monday, Feb 2 2026)
+190. [Personal Brand Logo Design for Akhtar Hasan](https://copilot.microsoft.com/shares/tCE9CKhB7PjPaoV9QWZSZ) [Fifa Utuber Microsoft Account] (Tuesday, Sep 9 2025)
+191. **...**
+192. [Suggestions for Young Professionals' Development](https://copilot.microsoft.com/shares/auxDBuQ3TUKT5mq3XEMYX) [Python Programmer Google Account] (Thursday, Sep 18 2025)
+193. [Professional Email Response Draft](https://copilot.microsoft.com/shares/Jm5H6yzrpn1CTAqKZDXuo) [Python Programmer Google Account] (Thursday, Sep 25 2025)
+194. **...**
+195. [Setting Default Photo Viewer in Windows 11](https://copilot.microsoft.com/shares/3dybo1N7BzwuB3jbqhVoL) [Python Programmer Google Account] (Wednesday, Oct 1 2025)
+196. **...**
+197. [Understanding a Metaphorical Comment on Generative AI](https://copilot.microsoft.com/shares/u8QX8Tn7LmrGgbs6EBds6) [Python Programmer Google Account] (Wednesday, Oct 8 2025)
+198. **...**
+199. [Calculating Bi-Weekly Meeting Dates in Power Automate](https://copilot.microsoft.com/shares/GfSRw3rVMuqn24bQpMaph) [Python Programmer Google Account] (Thursday, Nov 27 2025)
+200. **...**
+201. [Studying Concurrency in Java](https://m365.cloud.microsoft/chat/entity1-d870f6cd-4aa5-4d42-9626-ab690c041429/eyJpZCI6IlZYTmxjbFl4ZkdoMGRIQnpPaTh2YzNWaWMzUnlZWFJsTFdsdWRDNXZabVpwWTJVdVkyOXRMM3hQU1VRNk5EUXdZbVUyT0RndFlqTTROUzAwWXpjMkxXRmhZall0WW1aa00ySmhZV1ZrWTJSbGZEWTVZVE5pTlRoaExUUXpNRGt0TkRnNU5DMDRaRE0yTFdVM1l6STFNbUU1T1dRME5Id3lNREkyTFRBeUxUQXlWREV6T2pFM09qUTFMakl4TXpVeVdnJTNkJTNkIiwic2NlbmFyaW8iOiJzaGFyZUxpbmtWaWFSaWNoQ29weSIsInByb3BlcnRpZXMiOnsicHJvbXB0U291cmNlIjoidXNlciIsImNsaWNrVGltZXN0YW1wIjoiMjAyNi0wMi0wMlQxMzoxNzo0Mi45NTVaIn0sImNoYXRUeXBlIjoid2ViIiwidmVyc2lvbiI6MS4xfQ) [Uni Microsoft Account] (Monday, Feb 2 2026)
