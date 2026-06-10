@@ -201,7 +201,7 @@
 197. [Professional Email Response Draft](https://copilot.microsoft.com/shares/Jm5H6yzrpn1CTAqKZDXuo) [Python Programmer Google Account] (Thursday, Sep 25 2025)
 198. [Crafting a LinkedIn Post for Published Blog](https://copilot.microsoft.com/shares/s6zZda7Z8N5LXgit34YcS) [Fifa Utuber Microsoft Account] (Thursday, Sep 25 2025)
 199. [Creative Tangram Shape Ideas for Coursework](https://copilot.microsoft.com/shares/wcXtas5xWLniUjG68AipZ) [Fifa Utuber Microsoft Account] (Friday, Sep 26 2025)
-200. [Fifa Utuber Microsoft Account] (Wednesday, Jan 15 2025)
+200. [PiSoc Presentation Banner Design](https://copilot.microsoft.com/shares/kpso4NRt7LpgfM9a4H7V9) [Fifa Utuber Microsoft Account] (Friday, Sep 26 2025)
 201. [Android Lecture Slide Summary](https://copilot.microsoft.com/shares/4oLGdAroG1bX1ricz2CNK) [Fifa Utuber Microsoft Account] (Monday, Sep 29 2025)
 202. [Packaging Python App with PyInstaller]( [Fifa Utuber Microsoft Account] (Wednesday, Oct 1 2025)
 203. [Setting Default Photo Viewer in Windows 11](https://copilot.microsoft.com/shares/3dybo1N7BzwuB3jbqhVoL) [Python Programmer Google Account] (Wednesday, Oct 1 2025)
@@ -219,5 +219,8 @@
 215. [Free Video Upscaling Tools](https://copilot.microsoft.com/shares/SDFGviVGDEscAQWd4etCo) [Fifa Utuber Microsoft Account] (Tuesday, Nov 11 2025)
 216. [LinkedIn Networking for Graduate Jobs](https://copilot.microsoft.com/shares/c1qttZBsaf7mLJsD6hNpK) [Fifa Utuber Microsoft Account] (Tuesday, Nov 25 2025)
 217. [Calculating Bi-Weekly Meeting Dates in Power Automate](https://copilot.microsoft.com/shares/GfSRw3rVMuqn24bQpMaph) [Python Programmer Google Account] (Thursday, Nov 27 2025)
-218. **...**
-219. [Studying Concurrency in Java](https://m365.cloud.microsoft/chat/entity1-d870f6cd-4aa5-4d42-9626-ab690c041429/eyJpZCI6IlZYTmxjbFl4ZkdoMGRIQnpPaTh2YzNWaWMzUnlZWFJsTFdsdWRDNXZabVpwWTJVdVkyOXRMM3hQU1VRNk5EUXdZbVUyT0RndFlqTTROUzAwWXpjMkxXRmhZall0WW1aa00ySmhZV1ZrWTJSbGZEWTVZVE5pTlRoaExUUXpNRGt0TkRnNU5DMDRaRE0yTFdVM1l6STFNbUU1T1dRME5Id3lNREkyTFRBeUxUQXlWREV6T2pFM09qUTFMakl4TXpVeVdnJTNkJTNkIiwic2NlbmFyaW8iOiJzaGFyZUxpbmtWaWFSaWNoQ29weSIsInByb3BlcnRpZXMiOnsicHJvbXB0U291cmNlIjoidXNlciIsImNsaWNrVGltZXN0YW1wIjoiMjAyNi0wMi0wMlQxMzoxNzo0Mi45NTVaIn0sImNoYXRUeXBlIjoid2ViIiwidmVyc2lvbiI6MS4xfQ) [Uni Microsoft Account] (Monday, Feb 2 2026)
+218. [TikTok Shop Application Rejection Inquiry](https://copilot.microsoft.com/shares/yFqpkZoqB58c6nvYx5GLr) [Fifa Utuber Microsoft Account] (Saturday, Nov 29 2025)
+219. [LinkedIn Post for Career Awards Event](https://copilot.microsoft.com/shares/J9THHtPpFtBm4LV2L9aAU) [Fifa Utuber Microsoft Account] (Thursday, Dec 11 2025)
+220. [Fixing SQLite Query in Java Method](https://copilot.microsoft.com/shares/yavrNWcwZgng9LkgGvvLr) [Fifa Utuber Microsoft Account] (Sunday, Dec 14 2025)
+221. **...**
+222. [Studying Concurrency in Java](https://m365.cloud.microsoft/chat/entity1-d870f6cd-4aa5-4d42-9626-ab690c041429/eyJpZCI6IlZYTmxjbFl4ZkdoMGRIQnpPaTh2YzNWaWMzUnlZWFJsTFdsdWRDNXZabVpwWTJVdVkyOXRMM3hQU1VRNk5EUXdZbVUyT0RndFlqTTROUzAwWXpjMkxXRmhZall0WW1aa00ySmhZV1ZrWTJSbGZEWTVZVE5pTlRoaExUUXpNRGt0TkRnNU5DMDRaRE0yTFdVM1l6STFNbUU1T1dRME5Id3lNREkyTFRBeUxUQXlWREV6T2pFM09qUTFMakl4TXpVeVdnJTNkJTNkIiwic2NlbmFyaW8iOiJzaGFyZUxpbmtWaWFSaWNoQ29weSIsInByb3BlcnRpZXMiOnsicHJvbXB0U291cmNlIjoidXNlciIsImNsaWNrVGltZXN0YW1wIjoiMjAyNi0wMi0wMlQxMzoxNzo0Mi45NTVaIn0sImNoYXRUeXBlIjoid2ViIiwidmVyc2lvbiI6MS4xfQ) [Uni Microsoft Account] (Monday, Feb 2 2026)
