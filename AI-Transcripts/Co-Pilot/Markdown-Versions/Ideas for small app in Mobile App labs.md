@@ -307,96 +307,135 @@ After deleting my kotlin file and creating a java one I get this error in my `an
 `MainActivity must extend android. app. Activity More... (Ctrl+F1)`  
 
 ## Co-Pilot
-[1]: https://careers.unilever.com/uk-placements ""
-[2]: https://careers.unilever.com/category/research-development-jobs/34155/8110064/1 ""
-[3]: https://careers.unilever.com/job/united-kingdom/uflp-research-and-development-uk-2025/34155/70880030128 ""
-[4]: https://www.brightnetwork.co.uk/graduate-jobs/unilever/technology-management-industrial-placement ""
+Great catch, Hasan! That error usually happens when Android Studio can't recognize your new `MainActivity` as a proper **AppCompatActivity**. Here's how to fix it:  
 
-The specific hiring manager for the "Industrial Placement - Research and Development (R&D)" position at Unilever isn't typically listed in public job postings. However, you can reach out to Unilever's recruitment team for more details. You can contact them via email at futurecareers.recruitment@unilever.com or by phone at +44 20 3650 2304[^1^][1].
+### ✅ Fix the Manifest Error  
+Make sure your `MainActivity.java` **extends `AppCompatActivity`**, *not just* `Activity`.  
 
-Is there anything else you'd like to know about the application process or the role itself?
+#### ✅ Correct:  
 
-Learn more: 
-[1. careers.unilever.com](https://careers.unilever.com/uk-placements) 
-[2. careers.unilever.com](https://careers.unilever.com/category/research-development-jobs/34155/8110064/1) 
-[3. careers.unilever.com](https://careers.unilever.com/job/united-kingdom/uflp-research-and-development-uk-2025/34155/70880030128) 
-[4. www.brightnetwork.co.uk](https://www.brightnetwork.co.uk/graduate-jobs/unilever/technology-management-industrial-placement)  
+```Java
+public class MainActivity extends AppCompatActivity {
+    // your code
+}
+```  
+
+#### ❌ Incorrect:  
+
+```Java
+public class MainActivity extends Activity {
+    // will cause issues with themes and layouts
+}
+```
+
+Also, ensure you have the correct import at the top:  
+
+```Java
+import androidx.appcompat.app.AppCompatActivity;
+```  
+
+### ✅ Update Your `AndroidManifest.xml`  
+Make sure your manifest points to the correct class:  
+
+```Xml
+<activity android:name=".MainActivity">
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+</activity>
+```  
+
+If your package is `uk.ac.bradford.has_akh.dailyquoteapp`, and your activity is inside that package, then `.MainActivity` is fine.  
+
+### ✅ Sync and Rebuild  
+After making these changes:  
+1. **Sync Gradle** (click “Sync Now” if prompted).
+2. **Clean and Rebuild** the project:
+    - `Build > Clean Project`
+    - `Build > Rebuild Project`  
+
+Let me know if you’re still seeing the error or if you'd like help checking your full manifest or Java file!  
 
 ## Me
-Explain how to do this in Python?  
-```
-text
-Use the method .copy() to initialise w with the values of w0
-```
+Also the format of my library imports in `build.gradle.kts` is this, how do I update it with the new imports:  
+
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.activity.compose)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.ui.graphics)
+    implementation(libs.androidx.ui.tooling.preview)
+    implementation(libs.androidx.material3)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.androidx.ui.test.junit4)
+    debugImplementation(libs.androidx.ui.tooling)
+    debugImplementation(libs.androidx.ui.test.manifest)  
 
 ## Co-Pilot
-[1]: https://docs.python.org/3/library/copy.html ""
-[2]: https://www.w3schools.com/python/ref_list_copy.asp ""
-[3]: https://careerkarma.com/blog/python-copy-list/ ""
-[4]: https://diveintopython.org/functions/list-methods/copy ""
-[5]: https://realpython.com/copying-python-objects/ ""
+Thanks for sharing your `build.gradle.kts` format! Since you're using the **Kotlin DSL** (.kts), *dependencies are declared* using `libs.<library>` references, which are *typically managed* via a `libs.versions.toml` file.  
 
-To initialize `w` with the values of `w0` using the `.copy()` method in Python, you can follow these steps:
+To add Java-compatible libraries for your app (like `AppCompatActivity` and `OkHttp`), you’ll need to:  
 
-1. **Ensure `w0` is a list or dictionary**: The `.copy()` method is available for lists and dictionaries in Python.
+### ✅ Step 1: Add Required Libraries to `libs.versions.toml`  
 
-2. **Use the `.copy()` method**: This method creates a shallow copy of the list or dictionary, meaning it copies the structure but not the nested objects.
+If you're using **version catalogs**, open `gradle/libs.versions.toml` and *add entries* like:
 
-Here's an example for both a list and a dictionary:
+```Toml
+[versions]
+appcompat = "1.6.1"
+okhttp = "4.9.3"
 
-### For a List
-```python
-# Original list
-w0 = [1, 2, 3, 4, 5]
+[libraries]
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+```  
 
-# Create a copy of w0
-w = w0.copy()
+### ✅ Step 2: Add Them to `build.gradle.kts`  
+Now in your `build.gradle.kts`, add:  
 
-# Now w is a separate list with the same values as w0
-print(w)  # Output: [1, 2, 3, 4, 5]
-```
+```Kotlin
+implementation(libs.androidx.appcompat)
+implementation(libs.okhttp)
+```  
 
-### For a Dictionary
-```python
-# Original dictionary
-w0 = {'a': 1, 'b': 2, 'c': 3}
+### ✅ Optional: If You’re Not Using Version Catalogs  
+If you’re not using `libs.versions.toml`, you can *directly add the dependencies* like this:  
 
-# Create a copy of w0
-w = w0.copy()
+```Kotlin
+implementation("androidx.appcompat:appcompat:1.6.1")
+implementation("com.squareup.okhttp3:okhttp:4.9.3")
+```  
 
-# Now w is a separate dictionary with the same key-value pairs as w0
-print(w)  # Output: {'a': 1, 'b': 2, 'c': 3}
-```
+### ✅ Bonus: Java Compatibility  
+Since you're *writing in Java*, make sure your `compileSdk` and `targetSdk` are set appropriately in `build.gradle.kts`:  
 
-### Important Notes
-- **Shallow Copy**: The `.copy()` method creates a shallow copy. If your list or dictionary contains other mutable objects (like other lists or dictionaries), those objects are not copied. Instead, references to the original objects are included in the new list or dictionary.
-- **Deep Copy**: If you need to copy nested objects as well, you should use the `copy.deepcopy()` method from the `copy` module.
+```Gradle
+android {
+    compileSdk = 34
 
-### Example of Deep Copy
-```python
-import copy
+    defaultConfig {
+        applicationId = "uk.ac.bradford.has_akh.dailyquoteapp"
+        minSdk = 21
+        targetSdk = 34
+        // ...
+    }
 
-# Original nested list
-w0 = [[1, 2], [3, 4]]
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+}
+```  
 
-# Create a deep copy of w0
-w = copy.deepcopy(w0)
-
-# Now w is a completely separate list with the same nested values as w0
-print(w)  # Output: [[1, 2], [3, 4]]
-```
-
-Feel free to ask if you have any more questions or need further clarification!
-
-Learn more: 
-[1. docs.python.org](https://docs.python.org/3/library/copy.html) 
-[2. www.w3schools.com](https://www.w3schools.com/python/ref_list_copy.asp) 
-[3. careerkarma.com](https://careerkarma.com/blog/python-copy-list/) 
-[4. diveintopython.org](https://diveintopython.org/functions/list-methods/copy) 
-[5. realpython.com](https://realpython.com/copying-python-objects/)  
+Would you like help checking your `libs.versions.toml` file or adding other useful Java libraries like `Retrofit`, `Gson`, or `Material Components`?  
 
 ## Me
-I got this error when trying to run mySQL server in xampp:2024-10-15 10:28:59 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 334962024-10-15 10:28:59 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 10:28:59 0 [Note] InnoDB: Uses event mutexes2024-10-15 10:28:59 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 10:28:59 0 [Note] InnoDB: Number of pools: 12024-10-15 10:28:59 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 10:28:59 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 10:28:59 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 10:28:59 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=3002882024-10-15 10:28:59 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 10:28:59 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 10:28:59 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 10:28:59 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 10:28:59 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 10:28:59 0 [Note] InnoDB: Waiting for purge to start2024-10-15 10:28:59 0 [Note] InnoDB: 10.4.32 started; log sequence number 300297; transaction id 1702024-10-15 10:28:59 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 10:28:59 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 10:28:59 0 [Note] InnoDB: Buffer pool(s) load completed at 241015 10:28:592024-10-15 10:28:59 0 [Note] Server socket created on IP: '::'.2024-10-15 11:40:26 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 16224Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:26 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:26 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:26 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:26 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:26 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:26 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:26 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:26 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:26 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:26 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=5755382024-10-15 11:40:26 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:26 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"2024-10-15 11:40:26 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:26 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:26 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:26 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:27 0 [Note] InnoDB: 10.4.32 started; log sequence number 575547; transaction id 4052024-10-15 11:40:27 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:27 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:27 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:27 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:27 0 [ERROR] Aborting2024-10-15 11:40:31 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 27624Cannot find checkpoint record at LSN (1,0x5556)2024-10-15 11:40:31 0 [ERROR] mysqld.exe: Aria recovery failed. Please run aria_chk -r on all Aria tables and delete all aria_log.######## files2024-10-15 11:40:31 0 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.2024-10-15 11:40:31 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions2024-10-15 11:40:31 0 [Note] InnoDB: Uses event mutexes2024-10-15 11:40:31 0 [Note] InnoDB: Compressed tables use zlib 1.32024-10-15 11:40:31 0 [Note] InnoDB: Number of pools: 12024-10-15 11:40:31 0 [Note] InnoDB: Using SSE2 crc32 instructions2024-10-15 11:40:31 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M2024-10-15 11:40:31 0 [Note] InnoDB: Completed initialization of buffer pool2024-10-15 11:40:31 0 [Note] InnoDB: 128 out of 128 rollback segments are active.2024-10-15 11:40:31 0 [Note] InnoDB: Creating shared tablespace for temporary tables2024-10-15 11:40:31 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...2024-10-15 11:40:31 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.2024-10-15 11:40:31 0 [Note] InnoDB: Waiting for purge to start2024-10-15 11:40:31 0 [Note] InnoDB: 10.4.32 started; log sequence number 575556; transaction id 4052024-10-15 11:40:31 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool2024-10-15 11:40:31 0 [Note] Plugin 'FEEDBACK' is disabled.2024-10-15 11:40:31 0 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded2024-10-15 11:40:31 0 [ERROR] Failed to initialize plugins.2024-10-15 11:40:31 0 [ERROR] Aborting  
+I'm trying to write the main activity and layout files from scratch to test myself, but can you give me a bit of guidance?  
 
 ## Copilot
 Absolutely, Hasan! Here’s some practical guidance to help you write your own `MainActivity.java` and `activity_main.xml` from scratch, while still letting you do the hands-on work:  
